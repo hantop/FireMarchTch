@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		682F0A19C9F947C5D768DFE0 /* libPods-FireMarchTch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */; };
+		EC473C962056556200CD9397 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473C952056556200CD9397 /* ViewController.m */; };
+		EC473C9B2056556200CD9397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC473C9A2056556200CD9397 /* Assets.xcassets */; };
+		EC473CE62056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EC473CE52056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF */; };
+		EC473CEC2056BA3300CD9397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CE72056BA3300CD9397 /* AppDelegate.m */; };
+		EC473CED2056BA3300CD9397 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC473CE82056BA3300CD9397 /* Info.plist */; };
+		EC473CEE2056BA3300CD9397 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CEA2056BA3300CD9397 /* main.m */; };
+		EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF12056BDCB00CD9397 /* LaunchScreen.storyboard */; };
+		EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF32056BDCB00CD9397 /* Main.storyboard */; };
+		EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF72056BE0B00CD9397 /* RegLogin.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FireMarchTch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26A680B511CED9E372C15761 /* Pods-FireMarchTch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMarchTch.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch.release.xcconfig"; sourceTree = "<group>"; };
+		C70B9865407A3A915AD13095 /* Pods-FireMarchTch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMarchTch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch.debug.xcconfig"; sourceTree = "<group>"; };
+		EC473C8E2056556200CD9397 /* FireMarchTch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireMarchTch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC473C942056556200CD9397 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EC473C952056556200CD9397 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC473C9A2056556200CD9397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC473CE52056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭细黑_GBK.TTF"; sourceTree = "<group>"; };
+		EC473CE72056BA3300CD9397 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FireMarchTch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		EC473CE82056BA3300CD9397 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FireMarchTch/Info.plist; sourceTree = SOURCE_ROOT; };
+		EC473CE92056BA3300CD9397 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FireMarchTch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		EC473CEA2056BA3300CD9397 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FireMarchTch/main.m; sourceTree = SOURCE_ROOT; };
+		EC473CF22056BDCB00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC473CF42056BDCB00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		EC473CF82056BE0B00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RegLogin.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC473C8B2056556200CD9397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682F0A19C9F947C5D768DFE0 /* libPods-FireMarchTch.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3C9660551C7FB45C49B4691 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC473C852056556200CD9397 = {
+			isa = PBXGroup;
+			children = (
+				EC473C902056556200CD9397 /* FireMarchTch */,
+				EC473C8F2056556200CD9397 /* Products */,
+				FB5A6B064CF7852341A3800A /* Pods */,
+				C3C9660551C7FB45C49B4691 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC473C8F2056556200CD9397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC473C8E2056556200CD9397 /* FireMarchTch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC473C902056556200CD9397 /* FireMarchTch */ = {
+			isa = PBXGroup;
+			children = (
+				EC473C9A2056556200CD9397 /* Assets.xcassets */,
+				EC473CF02056BDCB00CD9397 /* Base.lproj */,
+				EC473CE32056B9DC00CD9397 /* Basic */,
+				EC473CCB2056B9DB00CD9397 /* Classes */,
+				EC473CE02056B9DB00CD9397 /* Extentions */,
+				EC473CE42056B9DC00CD9397 /* Sources */,
+				EC473CCA2056B98B00CD9397 /* System */,
+			);
+			path = FireMarchTch;
+			sourceTree = "<group>";
+		};
+		EC473CCA2056B98B00CD9397 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CE92056BA3300CD9397 /* AppDelegate.h */,
+				EC473CE72056BA3300CD9397 /* AppDelegate.m */,
+				EC473CE82056BA3300CD9397 /* Info.plist */,
+				EC473CEA2056BA3300CD9397 /* main.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		EC473CCB2056B9DB00CD9397 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CCC2056B9DB00CD9397 /* Home */,
+				EC473CD02056B9DB00CD9397 /* MyInfos */,
+				EC473CD42056B9DB00CD9397 /* Square */,
+				EC473CD82056B9DB00CD9397 /* Evaluate */,
+				EC473CDC2056B9DB00CD9397 /* Orders */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EC473CCC2056B9DB00CD9397 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CCD2056B9DB00CD9397 /* Models */,
+				EC473CCE2056B9DB00CD9397 /* Controllers */,
+				EC473CCF2056B9DB00CD9397 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EC473CCD2056B9DB00CD9397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC473CCE2056B9DB00CD9397 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC473C942056556200CD9397 /* ViewController.h */,
+				EC473C952056556200CD9397 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC473CCF2056B9DB00CD9397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC473CD02056B9DB00CD9397 /* MyInfos */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CD12056B9DB00CD9397 /* Models */,
+				EC473CD22056B9DB00CD9397 /* Controllers */,
+				EC473CD32056B9DB00CD9397 /* Views */,
+			);
+			path = MyInfos;
+			sourceTree = "<group>";
+		};
+		EC473CD12056B9DB00CD9397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC473CD22056B9DB00CD9397 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC473CD32056B9DB00CD9397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC473CD42056B9DB00CD9397 /* Square */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CD52056B9DB00CD9397 /* Models */,
+				EC473CD62056B9DB00CD9397 /* Controllers */,
+				EC473CD72056B9DB00CD9397 /* Views */,
+			);
+			path = Square;
+			sourceTree = "<group>";
+		};
+		EC473CD52056B9DB00CD9397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC473CD62056B9DB00CD9397 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC473CD72056B9DB00CD9397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC473CD82056B9DB00CD9397 /* Evaluate */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CD92056B9DB00CD9397 /* Models */,
+				EC473CDA2056B9DB00CD9397 /* Controllers */,
+				EC473CDB2056B9DB00CD9397 /* Views */,
+			);
+			path = Evaluate;
+			sourceTree = "<group>";
+		};
+		EC473CD92056B9DB00CD9397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC473CDA2056B9DB00CD9397 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC473CDB2056B9DB00CD9397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC473CDC2056B9DB00CD9397 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CDD2056B9DB00CD9397 /* Models */,
+				EC473CDE2056B9DB00CD9397 /* Controllers */,
+				EC473CDF2056B9DB00CD9397 /* Views */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		EC473CDD2056B9DB00CD9397 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC473CDE2056B9DB00CD9397 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EC473CDF2056B9DB00CD9397 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC473CE02056B9DB00CD9397 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CE12056B9DB00CD9397 /* Libraries */,
+				EC473CE22056B9DB00CD9397 /* Utils */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		EC473CE12056B9DB00CD9397 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		EC473CE22056B9DB00CD9397 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EC473CE32056B9DC00CD9397 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		EC473CE42056B9DC00CD9397 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CE52056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EC473CF02056BDCB00CD9397 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CF12056BDCB00CD9397 /* LaunchScreen.storyboard */,
+				EC473CF32056BDCB00CD9397 /* Main.storyboard */,
+				EC473CF72056BE0B00CD9397 /* RegLogin.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		FB5A6B064CF7852341A3800A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C70B9865407A3A915AD13095 /* Pods-FireMarchTch.debug.xcconfig */,
+				26A680B511CED9E372C15761 /* Pods-FireMarchTch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC473C8D2056556200CD9397 /* FireMarchTch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC473CA42056556200CD9397 /* Build configuration list for PBXNativeTarget "FireMarchTch" */;
+			buildPhases = (
+				926821363AAB3EF771BDD3C2 /* [CP] Check Pods Manifest.lock */,
+				EC473C8A2056556200CD9397 /* Sources */,
+				EC473C8B2056556200CD9397 /* Frameworks */,
+				EC473C8C2056556200CD9397 /* Resources */,
+				6FA174B7A5B193B5BB790FDD /* [CP] Embed Pods Frameworks */,
+				1E30CE152700EEB3A218D543 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FireMarchTch;
+			productName = FireMarchTch;
+			productReference = EC473C8E2056556200CD9397 /* FireMarchTch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC473C862056556200CD9397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = XWBank;
+				TargetAttributes = {
+					EC473C8D2056556200CD9397 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EC473C892056556200CD9397 /* Build configuration list for PBXProject "FireMarchTch" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC473C852056556200CD9397;
+			productRefGroup = EC473C8F2056556200CD9397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC473C8D2056556200CD9397 /* FireMarchTch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC473C8C2056556200CD9397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
+				EC473CE62056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
+				EC473C9B2056556200CD9397 /* Assets.xcassets in Resources */,
+				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
+				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
+				EC473CED2056BA3300CD9397 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E30CE152700EEB3A218D543 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA174B7A5B193B5BB790FDD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		926821363AAB3EF771BDD3C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FireMarchTch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC473C8A2056556200CD9397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC473CEC2056BA3300CD9397 /* AppDelegate.m in Sources */,
+				EC473CEE2056BA3300CD9397 /* main.m in Sources */,
+				EC473C962056556200CD9397 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EC473CF12056BDCB00CD9397 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC473CF22056BDCB00CD9397 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EC473CF32056BDCB00CD9397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC473CF42056BDCB00CD9397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC473CF72056BE0B00CD9397 /* RegLogin.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC473CF82056BE0B00CD9397 /* Base */,
+			);
+			name = RegLogin.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC473CA22056556200CD9397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC473CA32056556200CD9397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC473CA52056556200CD9397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C70B9865407A3A915AD13095 /* Pods-FireMarchTch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NB59393AH;
+				INFOPLIST_FILE = FireMarchTch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.FireMarchTch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC473CA62056556200CD9397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A680B511CED9E372C15761 /* Pods-FireMarchTch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NB59393AH;
+				INFOPLIST_FILE = FireMarchTch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.FireMarchTch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC473C892056556200CD9397 /* Build configuration list for PBXProject "FireMarchTch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC473CA22056556200CD9397 /* Debug */,
+				EC473CA32056556200CD9397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC473CA42056556200CD9397 /* Build configuration list for PBXNativeTarget "FireMarchTch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC473CA52056556200CD9397 /* Debug */,
+				EC473CA62056556200CD9397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC473C862056556200CD9397 /* Project object */;
+}
