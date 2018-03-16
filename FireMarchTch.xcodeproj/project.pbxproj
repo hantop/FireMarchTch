@@ -10,13 +10,22 @@
 		682F0A19C9F947C5D768DFE0 /* libPods-FireMarchTch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */; };
 		EC473C962056556200CD9397 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473C952056556200CD9397 /* ViewController.m */; };
 		EC473C9B2056556200CD9397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC473C9A2056556200CD9397 /* Assets.xcassets */; };
-		EC473CE62056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EC473CE52056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF */; };
-		EC473CEC2056BA3300CD9397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CE72056BA3300CD9397 /* AppDelegate.m */; };
-		EC473CED2056BA3300CD9397 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC473CE82056BA3300CD9397 /* Info.plist */; };
-		EC473CEE2056BA3300CD9397 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CEA2056BA3300CD9397 /* main.m */; };
 		EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF12056BDCB00CD9397 /* LaunchScreen.storyboard */; };
 		EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF32056BDCB00CD9397 /* Main.storyboard */; };
 		EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF72056BE0B00CD9397 /* RegLogin.storyboard */; };
+		EC473D00205767F400CD9397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CFC205767F300CD9397 /* AppDelegate.m */; };
+		EC473D01205767F400CD9397 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC473CFD205767F400CD9397 /* Info.plist */; };
+		EC473D02205767F400CD9397 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CFF205767F400CD9397 /* main.m */; };
+		EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EC473D0520576BD000CD9397 /* 方正兰亭细黑_GBK.TTF */; };
+		EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D09205BD9BF00CD9397 /* FMUtils.m */; };
+		EC473D12205BE49000CD9397 /* ValueType.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D11205BE49000CD9397 /* ValueType.m */; };
+		EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D16205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m */; };
+		EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D17205BF6DB00CD9397 /* UIView+Frame.m */; };
+		EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D18205BF6DB00CD9397 /* UIView+RGSize.m */; };
+		EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1A205BF6DB00CD9397 /* UIScrollView+Touch.m */; };
+		EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1B205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m */; };
+		EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */; };
+		EC473D29205C0FA700CD9397 /* FMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D28205C0FA700CD9397 /* FMModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,14 +36,34 @@
 		EC473C942056556200CD9397 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC473C952056556200CD9397 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC473C9A2056556200CD9397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EC473CE52056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭细黑_GBK.TTF"; sourceTree = "<group>"; };
-		EC473CE72056BA3300CD9397 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = FireMarchTch/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		EC473CE82056BA3300CD9397 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FireMarchTch/Info.plist; sourceTree = SOURCE_ROOT; };
-		EC473CE92056BA3300CD9397 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FireMarchTch/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		EC473CEA2056BA3300CD9397 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FireMarchTch/main.m; sourceTree = SOURCE_ROOT; };
 		EC473CF22056BDCB00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC473CF42056BDCB00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		EC473CF82056BE0B00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RegLogin.storyboard; sourceTree = "<group>"; };
+		EC473CFC205767F300CD9397 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC473CFD205767F400CD9397 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC473CFE205767F400CD9397 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC473CFF205767F400CD9397 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC473D0520576BD000CD9397 /* 方正兰亭细黑_GBK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭细黑_GBK.TTF"; sourceTree = "<group>"; };
+		EC473D08205BD9BF00CD9397 /* FMUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUtils.h; sourceTree = "<group>"; };
+		EC473D09205BD9BF00CD9397 /* FMUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUtils.m; sourceTree = "<group>"; };
+		EC473D0F205BE1C700CD9397 /* PJMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJMacros.h; sourceTree = "<group>"; };
+		EC473D10205BE2C400CD9397 /* ValueType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValueType.h; sourceTree = "<group>"; };
+		EC473D11205BE49000CD9397 /* ValueType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValueType.m; sourceTree = "<group>"; };
+		EC473D13205BEB8C00CD9397 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EC473D15205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSDictonay_Unicode.h"; sourceTree = "<group>"; };
+		EC473D16205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WLZ_HexRGB.m"; sourceTree = "<group>"; };
+		EC473D17205BF6DB00CD9397 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		EC473D18205BF6DB00CD9397 /* UIView+RGSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RGSize.m"; sourceTree = "<group>"; };
+		EC473D19205BF6DB00CD9397 /* CALayer+UIColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+UIColor.h"; sourceTree = "<group>"; };
+		EC473D1A205BF6DB00CD9397 /* UIScrollView+Touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Touch.m"; sourceTree = "<group>"; };
+		EC473D1B205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NSDictonay_Unicode.m"; sourceTree = "<group>"; };
+		EC473D1C205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WLZ_HexRGB.h"; sourceTree = "<group>"; };
+		EC473D1D205BF6DB00CD9397 /* UIView+RGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RGSize.h"; sourceTree = "<group>"; };
+		EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+UIColor.m"; sourceTree = "<group>"; };
+		EC473D1F205BF6DB00CD9397 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		EC473D20205BF6DB00CD9397 /* UIScrollView+Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Touch.h"; sourceTree = "<group>"; };
+		EC473D27205C0FA700CD9397 /* FMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMModel.h; sourceTree = "<group>"; };
+		EC473D28205C0FA700CD9397 /* FMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,24 +109,14 @@
 			children = (
 				EC473C9A2056556200CD9397 /* Assets.xcassets */,
 				EC473CF02056BDCB00CD9397 /* Base.lproj */,
-				EC473CE32056B9DC00CD9397 /* Basic */,
 				EC473CCB2056B9DB00CD9397 /* Classes */,
 				EC473CE02056B9DB00CD9397 /* Extentions */,
+				EC473D0C205BE0C700CD9397 /* New Group */,
 				EC473CE42056B9DC00CD9397 /* Sources */,
-				EC473CCA2056B98B00CD9397 /* System */,
+				EC473D0D205BE0DC00CD9397 /* SupportingFiles */,
+				EC473CFB205767D700CD9397 /* System */,
 			);
 			path = FireMarchTch;
-			sourceTree = "<group>";
-		};
-		EC473CCA2056B98B00CD9397 /* System */ = {
-			isa = PBXGroup;
-			children = (
-				EC473CE92056BA3300CD9397 /* AppDelegate.h */,
-				EC473CE72056BA3300CD9397 /* AppDelegate.m */,
-				EC473CE82056BA3300CD9397 /* Info.plist */,
-				EC473CEA2056BA3300CD9397 /* main.m */,
-			);
-			path = System;
 			sourceTree = "<group>";
 		};
 		EC473CCB2056B9DB00CD9397 /* Classes */ = {
@@ -272,7 +291,9 @@
 		EC473CE02056B9DB00CD9397 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				EC473D14205BF6DB00CD9397 /* Category */,
 				EC473CE12056B9DB00CD9397 /* Libraries */,
+				EC473D0720576F1D00CD9397 /* Managers */,
 				EC473CE22056B9DB00CD9397 /* Utils */,
 			);
 			path = Extentions;
@@ -288,21 +309,17 @@
 		EC473CE22056B9DB00CD9397 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EC473D08205BD9BF00CD9397 /* FMUtils.h */,
+				EC473D09205BD9BF00CD9397 /* FMUtils.m */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		EC473CE32056B9DC00CD9397 /* Basic */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Basic;
 			sourceTree = "<group>";
 		};
 		EC473CE42056B9DC00CD9397 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				EC473CE52056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF */,
+				EC473D0320576BD000CD9397 /* ConfigPlist */,
+				EC473D0420576BD000CD9397 /* Fonts */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -315,6 +332,78 @@
 				EC473CF72056BE0B00CD9397 /* RegLogin.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		EC473CFB205767D700CD9397 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				EC473CFE205767F400CD9397 /* AppDelegate.h */,
+				EC473CFC205767F300CD9397 /* AppDelegate.m */,
+				EC473CFD205767F400CD9397 /* Info.plist */,
+				EC473CFF205767F400CD9397 /* main.m */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		EC473D0320576BD000CD9397 /* ConfigPlist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConfigPlist;
+			sourceTree = "<group>";
+		};
+		EC473D0420576BD000CD9397 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EC473D0520576BD000CD9397 /* 方正兰亭细黑_GBK.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EC473D0720576F1D00CD9397 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		EC473D0C205BE0C700CD9397 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		EC473D0D205BE0DC00CD9397 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EC473D13205BEB8C00CD9397 /* PrefixHeader.pch */,
+				EC473D0F205BE1C700CD9397 /* PJMacros.h */,
+				EC473D10205BE2C400CD9397 /* ValueType.h */,
+				EC473D11205BE49000CD9397 /* ValueType.m */,
+				EC473D27205C0FA700CD9397 /* FMModel.h */,
+				EC473D28205C0FA700CD9397 /* FMModel.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EC473D14205BF6DB00CD9397 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				EC473D15205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.h */,
+				EC473D16205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m */,
+				EC473D17205BF6DB00CD9397 /* UIView+Frame.m */,
+				EC473D18205BF6DB00CD9397 /* UIView+RGSize.m */,
+				EC473D19205BF6DB00CD9397 /* CALayer+UIColor.h */,
+				EC473D1A205BF6DB00CD9397 /* UIScrollView+Touch.m */,
+				EC473D1B205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m */,
+				EC473D1C205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.h */,
+				EC473D1D205BF6DB00CD9397 /* UIView+RGSize.h */,
+				EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */,
+				EC473D1F205BF6DB00CD9397 /* UIView+Frame.h */,
+				EC473D20205BF6DB00CD9397 /* UIScrollView+Touch.h */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		FB5A6B064CF7852341A3800A /* Pods */ = {
@@ -387,12 +476,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
-				EC473CE62056B9DC00CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
+				EC473D01205767F400CD9397 /* Info.plist in Resources */,
 				EC473C9B2056556200CD9397 /* Assets.xcassets in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
-				EC473CED2056BA3300CD9397 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,9 +494,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -454,9 +554,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC473CEC2056BA3300CD9397 /* AppDelegate.m in Sources */,
-				EC473CEE2056BA3300CD9397 /* main.m in Sources */,
+				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
+				EC473D12205BE49000CD9397 /* ValueType.m in Sources */,
+				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
+				EC473D00205767F400CD9397 /* AppDelegate.m in Sources */,
+				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
+				EC473D02205767F400CD9397 /* main.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
+				EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */,
+				EC473D29205C0FA700CD9397 /* FMModel.m in Sources */,
+				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
+				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
+				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +710,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NB59393AH;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FireMarchTch/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -617,6 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NB59393AH;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FireMarchTch/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  FireMarchTch
+//
+//  Created by Joe.Pen on 16/03/2018.
+//  Copyright © 2018 XWBank. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#ifdef __OBJC__
+
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "PJMacros.h"
+#import "ValueType.h"
+#import "FMModel.h"
+#import <Masonry.h>
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
+#import <MJExtension.h>
+#import <iConsole.h>
+#import <SDImageCache.h>
+#import <CocoaLumberjack.h>
+#import <GPUImage.h>
+#import <ZipArchive.h>
+
+#endif
+#endif /* PrefixHeader_pch */
