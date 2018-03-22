@@ -3,7 +3,7 @@
 //  FireMarchTch
 //
 //  Created by Joe.Pen on 16/03/2018.
-//  Copyright © 2018 XWBank. All rights reserved.
+//  Copyright © 2018 Joe.Pen. All rights reserved.
 //
 
 #import "FMModel.h"

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		682F0A19C9F947C5D768DFE0 /* libPods-FireMarchTch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */; };
+		EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */; };
+		EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4B72062131500C52324 /* FMTUnLockViewController.m */; };
+		EC42A4BD2063409A00C52324 /* qViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4BC2063409A00C52324 /* qViewController.m */; };
 		EC473C962056556200CD9397 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473C952056556200CD9397 /* ViewController.m */; };
 		EC473C9B2056556200CD9397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC473C9A2056556200CD9397 /* Assets.xcassets */; };
 		EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF12056BDCB00CD9397 /* LaunchScreen.storyboard */; };
@@ -26,12 +29,21 @@
 		EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1B205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m */; };
 		EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */; };
 		EC473D29205C0FA700CD9397 /* FMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D28205C0FA700CD9397 /* FMModel.m */; };
+		EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D2B205FBF5200CD9397 /* CCLocationManager.m */; };
+		EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D2E205FBFF300CD9397 /* WGS84TOGCJ02.m */; };
+		EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D312060DB9500CD9397 /* FMNetworkMananger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FireMarchTch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A680B511CED9E372C15761 /* Pods-FireMarchTch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMarchTch.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch.release.xcconfig"; sourceTree = "<group>"; };
 		C70B9865407A3A915AD13095 /* Pods-FireMarchTch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMarchTch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch.debug.xcconfig"; sourceTree = "<group>"; };
+		EC42A4AD20614F4700C52324 /* FMTBaseDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTBaseDataManager.h; sourceTree = "<group>"; };
+		EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTBaseDataManager.m; sourceTree = "<group>"; };
+		EC42A4B62062131500C52324 /* FMTUnLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTUnLockViewController.h; sourceTree = "<group>"; };
+		EC42A4B72062131500C52324 /* FMTUnLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTUnLockViewController.m; sourceTree = "<group>"; };
+		EC42A4BB2063409A00C52324 /* qViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qViewController.h; sourceTree = "<group>"; };
+		EC42A4BC2063409A00C52324 /* qViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qViewController.m; sourceTree = "<group>"; };
 		EC473C8E2056556200CD9397 /* FireMarchTch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireMarchTch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC473C942056556200CD9397 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC473C952056556200CD9397 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -64,6 +76,12 @@
 		EC473D20205BF6DB00CD9397 /* UIScrollView+Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Touch.h"; sourceTree = "<group>"; };
 		EC473D27205C0FA700CD9397 /* FMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMModel.h; sourceTree = "<group>"; };
 		EC473D28205C0FA700CD9397 /* FMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMModel.m; sourceTree = "<group>"; };
+		EC473D2A205FBF5200CD9397 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
+		EC473D2B205FBF5200CD9397 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
+		EC473D2D205FBFF200CD9397 /* WGS84TOGCJ02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGS84TOGCJ02.h; sourceTree = "<group>"; };
+		EC473D2E205FBFF300CD9397 /* WGS84TOGCJ02.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGS84TOGCJ02.m; sourceTree = "<group>"; };
+		EC473D302060DB9500CD9397 /* FMNetworkMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMNetworkMananger.h; sourceTree = "<group>"; };
+		EC473D312060DB9500CD9397 /* FMNetworkMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNetworkMananger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +102,13 @@
 				25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC42A4B02061EFB500C52324 /* Coponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coponents;
 			sourceTree = "<group>";
 		};
 		EC473C852056556200CD9397 = {
@@ -153,6 +178,10 @@
 			children = (
 				EC473C942056556200CD9397 /* ViewController.h */,
 				EC473C952056556200CD9397 /* ViewController.m */,
+				EC42A4B62062131500C52324 /* FMTUnLockViewController.h */,
+				EC42A4B72062131500C52324 /* FMTUnLockViewController.m */,
+				EC42A4BB2063409A00C52324 /* qViewController.h */,
+				EC42A4BC2063409A00C52324 /* qViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				EC473D14205BF6DB00CD9397 /* Category */,
+				EC42A4B02061EFB500C52324 /* Coponents */,
 				EC473CE12056B9DB00CD9397 /* Libraries */,
 				EC473D0720576F1D00CD9397 /* Managers */,
 				EC473CE22056B9DB00CD9397 /* Utils */,
@@ -363,6 +393,14 @@
 		EC473D0720576F1D00CD9397 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EC473D2D205FBFF200CD9397 /* WGS84TOGCJ02.h */,
+				EC473D2E205FBFF300CD9397 /* WGS84TOGCJ02.m */,
+				EC473D2A205FBF5200CD9397 /* CCLocationManager.h */,
+				EC473D2B205FBF5200CD9397 /* CCLocationManager.m */,
+				EC473D302060DB9500CD9397 /* FMNetworkMananger.h */,
+				EC473D312060DB9500CD9397 /* FMNetworkMananger.m */,
+				EC42A4AD20614F4700C52324 /* FMTBaseDataManager.h */,
+				EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -559,13 +597,19 @@
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
 				EC473D00205767F400CD9397 /* AppDelegate.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
+				EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */,
+				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
 				EC473D02205767F400CD9397 /* main.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
 				EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */,
+				EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */,
 				EC473D29205C0FA700CD9397 /* FMModel.m in Sources */,
+				EC42A4BD2063409A00C52324 /* qViewController.m in Sources */,
 				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
+				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
+				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,11 +3,11 @@
 //  FireMarchTch
 //
 //  Created by Joe.Pen on 16/03/2018.
-//  Copyright © 2018 XWBank. All rights reserved.
+//  Copyright © 2018 Joe.Pen. All rights reserved.
 //
 
 #import "FMUtils.h"
-
+#import <SDImageCache.h>
 #include <objc/runtime.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
@@ -209,8 +209,7 @@
 }
 
 
-#pragma mark 正则判断
-
+#pragma mark- 正则判断
 + (BOOL)isCarNumberPlate:(NSString *)carNo
 {
     NSString *carRegex = @"^[A-Za-z]{1}[A-Za-z_0-9]{5}$";
@@ -294,6 +293,7 @@
 }
 
 
+#pragma mark- 颜色和UI
 +( UIColor *)getColorFromString:( NSString *)hexColor
 {
     unsigned int red, green, blue;
@@ -331,15 +331,13 @@ void backLastView(id sender)
 + (void)customizeNavigationBarForTarget:(UIViewController *)target hiddenButton:(BOOL)hidden
 {
     SEL popAction = sel_registerName("backLastView:");
-    SEL back = @selector(backLastView:);
-    //    IMP backImp = [self methodForSelector:@selector(backLastView:)];
-    //    IMP backImp = [NSObject instanceMethodForSelector:@selector(backLastView:)];
+//    SEL back = @selector(backLastView:);
+//    IMP backImp = [self methodForSelector:@selector(backLastView:)];
+//    IMP backImp = [NSObject instanceMethodForSelector:@selector(backLastView:)];
     //经测试，以上俩方法都不能返回正确的IMP变量。
     IMP backImp = (IMP)backLastView;
     //1.先动态的给类添加一个方法，因为下面添加的返回按钮需要调用这个方法
     class_addMethod([target class],popAction,backImp,"v@:@");
-    
-    
     
     //UIButton
     UIButton *leftBtn = [[ UIButton alloc ] initWithFrame : CGRectMake(- 20 , 0 , 44 , 44 )];
@@ -378,7 +376,7 @@ void backLastView(id sender)
 }
 
 
-#pragma mark 提示框
+#pragma mark- 提示框
 + (void)tipWithText:(NSString *)text onView:(UIView *)view
 {
     [FMUtils tipWithText:text onView:view withCompeletHandler:nil];
@@ -388,12 +386,12 @@ void backLastView(id sender)
 {
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.mode = MBProgressHUDModeText;
-    hud.labelText = text;
+    hud.label.text = text;
     hud.margin = 15.f;
-    hud.yOffset = 20.f;
+    [hud setOffset:CGPointMake(0, 20.f)];
     hud.removeFromSuperViewOnHide = YES;
-    [hud setYOffset:PJ_SCREEN_HEIGHT/4];
-    [hud hide:YES afterDelay:1.5];
+    [hud setOffset:CGPointMake(0, PJ_SCREEN_HEIGHT/4)];
+    [hud hideAnimated:YES afterDelay:1.5];
     hud.completionBlock = compeletBlock;
 }
 
@@ -421,7 +419,7 @@ void backLastView(id sender)
     return view;
 }
 
-#pragma mark 字符串处理
+#pragma mark- 字符串处理
 + (BOOL)isBlankString:(NSString *)string
 {
     
@@ -443,11 +441,13 @@ void backLastView(id sender)
     return NO;
 }
 
-
-+ (NSString *)getExplicitServerAPIURLPathWithSuffix:(NSString *)urlStr{
-    return [NSString stringWithFormat:@"%@%@",kFMTAPIHost,urlStr];
++ (NSString *)resetString:(NSString *)str
+{
+    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" :-'''"""];
+    str = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString* ns2 = [str stringByTrimmingCharactersInSet:set];
+    return ns2;
 }
-
 
 + (NSString *)cutString:(NSString *)str Prefix:(NSString *)pre
 {
@@ -460,12 +460,20 @@ void backLastView(id sender)
     return [ns2 substringWithRange:NSMakeRange(range.location+range.length, ([ns2 length]-(range.location+range.length)))];
 }
 
-+ (NSString *)resetString:(NSString *)str
++ (NSString *)getExplicitServerAPIURLPathWithSuffix:(NSString *)urlStr{
+    return [NSString stringWithFormat:@"%@%@",kFMTAPIHost,urlStr];
+}
+
++ (NSMutableAttributedString*)stringWithDeleteLine:(NSString *)string
 {
-    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" :-'''"""];
-    str = [str stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString* ns2 = [str stringByTrimmingCharactersInSet:set];
-    return ns2;
+    NSUInteger length = [string length];
+    if (0 == length) {
+        return nil;
+    }
+    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:string];
+    [attri addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, length)];
+    [attri addAttribute:NSStrikethroughColorAttributeName value:UIColorFromRGB(0x999999) range:NSMakeRange(0, length)];
+    return attri;
 }
 
 + (CGSize)calculateTitleSizeWithString:(NSString *)string AndFontSize:(CGFloat)fontSize
@@ -485,20 +493,9 @@ void backLastView(id sender)
     return size;
 }
 
-+ (NSMutableAttributedString*)stringWithDeleteLine:(NSString *)string
-{
-    NSUInteger length = [string length];
-    if (0 == length) {
-        return nil;
-    }
-    NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithString:string];
-    [attri addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, length)];
-    [attri addAttribute:NSStrikethroughColorAttributeName value:UIColorFromRGB(0x999999) range:NSMakeRange(0, length)];
-    return attri;
-}
 
 
-#pragma mark 界面控制器处理
+#pragma mark- 控制器处理
 + (UIViewController*)getViewControllerFromStoryboard:(NSString*)storyboardName andVCName:(NSString*)vcName
 {
     //获取storyboard: 通过bundle根据storyboard的名字来获取我们的storyboard,
@@ -713,7 +710,7 @@ void backLastView(id sender)
 //}
 
 
-#pragma mark 其它方法
+#pragma mark- 时间处理
 + (BOOL)isTimeCrossOneDay
 {//判断俩次启动相隔时长
     
@@ -769,19 +766,19 @@ void backLastView(id sender)
         hourStr =[NSString stringWithFormat:@"0%ld", hour];
     }
     
-    NSString* minutesStr = [NSString stringWithFormat:@"%ld", minute];
+    NSString* minutesStr = [NSString stringWithFormat:@"%ld", (long)minute];
     if (minute < 10)
     {
-        minutesStr = [NSString stringWithFormat:@"0%ld", minute];
+        minutesStr = [NSString stringWithFormat:@"0%ld", (long)minute];
     }
     
-    NSString* secondStr = [NSString stringWithFormat:@"%ld", second];
+    NSString* secondStr = [NSString stringWithFormat:@"%ld", (long)second];
     if (second < 10)
     {
-        secondStr = [NSString stringWithFormat:@"0%ld", second];
+        secondStr = [NSString stringWithFormat:@"0%ld", (long)second];
     }
     
-    dateTime.day = [NSString stringWithFormat:@"%ld", day];
+    dateTime.day = [NSString stringWithFormat:@"%ld", (long)day];
     dateTime.hour = hourStr;
     dateTime.minute = minutesStr;
     dateTime.second = secondStr;
@@ -812,14 +809,6 @@ void backLastView(id sender)
     NSString* dateTime = [formatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:time]];
     return dateTime;
 }
-
-//+ (NSString*)getChatDatetime:(NSInteger)chatTime
-//{
-//    NSDateFormatter* formatter = [[NSDateFormatter alloc]init];
-//    [formatter setDateFormat:@"HH:mm"];
-//    NSString* dateTime = [[NSDate dateWithTimeIntervalInMilliSecondSince1970:chatTime] formattedTime];
-//    return dateTime;
-//}
 
 + (NSString*)getDateTimeSinceTime:(NSInteger)skillTime
 {
@@ -857,6 +846,7 @@ void backLastView(id sender)
     }
 }
 
+#pragma mark- 系统处理
 + (void)performBlock:(FMGeneralBlock)block afterDelay:(NSTimeInterval)delay
 {
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC));
@@ -909,5 +899,252 @@ void backLastView(id sender)
     return layer;
 }
 
++ (CAShapeLayer *)creatIndicatorWithColor:(UIColor *)color andPosition:(CGPoint)point
+{
+    CAShapeLayer *layer = [CAShapeLayer new];
+    
+    UIBezierPath *path = [UIBezierPath new];
+    [path moveToPoint:CGPointMake(0, 0)];
+    [path addLineToPoint:CGPointMake(8, 0)];
+    [path addLineToPoint:CGPointMake(4, 5)];
+    [path closePath];
+    
+    layer.path = path.CGPath;
+    layer.lineWidth = 1.0;
+    layer.fillColor = color.CGColor;
+    
+    CGPathRef bound = CGPathCreateCopyByStrokingPath(layer.path, nil, layer.lineWidth, kCGLineCapButt, kCGLineJoinMiter, layer.miterLimit);
+    layer.bounds = CGPathGetBoundingBox(bound);
+    
+    layer.position = point;
+    
+    return layer;
+}
+
+
+#pragma mark- 相机处理
++ (BOOL) isCameraAvailable:(UIViewController *)base
+{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied)
+    {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Title"
+                                                                       message:@"This is an alert."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {
+                                                                  //响应事件
+                                                                  NSLog(@"action = %@", action);
+                                                              }];
+        UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                             handler:^(UIAlertAction * action) {
+                                                                 //响应事件
+                                                                 NSLog(@"action = %@", action);
+                                                             }];
+        
+        [alert addAction:defaultAction];
+        [alert addAction:cancelAction];
+        [base presentViewController:alert animated:YES completion:nil];
+        return NO;
+    }
+    return YES;
+}
+
++ (BOOL) isCameraAvailable{
+    return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
+}
+
++ (BOOL) isRearCameraAvailable{
+    return [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+}
+
++ (BOOL) isFrontCameraAvailable {
+    return [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront];
+}
+
++ (BOOL) doesCameraSupportTakingPhotos {
+    return [self cameraSupportsMedia:(__bridge NSString *)kUTTypeImage sourceType:UIImagePickerControllerSourceTypeCamera];
+}
+
++ (BOOL) isPhotoLibraryAvailable{
+    return [UIImagePickerController isSourceTypeAvailable:
+            UIImagePickerControllerSourceTypePhotoLibrary];
+}
++ (BOOL) canUserPickVideosFromPhotoLibrary{
+    return [self
+            cameraSupportsMedia:(__bridge NSString *)kUTTypeMovie sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+}
++ (BOOL) canUserPickPhotosFromPhotoLibrary{
+    return [self
+            cameraSupportsMedia:(__bridge NSString *)kUTTypeImage sourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+}
+
++ (BOOL) cameraSupportsMedia:(NSString *)paramMediaType sourceType:(UIImagePickerControllerSourceType)paramSourceType{
+    __block BOOL result = NO;
+    if ([paramMediaType length] == 0) {
+        return NO;
+    }
+    NSArray *availableMediaTypes = [UIImagePickerController availableMediaTypesForSourceType:paramSourceType];
+    [availableMediaTypes enumerateObjectsUsingBlock: ^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *mediaType = (NSString *)obj;
+        if ([mediaType isEqualToString:paramMediaType]){
+            result = YES;
+            *stop= YES;
+        }
+    }];
+    return result;
+}
+
++ (UIImage *)imageByScalingToMaxSize:(UIImage *)sourceImage {
+    if (sourceImage.size.width < ORIGINAL_MAX_WIDTH) return sourceImage;
+    CGFloat btWidth = 0.0f;
+    CGFloat btHeight = 0.0f;
+    if (sourceImage.size.width > sourceImage.size.height) {
+        btHeight = ORIGINAL_MAX_WIDTH;
+        btWidth = sourceImage.size.width * (ORIGINAL_MAX_WIDTH / sourceImage.size.height);
+    } else {
+        btWidth = ORIGINAL_MAX_WIDTH;
+        btHeight = sourceImage.size.height * (ORIGINAL_MAX_WIDTH / sourceImage.size.width);
+    }
+    CGSize targetSize = CGSizeMake(btWidth, btHeight);
+    return [self imageByScalingAndCroppingForSourceImage:sourceImage targetSize:targetSize];
+}
+
++ (UIImage *)imageByScalingAndCroppingForSourceImage:(UIImage *)sourceImage targetSize:(CGSize)targetSize {
+    UIImage *newImage = nil;
+    CGSize imageSize = sourceImage.size;
+    CGFloat width = imageSize.width;
+    CGFloat height = imageSize.height;
+    CGFloat targetWidth = targetSize.width;
+    CGFloat targetHeight = targetSize.height;
+    CGFloat scaleFactor = 0.0;
+    CGFloat scaledWidth = targetWidth;
+    CGFloat scaledHeight = targetHeight;
+    CGPoint thumbnailPoint = CGPointMake(0.0,0.0);
+    if (CGSizeEqualToSize(imageSize, targetSize) == NO)
+    {
+        CGFloat widthFactor = targetWidth / width;
+        CGFloat heightFactor = targetHeight / height;
+        
+        if (widthFactor > heightFactor)
+            scaleFactor = widthFactor; // scale to fit height
+        else
+            scaleFactor = heightFactor; // scale to fit width
+        scaledWidth  = width * scaleFactor;
+        scaledHeight = height * scaleFactor;
+        
+        // center the image
+        if (widthFactor > heightFactor)
+        {
+            thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+        }
+        else
+            if (widthFactor < heightFactor)
+            {
+                thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+            }
+    }
+    UIGraphicsBeginImageContext(targetSize); // this will crop
+    CGRect thumbnailRect = CGRectZero;
+    thumbnailRect.origin = thumbnailPoint;
+    thumbnailRect.size.width  = scaledWidth;
+    thumbnailRect.size.height = scaledHeight;
+    
+    [sourceImage drawInRect:thumbnailRect];
+    
+    newImage = UIGraphicsGetImageFromCurrentImageContext();
+    if(newImage == nil) NSLog(@"could not scale image");
+    
+    //pop the context to get back to the default
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+
+#pragma mark- 缓存文件大小计算及清除
++ (float)fileSizeAtPath:(NSString *)path
+{
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if([fileManager fileExistsAtPath:path]){
+        long long size = [fileManager attributesOfItemAtPath:path error:nil].fileSize;
+        // 返回值是字节 B K M
+        return size/1024.0/1024.0;
+    }
+    return 0;
+}
+
+//计算目录大小
++ (float)folderSizeAtPath:(NSString *)path
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    float folderSize = 0;
+    if ([fileManager fileExistsAtPath:path]) {
+        NSArray *childerFiles=[fileManager subpathsAtPath:path];
+        for (NSString *fileName in childerFiles) {
+            NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
+            // 计算单个文件大小
+            folderSize += [self fileSizeAtPath:absolutePath];
+        }
+        //SDWebImage框架自身计算缓存的实现
+        folderSize+=[[SDImageCache sharedImageCache] getSize]/1024.0/1024.0;
+        return folderSize;
+    }
+    return 0;
+}
+
+//清理缓存文件
+//同样也是利用NSFileManager API进行文件操作，SDWebImage框架自己实现了清理缓存操作，我们可以直接调用
++ (void)clearFile:(NSString *)path andSuccess:(FMGeneralBlock)success
+{
+    BACK(^{
+        NSFileManager *fileManager=[NSFileManager defaultManager];
+        if ([fileManager fileExistsAtPath:path]) {
+            NSArray *childerFiles=[fileManager subpathsAtPath:path];
+            for (NSString *fileName in childerFiles) {
+                //如有需要，加入条件，过滤掉不想删除的文件
+                NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
+                [fileManager removeItemAtPath:absolutePath error:nil];
+            }
+        }
+        // SDImageCache 自带缓存
+        [[SDImageCache sharedImageCache] clearDiskOnCompletion:success];
+        MAIN(success);
+    });
+}
+
++ (void)clearCache:(FMGeneralBlock)success
+{
+    [self clearFile:CachesDirectory andSuccess:success];
+}
+
+
++ (NSMutableArray*)getAggregationArrayFromArray:(NSArray*)sourcArray
+{
+    NSMutableArray* destArray = [NSMutableArray array];
+    float count = (float)sourcArray.count;
+    float count2 = ceilf(count/2);
+    [destArray removeAllObjects];
+    for (int i  = 0; i < count2; i++)
+    {
+        NSMutableArray* array = [NSMutableArray array];
+        [destArray addObject:array];
+    }
+    for (int i = 0; i < count; i++) {
+        int index = i / 2;
+        [destArray[index] addObject:sourcArray[i]];
+    }
+    return destArray;
+}
+
+#pragma mark- 获取App当前版本号
++ (NSString*)getAppCurrentVersion
+{
+    //获取bundle里面关于当前版本的信息
+    NSDictionary *infoDict = [[NSBundle mainBundle] infoDictionary];
+    NSString *nowVersion = [infoDict objectForKey:@"CFBundleShortVersionString"];
+    NSLog(@"nowVersion == %@",nowVersion);
+    return nowVersion;
+}
 
 @end

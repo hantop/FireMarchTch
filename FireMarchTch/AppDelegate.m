@@ -3,7 +3,7 @@
 //  FireMarchTch
 //
 //  Created by Joe.Pen on 2018/3/12.
-//  Copyright © 2018年 XWBank. All rights reserved.
+//  Copyright © 2018年 Joe.Pen. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -16,7 +16,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //-------------------1.设置状态栏隐藏，因为有广告------------------
+//    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    
+    //------------------2.设置URL缓存机制----------------
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
+    
+    //--------------------4.初始化定位-------------------
+    [[CCLocationManager shareLocation]getCity:^(NSString *addressString) {
+        CLLocationCoordinate2D location = CLLocationCoordinate2DMake([USER_DEFAULT doubleForKey:CCLastLatitude],[USER_DEFAULT doubleForKey:CCLastLongitude]);
+//        [CZJBaseDataInstance setCurLocation:location];
+//        [CZJBaseDataInstance setCurCityName:addressString];
+    }];
+    
     return YES;
 }
 
