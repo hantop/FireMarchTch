@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMTCodeInputTextField.h"
 
 @interface FMTUnLockViewController : UIViewController
 

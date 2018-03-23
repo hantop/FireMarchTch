@@ -19,6 +19,7 @@
     
     //-------------------1.设置状态栏隐藏，因为有广告------------------
 //    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    [USER_DEFAULT setValue:@"1234" forKey:kFMTAccessCode];
     
     //------------------2.设置URL缓存机制----------------
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
@@ -30,6 +31,16 @@
 //        [CZJBaseDataInstance setCurLocation:location];
 //        [CZJBaseDataInstance setCurCityName:addressString];
     }];
+    
+    //-----------------6.设置主页并判断是否启动广告页面--------------
+#ifdef DEBUG//离线日志打印
+    self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+#else
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+#endif
+    UIViewController *_CZJRootViewController = [FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginNavi"];
+    self.window.rootViewController = _CZJRootViewController;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -48,11 +59,15 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    UIViewController* unloackView = [FMUtils getViewControllerFromStoryboard:@"Main" andVCName:@"unlockView"];
+    [self.window.rootViewController presentViewController:unloackView animated:YES
+                                               completion:nil];
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

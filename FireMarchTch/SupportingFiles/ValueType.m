@@ -18,6 +18,8 @@ NSString *const kFMTAPILogin = @"auth/login";
 #pragma mark- 字符串定义
 //token key值定义
 NSString *const kFMTAccessToken = @"token";
+//
+NSString *const kFMTAccessCode = @"accessCode";
 //以天为间隔时间
 NSString *const kUserDefaultTimeDay = @"userdefaultTimeDay";
 //以分钟为间隔时间

@@ -15,6 +15,8 @@ extern NSString *const kFMTAPIHttpScheme;
 extern NSString *const kFMTAPIHost;
 extern NSString *const kFMTAPILogin;
 extern NSString *const kFMTAccessToken;
+extern NSString *const kFMTAccessCode;
+
 
 
 

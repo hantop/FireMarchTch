@@ -114,5 +114,5 @@
 
 #pragma mark- 获取App当前版本号
 + (NSString*)getAppCurrentVersion;
-
++ (UIImage *)imageByApplyingAlpha:(CGFloat)alpha;
 @end

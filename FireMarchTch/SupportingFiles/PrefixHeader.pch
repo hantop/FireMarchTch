@@ -15,11 +15,25 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#pragma mark- 公共
 #import "PJMacros.h"
 #import "ValueType.h"
 #import "FMModel.h"
 #import "FMUtils.h"
 #import "CCLocationManager.h"
+
+
+#pragma mark- 分类
+#import "UINavigationBar+BackgroundColor.h"
+#import "NSDictionary+NSDictonay_Unicode.h"
+#import "CALayer+UIColor.h"
+#import "UIColor+WLZ_HexRGB.h"
+#import "UIScrollView+Touch.h"
+#import "UIView+Frame.h"
+#import "UIView+RGSize.h"
+
+
+#pragma mark- Pod库
 #import <Masonry.h>
 #import <AFNetworking.h>
 #import <MBProgressHUD.h>

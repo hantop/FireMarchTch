@@ -341,7 +341,7 @@ void backLastView(id sender)
     
     //UIButton
     UIButton *leftBtn = [[ UIButton alloc ] initWithFrame : CGRectMake(- 20 , 0 , 44 , 44 )];
-    [leftBtn setBackgroundImage:[UIImage imageNamed:(hidden? @"all_arrow_backwhite" : @"prodetail_btn_backnor")] forState:UIControlStateNormal];
+    [leftBtn setBackgroundImage:[UIImage imageNamed:(hidden? @"arrow_back" : @"prodetail_btn_backnor")] forState:UIControlStateNormal];
     [leftBtn addTarget:target action:popAction forControlEvents:UIControlEventTouchUpInside];
     [leftBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal]; //将leftItem设置为自定义按钮
     
@@ -1145,6 +1145,21 @@ void backLastView(id sender)
     NSString *nowVersion = [infoDict objectForKey:@"CFBundleShortVersionString"];
     NSLog(@"nowVersion == %@",nowVersion);
     return nowVersion;
+}
+
++ (UIImage *)imageByApplyingAlpha:(CGFloat)alpha{
+    CGSize imageSize = CGSizeMake(1, 1);
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0.0f);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGRect area = CGRectMake(0, 0, imageSize.width, imageSize.height);
+    CGContextScaleCTM(ctx, 1, -1);
+    CGContextTranslateCTM(ctx, 0, -area.size.height);
+    CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
+    CGContextSetAlpha(ctx, alpha);
+    CGContextDrawImage(ctx, area, nil);
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
 }
 
 @end

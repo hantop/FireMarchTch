@@ -1,18 +1,18 @@
 //
-//  qViewController.m
+//  FMTRegistViewController.m
 //  FireMarchTch
 //
 //  Created by Joe.Pen on 22/03/2018.
 //  Copyright © 2018 Joe.Pen. All rights reserved.
 //
 
-#import "qViewController.h"
+#import "FMTRegistViewController.h"
 
-@interface qViewController ()
+@interface FMTRegistViewController ()
 
 @end
 
-@implementation qViewController
+@implementation FMTRegistViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

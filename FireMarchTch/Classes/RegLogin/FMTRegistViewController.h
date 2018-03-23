@@ -1,5 +1,5 @@
 //
-//  qViewController.h
+//  FMTRegistViewController.h
 //  FireMarchTch
 //
 //  Created by Joe.Pen on 22/03/2018.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface qViewController : UIViewController
+@interface FMTRegistViewController : UIViewController
 
 @end
