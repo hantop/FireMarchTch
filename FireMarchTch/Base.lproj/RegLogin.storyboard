@@ -50,7 +50,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FZLTXHK" family="FZLanTingHei-L-GBK" pointSize="18"/>
                                 <state key="normal" title="登录">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="kR3-qI-E4R" kind="show" id="bt1-y0-Kdy"/>

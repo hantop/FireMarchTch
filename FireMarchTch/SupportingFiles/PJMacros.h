@@ -162,9 +162,13 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define FSBlackColor33 RGB (51, 51, 51)
 #define FSGrayColor66 RGB (102, 102, 102)
 #define FSGrayColor99 RGB (153, 153, 153)
-#define FSGrayColorB9 RGB (185, 185, 185)
-#define FSGrayColorD9 RGB (217, 217, 217)
-#define FSGrayColorEE RGB (238, 238, 238)
+#define FSGrayColorA8 RGB (168, 168, 168)
+#define FSGrayColorB8 RGB (184, 184, 184)
+#define FSGrayColorC8 RGB (200, 200, 200)
+#define FSGrayColorD0 RGB (208, 208, 208)
+#define FSGrayColorD8 RGB (216, 216, 216)
+#define FSGrayColorE0 RGB (224, 224, 224)
+#define FSGrayColorE8 RGB (232, 232, 232)
 
 
 //------------------------调试-------------------------

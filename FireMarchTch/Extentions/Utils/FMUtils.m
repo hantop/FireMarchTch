@@ -340,17 +340,18 @@ void backLastView(id sender)
     class_addMethod([target class],popAction,backImp,"v@:@");
     
     //UIButton
-    UIButton *leftBtn = [[ UIButton alloc ] initWithFrame : CGRectMake(- 20 , 0 , 44 , 44 )];
-    [leftBtn setBackgroundImage:[UIImage imageNamed:(hidden? @"arrow_back" : @"prodetail_btn_backnor")] forState:UIControlStateNormal];
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 40, 40);
+    [leftBtn setBackgroundImage:[[UIImage imageNamed:(hidden? @"arrow_back" : @"prodetail_btn_backnor")] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]  forState:UIControlStateNormal];
     [leftBtn addTarget:target action:popAction forControlEvents:UIControlEventTouchUpInside];
-    [leftBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal]; //将leftItem设置为自定义按钮
+    [leftBtn setTintColor: FSGrayColorB8];
     
     //UIBarButtonItem
     UIBarButtonItem *leftItem =[[UIBarButtonItem alloc]initWithCustomView: leftBtn];
     if (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? 20 : 0))
     {
         UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-        negativeSpacer.width = -20 ;//这个数值可以根据情况自由变化
+        negativeSpacer.width = iPhone6Plus ? -15 : -30 ;//这个数值可以根据情况自由变化
         target.navigationItem.leftBarButtonItems = @[negativeSpacer, leftItem];
         
     } else
