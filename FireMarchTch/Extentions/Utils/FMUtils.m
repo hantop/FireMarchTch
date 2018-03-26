@@ -357,7 +357,10 @@ void backLastView(id sender)
     {
         target.navigationItem.leftBarButtonItem = leftItem;
     }
-    target.navigationController.interactivePopGestureRecognizer.delegate = (id)target;
+     __weak typeof (target) weakSelf = target;
+    target.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    target.navigationController.interactivePopGestureRecognizer.delegate = weakSelf;
+    
 }
 
 
