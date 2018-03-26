@@ -147,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="1036" y="-695"/>
         </scene>
-        <!--Regist View Controller-->
+        <!--输入邀请码-->
         <scene sceneID="uZA-cd-2sf">
             <objects>
-                <viewController id="YUe-O1-hSe" customClass="FMTRegistViewController" sceneMemberID="viewController">
+                <viewController id="YUe-O1-hSe" userLabel="输入邀请码" customClass="FMTRegistViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YXx-c9-MUd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

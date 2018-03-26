@@ -28,4 +28,18 @@ pod 'Masonry', '~> 1.1.0'
 pod 'MBProgressHUD', '~> 1.1.0'
 #正则表达库
 pod 'RegexKitLite', '~> 4.0'
+#扁平风格
+pod 'FlatUIKit'
+#进度条
+pod 'SVProgressHUD'
+#facebook的异步显示框架
+#pod 'Texture'
+#实现输入框提示语浮动效果
+pod 'JVFloatLabeledTextField'
+#实现左右滑动出现按钮
+pod 'SWTableViewCell', '~> 0.3.7'
+#可以替代UILabel
+pod 'TTTAttributedLabel'
+#通知角标
+pod 'HHBadgeHUD'
 end

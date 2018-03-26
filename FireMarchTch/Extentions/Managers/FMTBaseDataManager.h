@@ -10,5 +10,6 @@
 
 @interface FMTBaseDataManager : NSObject
 singleton_interface(FMTBaseDataManager)
+@property (nonatomic) NSMutableDictionary *params;
 
 @end

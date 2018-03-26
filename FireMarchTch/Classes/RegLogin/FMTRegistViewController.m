@@ -7,8 +7,10 @@
 //
 
 #import "FMTRegistViewController.h"
+#import "FMTCodeInputTextFields.h"
 
-@interface FMTRegistViewController ()
+@interface FMTRegistViewController () <FMTCodeInputTextFieldsDelegate>
+@property (strong, nonatomic) FMTCodeInputTextFields *textField;
 
 @end
 
@@ -16,7 +18,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"填写邀请码";
+    [FMUtils customizeNavigationBarForTarget:self];
+    
+    FMTCodeInputTextFieldsConfig *config = [[FMTCodeInputTextFieldsConfig alloc]initWithCodeType:FMTCodeTypeLong];
+    config.textFieldSize = (iPhone5 || iPhone4) ? CGSizeMake(40, 50) : CGSizeMake(50, 50);
+    _textField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
+    [self.view addSubview:_textField];
+    
+    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.left.equalTo(self.view).with.offset(0);
+        make.top.equalTo(self.view).with.offset(100);
+        make.height.mas_equalTo(@(100));
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +38,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)codeInputTextFieldOverWithString:(NSString *)codeStr
+{
+    
 }
-*/
 
 @end

@@ -59,7 +59,7 @@ singleton_implementation(FMNetworkMananger)
 - (void)postJSONWithUrl:(NSString *)urlStr
              parameters:(id)parameters
                 success:(void (^)(id responseObject))success
-                   fail:(void (^)(void))fail
+                   fail:(void (^)(id error))fail
 {
     NSString* path =  [self getPath:urlStr];
     [self postJSONWithNoServerAPI:path parameters:parameters success:success fail:fail];
@@ -68,7 +68,7 @@ singleton_implementation(FMNetworkMananger)
 - (void)postJSONWithNoServerAPI:(NSString *)urlStr
                      parameters:(id)parameters
                         success:(void (^)(id responseObject))success
-                           fail:(void (^)(void))fail
+                           fail:(void (^)(id error))fail
 {
     DLog(@"\nServerAPI:%@, \nParameter:%@",urlStr,[parameters description]);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -86,19 +86,22 @@ singleton_implementation(FMNetworkMananger)
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
     
-    
-    
-    [manager POST:urlStr parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        DLog();
-        if (success)
-        {
-            success(responseObject);
-        }
-        dispatch_async(dispatch_get_main_queue(), ^(){
-        });
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        DLog(@"~~~~~~~~~~~~~~~~~~~~网络失败~~~~~~~~~~~~~~~~~~~~");
-    }];
+    // 调用AF发起请求
+    [manager POST:urlStr
+       parameters:parameters
+         progress:nil
+          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+              if (success)
+                  success(responseObject);
+              
+              //回到主线程
+              dispatch_async(dispatch_get_main_queue(), ^(){
+              });
+          }
+          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+              if (fail)
+                  fail(error.userInfo);
+          }];
 }
 
 

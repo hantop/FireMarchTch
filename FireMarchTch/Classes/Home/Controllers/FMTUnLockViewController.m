@@ -7,9 +7,10 @@
 //
 
 #import "FMTUnLockViewController.h"
+#import "FMTCodeInputTextFields.h"
 
-@interface FMTUnLockViewController ()<FMTCodeInputTextFieldDelegate>
-@property (strong, nonatomic) FMTCodeInputTextField *textField;
+@interface FMTUnLockViewController ()<FMTCodeInputTextFieldsDelegate>
+@property (strong, nonatomic) FMTCodeInputTextFields *textField;
 
 @end
 
@@ -17,10 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _textField = [FMUtils getXibViewByName:@"FMTCodeInputTextField"];
-    _textField.delegate = self;
-    _textField.frame = CGRectMake(0, 200, PJ_SCREEN_WIDTH, 60);
+
+    FMTCodeInputTextFieldsConfig *config = [[FMTCodeInputTextFieldsConfig alloc] initWithCodeType:FMTCodeTypeShort];
+    _textField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
     [self.view addSubview:_textField];
+    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(@(60));
+        make.top.equalTo(self.view).with.offset(100);
+        make.right.left.equalTo(self.view).with.offset(0);
+    }];
     // Do any additional setup after loading the view.
 }
 

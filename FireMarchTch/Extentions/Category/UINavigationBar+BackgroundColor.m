@@ -35,7 +35,12 @@ static char overlayKey;
         self.overlay.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         
         [self insertSubview:self.overlay atIndex:0];
+        
+        NSArray *view3  = self.subviews;
+        DLog(@"%@",view3);
     }
+    [self sendSubviewToBack:self.overlay];
+    self.overlay.userInteractionEnabled = NO;
     self.overlay.backgroundColor = backgroundColor;
 }
 

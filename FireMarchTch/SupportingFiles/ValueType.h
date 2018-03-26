@@ -10,10 +10,19 @@
 #ifndef ValueType_h
 #define ValueType_h
 
-#pragma mark- 静态数据变量声明
+#pragma mark- 接口名称静态变量申明
 extern NSString *const kFMTAPIHttpScheme;
 extern NSString *const kFMTAPIHost;
 extern NSString *const kFMTAPILogin;
+extern NSString *const kFMTAPIRegister;
+extern NSString *const kFMTAPICheckInviteCode;
+extern NSString *const kFMTAPICheckUserFirst;
+extern NSString *const kFMTAPIForgotPWD;
+extern NSString *const kFMTAPISendSMSCode;
+
+
+
+#pragma mark-
 extern NSString *const kFMTAccessToken;
 extern NSString *const kFMTAccessCode;
 
@@ -34,7 +43,7 @@ extern NSString *const kUserDefaultRandomCode;
 typedef void (^FMBasicBlock)(void);
 typedef void (^FMButtonBlock)(UIButton* button);
 typedef void (^FMSuccessBlock)(id json);
-typedef void (^FMFailureBlock)(void);
+typedef void (^FMFailureBlock)(NSError *error);
 typedef void (^FMGeneralBlock)(void);
 
 

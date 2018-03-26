@@ -13,6 +13,11 @@
 NSString *const kFMTAPIHttpScheme = @"https";
 NSString *const kFMTAPIHost = @"https://dev.cucole.cc/";
 NSString *const kFMTAPILogin = @"auth/login";
+NSString *const kFMTAPIRegister = @"auth/register";
+NSString *const kFMTAPICheckInviteCode = @"auth/inviteCode";
+NSString *const kFMTAPICheckUserFirst = @"auth/checkUserFirst";
+NSString *const kFMTAPIForgotPWD = @"auth/forgetPassword";
+NSString *const kFMTAPISendSMSCode = @"auth/sendSmsCode";
 
 
 #pragma mark- 字符串定义

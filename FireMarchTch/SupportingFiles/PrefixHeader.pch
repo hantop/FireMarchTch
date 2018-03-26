@@ -15,12 +15,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#pragma mark- 公共
-#import "PJMacros.h"
-#import "ValueType.h"
-#import "FMModel.h"
-#import "FMUtils.h"
-#import "CCLocationManager.h"
+
 
 
 #pragma mark- 分类
@@ -33,6 +28,7 @@
 #import "UIView+RGSize.h"
 
 
+
 #pragma mark- Pod库
 #import <Masonry.h>
 #import <AFNetworking.h>
@@ -43,6 +39,16 @@
 #import <CocoaLumberjack.h>
 #import <GPUImage.h>
 #import <ZipArchive.h>
+
+#pragma mark- 公共
+#import "PJMacros.h"
+#import "ValueType.h"
+#import "FMModel.h"
+#import "FMUtils.h"
+#import "CCLocationManager.h"
+#import "FMNetworkMananger.h"
+#import "FMTBaseDataManager.h"
+
 
 #endif
 #endif /* PrefixHeader_pch */

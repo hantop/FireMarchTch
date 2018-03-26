@@ -7,8 +7,9 @@
 //
 
 #import "FMTCodeInputTextField.h"
+#import "UITextField+Delete.h"
 
-@interface FMTCodeInputTextField ()<UITextFieldDelegate>
+@interface FMTCodeInputTextField ()<UITextFieldDelegate, FMTextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *oneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *twoTextField;
 @property (weak, nonatomic) IBOutlet UITextField *thrTextField;
@@ -72,6 +73,11 @@
     
     
     return NO;
+}
+
+- (void)textFieldDidDeleteBackward:(UITextField *)textField {
+    DLog(@"%@, %ld",textField.text, textField.tag);
+    [self textFieldChanged:textField];
 }
 
 - (void)textFieldChanged:(UITextField *)textField {

@@ -19,12 +19,12 @@ singleton_interface(FMNetworkMananger)
 - (void)postJSONWithUrl:(NSString *)urlStr
              parameters:(id)parameters
                 success:(void (^)(id responseObject))success
-                   fail:(void (^)(void))fail;
+                   fail:(void (^)(id error))fail;
 
 - (void)postJSONWithNoServerAPI:(NSString *)urlStr
                      parameters:(id)parameters
                         success:(void (^)(id responseObject))success
-                           fail:(void (^)(void))fail;
+                           fail:(void (^)(id error))fail;
 
 - (void)uploadImageWithUrl:(NSString *)urlStr
                      image:(UIImage *)image

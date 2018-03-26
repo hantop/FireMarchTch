@@ -17,23 +17,25 @@
 		EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4CE2063EF2200C52324 /* FMTRegLoginHomeController.m */; };
 		EC42A4D12063F93000C52324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC42A4D02063F93000C52324 /* Assets.xcassets */; };
 		EC42A4D42064F13600C52324 /* UINavigationBar+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4D32064F13600C52324 /* UINavigationBar+BackgroundColor.m */; };
+		EC42A4D92068DC3A00C52324 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4D72068DC3900C52324 /* AppDelegate.m */; };
+		EC42A4DD2068DCC500C52324 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC42A4DB2068DCC500C52324 /* Info.plist */; };
+		EC42A4DE2068DCC500C52324 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4DC2068DCC500C52324 /* main.m */; };
+		EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4DF2068DCCC00C52324 /* ValueType.m */; };
+		EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4E02068DCCC00C52324 /* FMModel.m */; };
+		EC42A4F22068F6A000C52324 /* FMTCodeInputTextFields.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4F12068F6A000C52324 /* FMTCodeInputTextFields.m */; };
+		EC42A4F5206900E600C52324 /* UITextField+Delete.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4F4206900E600C52324 /* UITextField+Delete.m */; };
 		EC473C962056556200CD9397 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473C952056556200CD9397 /* ViewController.m */; };
 		EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF12056BDCB00CD9397 /* LaunchScreen.storyboard */; };
 		EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF32056BDCB00CD9397 /* Main.storyboard */; };
 		EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC473CF72056BE0B00CD9397 /* RegLogin.storyboard */; };
-		EC473D00205767F400CD9397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CFC205767F300CD9397 /* AppDelegate.m */; };
-		EC473D01205767F400CD9397 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC473CFD205767F400CD9397 /* Info.plist */; };
-		EC473D02205767F400CD9397 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473CFF205767F400CD9397 /* main.m */; };
 		EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = EC473D0520576BD000CD9397 /* 方正兰亭细黑_GBK.TTF */; };
 		EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D09205BD9BF00CD9397 /* FMUtils.m */; };
-		EC473D12205BE49000CD9397 /* ValueType.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D11205BE49000CD9397 /* ValueType.m */; };
 		EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D16205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m */; };
 		EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D17205BF6DB00CD9397 /* UIView+Frame.m */; };
 		EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D18205BF6DB00CD9397 /* UIView+RGSize.m */; };
 		EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1A205BF6DB00CD9397 /* UIScrollView+Touch.m */; };
 		EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1B205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m */; };
 		EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */; };
-		EC473D29205C0FA700CD9397 /* FMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D28205C0FA700CD9397 /* FMModel.m */; };
 		EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D2B205FBF5200CD9397 /* CCLocationManager.m */; };
 		EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D2E205FBFF300CD9397 /* WGS84TOGCJ02.m */; };
 		EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D312060DB9500CD9397 /* FMNetworkMananger.m */; };
@@ -59,23 +61,29 @@
 		EC42A4D02063F93000C52324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC42A4D22064F13600C52324 /* UINavigationBar+BackgroundColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+BackgroundColor.h"; sourceTree = "<group>"; };
 		EC42A4D32064F13600C52324 /* UINavigationBar+BackgroundColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+BackgroundColor.m"; sourceTree = "<group>"; };
+		EC42A4D72068DC3900C52324 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EC42A4D82068DC3A00C52324 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EC42A4DB2068DCC500C52324 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC42A4DC2068DCC500C52324 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC42A4DF2068DCCC00C52324 /* ValueType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueType.m; path = SupportingFiles/ValueType.m; sourceTree = "<group>"; };
+		EC42A4E02068DCCC00C52324 /* FMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMModel.m; path = SupportingFiles/FMModel.m; sourceTree = "<group>"; };
+		EC42A4E12068DCCC00C52324 /* PJMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PJMacros.h; path = SupportingFiles/PJMacros.h; sourceTree = "<group>"; };
+		EC42A4E22068DCCC00C52324 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = SupportingFiles/PrefixHeader.pch; sourceTree = "<group>"; };
+		EC42A4E32068DCCC00C52324 /* FMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMModel.h; path = SupportingFiles/FMModel.h; sourceTree = "<group>"; };
+		EC42A4E42068DCCD00C52324 /* ValueType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueType.h; path = SupportingFiles/ValueType.h; sourceTree = "<group>"; };
+		EC42A4F02068F6A000C52324 /* FMTCodeInputTextFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTCodeInputTextFields.h; sourceTree = "<group>"; };
+		EC42A4F12068F6A000C52324 /* FMTCodeInputTextFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTCodeInputTextFields.m; sourceTree = "<group>"; };
+		EC42A4F3206900E600C52324 /* UITextField+Delete.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Delete.h"; sourceTree = "<group>"; };
+		EC42A4F4206900E600C52324 /* UITextField+Delete.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Delete.m"; sourceTree = "<group>"; };
 		EC473C8E2056556200CD9397 /* FireMarchTch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireMarchTch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC473C942056556200CD9397 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC473C952056556200CD9397 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC473CF22056BDCB00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC473CF42056BDCB00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		EC473CF82056BE0B00CD9397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = RegLogin.storyboard; sourceTree = "<group>"; };
-		EC473CFC205767F300CD9397 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EC473CFD205767F400CD9397 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC473CFE205767F400CD9397 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		EC473CFF205767F400CD9397 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC473D0520576BD000CD9397 /* 方正兰亭细黑_GBK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正兰亭细黑_GBK.TTF"; sourceTree = "<group>"; };
 		EC473D08205BD9BF00CD9397 /* FMUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUtils.h; sourceTree = "<group>"; };
 		EC473D09205BD9BF00CD9397 /* FMUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUtils.m; sourceTree = "<group>"; };
-		EC473D0F205BE1C700CD9397 /* PJMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJMacros.h; sourceTree = "<group>"; };
-		EC473D10205BE2C400CD9397 /* ValueType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ValueType.h; sourceTree = "<group>"; };
-		EC473D11205BE49000CD9397 /* ValueType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ValueType.m; sourceTree = "<group>"; };
-		EC473D13205BEB8C00CD9397 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		EC473D15205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NSDictonay_Unicode.h"; sourceTree = "<group>"; };
 		EC473D16205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WLZ_HexRGB.m"; sourceTree = "<group>"; };
 		EC473D17205BF6DB00CD9397 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -88,8 +96,6 @@
 		EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+UIColor.m"; sourceTree = "<group>"; };
 		EC473D1F205BF6DB00CD9397 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		EC473D20205BF6DB00CD9397 /* UIScrollView+Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Touch.h"; sourceTree = "<group>"; };
-		EC473D27205C0FA700CD9397 /* FMModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMModel.h; sourceTree = "<group>"; };
-		EC473D28205C0FA700CD9397 /* FMModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMModel.m; sourceTree = "<group>"; };
 		EC473D2A205FBF5200CD9397 /* CCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationManager.h; sourceTree = "<group>"; };
 		EC473D2B205FBF5200CD9397 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
 		EC473D2D205FBFF200CD9397 /* WGS84TOGCJ02.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGS84TOGCJ02.h; sourceTree = "<group>"; };
@@ -121,6 +127,8 @@
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				EC42A4F02068F6A000C52324 /* FMTCodeInputTextFields.h */,
+				EC42A4F12068F6A000C52324 /* FMTCodeInputTextFields.m */,
 				EC42A4BE206346A800C52324 /* FMTCodeInputTextField.h */,
 				EC42A4BF206346A800C52324 /* FMTCodeInputTextField.m */,
 				EC42A4C0206346A800C52324 /* FMTCodeInputTextField.xib */,
@@ -139,6 +147,30 @@
 				EC42A4CB2063EF0700C52324 /* FMTRegistViewController.m */,
 			);
 			path = RegLogin;
+			sourceTree = "<group>";
+		};
+		EC42A4D62068DC1800C52324 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EC42A4D82068DC3A00C52324 /* AppDelegate.h */,
+				EC42A4D72068DC3900C52324 /* AppDelegate.m */,
+			);
+			name = Appdelegate;
+			sourceTree = "<group>";
+		};
+		EC42A4DA2068DC6A00C52324 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				EC42A4E32068DCCC00C52324 /* FMModel.h */,
+				EC42A4E02068DCCC00C52324 /* FMModel.m */,
+				EC42A4DB2068DCC500C52324 /* Info.plist */,
+				EC42A4DC2068DCC500C52324 /* main.m */,
+				EC42A4E12068DCCC00C52324 /* PJMacros.h */,
+				EC42A4E22068DCCC00C52324 /* PrefixHeader.pch */,
+				EC42A4E42068DCCD00C52324 /* ValueType.h */,
+				EC42A4DF2068DCCC00C52324 /* ValueType.m */,
+			);
+			name = SupportFile;
 			sourceTree = "<group>";
 		};
 		EC473C852056556200CD9397 = {
@@ -163,13 +195,12 @@
 			isa = PBXGroup;
 			children = (
 				EC42A4D02063F93000C52324 /* Assets.xcassets */,
+				EC42A4D62068DC1800C52324 /* Appdelegate */,
 				EC473CF02056BDCB00CD9397 /* Base.lproj */,
 				EC473CCB2056B9DB00CD9397 /* Classes */,
 				EC473CE02056B9DB00CD9397 /* Extentions */,
-				EC473D0C205BE0C700CD9397 /* New Group */,
 				EC473CE42056B9DC00CD9397 /* Sources */,
-				EC473D0D205BE0DC00CD9397 /* SupportingFiles */,
-				EC473CFB205767D700CD9397 /* System */,
+				EC42A4DA2068DC6A00C52324 /* SupportFile */,
 			);
 			path = FireMarchTch;
 			sourceTree = "<group>";
@@ -393,17 +424,6 @@
 			path = Base.lproj;
 			sourceTree = "<group>";
 		};
-		EC473CFB205767D700CD9397 /* System */ = {
-			isa = PBXGroup;
-			children = (
-				EC473CFE205767F400CD9397 /* AppDelegate.h */,
-				EC473CFC205767F300CD9397 /* AppDelegate.m */,
-				EC473CFD205767F400CD9397 /* Info.plist */,
-				EC473CFF205767F400CD9397 /* main.m */,
-			);
-			name = System;
-			sourceTree = "<group>";
-		};
 		EC473D0320576BD000CD9397 /* ConfigPlist */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,26 +454,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		EC473D0C205BE0C700CD9397 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
-		EC473D0D205BE0DC00CD9397 /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				EC473D13205BEB8C00CD9397 /* PrefixHeader.pch */,
-				EC473D0F205BE1C700CD9397 /* PJMacros.h */,
-				EC473D10205BE2C400CD9397 /* ValueType.h */,
-				EC473D11205BE49000CD9397 /* ValueType.m */,
-				EC473D27205C0FA700CD9397 /* FMModel.h */,
-				EC473D28205C0FA700CD9397 /* FMModel.m */,
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
 		EC473D14205BF6DB00CD9397 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +471,8 @@
 				EC473D17205BF6DB00CD9397 /* UIView+Frame.m */,
 				EC473D1D205BF6DB00CD9397 /* UIView+RGSize.h */,
 				EC473D18205BF6DB00CD9397 /* UIView+RGSize.m */,
+				EC42A4F3206900E600C52324 /* UITextField+Delete.h */,
+				EC42A4F4206900E600C52324 /* UITextField+Delete.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -514,7 +516,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = XWBank;
+				ORGANIZATIONNAME = Joe.Pen;
 				TargetAttributes = {
 					EC473C8D2056556200CD9397 = {
 						CreatedOnToolsVersion = 9.2;
@@ -547,11 +549,11 @@
 			files = (
 				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
-				EC473D01205767F400CD9397 /* Info.plist in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
 				EC42A4D12063F93000C52324 /* Assets.xcassets in Resources */,
 				EC42A4C2206346A800C52324 /* FMTCodeInputTextField.xib in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
+				EC42A4DD2068DCC500C52324 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,19 +567,31 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch-resources.sh",
+				"${PODS_ROOT}/FlatUIKit/Resources/flat-ui-icons-regular.ttf",
+				"${PODS_ROOT}/FlatUIKit/Resources/Lato-Bold.ttf",
+				"${PODS_ROOT}/FlatUIKit/Resources/Lato-Italic.ttf",
+				"${PODS_ROOT}/FlatUIKit/Resources/Lato-Light.ttf",
+				"${PODS_ROOT}/FlatUIKit/Resources/Lato-Regular.ttf",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/flat-ui-icons-regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Lato-Bold.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Lato-Italic.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Lato-Light.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Lato-Regular.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -624,28 +638,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC42A4D92068DC3A00C52324 /* AppDelegate.m in Sources */,
 				EC42A4C1206346A800C52324 /* FMTCodeInputTextField.m in Sources */,
 				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
-				EC473D12205BE49000CD9397 /* ValueType.m in Sources */,
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
-				EC473D00205767F400CD9397 /* AppDelegate.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
 				EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */,
 				EC42A4D42064F13600C52324 /* UINavigationBar+BackgroundColor.m in Sources */,
 				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
-				EC473D02205767F400CD9397 /* main.m in Sources */,
 				EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */,
 				EC42A4C92063EEED00C52324 /* FMTLoginViewController.m in Sources */,
+				EC42A4DE2068DCC500C52324 /* main.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
+				EC42A4F5206900E600C52324 /* UITextField+Delete.m in Sources */,
+				EC42A4F22068F6A000C52324 /* FMTCodeInputTextFields.m in Sources */,
 				EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */,
 				EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */,
-				EC473D29205C0FA700CD9397 /* FMModel.m in Sources */,
 				EC42A4CC2063EF0700C52324 /* FMTRegistViewController.m in Sources */,
 				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
+				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
 				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
+				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,7 +810,7 @@
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.joe.FireMarchTch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.FireMarchTch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -811,7 +827,7 @@
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.joe.FireMarchTch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.FireMarchTch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
