@@ -1,25 +1,23 @@
 //
-//  FMTLoginViewController.m
+//  FMSetPWDViewController.m
 //  FireMarchTch
 //
-//  Created by Joe.Pen on 22/03/2018.
+//  Created by Joe.Pen on 27/03/2018.
 //  Copyright © 2018 Joe.Pen. All rights reserved.
 //
 
-#import "FMTLoginViewController.h"
+#import "FMSetPWDViewController.h"
 
-@interface FMTLoginViewController ()
+@interface FMSetPWDViewController ()
 
 @end
 
-@implementation FMTLoginViewController
+@implementation FMSetPWDViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [FMUtils customizeNavigationBarForTarget:self];
+    // Do any additional setup after loading the view.
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

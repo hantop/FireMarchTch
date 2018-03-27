@@ -33,10 +33,11 @@ singleton_implementation(FMTBaseDataManager)
 }
 
 - (BOOL)showAlertView:(id)info{
+    [MBProgressHUD hideHUDForView:[[UIApplication sharedApplication] delegate].window animated:YES];
     NSDictionary* dict = [FMUtils dictionaryFromJsonString:info];
-    if (![dict[@"status"] isEqualToString:@"000000"]) {
-        [FMUtils tipWithText:[dict description] onView:nil];
-        return YES;
+    if (nil != dict && ![dict[@"code"] isEqualToString:@"000000"]) {
+        [FMUtils tipWithText:dict[@"msg"] onView:[[UIApplication sharedApplication] delegate].window];
+        return NO;
     }
     return YES;
 }
@@ -49,7 +50,6 @@ singleton_implementation(FMTBaseDataManager)
     [self generalPost:postParams success:success fail:nil url:api];
 }
 
-
 - (void)generalPost:(NSDictionary*)postParams
             success:(FMSuccessBlock)success
                fail:(FMFailureBlock)fail
@@ -60,9 +60,15 @@ singleton_implementation(FMTBaseDataManager)
         {
             success(json);
         }
+        else
+        {
+            if (fail)
+                fail(json);
+        }
     };
     
     FMFailureBlock failBlock = ^(id error){
+        [self showAlertView:error];
         if (fail)
             fail(error);
     };
@@ -71,6 +77,7 @@ singleton_implementation(FMTBaseDataManager)
     [params setValuesForKeysWithDictionary:self.params];
     [params setValuesForKeysWithDictionary:postParams];
     
+    [MBProgressHUD showHUDAddedTo:[[UIApplication sharedApplication] delegate].window animated:YES];
     [[FMNetworkMananger sharedFMNetworkMananger] postJSONWithUrl:api
                                                      parameters:params
                                                         success:successBlock

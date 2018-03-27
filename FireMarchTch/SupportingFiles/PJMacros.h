@@ -23,7 +23,7 @@
 #define IS_IOS9 (IOS_VERSION >= 9.0)
 #define _IPHONE80_ 80000
 
-#define CZJAppdelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+#define FMAppdelegate ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
 //获取当前语言
 #define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
@@ -169,6 +169,7 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define FSGrayColorD8 RGB (216, 216, 216)
 #define FSGrayColorE0 RGB (224, 224, 224)
 #define FSGrayColorE8 RGB (232, 232, 232)
+#define FSYellowColor33 RGB (250, 100, 0)
 
 
 //------------------------调试-------------------------

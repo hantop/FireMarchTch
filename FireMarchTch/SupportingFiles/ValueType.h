@@ -19,6 +19,7 @@ extern NSString *const kFMTAPICheckInviteCode;
 extern NSString *const kFMTAPICheckUserFirst;
 extern NSString *const kFMTAPIForgotPWD;
 extern NSString *const kFMTAPISendSMSCode;
+extern NSString *const kFMTAPICheckSMSCode;
 
 
 

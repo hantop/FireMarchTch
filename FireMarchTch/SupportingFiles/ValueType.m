@@ -18,6 +18,7 @@ NSString *const kFMTAPICheckInviteCode = @"auth/inviteCode";
 NSString *const kFMTAPICheckUserFirst = @"auth/checkUserFirst";
 NSString *const kFMTAPIForgotPWD = @"auth/forgetPassword";
 NSString *const kFMTAPISendSMSCode = @"auth/sendSmsCode";
+NSString *const kFMTAPICheckSMSCode = @"auth/smsCodeValid";
 
 
 #pragma mark- 字符串定义

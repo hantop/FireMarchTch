@@ -74,17 +74,19 @@ singleton_implementation(FMNetworkMananger)
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     // 设置请求格式
-    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    manager.requestSerializer.timeoutInterval = 10.f;
     
     // 设置请求Header token值
     [manager.requestSerializer setValue:[USER_DEFAULT valueForKey:kFMTAccessToken] forHTTPHeaderField:kFMTAccessToken];
-    manager.requestSerializer.timeoutInterval = 10.f;
     
     // 设置返回类型
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    
     
     // 调用AF发起请求
     [manager POST:urlStr

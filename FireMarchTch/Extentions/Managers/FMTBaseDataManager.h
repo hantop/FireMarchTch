@@ -12,4 +12,14 @@
 singleton_interface(FMTBaseDataManager)
 @property (nonatomic) NSMutableDictionary *params;
 
+
+
+- (void)generalPost:(NSDictionary*)postParams
+            success:(FMSuccessBlock)success
+                url:(NSString*)api;
+
+- (void)generalPost:(NSDictionary*)postParams
+            success:(FMSuccessBlock)success
+               fail:(FMFailureBlock)fail
+                url:(NSString*)api;
 @end

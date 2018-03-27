@@ -42,6 +42,9 @@
     self.window.rootViewController = _CZJRootViewController;
     [self.window makeKeyAndVisible];
     
+    //-------------------8.字典描述分类替换----------------
+    [NSDictionary jr_swizzleMethod:@selector(description) withMethod:@selector(my_description) error:nil];
+    
     return YES;
 }
 

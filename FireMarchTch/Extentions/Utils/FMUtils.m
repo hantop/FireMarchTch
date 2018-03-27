@@ -38,7 +38,7 @@
                                                        options:NSJSONWritingPrettyPrinted
                                                          error:&error];
     if (!jsonData) {
-        NSLog(@"Got an error:%@",error);
+        [self tipWithText:[error.userInfo description] onView:nil];
     } else {
         jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
@@ -53,18 +53,20 @@
     return DataDic;
 }
 
-+ (NSDictionary *)dictionaryFromJsonString:(NSString *)jsonString {
++ (NSDictionary *)dictionaryFromJsonString:(id)jsonString {
     if (jsonString == nil) {
         return nil;
     }
-    
+    if ([jsonString isKindOfClass:[NSDictionary class]]) {
+        return jsonString;
+    }
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *err;
+    NSError *error;
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
                                                         options:NSJSONReadingMutableContainers
-                                                          error:&err];
-    if(err) {
-        NSLog(@"json解析失败：%@",err);
+                                                          error:&error];
+    if(error) {
+        [self tipWithText:[error.userInfo description] onView:nil];
         return nil;
     }
     
@@ -342,12 +344,17 @@ void backLastView(id sender)
     //UIButton
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame = CGRectMake(0, 0, 40, 40);
-    [leftBtn setBackgroundImage:[[UIImage imageNamed:(hidden? @"arrow_back" : @"prodetail_btn_backnor")] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]  forState:UIControlStateNormal];
+    [leftBtn setImage:[[UIImage imageNamed:(hidden? @"all_arrow_back" : @"prodetail_btn_backnor")] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]  forState:UIControlStateNormal];
+//    [leftBtn setTitle:@"返回" forState:UIControlStateNormal];
+//    [leftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0,12,0,0)];
+//    [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0,-6,0,0)];
     [leftBtn addTarget:target action:popAction forControlEvents:UIControlEventTouchUpInside];
     [leftBtn setTintColor: FSGrayColorB8];
+    [leftBtn setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
     
     //UIBarButtonItem
     UIBarButtonItem *leftItem =[[UIBarButtonItem alloc]initWithCustomView: leftBtn];
+    
     if (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 ? 20 : 0))
     {
         UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
@@ -394,7 +401,7 @@ void backLastView(id sender)
     hud.margin = 15.f;
     [hud setOffset:CGPointMake(0, 20.f)];
     hud.removeFromSuperViewOnHide = YES;
-    [hud setOffset:CGPointMake(0, PJ_SCREEN_HEIGHT/4)];
+//    [hud setOffset:CGPointMake(0, PJ_SCREEN_HEIGHT/4)];
     [hud hideAnimated:YES afterDelay:1.5];
     hud.completionBlock = compeletBlock;
 }

@@ -14,7 +14,7 @@
 + (NSData *)jsonDataFormData:(id)data;
 + (NSString *)jsonStringFromData:(id)data;
 + (NSArray *)arrayFromJsonString:(id)jsonString;
-+ (NSDictionary *)dictionaryFromJsonString:(NSString *)jsonString;
++ (NSDictionary *)dictionaryFromJsonString:(id)jsonString;
 
 
 #pragma mark- 数据本地持久化
