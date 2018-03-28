@@ -13,7 +13,7 @@
 singleton_implementation(FMNetworkMananger)
 -(id)init{
     if (self = [super init]) {
-        
+        self.arrayOfTasks = [NSMutableArray array];
         return self;
     }
     
@@ -33,7 +33,7 @@ singleton_implementation(FMNetworkMananger)
                  break;
                  
              case AFNetworkReachabilityStatusNotReachable:
-                 [FMUtils tipWithText:@"请检查网络设置，确保连接网络" onView:nil];
+                 DLog(@"检查网络连接");
                  break;
                  
              case AFNetworkReachabilityStatusReachableViaWWAN:
@@ -65,31 +65,26 @@ singleton_implementation(FMNetworkMananger)
     [self postJSONWithNoServerAPI:path parameters:parameters success:success fail:fail];
 }
 
-- (void)postJSONWithNoServerAPI:(NSString *)urlStr
-                     parameters:(id)parameters
-                        success:(void (^)(id responseObject))success
-                           fail:(void (^)(id error))fail
+- (void )postJSONWithNoServerAPI:(NSString *)urlStr
+                      parameters:(id)parameters
+                         success:(void (^)(id responseObject))success
+                            fail:(void (^)(id error))fail
 {
     DLog(@"\nServerAPI:%@, \nParameter:%@",urlStr,[parameters description]);
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
     // 设置请求格式
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-    manager.requestSerializer.timeoutInterval = 10.f;
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    [self.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    self.requestSerializer.timeoutInterval = 10.f;
     
     // 设置请求Header token值
-    [manager.requestSerializer setValue:[USER_DEFAULT valueForKey:kFMTAccessToken] forHTTPHeaderField:kFMTAccessToken];
+    [self.requestSerializer setValue:[USER_DEFAULT valueForKey:kFMTAccessToken] forHTTPHeaderField:kFMTAccessToken];
     
     // 设置返回类型
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
-    
+    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
     
     // 调用AF发起请求
-    [manager POST:urlStr
+    NSURLSessionDataTask *task = [self POST:urlStr
        parameters:parameters
          progress:nil
           success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -104,6 +99,8 @@ singleton_implementation(FMNetworkMananger)
               if (fail)
                   fail(error.userInfo);
           }];
+    [self.arrayOfTasks addObject:task];
+    [self checkNetWorkStatus];
 }
 
 
@@ -113,17 +110,16 @@ singleton_implementation(FMNetworkMananger)
                    success:(void (^)(id responseObject))success
                    failure:(void (^)(void))failure {
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
     // 设置返回类型
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
     
     // 设置返回格式
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
     
     NSString* path =  [self getPath:urlStr];
     
-    [manager POST:path parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    NSURLSessionDataTask *task = [self POST:path parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         NSData *imageData = UIImageJPEGRepresentation(image, 1);
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -139,6 +135,8 @@ singleton_implementation(FMNetworkMananger)
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failure();
     }];
+    [self.arrayOfTasks addObject:task];
+    [self checkNetWorkStatus];
 }
 
 - (void)sessionDownloadWithUrl:(NSString *)urlStr success:(void (^)(NSURL *fileURL))success fail:(void (^)(void))fail
@@ -174,6 +172,7 @@ singleton_implementation(FMNetworkMananger)
         }
     }];
     [task resume];
+    [self checkNetWorkStatus];
 }
 
 

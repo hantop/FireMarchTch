@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/RegLogin/FMTRegistViewController.m"
-            timestampString = "543855937.0700541"
+            filePath = "FireMarchTch/Classes/RegLogin/FMSetPWDViewController.m"
+            timestampString = "543941309.7038749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-nextStepAction:"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "-registAction:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

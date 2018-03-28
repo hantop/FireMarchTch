@@ -32,6 +32,8 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+    NSArray *views = self.navigationController.viewControllers;
+    DLog(@"%@",views);
 }
 
 - (void)didReceiveMemoryWarning {

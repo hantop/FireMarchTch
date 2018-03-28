@@ -11,6 +11,8 @@
 @interface FMNetworkMananger : AFHTTPSessionManager
 singleton_interface(FMNetworkMananger)
 
+@property (strong, nonatomic) NSMutableArray *arrayOfTasks;
+
 /*
  * 检查网络状态
  */
@@ -21,15 +23,15 @@ singleton_interface(FMNetworkMananger)
                 success:(void (^)(id responseObject))success
                    fail:(void (^)(id error))fail;
 
-- (void)postJSONWithNoServerAPI:(NSString *)urlStr
-                     parameters:(id)parameters
-                        success:(void (^)(id responseObject))success
-                           fail:(void (^)(id error))fail;
+- (void )postJSONWithNoServerAPI:(NSString *)urlStr
+                      parameters:(id)parameters
+                         success:(void (^)(id responseObject))success
+                            fail:(void (^)(id error))fail;
 
 - (void)uploadImageWithUrl:(NSString *)urlStr
                      image:(UIImage *)image
                 parameters:(id)parameters
-                   success:(void (^)(id json))success
+                   success:(void (^)(id responseObject))success
                    failure:(void (^)(void))failure;
 
 - (void)sessionDownloadWithUrl:(NSString *)urlStr

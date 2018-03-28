@@ -147,6 +147,7 @@
     
     if (count < _buttonAry.count) {
         ((UIButton *)_buttonAry[count]).hidden = YES;
+        ((UITextField*)_fieldsAry[count]).layer.borderColor = _configuration.tintColor.CGColor;
     }
     
     if (count == _fieldsAry.count && [self.delegate respondsToSelector:@selector(codeInputTextFieldOverWithString:)]) {
