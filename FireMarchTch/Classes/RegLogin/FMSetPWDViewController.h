@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FMSetPWDViewController : UIViewController
+@interface FMSetPWDViewController : FMViewController
 @property (strong, nonatomic) NSMutableDictionary *basicInfo;
 @end

@@ -22,8 +22,8 @@
     [USER_DEFAULT setValue:@"1234" forKey:kFMTAccessCode];
     
     //------------------2.设置URL缓存机制----------------
-    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
-    [NSURLCache setSharedURLCache:URLCache];
+//    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
+//    [NSURLCache setSharedURLCache:URLCache];
     
     //--------------------4.初始化定位-------------------
     [[CCLocationManager shareLocation]getCity:^(NSString *addressString) {
@@ -38,12 +38,16 @@
 #else
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 #endif
-    UIViewController *_CZJRootViewController = [FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginNavi"];
-    self.window.rootViewController = _CZJRootViewController;
+
+    UIViewController *rootViewController = [FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginNavi"];
+    self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
     
     //-------------------8.字典描述分类替换----------------
     [NSDictionary jr_swizzleMethod:@selector(description) withMethod:@selector(my_description) error:nil];
+    
+    //--------------------9.开启帧数显示------------------
+//    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
     
     return YES;
 }

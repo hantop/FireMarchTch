@@ -40,12 +40,14 @@
 #import <GPUImage.h>
 #import <ZipArchive.h>
 #import <JRSwizzle.h>
+#import <KMCGeigerCounter.h>
 
 #pragma mark- 公共
 #import "PJMacros.h"
 #import "ValueType.h"
 #import "FMModel.h"
 #import "FMUtils.h"
+#import "FMDeviceInfo.h"
 #import "CCLocationManager.h"
 #import "FMNetworkMananger.h"
 #import "FMTBaseDataManager.h"

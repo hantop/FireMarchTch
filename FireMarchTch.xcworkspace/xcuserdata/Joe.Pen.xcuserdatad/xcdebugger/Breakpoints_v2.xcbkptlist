@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Classes/RegLogin/FMSetPWDViewController.m"
-            timestampString = "543941309.7038749"
+            timestampString = "544449941.7723089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-registAction:"
             landmarkType = "7">
          </BreakpointContent>

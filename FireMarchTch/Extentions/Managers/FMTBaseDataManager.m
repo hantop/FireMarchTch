@@ -10,8 +10,6 @@
 
 @interface FMTBaseDataManager ()
 
-@property (strong, nonatomic) AFHTTPSessionManager *manager;
-
 @end
 
 @implementation FMTBaseDataManager

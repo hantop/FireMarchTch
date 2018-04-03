@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		682F0A19C9F947C5D768DFE0 /* libPods-FireMarchTch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */; };
+		EC38CAFA20722EDB00C09DC7 /* FMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC38CAF920722EDB00C09DC7 /* FMViewController.m */; };
+		EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC38CAFB2072507800C09DC7 /* CZJAlertView.m */; };
+		EC38CAFF2072507900C09DC7 /* CZJAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC38CAFC2072507900C09DC7 /* CZJAlertView.xib */; };
+		EC38CB02207250B200C09DC7 /* FMAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC38CB01207250B100C09DC7 /* FMAlertViewController.m */; };
+		EC38CB0520732C8A00C09DC7 /* FMDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EC38CB0420732C8A00C09DC7 /* FMDeviceInfo.m */; };
+		EC38CB08207379FE00C09DC7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EC38CB07207379FE00C09DC7 /* Reachability.m */; };
 		EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */; };
 		EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4B72062131500C52324 /* FMTUnLockViewController.m */; };
 		EC42A4C1206346A800C52324 /* FMTCodeInputTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = EC42A4BF206346A800C52324 /* FMTCodeInputTextField.m */; };
@@ -46,6 +52,17 @@
 		25F7AE81BF2D94110752DD1A /* libPods-FireMarchTch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FireMarchTch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26A680B511CED9E372C15761 /* Pods-FireMarchTch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMarchTch.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch.release.xcconfig"; sourceTree = "<group>"; };
 		C70B9865407A3A915AD13095 /* Pods-FireMarchTch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireMarchTch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireMarchTch/Pods-FireMarchTch.debug.xcconfig"; sourceTree = "<group>"; };
+		EC38CAF820722EDB00C09DC7 /* FMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMViewController.h; sourceTree = "<group>"; };
+		EC38CAF920722EDB00C09DC7 /* FMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMViewController.m; sourceTree = "<group>"; };
+		EC38CAFB2072507800C09DC7 /* CZJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZJAlertView.m; sourceTree = "<group>"; };
+		EC38CAFC2072507900C09DC7 /* CZJAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZJAlertView.xib; sourceTree = "<group>"; };
+		EC38CAFD2072507900C09DC7 /* CZJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZJAlertView.h; sourceTree = "<group>"; };
+		EC38CB00207250B100C09DC7 /* FMAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMAlertViewController.h; sourceTree = "<group>"; };
+		EC38CB01207250B100C09DC7 /* FMAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMAlertViewController.m; sourceTree = "<group>"; };
+		EC38CB0320732C8A00C09DC7 /* FMDeviceInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDeviceInfo.h; sourceTree = "<group>"; };
+		EC38CB0420732C8A00C09DC7 /* FMDeviceInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDeviceInfo.m; sourceTree = "<group>"; };
+		EC38CB06207379FE00C09DC7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		EC38CB07207379FE00C09DC7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		EC42A4AD20614F4700C52324 /* FMTBaseDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTBaseDataManager.h; sourceTree = "<group>"; };
 		EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTBaseDataManager.m; sourceTree = "<group>"; };
 		EC42A4B62062131500C52324 /* FMTUnLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTUnLockViewController.h; sourceTree = "<group>"; };
@@ -127,9 +144,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC38CAF720722EBF00C09DC7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EC38CAF820722EDB00C09DC7 /* FMViewController.h */,
+				EC38CAF920722EDB00C09DC7 /* FMViewController.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				EC38CB00207250B100C09DC7 /* FMAlertViewController.h */,
+				EC38CB01207250B100C09DC7 /* FMAlertViewController.m */,
+				EC38CAFD2072507900C09DC7 /* CZJAlertView.h */,
+				EC38CAFB2072507800C09DC7 /* CZJAlertView.m */,
+				EC38CAFC2072507900C09DC7 /* CZJAlertView.xib */,
 				EC42A4F02068F6A000C52324 /* FMTCodeInputTextFields.h */,
 				EC42A4F12068F6A000C52324 /* FMTCodeInputTextFields.m */,
 				EC42A4BE206346A800C52324 /* FMTCodeInputTextField.h */,
@@ -385,6 +416,7 @@
 		EC473CE02056B9DB00CD9397 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				EC38CAF720722EBF00C09DC7 /* Common */,
 				EC473D14205BF6DB00CD9397 /* Category */,
 				EC42A4B02061EFB500C52324 /* Coponents */,
 				EC473CE12056B9DB00CD9397 /* Libraries */,
@@ -404,8 +436,12 @@
 		EC473CE22056B9DB00CD9397 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EC38CB06207379FE00C09DC7 /* Reachability.h */,
+				EC38CB07207379FE00C09DC7 /* Reachability.m */,
 				EC473D08205BD9BF00CD9397 /* FMUtils.h */,
 				EC473D09205BD9BF00CD9397 /* FMUtils.m */,
+				EC38CB0320732C8A00C09DC7 /* FMDeviceInfo.h */,
+				EC38CB0420732C8A00C09DC7 /* FMDeviceInfo.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -555,6 +591,7 @@
 				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
+				EC38CAFF2072507900C09DC7 /* CZJAlertView.xib in Resources */,
 				EC42A4D12063F93000C52324 /* Assets.xcassets in Resources */,
 				EC42A4C2206346A800C52324 /* FMTCodeInputTextField.xib in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
@@ -582,6 +619,7 @@
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_ROOT}/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounterTick.aiff",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -596,6 +634,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMCGeigerCounterTick.aiff",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,14 +686,18 @@
 				EC42A4C1206346A800C52324 /* FMTCodeInputTextField.m in Sources */,
 				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
+				EC38CB08207379FE00C09DC7 /* Reachability.m in Sources */,
 				ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
+				EC38CB02207250B200C09DC7 /* FMAlertViewController.m in Sources */,
 				EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */,
 				EC42A4D42064F13600C52324 /* UINavigationBar+BackgroundColor.m in Sources */,
 				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
 				EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */,
 				EC42A4C92063EEED00C52324 /* FMTLoginViewController.m in Sources */,
+				EC38CAFA20722EDB00C09DC7 /* FMViewController.m in Sources */,
 				EC42A4DE2068DCC500C52324 /* main.m in Sources */,
+				EC38CB0520732C8A00C09DC7 /* FMDeviceInfo.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
 				EC42A4F5206900E600C52324 /* UITextField+Delete.m in Sources */,
 				EC42A4F22068F6A000C52324 /* FMTCodeInputTextFields.m in Sources */,
@@ -667,6 +710,7 @@
 				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
 				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
+				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
 				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -811,7 +855,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NB59393AH;
+				DEVELOPMENT_TEAM = TL4R9BXB5H;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FireMarchTch/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -828,7 +872,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NB59393AH;
+				DEVELOPMENT_TEAM = TL4R9BXB5H;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FireMarchTch/SupportingFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

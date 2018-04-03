@@ -14,6 +14,7 @@
 
 
 
+
 @interface FMUtils ()<UIAlertViewDelegate>
 
 @end
@@ -538,67 +539,67 @@ void backLastView(id sender)
  * @baseViewController  当前视图控制器，承载弹窗视图控制器
  * @myViewController    弹窗视图控制器
  */
-//+ (void)showMyWindowOnTarget:(UIViewController*)baseViewController withPopVc:(UIViewController*)popViewController
-//{
-//    //初始化一个自定义弹窗视图
-//    UIWindow *myWindow = [[UIWindow alloc] initWithFrame:baseViewController.popWindowInitialRect];
-//    baseViewController.window = myWindow;
-//    myWindow.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:baseViewController.windowAlpha];
-//    myWindow.windowLevel = UIWindowLevelNormal;
-//    myWindow.hidden = NO;
-//    myWindow.rootViewController = popViewController;
-//    [myWindow makeKeyAndVisible];
-//
-//    //动态给当前基础视图控制器添加点击回调函数（隐藏弹窗视图）
-//    SEL dismissPopview = sel_registerName("tapToHidePopViewAction:");
-//    class_addMethod([baseViewController class],dismissPopview,(IMP)tapToHidePopViewAction,"v@:");
-//
-//    //当前视图控制器的upView上添加手势监测
-//    //初始化upView
-//    baseViewController.upView = [[UIView alloc] initWithFrame:baseViewController.view.bounds];
-//    baseViewController.upView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
-//    baseViewController.upView.alpha = 0.0;
-//    //添加背景层点击隐藏手势、向右侧滑隐藏手势、向下滑隐藏手势和弹出页向右侧滑隐藏手势
-//    [baseViewController.upView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview]];
-//    [baseViewController.upView addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview]];
-//    [popViewController.view addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview]];
-//    UISwipeGestureRecognizer* downGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview];
-//    [downGesture setDirection:UISwipeGestureRecognizerDirectionDown];
-//    [baseViewController.upView addGestureRecognizer:downGesture];
-//    //将upView添加到当前View上
-//    [baseViewController.view addSubview:baseViewController.upView];
-//
-//
-//    //动画出现弹窗视图
-//    __weak typeof(baseViewController) weakSelf = baseViewController;
-//    [UIView animateWithDuration:0.5 animations:^{
-//        weakSelf.windowAlpha = 1.0f;
-//        weakSelf.window.frame =  weakSelf.popWindowDestineRect;
-//        weakSelf.upView.alpha = 1.0;
-//    } completion:nil];
-//    baseViewController.navigationController.interactivePopGestureRecognizer.enabled = NO;
-//}
++ (void)showMyWindowOnTarget:(FMViewController*)baseViewController withPopVc:(UIViewController*)popViewController
+{
+    //初始化一个自定义弹窗视图
+    UIWindow *myWindow = [[UIWindow alloc] initWithFrame:baseViewController.popWindowInitialRect];
+    baseViewController.window = myWindow;
+    myWindow.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:baseViewController.windowAlpha];
+    myWindow.windowLevel = UIWindowLevelNormal;
+    myWindow.hidden = NO;
+    myWindow.rootViewController = popViewController;
+    [myWindow makeKeyAndVisible];
 
-//void tapToHidePopViewAction(id sender, SEL _cmd)
-//{
-//    //此为当前视图控制器，这是upView上手势的回调函数，已动态添加到当前视图控制器
-//
-//    UIViewController* baseViewController = ((UIViewController*)sender);
-//    __weak typeof(baseViewController) weakSelf = baseViewController;
-//    [UIView animateWithDuration:0.5 animations:^{
-//        weakSelf.window.frame = weakSelf.popWindowInitialRect;
-//        weakSelf.windowAlpha = 1.0f;
-//        weakSelf.upView.alpha = 0.0;
-//    } completion:^(BOOL finished) {
-//        if (finished) {
-//            [weakSelf.upView removeFromSuperview];
-//            [weakSelf.window resignKeyWindow];
-//            weakSelf.window  = nil;
-//            weakSelf.upView = nil;
-//            weakSelf.navigationController.interactivePopGestureRecognizer.enabled = YES;
-//        }
-//    }];
-//}
+    //动态给当前基础视图控制器添加点击回调函数（隐藏弹窗视图）
+    SEL dismissPopview = sel_registerName("tapToHidePopViewAction:");
+    class_addMethod([baseViewController class],dismissPopview,(IMP)tapToHidePopViewAction,"v@:");
+
+    //当前视图控制器的upView上添加手势监测
+    //初始化upView
+    baseViewController.upView = [[UIView alloc] initWithFrame:baseViewController.view.bounds];
+    baseViewController.upView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    baseViewController.upView.alpha = 0.0;
+    //添加背景层点击隐藏手势、向右侧滑隐藏手势、向下滑隐藏手势和弹出页向右侧滑隐藏手势
+    [baseViewController.upView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview]];
+    [baseViewController.upView addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview]];
+    [popViewController.view addGestureRecognizer:[[UISwipeGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview]];
+    UISwipeGestureRecognizer* downGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:baseViewController action:dismissPopview];
+    [downGesture setDirection:UISwipeGestureRecognizerDirectionDown];
+    [baseViewController.upView addGestureRecognizer:downGesture];
+    //将upView添加到当前View上
+    [baseViewController.view addSubview:baseViewController.upView];
+
+
+    //动画出现弹窗视图
+    __weak typeof(baseViewController) weakSelf = baseViewController;
+    [UIView animateWithDuration:0.5 animations:^{
+        weakSelf.windowAlpha = 1.0f;
+        weakSelf.window.frame =  weakSelf.popWindowDestineRect;
+        weakSelf.upView.alpha = 1.0;
+    } completion:nil];
+    baseViewController.navigationController.interactivePopGestureRecognizer.enabled = NO;
+}
+
+void tapToHidePopViewAction(id sender, SEL _cmd)
+{
+    //此为当前视图控制器，这是upView上手势的回调函数，已动态添加到当前视图控制器
+
+    FMViewController* baseViewController = ((FMViewController*)sender);
+    __weak typeof(baseViewController) weakSelf = baseViewController;
+    [UIView animateWithDuration:0.5 animations:^{
+        weakSelf.window.frame = weakSelf.popWindowInitialRect;
+        weakSelf.windowAlpha = 1.0f;
+        weakSelf.upView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [weakSelf.upView removeFromSuperview];
+            [weakSelf.window resignKeyWindow];
+            weakSelf.window  = nil;
+            weakSelf.upView = nil;
+            weakSelf.navigationController.interactivePopGestureRecognizer.enabled = YES;
+        }
+    }];
+}
 
 
 //+ (void)showSearchView:(CZJViewController*)target andNaviBar:(CZJNaviagtionBarView*)naviBar

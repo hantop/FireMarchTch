@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMViewController.h"
 
 @interface FMUtils : NSObject
 
@@ -65,6 +66,7 @@
 
 
 #pragma mark- 控制器处理
++ (void)showMyWindowOnTarget:(FMViewController*)baseViewController withPopVc:(UIViewController*)popViewController;
 + (UIViewController*)getViewControllerFromStoryboard:(NSString*)storyboardName andVCName:(NSString*)vcName;
 + (UIViewController*)getViewControllerInUINavigator:(UINavigationController*)navi withClass:(Class)_class;
 + (id)getXibViewByName:(NSString*)xibName;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FMTRegistViewController : UIViewController
+@interface FMTRegistViewController : FMViewController
 
 @end

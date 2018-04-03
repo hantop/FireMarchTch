@@ -42,4 +42,6 @@ pod 'SWTableViewCell', '~> 0.3.7'
 pod 'TTTAttributedLabel'
 #通知角标
 pod 'HHBadgeHUD'
+#帧率显示
+pod 'KMCGeigerCounter', '~> 0.2.2'
 end

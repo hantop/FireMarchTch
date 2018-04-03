@@ -43,6 +43,11 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *numStr = [NSString stringWithFormat:@"%@%@",textField.text, string];
+    if (numStr.length > 20){
+        [FMUtils tipWithText:@"密码长度不大于20位" onView:self.view];
+        return NO;
+    }
     [self updateRegistButton];
     return YES;
 }
@@ -80,10 +85,4 @@
         
     } url:kFMTAPIRegister];
 }
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.view endEditing:YES];
-}
-
 @end

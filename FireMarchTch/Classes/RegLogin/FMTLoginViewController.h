@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FMTLoginViewController : UIViewController
+@interface FMTLoginViewController : FMViewController
 
 @end
