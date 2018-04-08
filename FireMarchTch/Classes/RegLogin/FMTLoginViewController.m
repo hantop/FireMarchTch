@@ -7,6 +7,7 @@
 //
 
 #import "FMTLoginViewController.h"
+#import "FMSetMyInfoViewController.h"
 
 @interface FMTLoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -81,9 +82,12 @@
                              @"password" : _pwdTextField.text,
                              @"deviceid" : @""
                              };
-    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
-        
-    } url:kFMTAPILogin];
+    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+    [self.navigationController pushViewController:setVC animated:YES];
+    
+//    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
+//
+//    } url:kFMTAPILogin];
 }
 
 

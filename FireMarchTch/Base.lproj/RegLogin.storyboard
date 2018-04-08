@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3KT-An-CUs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="241" y="-212"/>
+            <point key="canvasLocation" x="240.80000000000001" y="-212.74362818590706"/>
         </scene>
         <!--帐号登录-->
         <scene sceneID="RJq-DJ-u2f">
@@ -157,7 +157,7 @@
                                     <constraint firstAttribute="height" constant="40" id="OPT-Zz-u6e"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无效的手机号码" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wL-xf-6ja">
@@ -184,7 +184,7 @@
                                     <constraint firstAttribute="height" constant="40" id="DUF-rn-kRg"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH3-Fu-Tef">
@@ -294,14 +294,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xun-Lu-j7a">
                                 <rect key="frame" x="0.0" y="180" width="375" height="487"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号（最大11位）" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-pH-b23" userLabel="phoneNumText">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-pH-b23" userLabel="phoneNumText">
                                         <rect key="frame" x="20" y="0.0" width="335" height="40"/>
                                         <color key="tintColor" red="1" green="0.3921568627" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="qPO-Ot-8oB"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xu-pB-SB0">
@@ -334,14 +334,14 @@
                                         <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入验证码（最长6位）" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pPK-Fr-8hl" userLabel="codeText">
-                                        <rect key="frame" x="20" y="60" width="235" height="40"/>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pPK-Fr-8hl" userLabel="codeText">
+                                        <rect key="frame" x="20" y="65" width="235" height="35"/>
                                         <color key="tintColor" red="1" green="0.3921568627" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="JtZ-U1-t23"/>
+                                            <constraint firstAttribute="height" constant="35" id="JtZ-U1-t23"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPi-cm-SDJ">
@@ -351,14 +351,14 @@
                                             <constraint firstAttribute="height" constant="0.5" id="pUs-C7-baB"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入QQ号（最长13位，工作号）" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T0F-IW-Wnw" userLabel="QQText">
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入QQ号" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T0F-IW-Wnw" userLabel="QQText">
                                         <rect key="frame" x="20" y="120" width="335" height="40"/>
                                         <color key="tintColor" red="1" green="0.3921568627" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="S8H-mz-isF"/>
                                         </constraints>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtE-EO-1Sp">
@@ -399,7 +399,7 @@
                                     <constraint firstItem="VPi-cm-SDJ" firstAttribute="leading" secondItem="Xun-Lu-j7a" secondAttribute="leading" constant="20" id="4ef-Ja-hUY"/>
                                     <constraint firstItem="7Xu-pB-SB0" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" id="590-0g-liL"/>
                                     <constraint firstItem="s93-aI-Cme" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" constant="15" id="A4a-vu-HGT"/>
-                                    <constraint firstItem="pPK-Fr-8hl" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" constant="20" id="Anr-kX-co8"/>
+                                    <constraint firstItem="pPK-Fr-8hl" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" constant="25" id="Anr-kX-co8"/>
                                     <constraint firstItem="bi8-Rg-geb" firstAttribute="centerY" secondItem="s93-aI-Cme" secondAttribute="centerY" id="BKy-bn-Snh"/>
                                     <constraint firstItem="pPK-Fr-8hl" firstAttribute="trailing" secondItem="s93-aI-Cme" secondAttribute="leading" constant="-10" id="C6X-0n-OAK"/>
                                     <constraint firstItem="OtE-EO-1Sp" firstAttribute="top" secondItem="T0F-IW-Wnw" secondAttribute="bottom" id="DqO-Iw-ydZ"/>
@@ -480,7 +480,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="包含数字和字母组合，区分大小写，最少8位,最长20位" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz5-Un-CZT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="包含数字和字母组合，区分大小写，最少8位,最长20位" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz5-Un-CZT">
                                         <rect key="frame" x="20" y="118" width="335" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="mRp-qs-e3b"/>
@@ -510,7 +510,7 @@
                                     <constraint firstAttribute="height" constant="40" id="8J2-Wx-MQ6"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqd-vh-udQ">
@@ -527,7 +527,7 @@
                                     <constraint firstAttribute="height" constant="40" id="zhD-Zg-dZo"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hxm-oM-j1Y">

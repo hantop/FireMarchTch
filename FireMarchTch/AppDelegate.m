@@ -10,10 +10,33 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) __block UIView* notifyView;
 @end
 
 @implementation AppDelegate
 
+- (void)initNotifyView
+{
+    _notifyView = [[UIView alloc]initWithFrame:CGRectMake(0, -64, PJ_SCREEN_WIDTH, 64)];
+    _notifyView.backgroundColor = FSYellow;
+    _notifyView.alpha = 0.9;
+    UISwipeGestureRecognizer* downGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipToHideNotifyView:)];
+    [downGesture setDirection:UISwipeGestureRecognizerDirectionUp];
+    [_notifyView addGestureRecognizer:downGesture];
+    UILabel* notifyLabel = [[UILabel alloc]initWithFrame:CGRectMake(15, 27, PJ_SCREEN_WIDTH - 30, 35)];
+    notifyLabel.tag = 1001;
+    notifyLabel.textColor = WHITECOLOR;
+    notifyLabel.textAlignment = NSTextAlignmentLeft;
+    notifyLabel.font = SYSTEMFONT(15);
+    notifyLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    notifyLabel.numberOfLines = 2;
+    [_notifyView addSubview:notifyLabel];
+    [notifyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(_notifyView).offset(0);
+        make.centerY.equalTo(_notifyView).offset(10);
+    }];
+    [self.window addSubview:_notifyView];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -48,6 +71,9 @@
     
     //--------------------9.开启帧数显示------------------
 //    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
+    
+    //-------------------12.接收远程通知本地显示---------------
+    [self initNotifyView];
     
     return YES;
 }
@@ -84,4 +110,35 @@
 }
 
 
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    ((UILabel*)VIEWWITHTAG(_notifyView, 1001)).text = notification.alertBody;
+    [self showNotifyView];
+}
+
+#pragma mark- LocalNotification
+//显示通知条
+- (void)showNotifyView
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        _notifyView.frame = CGRectMake(0, 0, PJ_SCREEN_WIDTH, 64);
+    } completion:^(BOOL finished) {
+        if (finished)
+        {
+            [self performSelector:@selector(hideNotifyView) withObject:nil afterDelay:1];
+        }
+    }];
+}
+
+- (void)swipToHideNotifyView:(UIGestureRecognizer*)gestture
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideNotifyView) object:nil];
+    [self hideNotifyView];
+}
+
+- (void)hideNotifyView
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        _notifyView.frame = CGRectMake(0, -64, PJ_SCREEN_WIDTH, 64);
+    }];
+}
 @end

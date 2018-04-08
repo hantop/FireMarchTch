@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FMTUnLockViewController : UIViewController
+@interface FMTUnLockViewController : FMViewController
 
 @end

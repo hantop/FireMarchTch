@@ -33,6 +33,20 @@ singleton_implementation(FMNetworkMananger)
                  break;
                  
              case AFNetworkReachabilityStatusNotReachable:
+             {
+                 UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                 if (localNotification == nil) {
+                     return;
+                 }
+                 //设置本地通知的时区
+                 localNotification.timeZone = [NSTimeZone defaultTimeZone];
+                 //设置通知的内容
+                 localNotification.alertBody = @"检查网络连接";
+                 //设置通知的相关信息，这个很重要，可以添加一些标记性内容，方便以后区分和获取通知的信息
+                 localNotification.userInfo = @{@"alertType" : @"检查网络连接"};
+                 //立即触发一个通知
+                 [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+             }
                  DLog(@"检查网络连接");
                  break;
                  
