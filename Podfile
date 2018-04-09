@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'FireMarchTch' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -7,7 +7,9 @@ target 'FireMarchTch' do
 
   # Pods for FireMarchTch
 #网络库
-pod 'AFNetworking', '~>3.2.0'
+pod 'AFNetworking', '~>3.1.0'
+#图片上传下载库
+pod 'PPNetworkHelper', '~> 0.8.0'
 #模型转换库
 pod 'MJExtension', '~> 3.0.13'
 #图像处理库
@@ -44,4 +46,8 @@ pod 'TTTAttributedLabel'
 pod 'HHBadgeHUD'
 #帧率显示
 pod 'KMCGeigerCounter', '~> 0.2.2'
+#获取相册
+pod 'ZLPhotoBrowser', '~> 2.6.4'
+#图片裁剪
+pod 'VPImageCropper', '~> 0.0.4'
 end

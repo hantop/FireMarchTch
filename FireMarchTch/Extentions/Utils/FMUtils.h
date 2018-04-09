@@ -66,6 +66,8 @@
 
 
 #pragma mark- 控制器处理
++ (UIViewController *)getCurrentVC;
++ (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC;
 + (void)showMyWindowOnTarget:(FMViewController*)baseViewController withPopVc:(UIViewController*)popViewController;
 + (UIViewController*)getViewControllerFromStoryboard:(NSString*)storyboardName andVCName:(NSString*)vcName;
 + (UIViewController*)getViewControllerInUINavigator:(UINavigationController*)navi withClass:(Class)_class;
@@ -104,6 +106,18 @@
 + (BOOL)cameraSupportsMedia:(NSString *)paramMediaType sourceType:(UIImagePickerControllerSourceType)paramSourceType;
 + (UIImage *)imageByScalingToMaxSize:(UIImage *)sourceImage;
 + (UIImage *)imageByScalingAndCroppingForSourceImage:(UIImage *)sourceImage targetSize:(CGSize)targetSize;
++ (CGRect)viewFramFromDynamic:(CZJMargin)margin size:(CGSize)viewSize index:(int)index divide:(int)divide;
++ (CGRect)viewFrameFromDynamic:(CZJMargin)margin
+                          size:(CGSize)viewSize
+                         index:(int)index
+                        divide:(int)divide
+                      subWidth:(int)width;
++ (CGRect)viewFrameFromDynamic:(CZJMargin)margin
+                         width:(int)cellWidth
+                          size:(CGSize)viewSize
+                         index:(int)index
+                        divide:(int)divide
+                      subWidth:(int)width;
 
 
 #pragma mark- 缓存文件大小计算及清除

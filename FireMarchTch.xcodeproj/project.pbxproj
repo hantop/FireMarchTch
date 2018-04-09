@@ -49,6 +49,15 @@
 		EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D2E205FBFF300CD9397 /* WGS84TOGCJ02.m */; };
 		EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D312060DB9500CD9397 /* FMNetworkMananger.m */; };
 		ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */; };
+		ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */; };
+		ECDCE67B207B0D07009BB554 /* FMTUpImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */; };
+		ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE67C207B5DEF009BB554 /* FSDeletableImageView.m */; };
+		ECDCE682207B6104009BB554 /* CPAddEvaluationPhotoVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE67F207B6103009BB554 /* CPAddEvaluationPhotoVCell.m */; };
+		ECDCE683207B6104009BB554 /* CPAddEvaluationPhotoVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE680207B6103009BB554 /* CPAddEvaluationPhotoVCell.xib */; };
+		ECDCE686207B6ACE009BB554 /* PBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE685207B6ACE009BB554 /* PBaseTableViewCell.m */; };
+		ECDCE689207B9C8C009BB554 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE688207B9C8C009BB554 /* UIView+SDAutoLayout.m */; };
+		ECDCE68C207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE68A207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE693207BABD7009BB554 /* FMImageUploadView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +139,22 @@
 		EC473D312060DB9500CD9397 /* FMNetworkMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNetworkMananger.m; sourceTree = "<group>"; };
 		ECA70B86206A935B003E2F62 /* FMSetPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMSetPWDViewController.h; sourceTree = "<group>"; };
 		ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMSetPWDViewController.m; sourceTree = "<group>"; };
+		ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTUpImageViewController.h; sourceTree = "<group>"; };
+		ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTUpImageViewController.m; sourceTree = "<group>"; };
+		ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTUpImageViewController.xib; sourceTree = "<group>"; };
+		ECDCE67C207B5DEF009BB554 /* FSDeletableImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSDeletableImageView.m; sourceTree = "<group>"; };
+		ECDCE67D207B5DF0009BB554 /* FSDeletableImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSDeletableImageView.h; sourceTree = "<group>"; };
+		ECDCE67F207B6103009BB554 /* CPAddEvaluationPhotoVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAddEvaluationPhotoVCell.m; sourceTree = "<group>"; };
+		ECDCE680207B6103009BB554 /* CPAddEvaluationPhotoVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPAddEvaluationPhotoVCell.xib; sourceTree = "<group>"; };
+		ECDCE681207B6103009BB554 /* CPAddEvaluationPhotoVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAddEvaluationPhotoVCell.h; sourceTree = "<group>"; };
+		ECDCE684207B6ACE009BB554 /* PBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBaseTableViewCell.h; sourceTree = "<group>"; };
+		ECDCE685207B6ACE009BB554 /* PBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBaseTableViewCell.m; sourceTree = "<group>"; };
+		ECDCE687207B9C8C009BB554 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		ECDCE688207B9C8C009BB554 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		ECDCE68A207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		ECDCE68B207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		ECDCE692207BABD7009BB554 /* FMImageUploadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMImageUploadView.h; sourceTree = "<group>"; };
+		ECDCE693207BABD7009BB554 /* FMImageUploadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMImageUploadView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,18 +189,27 @@
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
-				EC38CB0E2074A7E500C09DC7 /* LewPickerController.h */,
-				EC38CB0F2074A7E500C09DC7 /* LewPickerController.m */,
-				EC38CB00207250B100C09DC7 /* FMAlertViewController.h */,
-				EC38CB01207250B100C09DC7 /* FMAlertViewController.m */,
+				ECDCE684207B6ACE009BB554 /* PBaseTableViewCell.h */,
+				ECDCE685207B6ACE009BB554 /* PBaseTableViewCell.m */,
+				ECDCE681207B6103009BB554 /* CPAddEvaluationPhotoVCell.h */,
+				ECDCE67F207B6103009BB554 /* CPAddEvaluationPhotoVCell.m */,
+				ECDCE680207B6103009BB554 /* CPAddEvaluationPhotoVCell.xib */,
 				EC38CAFD2072507900C09DC7 /* CZJAlertView.h */,
 				EC38CAFB2072507800C09DC7 /* CZJAlertView.m */,
 				EC38CAFC2072507900C09DC7 /* CZJAlertView.xib */,
-				EC42A4F02068F6A000C52324 /* FMTCodeInputTextFields.h */,
-				EC42A4F12068F6A000C52324 /* FMTCodeInputTextFields.m */,
+				EC38CB00207250B100C09DC7 /* FMAlertViewController.h */,
+				EC38CB01207250B100C09DC7 /* FMAlertViewController.m */,
 				EC42A4BE206346A800C52324 /* FMTCodeInputTextField.h */,
 				EC42A4BF206346A800C52324 /* FMTCodeInputTextField.m */,
 				EC42A4C0206346A800C52324 /* FMTCodeInputTextField.xib */,
+				EC42A4F02068F6A000C52324 /* FMTCodeInputTextFields.h */,
+				EC42A4F12068F6A000C52324 /* FMTCodeInputTextFields.m */,
+				ECDCE67D207B5DF0009BB554 /* FSDeletableImageView.h */,
+				ECDCE67C207B5DEF009BB554 /* FSDeletableImageView.m */,
+				EC38CB0E2074A7E500C09DC7 /* LewPickerController.h */,
+				EC38CB0F2074A7E500C09DC7 /* LewPickerController.m */,
+				ECDCE692207BABD7009BB554 /* FMImageUploadView.h */,
+				ECDCE693207BABD7009BB554 /* FMImageUploadView.m */,
 			);
 			path = Coponents;
 			sourceTree = "<group>";
@@ -194,6 +228,9 @@
 				EC38CB092074745600C09DC7 /* FMSetMyInfoViewController.h */,
 				EC38CB0A2074745600C09DC7 /* FMSetMyInfoViewController.m */,
 				EC38CB0B2074745600C09DC7 /* FMSetMyInfoViewController.xib */,
+				ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */,
+				ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */,
+				ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */,
 			);
 			path = RegLogin;
 			sourceTree = "<group>";
@@ -511,6 +548,10 @@
 		EC473D14205BF6DB00CD9397 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				ECDCE68B207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.h */,
+				ECDCE68A207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m */,
+				ECDCE687207B9C8C009BB554 /* UIView+SDAutoLayout.h */,
+				ECDCE688207B9C8C009BB554 /* UIView+SDAutoLayout.m */,
 				EC473D19205BF6DB00CD9397 /* CALayer+UIColor.h */,
 				EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */,
 				EC473D15205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.h */,
@@ -607,7 +648,9 @@
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
 				EC38CAFF2072507900C09DC7 /* CZJAlertView.xib in Resources */,
 				EC42A4D12063F93000C52324 /* Assets.xcassets in Resources */,
+				ECDCE683207B6104009BB554 /* CPAddEvaluationPhotoVCell.xib in Resources */,
 				EC42A4C2206346A800C52324 /* FMTCodeInputTextField.xib in Resources */,
+				ECDCE67B207B0D07009BB554 /* FMTUpImageViewController.xib in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
 				EC42A4DD2068DCC500C52324 /* Info.plist in Resources */,
 			);
@@ -635,6 +678,9 @@
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 				"${PODS_ROOT}/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounterTick.aiff",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
+				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
+				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -650,6 +696,9 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMCGeigerCounterTick.aiff",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowser.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -701,11 +750,14 @@
 				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
 				EC38CB08207379FE00C09DC7 /* Reachability.m in Sources */,
+				ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */,
 				ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
 				EC38CB02207250B200C09DC7 /* FMAlertViewController.m in Sources */,
+				ECDCE689207B9C8C009BB554 /* UIView+SDAutoLayout.m in Sources */,
 				EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */,
 				EC42A4D42064F13600C52324 /* UINavigationBar+BackgroundColor.m in Sources */,
+				ECDCE68C207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
 				EC38CB0C2074745600C09DC7 /* FMSetMyInfoViewController.m in Sources */,
 				EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */,
@@ -723,10 +775,14 @@
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
 				EC38CB102074A7E500C09DC7 /* LewPickerController.m in Sources */,
+				ECDCE682207B6104009BB554 /* CPAddEvaluationPhotoVCell.m in Sources */,
+				ECDCE686207B6ACE009BB554 /* PBaseTableViewCell.m in Sources */,
 				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
 				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
+				ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
+				ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */,
 				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

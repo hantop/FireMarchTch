@@ -1,18 +1,18 @@
 PODS:
-  - AFNetworking (3.2.0):
-    - AFNetworking/NSURLSession (= 3.2.0)
-    - AFNetworking/Reachability (= 3.2.0)
-    - AFNetworking/Security (= 3.2.0)
-    - AFNetworking/Serialization (= 3.2.0)
-    - AFNetworking/UIKit (= 3.2.0)
-  - AFNetworking/NSURLSession (3.2.0):
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.0)
-  - AFNetworking/Security (3.2.0)
-  - AFNetworking/Serialization (3.2.0)
-  - AFNetworking/UIKit (3.2.0):
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - CocoaLumberjack (3.4.1):
     - CocoaLumberjack/Default (= 3.4.1)
@@ -30,6 +30,9 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.13)
+  - PPNetworkHelper (0.8.0):
+    - AFNetworking (~> 3.1.0)
+    - YYCache (~> 1.0.4)
   - RegexKitLite (4.0)
   - SDWebImage (4.3.2):
     - SDWebImage/Core (= 4.3.2)
@@ -37,10 +40,14 @@ PODS:
   - SVProgressHUD (2.2.5)
   - SWTableViewCell (0.3.7)
   - TTTAttributedLabel (2.0.0)
+  - VPImageCropper (0.0.4)
+  - YYCache (1.0.4)
   - ZipArchive (1.4.0)
+  - ZLPhotoBrowser (2.6.4):
+    - SDWebImage
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.2.0)
+  - AFNetworking (~> 3.1.0)
   - CocoaLumberjack (~> 3.4.1)
   - FlatUIKit
   - GPUImage (~> 0.1.7)
@@ -52,15 +59,18 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.1.0)
   - MJExtension (~> 3.0.13)
+  - PPNetworkHelper (~> 0.8.0)
   - RegexKitLite (~> 4.0)
   - SDWebImage (~> 4.3.2)
   - SVProgressHUD
   - SWTableViewCell (~> 0.3.7)
   - TTTAttributedLabel
+  - VPImageCropper (~> 0.0.4)
   - ZipArchive (~> 1.4.0)
+  - ZLPhotoBrowser (~> 2.6.4)
 
 SPEC CHECKSUMS:
-  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
@@ -72,13 +82,17 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  PPNetworkHelper: 900d1af5cb9f2932b3f955ebf72148b7ec403d44
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
   SDWebImage: 29bd3c0bc1f01e5eb59720847c64ad4c4ca1af5d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  VPImageCropper: f4895315460bd05fbb22dbee6b063bdd43f25797
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+  ZLPhotoBrowser: 2125e7b7ea328c959a5ead1204c83b3bb0f0bf5a
 
-PODFILE CHECKSUM: 64f727629d89f91fac873928407f3923817a9a55
+PODFILE CHECKSUM: d574a8882fb693af9ccc77698c7117e946cbf7ce
 
 COCOAPODS: 1.4.0

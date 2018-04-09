@@ -8,6 +8,7 @@
 
 #import "FMSetMyInfoViewController.h"
 #import "LewPickerController.h"
+#import "FMTUpImageViewController.h"
 
 @interface FMSetMyInfoViewController ()
 <
@@ -38,6 +39,7 @@ UIPickerViewDelegate
 @property (weak, nonatomic) IBOutlet UITextField *oldLabel;
 
 - (IBAction)buttonAction:(id)sender;
+- (IBAction)nextStepAction:(id)sender;
 
 @end
 
@@ -113,6 +115,11 @@ UIPickerViewDelegate
     pickerController.titleLabel.text = title;
 }
 
+- (IBAction)nextStepAction:(id)sender {
+    FMTUpImageViewController *imageUpVC = [[FMTUpImageViewController alloc] init];
+    [self.navigationController pushViewController:imageUpVC animated:YES];
+}
+
 #pragma mark - UIPickerViewDelegate,UIPickerViewDataSource
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
@@ -173,33 +180,6 @@ UIPickerViewDelegate
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-
-    //    if (component == 0) {
-    //        self.selectedArray = [self.pickerDic objectForKey:[self.provinceArray objectAtIndex:row]];
-    //        if (self.selectedArray.count > 0) {
-    //            self.cityArray = [[self.selectedArray objectAtIndex:0] allKeys];
-    //        } else {
-    //            self.cityArray = nil;
-    //        }
-    //        if (self.cityArray.count > 0) {
-    //            self.townArray = [[self.selectedArray objectAtIndex:0] objectForKey:[self.cityArray objectAtIndex:0]];
-    //        } else {
-    //            self.townArray = nil;
-    //        }
-    //    }
-    //    [pickerView selectedRowInComponent:1];
-    //    [pickerView reloadComponent:1];
-    //    [pickerView selectedRowInComponent:2];
-    //
-    //    if (component == 1) {
-    //        if (self.selectedArray.count > 0 && self.cityArray.count > 0) {
-    //            self.townArray = [[self.selectedArray objectAtIndex:0] objectForKey:[self.cityArray objectAtIndex:row]];
-    //        } else {
-    //            self.townArray = nil;
-    //        }
-    //        [pickerView selectRow:0 inComponent:2 animated:YES];
-    //    }
-    //    [pickerView reloadComponent:2];
 }
 
 #pragma mark - LewPickerControllerDelegate
@@ -224,11 +204,6 @@ UIPickerViewDelegate
         default:
             break;
     }
-//    currentSelectRow = [_pickerView selectedRowInComponent:0];
-//    provinceStr = provinceAry[currentSelectPro];
-//    numverPlateStr = numberPlateAry[currentSelectNum];
-//    NSString *numberPlate = [NSString stringWithFormat:@"%@%@",provinceStr,numverPlateStr];
-//    _carPlateNumLabel.text = numberPlate;
     [self closeBackgroundView];
     return  YES;
 }

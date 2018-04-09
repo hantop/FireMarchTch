@@ -19,6 +19,7 @@ NSString *const kFMTAPICheckUserFirst = @"auth/checkUserFirst";
 NSString *const kFMTAPIForgotPWD = @"auth/forgetPassword";
 NSString *const kFMTAPISendSMSCode = @"auth/sendSmsCode";
 NSString *const kFMTAPICheckSMSCode = @"auth/smsCodeValid";
+NSString *const kFMTAPIUploadImage = @"";
 
 
 #pragma mark- 字符串定义

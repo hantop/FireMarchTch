@@ -40,4 +40,28 @@ singleton_interface(FMNetworkMananger)
 
 - (void)saveImage:(UIImage *)image withFilename:(NSString *)filename;
 
+//上传图片文件（可多张）
+- (void)uploadData:(NSArray*)_uploadImageAry
+         parameter:(id)_parameter
+             toURL:(NSString*)_urlStr
+          progress:(void (^)(NSProgress *))_progress
+            sccess:(void (^)(id responseObject))_success
+           failure:(void (^)())_fail;
+
+//上传音频文件
+- (void)uploadVoice:(NSData*)_voiceData
+         parameters:(id)_param
+              toURL:(NSString*)_urlStr
+           progress:(void (^)(NSProgress *))_progress
+            success:(void (^)(id responseObject))_success
+            failure:(void (^)())_fail;
+
+//上传视频文件
+- (void)uploadVideo:(NSData*)_videoData
+         parameters:(id)_param
+              toURL:(NSString*)_urlStr
+           progress:(void (^)(NSProgress *))_progress
+            success:(void (^)(id responseObject))_success
+            failure:(void (^)())_fail;
+
 @end

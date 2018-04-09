@@ -10,7 +10,7 @@
 
 @interface FMTBaseDataManager : NSObject
 singleton_interface(FMTBaseDataManager)
-@property (nonatomic) NSMutableDictionary *params;
+@property (nonatomic) NSMutableDictionary *baseParams;
 
 
 - (void)generalPostNoTips:(NSDictionary*)postParams
@@ -31,11 +31,12 @@ singleton_interface(FMTBaseDataManager)
                fail:(FMFailureBlock)fail
                 url:(NSString*)api;
 
-- (void)generalPost:(NSDictionary*)postParams
-            success:(FMSuccessBlock)success
-               fail:(FMFailureBlock)fail
-                url:(NSString*)api
-           withTips:(BOOL)isShowTip;
+
+- (void)uploadImages:(NSArray*)_imageAry
+               param:(NSDictionary*)_params
+            progress:(FMProgressBlock)_progress
+             success:(FMSuccessBlock)_success
+             failure:(FMFailureBlock)_fail;
 
 - (void)cancelAllRequest;
 @end

@@ -8,6 +8,9 @@
 
 #import "FMNetworkMananger.h"
 
+static NSString* const ImageName = @"image";
+static NSString* const ImageFileName = @"imageFile";
+
 @implementation FMNetworkMananger
 
 singleton_implementation(FMNetworkMananger)
@@ -210,6 +213,123 @@ singleton_implementation(FMNetworkMananger)
     path = [path stringByAppendingPathComponent:filename];
     NSData *imageData = UIImagePNGRepresentation(image);
     NSLog(@"Written: %d",[imageData writeToFile:path atomically:YES]);
+}
+
+
+
+//上传图片文件（可多张）
+- (void)uploadData:(NSArray*)_uploadImageAry
+         parameter:(id)_parameter
+             toURL:(NSString*)_urlStr
+          progress:(void (^)(NSProgress *))_progress
+            sccess:(void (^)(id responseObject))_success
+           failure:(void (^)())_fail
+{
+    
+    self.requestSerializer = [AFHTTPRequestSerializer serializer];
+    self.responseSerializer = [AFHTTPResponseSerializer serializer];
+    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/plain",@"application/json",@"text/javascript",@"text/html", @"text/json", nil];
+    self.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+    _urlStr = [_urlStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString* path =  [self getPath:_urlStr];
+    
+    [self POST:path parameters:_parameter constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        for(NSInteger i = 0; i < _uploadImageAry.count; i++)
+        {
+            UIImage* image = _uploadImageAry[i];
+            
+            NSData *imageData = UIImageJPEGRepresentation(image, 0);
+            NSString * Name = [NSString stringWithFormat:@"%@%zi", ImageName, i+1];
+            NSString * fileName = [NSString stringWithFormat:@"%@%zi.jpeg", ImageFileName,i+1];
+            NSLog(@"%ld",imageData.length);
+            
+            [formData appendPartWithFileData:imageData name:Name fileName:fileName mimeType:@"image/jpeg"];
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (_progress) {
+            _progress(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (_success) {
+            _success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error) {
+            DLog(@"Error::%@",[error description]);
+            [FMUtils tipWithText:[error description] onView:nil];
+            _fail();
+        }
+    }];
+}
+
+//上传音频文件
+- (void)uploadVoice:(NSData*)_voiceData
+         parameters:(id)_param
+              toURL:(NSString*)_urlStr
+           progress:(void (^)(NSProgress *))_progress
+            success:(void (^)(id responseObject))_success
+            failure:(void (^)())_fail
+{
+    _urlStr = [_urlStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    [self POST:_urlStr parameters:_param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString stringWithFormat:@"%@.amr", str];
+        [formData appendPartWithFileData:_voiceData name:@"voice" fileName:fileName mimeType:@"amr/mp3/wmr"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (_progress) {
+            _progress(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (_success) {
+            _success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error) {
+            DLog(@"Error::%@",[error description]);
+            _fail();
+        }
+    }];
+}
+
+//上传视频文件
+- (void)uploadVideo:(NSData*)_videoData
+         parameters:(id)_param
+              toURL:(NSString*)_urlStr
+           progress:(void (^)(NSProgress *))_progress
+            success:(void (^)(id responseObject))_success
+            failure:(void (^)())_fail
+{
+    _urlStr = [_urlStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    [self POST:_urlStr parameters:_param constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString stringWithFormat:@"%@.mp4", str];
+        [formData appendPartWithFileData:_videoData name:@"video" fileName:fileName mimeType:@"video/mpeg4"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (_progress) {
+            _progress(uploadProgress);
+        }
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (_success) {
+            _success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error) {
+            DLog(@"Error::%@",[error description]);
+            _fail();
+        }
+    }];
 }
 
 

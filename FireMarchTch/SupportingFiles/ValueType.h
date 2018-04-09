@@ -11,38 +11,53 @@
 #define ValueType_h
 
 #pragma mark- 接口名称静态变量申明
-extern NSString *const kFMTAPIHttpScheme;
-extern NSString *const kFMTAPIHost;
-extern NSString *const kFMTAPILogin;
-extern NSString *const kFMTAPIRegister;
-extern NSString *const kFMTAPICheckInviteCode;
-extern NSString *const kFMTAPICheckUserFirst;
-extern NSString *const kFMTAPIForgotPWD;
-extern NSString *const kFMTAPISendSMSCode;
-extern NSString *const kFMTAPICheckSMSCode;
+UIKIT_EXTERN NSString *const kFMTAPIHttpScheme;
+UIKIT_EXTERN NSString *const kFMTAPIHost;
+UIKIT_EXTERN NSString *const kFMTAPILogin;
+UIKIT_EXTERN NSString *const kFMTAPIRegister;
+UIKIT_EXTERN NSString *const kFMTAPICheckInviteCode;
+UIKIT_EXTERN NSString *const kFMTAPICheckUserFirst;
+UIKIT_EXTERN NSString *const kFMTAPIForgotPWD;
+UIKIT_EXTERN NSString *const kFMTAPISendSMSCode;
+UIKIT_EXTERN NSString *const kFMTAPICheckSMSCode;
+UIKIT_EXTERN NSString *const kFMTAPIUploadImage;
+
 
 
 
 #pragma mark-
-extern NSString *const kFMTAccessToken;
-extern NSString *const kFMTAccessCode;
+UIKIT_EXTERN NSString *const kFMTAccessToken;
+UIKIT_EXTERN NSString *const kFMTAccessCode;
 
 
 
 
-extern NSString *const kUserDefaultTimeDay;
-extern NSString *const kUserDefaultTimeMin;
-extern NSString *const kUserDefaultTimeMinLocation;
-extern NSString *const kUserDefaultRandomCode;
+UIKIT_EXTERN NSString *const kUserDefaultTimeDay;
+UIKIT_EXTERN NSString *const kUserDefaultTimeMin;
+UIKIT_EXTERN NSString *const kUserDefaultTimeMinLocation;
+UIKIT_EXTERN NSString *const kUserDefaultRandomCode;
 
 
 #pragma mark- 枚举数据声明
+struct CZJMargin {
+    CGFloat horisideMargin;
+    CGFloat vertiMiddleMargin;
+};
+typedef struct CZJMargin CZJMargin;
 
+CG_INLINE CZJMargin CZJMarginMake(CGFloat horisideMargin, CGFloat vertiMiddleMargin)
+{
+    CZJMargin margin;
+    margin.horisideMargin = horisideMargin;
+    margin.vertiMiddleMargin = vertiMiddleMargin;
+    return margin;
+}
 
 
 #pragma mark-
 typedef void (^FMBasicBlock)(void);
 typedef void (^FMButtonBlock)(UIButton* button);
+typedef void (^FMProgressBlock)(NSProgress* progress);
 typedef void (^FMSuccessBlock)(id json);
 typedef void (^FMFailureBlock)(NSError *error);
 typedef void (^FMGeneralBlock)(void);

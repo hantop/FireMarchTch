@@ -508,6 +508,45 @@ void backLastView(id sender)
 
 
 #pragma mark- 控制器处理
+//获取当前屏幕显示的viewcontroller
++ (UIViewController *)getCurrentVC
+{
+    UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+    
+    UIViewController *currentVC = [self getCurrentVCFrom:rootViewController];
+    
+    return currentVC;
+}
+
++ (UIViewController *)getCurrentVCFrom:(UIViewController *)rootVC
+{
+    UIViewController *currentVC;
+    
+    if ([rootVC presentedViewController]) {
+        // 视图是被presented出来的
+        
+        rootVC = [rootVC presentedViewController];
+    }
+    
+    if ([rootVC isKindOfClass:[UITabBarController class]]) {
+        // 根视图为UITabBarController
+        
+        currentVC = [self getCurrentVCFrom:[(UITabBarController *)rootVC selectedViewController]];
+        
+    } else if ([rootVC isKindOfClass:[UINavigationController class]]){
+        // 根视图为UINavigationController
+        
+        currentVC = [self getCurrentVCFrom:[(UINavigationController *)rootVC visibleViewController]];
+        
+    } else {
+        // 根视图为非导航类
+        
+        currentVC = rootVC;
+    }
+    
+    return currentVC;
+}
+
 + (UIViewController*)getViewControllerFromStoryboard:(NSString*)storyboardName andVCName:(NSString*)vcName
 {
     //获取storyboard: 通过bundle根据storyboard的名字来获取我们的storyboard,
@@ -1071,6 +1110,69 @@ void tapToHidePopViewAction(id sender, SEL _cmd)
     //pop the context to get back to the default
     UIGraphicsEndImageContext();
     return newImage;
+}
+
+/**
+ * @margin
+ * @viewSize
+ * @index
+ * @divide
+ */
++ (CGRect)viewFramFromDynamic:(CZJMargin)margin size:(CGSize)viewSize index:(int)index divide:(int)divide
+{
+    // 列数
+    int column = index%divide;
+    // 行数
+    int row = index/divide;
+    // 动态调整中间间距
+    CGFloat horiMiddleMargin = (PJ_SCREEN_WIDTH - divide*viewSize.width - 2*margin.horisideMargin) / (divide-1);
+    if (horiMiddleMargin > 15)
+    {
+        horiMiddleMargin = 15;
+    }
+    
+    // 很据列数和行数算出x、y
+    int childX = column * (viewSize.width + horiMiddleMargin);
+    int childY = row * (viewSize.height + margin.vertiMiddleMargin);
+    CGRect rect = CGRectMake(childX + margin.horisideMargin, childY + margin.vertiMiddleMargin, viewSize.width, viewSize.height);
+    return rect;
+}
+
+
++ (CGRect)viewFrameFromDynamic:(CZJMargin)margin
+                          size:(CGSize)viewSize
+                         index:(int)index
+                        divide:(int)divide
+                      subWidth:(int)width
+{
+    return [self viewFrameFromDynamic:margin width:PJ_SCREEN_WIDTH size:viewSize index:index divide:divide subWidth:width];
+}
+
+/**
+ * @margin
+ * @viewSize
+ * @index
+ * @divide
+ * @筛选界面专用，没有间距限制
+ */
++ (CGRect)viewFrameFromDynamic:(CZJMargin)margin
+                         width:(int)cellWidth
+                          size:(CGSize)viewSize
+                         index:(int)index
+                        divide:(int)divide
+                      subWidth:(int)width
+{
+    // 列数
+    int column = index%divide;
+    // 行数
+    int row = index/divide;
+    // 动态调整中间间距
+    CGFloat horiMiddleMargin = (cellWidth - width - divide*viewSize.width - 2*margin.horisideMargin) / (divide-1);
+    // 很据列数和行数算出x、y
+    int childX = column * (viewSize.width + horiMiddleMargin);
+    int childY = row * (viewSize.height + margin.vertiMiddleMargin);
+    CGRect rect = CGRectMake(childX + margin.horisideMargin, childY + margin.vertiMiddleMargin, viewSize.width, viewSize.height);
+    return rect;
 }
 
 
