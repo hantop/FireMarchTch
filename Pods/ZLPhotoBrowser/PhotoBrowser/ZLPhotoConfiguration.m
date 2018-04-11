@@ -28,9 +28,9 @@
     configuration.maxPreviewCount = 20;
     configuration.cellCornerRadio = .0;
     configuration.allowMixSelect = YES;
-    configuration.allowSelectImage = YES;
-    configuration.allowSelectVideo = YES;
-    configuration.allowSelectGif = YES;
+    configuration.allowSelectImage = NO;
+    configuration.allowSelectVideo = NO;
+    configuration.allowSelectGif = NO;
     configuration.allowSelectLivePhoto = NO;
     configuration.allowTakePhotoInLibrary = YES;
     configuration.allowForceTouch = YES;
@@ -68,6 +68,21 @@
     configuration.exportVideoType = ZLExportVideoTypeMov;
     
     return configuration;
+}
+- (void)setAllowEditVideo:(BOOL)allowEditVideo {
+    _allowEditVideo = allowEditVideo;
+}
+
+- (void)setAllowEditImage:(BOOL)allowEditImage {
+    _allowEditImage = allowEditImage;
+}
+
+- (void)setAllowSelectImage:(BOOL)allowSelectImage {
+    _allowSelectImage = allowSelectImage;
+}
+
+- (void)setAllowSelectVideo:(BOOL)allowSelectVideo {
+    _allowSelectVideo = allowSelectVideo;
 }
 
 - (void)setMaxSelectCount:(NSInteger)maxSelectCount

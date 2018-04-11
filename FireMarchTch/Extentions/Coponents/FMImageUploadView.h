@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @protocol FMImageUploadViewDelegate <NSObject>
 - (void)deleteEvaluatePic:(NSString*)url andIndex:(NSIndexPath*)indexP;;
 - (void)addEvaluatePic:(NSArray*)urls andIndex:(NSIndexPath*)indexP;;

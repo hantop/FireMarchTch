@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YYFPSLabel.h"
 
 @interface AppDelegate ()
 
@@ -58,13 +59,23 @@
     //-----------------6.设置主页并判断是否启动广告页面--------------
 #ifdef DEBUG//离线日志打印
     self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    YYFPSLabel *label = [[YYFPSLabel alloc] initWithSize:CGSizeMake(60, 20)];
+    label.textColor = FSYellow;
+    [self.window addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.window).offset(-50);
+        make.top.mas_equalTo(self.window).offset(3);
+    }];
+    
 #else
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 #endif
 
-    UIViewController *rootViewController = [FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginNavi"];
+    UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginNavi"];
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
+    
+    [self.window bringSubviewToFront:label];
     
     //-------------------8.字典描述分类替换----------------
     [NSDictionary jr_swizzleMethod:@selector(description) withMethod:@selector(my_description) error:nil];

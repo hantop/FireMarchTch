@@ -48,7 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Txd-8n-GIK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FZLTXHK" family="FZLanTingHei-L-GBK" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="登录">
                                     <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="HbQ-8e-rEH"/>
                                     <constraint firstAttribute="height" constant="50" id="Yw5-9A-Y3g"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FZLTXHK" family="FZLanTingHei-L-GBK" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="FZLTXHK" family="FZLanTingHei-L-GBK" pointSize="16"/>
                                 <state key="normal" title="注册">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

@@ -20,6 +20,7 @@
                 <outlet property="line2" destination="jSY-Ev-PJo" id="Rc8-1k-tEX"/>
                 <outlet property="line3" destination="EK1-mO-skk" id="lqa-jN-JhE"/>
                 <outlet property="line4" destination="xWG-dd-DVz" id="1Ph-LP-Ret"/>
+                <outlet property="nextStepButton" destination="xA8-JA-jvj" id="h2V-S3-QKs"/>
                 <outlet property="oldLabel" destination="rUC-HW-urQ" id="dQo-ur-SY3"/>
                 <outlet property="topView" destination="rsS-OY-sIe" id="5QR-Cf-US9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -171,13 +172,13 @@
                                 <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="Dyi-3I-N0W"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA8-JA-jvj">
-                            <rect key="frame" x="20" y="292" width="335" height="40"/>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xA8-JA-jvj">
+                            <rect key="frame" x="0.0" y="467" width="375" height="50"/>
                             <color key="backgroundColor" red="1" green="0.3921568627" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="kZl-EB-Wxk"/>
+                                <constraint firstAttribute="height" constant="50" id="kZl-EB-Wxk"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="下一步">
                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,7 +206,7 @@
                         <constraint firstItem="jvF-Sm-nK6" firstAttribute="centerX" secondItem="lig-Sq-oFL" secondAttribute="centerX" id="IYI-OL-Mxv"/>
                         <constraint firstItem="SSc-jG-xmd" firstAttribute="trailing" secondItem="krO-Qn-LCN" secondAttribute="trailing" id="ItJ-7h-Zgz"/>
                         <constraint firstItem="T04-jI-HzL" firstAttribute="bottom" secondItem="lig-Sq-oFL" secondAttribute="bottom" id="Mva-HI-v1Y"/>
-                        <constraint firstAttribute="bottom" secondItem="xA8-JA-jvj" secondAttribute="bottom" constant="185" id="OHd-lv-nZU"/>
+                        <constraint firstAttribute="bottom" secondItem="xA8-JA-jvj" secondAttribute="bottom" id="OHd-lv-nZU"/>
                         <constraint firstItem="SSc-jG-xmd" firstAttribute="leading" secondItem="krO-Qn-LCN" secondAttribute="leading" id="PZ0-g6-8eL"/>
                         <constraint firstItem="KfE-zU-Bh4" firstAttribute="centerY" secondItem="rUC-HW-urQ" secondAttribute="centerY" id="Q9V-y6-XN1"/>
                         <constraint firstItem="E6N-z1-wQl" firstAttribute="centerY" secondItem="YvJ-LS-XPK" secondAttribute="centerY" id="QKL-UP-lKA"/>
@@ -221,7 +222,7 @@
                         <constraint firstItem="1hw-xg-e5r" firstAttribute="trailing" secondItem="YvJ-LS-XPK" secondAttribute="trailing" id="aPa-J4-VVS"/>
                         <constraint firstItem="YvJ-LS-XPK" firstAttribute="leading" secondItem="RXJ-PU-seW" secondAttribute="leading" constant="20" id="aq5-tp-Nk7"/>
                         <constraint firstItem="1hw-xg-e5r" firstAttribute="leading" secondItem="YvJ-LS-XPK" secondAttribute="leading" id="b3w-XB-veO"/>
-                        <constraint firstAttribute="trailing" secondItem="xA8-JA-jvj" secondAttribute="trailing" constant="20" id="eVh-R8-syf"/>
+                        <constraint firstAttribute="trailing" secondItem="xA8-JA-jvj" secondAttribute="trailing" id="eVh-R8-syf"/>
                         <constraint firstAttribute="trailing" secondItem="rUC-HW-urQ" secondAttribute="trailing" constant="20" id="gA2-iL-Jcu"/>
                         <constraint firstItem="YvJ-LS-XPK" firstAttribute="top" secondItem="RXJ-PU-seW" secondAttribute="top" id="gaY-2s-XBH"/>
                         <constraint firstItem="lig-Sq-oFL" firstAttribute="top" secondItem="rUC-HW-urQ" secondAttribute="bottom" constant="10" id="hXa-I6-DRt"/>
@@ -229,7 +230,7 @@
                         <constraint firstItem="rUC-HW-urQ" firstAttribute="leading" secondItem="RXJ-PU-seW" secondAttribute="leading" constant="20" id="iGX-Sf-Pd3"/>
                         <constraint firstItem="KfE-zU-Bh4" firstAttribute="height" secondItem="rUC-HW-urQ" secondAttribute="height" id="nJG-Bd-dXF"/>
                         <constraint firstAttribute="trailing" secondItem="YvJ-LS-XPK" secondAttribute="trailing" constant="20" id="pAJ-UM-zn1"/>
-                        <constraint firstItem="xA8-JA-jvj" firstAttribute="leading" secondItem="RXJ-PU-seW" secondAttribute="leading" constant="20" id="qc6-C7-MgS"/>
+                        <constraint firstItem="xA8-JA-jvj" firstAttribute="leading" secondItem="RXJ-PU-seW" secondAttribute="leading" id="qc6-C7-MgS"/>
                         <constraint firstItem="lig-Sq-oFL" firstAttribute="leading" secondItem="RXJ-PU-seW" secondAttribute="leading" constant="20" id="rvq-da-MaZ"/>
                         <constraint firstItem="krO-Qn-LCN" firstAttribute="leading" secondItem="RXJ-PU-seW" secondAttribute="leading" constant="20" id="xcw-WG-Z4d"/>
                         <constraint firstItem="SSc-jG-xmd" firstAttribute="bottom" secondItem="krO-Qn-LCN" secondAttribute="bottom" id="zxD-uu-nGO"/>

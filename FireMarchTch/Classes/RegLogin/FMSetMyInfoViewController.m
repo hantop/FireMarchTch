@@ -37,6 +37,7 @@ UIPickerViewDelegate
 @property (weak, nonatomic) IBOutlet UITextField *weightLabel;
 @property (weak, nonatomic) IBOutlet UITextField *bustLabel;
 @property (weak, nonatomic) IBOutlet UITextField *oldLabel;
+@property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
 
 - (IBAction)buttonAction:(id)sender;
 - (IBAction)nextStepAction:(id)sender;
@@ -48,7 +49,9 @@ UIPickerViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     [FMUtils customizeNavigationBarForTarget:self];
+    
     [self initViewsAndDatas];
+    self.nextStepButton.layer.cornerRadius = 5;
     // Do any additional setup after loading the view from its nib.
 }
 

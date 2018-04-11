@@ -39,6 +39,10 @@ double const ScalePhotoWidth = 1000;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *verColHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *verBottomSpace;
+@property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *lineOneHeight;
+@property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *lineTwoHeight;
+@property (unsafe_unretained, nonatomic) IBOutlet NSLayoutConstraint *lineThrHeight;
+
 
 
 @property (nonatomic, assign) BOOL animate;
@@ -121,6 +125,9 @@ double const ScalePhotoWidth = 1000;
         self.collectionView.collectionViewLayout = layout;
         self.collectionView.backgroundColor = [UIColor whiteColor];
         [self.collectionView registerClass:NSClassFromString(@"ZLCollectionCell") forCellWithReuseIdentifier:@"ZLCollectionCell"];
+        self.lineOneHeight.constant = 0.5;
+        self.lineTwoHeight.constant = 0.5;
+        self.lineThrHeight.constant = 0.5;
         if (![ZLPhotoManager havePhotoLibraryAuthority]) {
             //注册实施监听相册变化
             [[PHPhotoLibrary sharedPhotoLibrary] registerChangeObserver:self];
@@ -380,7 +387,7 @@ double const ScalePhotoWidth = 1000;
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self hide];
+//    [self hide];
 }
 
 - (void)panAction:(UIPanGestureRecognizer *)pan

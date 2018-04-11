@@ -119,7 +119,7 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define JPGIMAGE(NAME) IMAGE(NAME,@"jpg")
 #define IMAGENAMED(NAME) [UIImage imageNamed:NAME]
 #define DefaultPlaceHolderCircle IMAGENAMED(@"placeholder_circle")
-#define DefaultPlaceHolderSquare IMAGENAMED(@"default_icon_car")
+#define DefaultPlaceHolderSquare IMAGENAMED(@"default_image")
 #define DefaultPlaceHolderSquarePlus IMAGENAMED(@"placeholder_squarePlus")
 #define DefaultPlaceHolderRectangle IMAGENAMED(@"placeholder_rectangle")
 
@@ -156,8 +156,9 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define FSDisButtonBG UIColorFromHEX(0xBBBBBB,1)
 
 //本项目自定义颜色
-#define FSBlackColor33 RGB (51, 51, 51)
-#define FSGrayColor66 RGB (102, 102, 102)
+#define FSBlackColor20 RGB (32, 32, 32)
+#define FSBlackColor33 RGB (64, 64, 64)
+#define FSBlackColor66 RGB (102, 102, 102)
 #define FSGrayColor99 RGB (153, 153, 153)
 #define FSGrayColorA8 RGB (168, 168, 168)
 #define FSGrayColorB8 RGB (184, 184, 184)

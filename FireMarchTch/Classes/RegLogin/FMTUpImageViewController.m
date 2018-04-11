@@ -7,16 +7,37 @@
 //
 
 #import "FMTUpImageViewController.h"
-#import "CPAddEvaluationPhotoVCell.h"
 #import "UIView+SDAutoLayout.h"
-#import "FMImageUploadView.h"
+#import "FMImageCollectionViewCell.h"
+#import <ZLPhotoModel.h>
+#import <ZLPhotoActionSheet.h>
 
-@interface FMTUpImageViewController () <CPAddEvaluatePhotoDelegate>
-@property (strong, nonatomic) FMImageUploadView *photoView;
-@property (strong, nonatomic) NSMutableArray *photoPicArray;
+typedef NS_ENUM(NSInteger, FMImageType) {
+    FMImageTypePic = 0,
+    FMImageTypeVideo
+};
+
+@interface FMTUpImageViewController () < UICollectionViewDelegate, UICollectionViewDataSource>
+@property (nonatomic, assign) FMImageType fmImageType;
+@property (strong, nonatomic) __block NSMutableArray *photoPicUrlArray;
+@property (strong, nonatomic) __block NSMutableArray *photoVideoUrlArray;
+@property (strong, nonatomic)UICollectionView* myPicCollectionView;
+@property (nonatomic, strong) NSMutableArray<UIImage *> *lastSelectPhotos;
+@property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssets;
+@property (nonatomic, strong) NSArray *arrDataSources;
+@property (nonatomic, assign) BOOL isOriginal;
+
+
 @property (weak, nonatomic) IBOutlet UILabel *bigTitle;
 @property (weak, nonatomic) IBOutlet UILabel *littleTitle;
 @property (weak, nonatomic) IBOutlet UIView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *nextStepButton;
+- (IBAction)photoAction:(id)sender;
+- (IBAction)vedioAction:(id)sender;
+- (IBAction)nextStepAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *photoButton;
+@property (weak, nonatomic) IBOutlet UIButton *videoButton;
+
 @end
 
 @implementation FMTUpImageViewController
@@ -24,50 +45,241 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [FMUtils customizeNavigationBarForTarget:self];
-    self.photoPicArray = [NSMutableArray array];
-    
-    [self.imageView addSubview:self.photoView];
-    [self.photoView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.imageView);
-        make.width.equalTo(self.imageView);
-        make.height.equalTo(self.imageView);
-    }];
+    self.photoPicUrlArray = [NSMutableArray array];
+    self.photoVideoUrlArray = [NSMutableArray array];
+    self.fmImageType = FMImageTypePic;
+
+    [self photoAction:nil];
+    [self.myPicCollectionView reloadData];
     // Do any additional setup after loading the view from its nib.
 }
 
-
+- (UICollectionView *)myPicCollectionView {
+    if (!_myPicCollectionView) {
+        UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+        flowLayout.minimumInteritemSpacing=0.f;//左右间隔
+        flowLayout.minimumLineSpacing=10.f;
+        _myPicCollectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        _myPicCollectionView.delegate = self;
+        _myPicCollectionView.dataSource = self;
+        _myPicCollectionView.clipsToBounds = YES;
+        _myPicCollectionView.alwaysBounceVertical = YES;
+        _myPicCollectionView.backgroundColor = WHITECOLOR;
+        UINib *nib=[UINib nibWithNibName:@"FMImageCollectionViewCell" bundle:nil];
+        [_myPicCollectionView registerNib: nib forCellWithReuseIdentifier:@"FMImageCollectionViewCell"];
+        [_imageView addSubview:_myPicCollectionView];
+        [_myPicCollectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.mas_equalTo(_imageView);
+            make.size.mas_equalTo(_imageView);
+        }];
+        
+    }
+    return _myPicCollectionView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)deleteEvaluatePic:(NSString*)url andIndex:(NSIndexPath*)indexP
+#pragma mark- CollectionView
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    [self.photoPicArray removeObject:url];
-    [self updatePhotoView];
+    return 1;
 }
 
-- (void)addEvaluatePic:(NSArray*)urls andIndex:(NSIndexPath*)indexP
-{
-    [self.photoPicArray addObjectsFromArray:urls];
-    [self updatePhotoView];
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.fmImageType == FMImageTypePic ? self.photoPicUrlArray.count + 1 : self.photoVideoUrlArray.count + 1;
 }
 
-- (void)updatePhotoView
-{
-    [self.photoView setSize_sd:CGSizeMake(PJ_SCREEN_WIDTH, (1 + self.photoPicArray.count/Divide) * 90)];
-    [self.photoView setPicAry:self.photoPicArray];
-}
-
-
-- (FMImageUploadView *)photoView
-{
-    if (!_photoView) {
-        _photoView = [[FMImageUploadView alloc]initWithSize:self.imageView.size];
-        _photoView.delegate = self;
+//返回CollectionCell
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    FMImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FMImageCollectionViewCell" forIndexPath:indexPath];
+    [cell.imageView setImage:nil];
+    [cell.addImageView setImage:  [IMAGENAMED(@"addSqure") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [cell.addImageView setTintColor:FSGrayColorA8];
+    switch (self.fmImageType) {
+        case FMImageTypePic:
+        {
+            if (indexPath.item == self.photoPicUrlArray.count) {
+                cell.addImageView.hidden = NO;
+            }
+            else {
+                cell.addImageView.hidden = YES;
+                //        NSString *urlStr = self.photoPicUrlArray[indexPath.item];
+                //        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:DefaultPlaceHolderSquare];
+                [cell.imageView setImage:self.photoPicUrlArray[indexPath.item]];
+            }
+        }
+            break;
+        case FMImageTypeVideo:
+        {
+            if (indexPath.item == self.photoVideoUrlArray.count) {
+                cell.addImageView.hidden = NO;
+            }
+            else {
+                cell.addImageView.hidden = NO;
+                [cell.addImageView setImage:[IMAGENAMED(@"play") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+                [cell.addImageView setTintColor: WHITECOLOR];
+                //        NSString *urlStr = self.photoPicUrlArray[indexPath.item];
+                //        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:DefaultPlaceHolderSquare];
+                [cell.imageView setImage:self.photoVideoUrlArray[indexPath.item]];
+            }
+        }
+            break;
+            
+        default:
+            break;
     }
-    return _photoView;
+    
+
+    return cell;
 }
 
+
+//返回collectionCell尺寸
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    int width = (iPhone4 || iPhone5) ? 65 : (PJ_SCREEN_WIDTH - 140)/3;
+    int height = width;
+    return CGSizeMake(width, height);
+}
+
+
+//返回
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(10, 10, 10, 10);
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (self.fmImageType) {
+        case FMImageTypePic:
+        {
+            if (indexPath.item == self.photoPicUrlArray.count) {
+                ZLPhotoActionSheet *actionSheet = [self getPas];
+                ZLPhotoConfiguration *config = actionSheet.configuration;
+                [config setAllowSelectImage:YES];
+                [config setAllowSelectVideo:NO];
+                [actionSheet showPhotoLibrary];
+            }
+            else {
+                //        [[self getPas] previewSelectedPhotos:self.lastSelectPhotos assets:self.lastSelectAssets index:indexPath.row isOriginal:self.isOriginal];
+            }
+        }
+            break;
+        case FMImageTypeVideo:
+        {
+            if (indexPath.item == self.photoVideoUrlArray.count) {
+                ZLPhotoActionSheet *actionSheet = [self getPas];
+                [actionSheet.configuration setAllowSelectImage:NO];
+                [actionSheet.configuration setAllowSelectVideo:YES];
+                [actionSheet showPhotoLibrary];
+            }
+            else {
+                //        [[self getPas] previewSelectedPhotos:self.lastSelectPhotos assets:self.lastSelectAssets index:indexPath.row isOriginal:self.isOriginal];
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+- (IBAction)photoAction:(id)sender {
+    self.fmImageType = FMImageTypePic;
+    [self.photoButton setTitleColor:FSBlackColor20 forState:UIControlStateNormal];
+    [self.videoButton setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
+    [self.myPicCollectionView removeAllSubViews];
+    [self.myPicCollectionView reloadData];
+}
+
+- (IBAction)vedioAction:(id)sender {
+    self.fmImageType = FMImageTypeVideo;
+    [self.photoButton setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
+    [self.videoButton setTitleColor:FSBlackColor20 forState:UIControlStateNormal];
+    [self.myPicCollectionView removeAllSubViews];
+    [self.myPicCollectionView reloadData];
+}
+
+- (IBAction)nextStepAction:(id)sender {
+}
+
+
+- (ZLPhotoActionSheet *)getPas
+{
+    if ([FMUtils isPhotoLibraryAvailable]) {
+        ZLPhotoActionSheet *actionSheet = [[ZLPhotoActionSheet alloc] init];
+        //设置照片最大选择数
+        actionSheet.configuration.maxSelectCount = 5;
+        //设置照片最大预览数
+        actionSheet.configuration.maxPreviewCount = 10;
+        actionSheet.sender = self;
+        actionSheet.arrSelectedAssets = self.lastSelectAssets;
+        weakSelf(self);
+        [actionSheet setSelectImageBlock:^(NSArray<UIImage *> * _Nullable images, NSArray<PHAsset *> * _Nonnull assets, BOOL isOriginal) {
+            strongSelf(weakSelf);
+
+            switch (strongSelf.fmImageType) {
+                case FMImageTypePic:
+                {
+                    strongSelf.photoPicUrlArray = images.mutableCopy;
+                    strongSelf.isOriginal = isOriginal;
+                    strongSelf.lastSelectAssets = assets.mutableCopy;
+                    strongSelf.lastSelectPhotos = images.mutableCopy;
+                    strongSelf.arrDataSources = images.copy;
+                }
+                    break;
+                case FMImageTypeVideo:
+                {
+                    strongSelf.photoVideoUrlArray = images.mutableCopy;
+                    strongSelf.isOriginal = isOriginal;
+                    strongSelf.lastSelectAssets = assets.mutableCopy;
+                    strongSelf.lastSelectPhotos = images.mutableCopy;
+                    strongSelf.arrDataSources = images.copy;
+                }
+                    break;
+                    
+                default:
+                    break;
+            }
+  
+            
+            [strongSelf.myPicCollectionView reloadData];
+            
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[FMUtils getCurrentVC].view animated:YES];
+            hud.label.text = @"上传中...";
+            [[FMTBaseDataManager sharedFMTBaseDataManager] uploadImages:self.arrDataSources param:@{@"imageType" : @"1"} progress:nil success:^(id json) {
+                NSArray* tmpAry = json[@"data"];
+                for (NSDictionary* dictKey in tmpAry)
+                {
+                    switch (strongSelf.fmImageType) {
+                        case FMImageTypePic:
+                            [strongSelf.photoPicUrlArray addObject:dictKey[@"image_url"]];
+                            break;
+                        case FMImageTypeVideo:
+                            [strongSelf.photoVideoUrlArray addObject:dictKey[@"image_url"]];
+                            break;
+                            
+                        default:
+                            break;
+                    }
+                    
+                }
+                [strongSelf.myPicCollectionView reloadData];
+            } failure:^(id json){
+
+            }];
+            
+        }];
+        
+        actionSheet.cancleBlock = ^{
+            NSLog(@"取消选择图片");
+        };
+        
+        return actionSheet;
+    }
+    return nil;
+}
 @end

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,62 +15,12 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwQ-VQ-65C">
-                    <rect key="frame" x="0.0" y="367" width="375" height="300"/>
+                    <rect key="frame" x="0.0" y="372" width="375" height="295"/>
                     <subviews>
-                        <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-eZ-Ysy">
-                            <rect key="frame" x="0.0" y="162" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="rzd-KE-9pP"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c7-2D-ETF">
-                            <rect key="frame" x="0.0" y="209" width="375" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="J9w-f7-IG8"/>
-                            </constraints>
-                            <state key="normal" title="相册">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="btnPhotoLibrary_Click:" destination="uFx-aZ-mnT" eventType="touchUpInside" id="rnP-ai-Mab"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-ZL-uBR">
-                            <rect key="frame" x="0.0" y="163" width="375" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="Hay-b7-Bza"/>
-                            </constraints>
-                            <state key="normal" title="拍照">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="btnCamera_Click:" destination="uFx-aZ-mnT" eventType="touchUpInside" id="E1c-Kb-uCs"/>
-                            </connections>
-                        </button>
-                        <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-J5-10l">
-                            <rect key="frame" x="0.0" y="208" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="1" id="IXP-DI-D76"/>
-                            </constraints>
-                        </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gN-s7-KDC">
-                            <rect key="frame" x="0.0" y="255" width="375" height="45"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="45" id="gys-VL-LTC"/>
-                            </constraints>
-                            <state key="normal" title="取消">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="btnCancel_Click:" destination="uFx-aZ-mnT" eventType="touchUpInside" id="wZx-1X-pzG"/>
-                            </connections>
-                        </button>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kyz-US-a4b">
-                            <rect key="frame" x="0.0" y="3" width="375" height="155"/>
+                            <rect key="frame" x="0.0" y="1" width="375" height="140"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="155" id="AKH-PG-3Zh"/>
+                                <constraint firstAttribute="height" constant="140" id="AKH-PG-3Zh"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mGN-oc-vom">
                                 <size key="itemSize" width="50" height="50"/>
@@ -84,13 +33,63 @@
                                 <outlet property="delegate" destination="uFx-aZ-mnT" id="YgX-F5-nzF"/>
                             </connections>
                         </collectionView>
+                        <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bR-eZ-Ysy">
+                            <rect key="frame" x="0.0" y="142" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="rzd-KE-9pP"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Seh-ZL-uBR">
+                            <rect key="frame" x="0.0" y="143" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Hay-b7-Bza"/>
+                            </constraints>
+                            <state key="normal" title="拍照">
+                                <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCamera_Click:" destination="uFx-aZ-mnT" eventType="touchUpInside" id="E1c-Kb-uCs"/>
+                            </connections>
+                        </button>
+                        <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-J5-10l">
+                            <rect key="frame" x="0.0" y="193" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="IXP-DI-D76"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3c7-2D-ETF">
+                            <rect key="frame" x="0.0" y="194" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="J9w-f7-IG8"/>
+                            </constraints>
+                            <state key="normal" title="相册">
+                                <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPhotoLibrary_Click:" destination="uFx-aZ-mnT" eventType="touchUpInside" id="rnP-ai-Mab"/>
+                            </connections>
+                        </button>
                         <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imw-yT-rXc">
-                            <rect key="frame" x="0.0" y="254" width="375" height="1"/>
-                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="0.0" y="244" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="GNF-Ae-JJr"/>
                             </constraints>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gN-s7-KDC">
+                            <rect key="frame" x="0.0" y="245" width="375" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="gys-VL-LTC"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCancel_Click:" destination="uFx-aZ-mnT" eventType="touchUpInside" id="wZx-1X-pzG"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
@@ -110,12 +109,12 @@
                         <constraint firstAttribute="trailing" secondItem="0gN-s7-KDC" secondAttribute="trailing" id="QTb-92-jkt"/>
                         <constraint firstItem="2bR-eZ-Ysy" firstAttribute="leading" secondItem="NwQ-VQ-65C" secondAttribute="leading" id="UpV-Ah-Zdp"/>
                         <constraint firstAttribute="trailing" secondItem="3c7-2D-ETF" secondAttribute="trailing" id="WC9-16-QIw"/>
-                        <constraint firstItem="kyz-US-a4b" firstAttribute="top" secondItem="NwQ-VQ-65C" secondAttribute="top" constant="3" id="WDr-Pi-u1y"/>
+                        <constraint firstItem="kyz-US-a4b" firstAttribute="top" secondItem="NwQ-VQ-65C" secondAttribute="top" constant="1" id="WDr-Pi-u1y"/>
                         <constraint firstAttribute="trailing" secondItem="Seh-ZL-uBR" secondAttribute="trailing" id="djA-1t-n7E"/>
                         <constraint firstItem="Seh-ZL-uBR" firstAttribute="leading" secondItem="NwQ-VQ-65C" secondAttribute="leading" id="fpj-U6-Kv1"/>
                         <constraint firstItem="YjW-J5-10l" firstAttribute="top" secondItem="Seh-ZL-uBR" secondAttribute="bottom" id="niD-xp-eOm"/>
                         <constraint firstAttribute="trailing" secondItem="YjW-J5-10l" secondAttribute="trailing" id="qRd-uT-BxH"/>
-                        <constraint firstItem="2bR-eZ-Ysy" firstAttribute="top" secondItem="kyz-US-a4b" secondAttribute="bottom" constant="4" id="r5R-AG-FT8"/>
+                        <constraint firstItem="2bR-eZ-Ysy" firstAttribute="top" secondItem="kyz-US-a4b" secondAttribute="bottom" constant="1" id="r5R-AG-FT8"/>
                         <constraint firstItem="0gN-s7-KDC" firstAttribute="leading" secondItem="NwQ-VQ-65C" secondAttribute="leading" id="z6i-8s-ZiH"/>
                     </constraints>
                     <variation key="default">
@@ -137,6 +136,9 @@
                 <outlet property="btnCamera" destination="Seh-ZL-uBR" id="yL8-H8-NKv"/>
                 <outlet property="btnCancel" destination="0gN-s7-KDC" id="MUt-WS-Vf4"/>
                 <outlet property="collectionView" destination="kyz-US-a4b" id="5ue-oG-KUP"/>
+                <outlet property="lineOneHeight" destination="rzd-KE-9pP" id="ps0-jF-0sH"/>
+                <outlet property="lineThrHeight" destination="GNF-Ae-JJr" id="SBM-uk-WXV"/>
+                <outlet property="lineTwoHeight" destination="IXP-DI-D76" id="zrp-dk-X3e"/>
                 <outlet property="verBottomSpace" destination="J9p-km-kNZ" id="6WF-6U-ewk"/>
                 <outlet property="verColHeight" destination="AKH-PG-3Zh" id="Evt-Qw-br3"/>
             </connections>
