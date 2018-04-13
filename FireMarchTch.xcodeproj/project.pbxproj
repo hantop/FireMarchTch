@@ -58,32 +58,12 @@
 		ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE693207BABD7009BB554 /* FMImageUploadView.m */; };
 		ECDCE699207C858A009BB554 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE695207C858A009BB554 /* YYWeakProxy.m */; };
 		ECDCE69A207C858A009BB554 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE696207C858A009BB554 /* YYFPSLabel.m */; };
-		ECDCE6EA207C9C91009BB554 /* UIImage+JKRRender.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE69D207C9C91009BB554 /* UIImage+JKRRender.m */; };
-		ECDCE6EB207C9C91009BB554 /* UIImage+JKRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE69E207C9C91009BB554 /* UIImage+JKRImage.m */; };
-		ECDCE6EC207C9C91009BB554 /* UIImage+JKR_MessageImage.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE69F207C9C91009BB554 /* UIImage+JKR_MessageImage.m */; };
-		ECDCE6ED207C9C91009BB554 /* UIView+JKR_HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6A4207C9C91009BB554 /* UIView+JKR_HitTest.m */; };
-		ECDCE6EE207C9C91009BB554 /* UIColor+JKRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6A7207C9C91009BB554 /* UIColor+JKRColor.m */; };
-		ECDCE6EF207C9C91009BB554 /* UIView+JKRTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6AF207C9C91009BB554 /* UIView+JKRTouch.m */; };
-		ECDCE6F0207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6B0207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.m */; };
-		ECDCE6F1207C9C91009BB554 /* UIView+JKR_Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6B1207C9C91009BB554 /* UIView+JKR_Frame.m */; };
-		ECDCE6F2207C9C91009BB554 /* UIView+JKRSnap.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6B2207C9C91009BB554 /* UIView+JKRSnap.m */; };
-		ECDCE6F3207C9C91009BB554 /* UIView+JKRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6B3207C9C91009BB554 /* UIView+JKRViewController.m */; };
-		ECDCE6F4207C9C91009BB554 /* NSObject+JKR_Observer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6B6207C9C91009BB554 /* NSObject+JKR_Observer.m */; };
-		ECDCE6F5207C9C91009BB554 /* NSObject+JKR_RunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6B9207C9C91009BB554 /* NSObject+JKR_RunTime.m */; };
-		ECDCE6F6207C9C91009BB554 /* UITextView+JKRPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6BC207C9C91009BB554 /* UITextView+JKRPlaceHolder.m */; };
-		ECDCE6F7207C9C91009BB554 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE6BD207C9C91009BB554 /* README.md */; };
-		ECDCE6F8207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6BF207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.m */; };
-		ECDCE6F9207C9C91009BB554 /* NSString+URLComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6C4207C9C91009BB554 /* NSString+URLComponents.m */; };
-		ECDCE6FA207C9C91009BB554 /* NSString+JKRMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6C5207C9C91009BB554 /* NSString+JKRMD5.m */; };
-		ECDCE6FB207C9C91009BB554 /* NSString+JKRSize.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6C6207C9C91009BB554 /* NSString+JKRSize.m */; };
-		ECDCE6FD207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6CC207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.m */; };
-		ECDCE6FE207C9C91009BB554 /* UINavigationController+JKRBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6CE207C9C91009BB554 /* UINavigationController+JKRBackButton.m */; };
-		ECDCE6FF207C9C91009BB554 /* UINavigationController+JKRStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6CF207C9C91009BB554 /* UINavigationController+JKRStatusBar.m */; };
-		ECDCE700207C9C91009BB554 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE6D2207C9C91009BB554 /* .gitignore */; };
-		ECDCE701207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6D4207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.m */; };
-		ECDCE70A207C9C91009BB554 /* NSDate+JKRDate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE6E9207C9C91009BB554 /* NSDate+JKRDate.m */; };
 		ECDCE70E207DF666009BB554 /* FMImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE70C207DF666009BB554 /* FMImageCollectionViewCell.m */; };
 		ECDCE70F207DF666009BB554 /* FMImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE70D207DF666009BB554 /* FMImageCollectionViewCell.xib */; };
+		ECDCE71B207F3E81009BB554 /* HXTagCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE711207F3E81009BB554 /* HXTagCollectionViewCell.m */; };
+		ECDCE71C207F3E81009BB554 /* HXTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE713207F3E81009BB554 /* HXTagsView.m */; };
+		ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE716207F3E81009BB554 /* HXTagAttribute.m */; };
+		ECDCE71F207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE719207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,55 +162,17 @@
 		ECDCE696207C858A009BB554 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		ECDCE697207C858A009BB554 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
 		ECDCE698207C858A009BB554 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
-		ECDCE69D207C9C91009BB554 /* UIImage+JKRRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKRRender.m"; sourceTree = "<group>"; };
-		ECDCE69E207C9C91009BB554 /* UIImage+JKRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKRImage.m"; sourceTree = "<group>"; };
-		ECDCE69F207C9C91009BB554 /* UIImage+JKR_MessageImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JKR_MessageImage.m"; sourceTree = "<group>"; };
-		ECDCE6A0207C9C91009BB554 /* UIImage+JKRRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKRRender.h"; sourceTree = "<group>"; };
-		ECDCE6A1207C9C91009BB554 /* UIImage+JKRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKRImage.h"; sourceTree = "<group>"; };
-		ECDCE6A2207C9C91009BB554 /* UIImage+JKR_MessageImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JKR_MessageImage.h"; sourceTree = "<group>"; };
-		ECDCE6A4207C9C91009BB554 /* UIView+JKR_HitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKR_HitTest.m"; sourceTree = "<group>"; };
-		ECDCE6A5207C9C91009BB554 /* UIView+JKR_HitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKR_HitTest.h"; sourceTree = "<group>"; };
-		ECDCE6A7207C9C91009BB554 /* UIColor+JKRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JKRColor.m"; sourceTree = "<group>"; };
-		ECDCE6A8207C9C91009BB554 /* UIColor+JKRColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JKRColor.h"; sourceTree = "<group>"; };
-		ECDCE6AA207C9C91009BB554 /* UIView+JKRTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRTouch.h"; sourceTree = "<group>"; };
-		ECDCE6AB207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRTapGestureRecognizer.h"; sourceTree = "<group>"; };
-		ECDCE6AC207C9C91009BB554 /* UIView+JKR_Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKR_Frame.h"; sourceTree = "<group>"; };
-		ECDCE6AD207C9C91009BB554 /* UIView+JKRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRViewController.h"; sourceTree = "<group>"; };
-		ECDCE6AE207C9C91009BB554 /* UIView+JKRSnap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKRSnap.h"; sourceTree = "<group>"; };
-		ECDCE6AF207C9C91009BB554 /* UIView+JKRTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRTouch.m"; sourceTree = "<group>"; };
-		ECDCE6B0207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRTapGestureRecognizer.m"; sourceTree = "<group>"; };
-		ECDCE6B1207C9C91009BB554 /* UIView+JKR_Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKR_Frame.m"; sourceTree = "<group>"; };
-		ECDCE6B2207C9C91009BB554 /* UIView+JKRSnap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRSnap.m"; sourceTree = "<group>"; };
-		ECDCE6B3207C9C91009BB554 /* UIView+JKRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKRViewController.m"; sourceTree = "<group>"; };
-		ECDCE6B5207C9C91009BB554 /* NSObject+JKR_Observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKR_Observer.h"; sourceTree = "<group>"; };
-		ECDCE6B6207C9C91009BB554 /* NSObject+JKR_Observer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKR_Observer.m"; sourceTree = "<group>"; };
-		ECDCE6B8207C9C91009BB554 /* NSObject+JKR_RunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JKR_RunTime.h"; sourceTree = "<group>"; };
-		ECDCE6B9207C9C91009BB554 /* NSObject+JKR_RunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JKR_RunTime.m"; sourceTree = "<group>"; };
-		ECDCE6BB207C9C91009BB554 /* UITextView+JKRPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+JKRPlaceHolder.h"; sourceTree = "<group>"; };
-		ECDCE6BC207C9C91009BB554 /* UITextView+JKRPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+JKRPlaceHolder.m"; sourceTree = "<group>"; };
-		ECDCE6BD207C9C91009BB554 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		ECDCE6BF207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+JKR_BackgroundColor.m"; sourceTree = "<group>"; };
-		ECDCE6C0207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+JKR_BackgroundColor.h"; sourceTree = "<group>"; };
-		ECDCE6C2207C9C91009BB554 /* NSString+JKRSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKRSize.h"; sourceTree = "<group>"; };
-		ECDCE6C3207C9C91009BB554 /* NSString+JKRMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JKRMD5.h"; sourceTree = "<group>"; };
-		ECDCE6C4207C9C91009BB554 /* NSString+URLComponents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLComponents.m"; sourceTree = "<group>"; };
-		ECDCE6C5207C9C91009BB554 /* NSString+JKRMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKRMD5.m"; sourceTree = "<group>"; };
-		ECDCE6C6207C9C91009BB554 /* NSString+JKRSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JKRSize.m"; sourceTree = "<group>"; };
-		ECDCE6C7207C9C91009BB554 /* NSString+URLComponents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLComponents.h"; sourceTree = "<group>"; };
-		ECDCE6CA207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JKRStatusBarStyle.h"; sourceTree = "<group>"; };
-		ECDCE6CC207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JKRStatusBarStyle.m"; sourceTree = "<group>"; };
-		ECDCE6CE207C9C91009BB554 /* UINavigationController+JKRBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKRBackButton.m"; sourceTree = "<group>"; };
-		ECDCE6CF207C9C91009BB554 /* UINavigationController+JKRStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+JKRStatusBar.m"; sourceTree = "<group>"; };
-		ECDCE6D0207C9C91009BB554 /* UINavigationController+JKRBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKRBackButton.h"; sourceTree = "<group>"; };
-		ECDCE6D1207C9C91009BB554 /* UINavigationController+JKRStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JKRStatusBar.h"; sourceTree = "<group>"; };
-		ECDCE6D2207C9C91009BB554 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		ECDCE6D4207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+JKRTouch.m"; sourceTree = "<group>"; };
-		ECDCE6D5207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+JKRTouch.h"; sourceTree = "<group>"; };
-		ECDCE6E8207C9C91009BB554 /* NSDate+JKRDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+JKRDate.h"; sourceTree = "<group>"; };
-		ECDCE6E9207C9C91009BB554 /* NSDate+JKRDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+JKRDate.m"; sourceTree = "<group>"; };
 		ECDCE70B207DF666009BB554 /* FMImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMImageCollectionViewCell.h; sourceTree = "<group>"; };
 		ECDCE70C207DF666009BB554 /* FMImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMImageCollectionViewCell.m; sourceTree = "<group>"; };
 		ECDCE70D207DF666009BB554 /* FMImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		ECDCE711207F3E81009BB554 /* HXTagCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewCell.m; sourceTree = "<group>"; };
+		ECDCE712207F3E81009BB554 /* HXTagAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagAttribute.h; sourceTree = "<group>"; };
+		ECDCE713207F3E81009BB554 /* HXTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagsView.m; sourceTree = "<group>"; };
+		ECDCE715207F3E81009BB554 /* HXTagCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		ECDCE716207F3E81009BB554 /* HXTagAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagAttribute.m; sourceTree = "<group>"; };
+		ECDCE717207F3E81009BB554 /* HXTagCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagCollectionViewCell.h; sourceTree = "<group>"; };
+		ECDCE718207F3E81009BB554 /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
+		ECDCE719207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +207,7 @@
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				ECDCE710207F3E81009BB554 /* HXTags */,
 				ECDCE698207C858A009BB554 /* YYFPSLabel.h */,
 				ECDCE696207C858A009BB554 /* YYFPSLabel.m */,
 				ECDCE697207C858A009BB554 /* YYWeakProxy.h */,
@@ -630,7 +573,6 @@
 			children = (
 				EC473D19205BF6DB00CD9397 /* CALayer+UIColor.h */,
 				EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */,
-				ECDCE69B207C9C91009BB554 /* JKRCategory-master */,
 				EC473D15205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.h */,
 				EC473D1B205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m */,
 				EC473D1C205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.h */,
@@ -653,161 +595,19 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		ECDCE69B207C9C91009BB554 /* JKRCategory-master */ = {
+		ECDCE710207F3E81009BB554 /* HXTags */ = {
 			isa = PBXGroup;
 			children = (
-				ECDCE69C207C9C91009BB554 /* UIImage */,
-				ECDCE6A3207C9C91009BB554 /* UIResponder */,
-				ECDCE6A6207C9C91009BB554 /* UIColor */,
-				ECDCE6A9207C9C91009BB554 /* UIView */,
-				ECDCE6B4207C9C91009BB554 /* KVO */,
-				ECDCE6B7207C9C91009BB554 /* Runtime */,
-				ECDCE6BA207C9C91009BB554 /* UITextView */,
-				ECDCE6BD207C9C91009BB554 /* README.md */,
-				ECDCE6BE207C9C91009BB554 /* UINavigationBar */,
-				ECDCE6C1207C9C91009BB554 /* NSString */,
-				ECDCE6C8207C9C91009BB554 /* UIViewController */,
-				ECDCE6CD207C9C91009BB554 /* UINavigationController */,
-				ECDCE6D2207C9C91009BB554 /* .gitignore */,
-				ECDCE6D3207C9C91009BB554 /* UIGestureRecognizer */,
-				ECDCE6E7207C9C91009BB554 /* NSDate */,
+				ECDCE712207F3E81009BB554 /* HXTagAttribute.h */,
+				ECDCE716207F3E81009BB554 /* HXTagAttribute.m */,
+				ECDCE717207F3E81009BB554 /* HXTagCollectionViewCell.h */,
+				ECDCE711207F3E81009BB554 /* HXTagCollectionViewCell.m */,
+				ECDCE715207F3E81009BB554 /* HXTagCollectionViewFlowLayout.h */,
+				ECDCE719207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m */,
+				ECDCE718207F3E81009BB554 /* HXTagsView.h */,
+				ECDCE713207F3E81009BB554 /* HXTagsView.m */,
 			);
-			path = "JKRCategory-master";
-			sourceTree = "<group>";
-		};
-		ECDCE69C207C9C91009BB554 /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE69D207C9C91009BB554 /* UIImage+JKRRender.m */,
-				ECDCE69E207C9C91009BB554 /* UIImage+JKRImage.m */,
-				ECDCE69F207C9C91009BB554 /* UIImage+JKR_MessageImage.m */,
-				ECDCE6A0207C9C91009BB554 /* UIImage+JKRRender.h */,
-				ECDCE6A1207C9C91009BB554 /* UIImage+JKRImage.h */,
-				ECDCE6A2207C9C91009BB554 /* UIImage+JKR_MessageImage.h */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		ECDCE6A3207C9C91009BB554 /* UIResponder */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6A4207C9C91009BB554 /* UIView+JKR_HitTest.m */,
-				ECDCE6A5207C9C91009BB554 /* UIView+JKR_HitTest.h */,
-			);
-			path = UIResponder;
-			sourceTree = "<group>";
-		};
-		ECDCE6A6207C9C91009BB554 /* UIColor */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6A7207C9C91009BB554 /* UIColor+JKRColor.m */,
-				ECDCE6A8207C9C91009BB554 /* UIColor+JKRColor.h */,
-			);
-			path = UIColor;
-			sourceTree = "<group>";
-		};
-		ECDCE6A9207C9C91009BB554 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6AA207C9C91009BB554 /* UIView+JKRTouch.h */,
-				ECDCE6AB207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.h */,
-				ECDCE6AC207C9C91009BB554 /* UIView+JKR_Frame.h */,
-				ECDCE6AD207C9C91009BB554 /* UIView+JKRViewController.h */,
-				ECDCE6AE207C9C91009BB554 /* UIView+JKRSnap.h */,
-				ECDCE6AF207C9C91009BB554 /* UIView+JKRTouch.m */,
-				ECDCE6B0207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.m */,
-				ECDCE6B1207C9C91009BB554 /* UIView+JKR_Frame.m */,
-				ECDCE6B2207C9C91009BB554 /* UIView+JKRSnap.m */,
-				ECDCE6B3207C9C91009BB554 /* UIView+JKRViewController.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
-		ECDCE6B4207C9C91009BB554 /* KVO */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6B5207C9C91009BB554 /* NSObject+JKR_Observer.h */,
-				ECDCE6B6207C9C91009BB554 /* NSObject+JKR_Observer.m */,
-			);
-			path = KVO;
-			sourceTree = "<group>";
-		};
-		ECDCE6B7207C9C91009BB554 /* Runtime */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6B8207C9C91009BB554 /* NSObject+JKR_RunTime.h */,
-				ECDCE6B9207C9C91009BB554 /* NSObject+JKR_RunTime.m */,
-			);
-			path = Runtime;
-			sourceTree = "<group>";
-		};
-		ECDCE6BA207C9C91009BB554 /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6BB207C9C91009BB554 /* UITextView+JKRPlaceHolder.h */,
-				ECDCE6BC207C9C91009BB554 /* UITextView+JKRPlaceHolder.m */,
-			);
-			path = UITextView;
-			sourceTree = "<group>";
-		};
-		ECDCE6BE207C9C91009BB554 /* UINavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6BF207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.m */,
-				ECDCE6C0207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.h */,
-			);
-			path = UINavigationBar;
-			sourceTree = "<group>";
-		};
-		ECDCE6C1207C9C91009BB554 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6C2207C9C91009BB554 /* NSString+JKRSize.h */,
-				ECDCE6C3207C9C91009BB554 /* NSString+JKRMD5.h */,
-				ECDCE6C4207C9C91009BB554 /* NSString+URLComponents.m */,
-				ECDCE6C5207C9C91009BB554 /* NSString+JKRMD5.m */,
-				ECDCE6C6207C9C91009BB554 /* NSString+JKRSize.m */,
-				ECDCE6C7207C9C91009BB554 /* NSString+URLComponents.h */,
-			);
-			path = NSString;
-			sourceTree = "<group>";
-		};
-		ECDCE6C8207C9C91009BB554 /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6CA207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.h */,
-				ECDCE6CC207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.m */,
-			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		ECDCE6CD207C9C91009BB554 /* UINavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6CE207C9C91009BB554 /* UINavigationController+JKRBackButton.m */,
-				ECDCE6CF207C9C91009BB554 /* UINavigationController+JKRStatusBar.m */,
-				ECDCE6D0207C9C91009BB554 /* UINavigationController+JKRBackButton.h */,
-				ECDCE6D1207C9C91009BB554 /* UINavigationController+JKRStatusBar.h */,
-			);
-			path = UINavigationController;
-			sourceTree = "<group>";
-		};
-		ECDCE6D3207C9C91009BB554 /* UIGestureRecognizer */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6D4207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.m */,
-				ECDCE6D5207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.h */,
-			);
-			path = UIGestureRecognizer;
-			sourceTree = "<group>";
-		};
-		ECDCE6E7207C9C91009BB554 /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				ECDCE6E8207C9C91009BB554 /* NSDate+JKRDate.h */,
-				ECDCE6E9207C9C91009BB554 /* NSDate+JKRDate.m */,
-			);
-			path = NSDate;
+			path = HXTags;
 			sourceTree = "<group>";
 		};
 		FB5A6B064CF7852341A3800A /* Pods */ = {
@@ -884,14 +684,12 @@
 				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
-				ECDCE700207C9C91009BB554 /* .gitignore in Resources */,
 				EC38CAFF2072507900C09DC7 /* CZJAlertView.xib in Resources */,
 				EC42A4D12063F93000C52324 /* Assets.xcassets in Resources */,
 				ECDCE70F207DF666009BB554 /* FMImageCollectionViewCell.xib in Resources */,
 				EC42A4C2206346A800C52324 /* FMTCodeInputTextField.xib in Resources */,
 				ECDCE67B207B0D07009BB554 /* FMTUpImageViewController.xib in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
-				ECDCE6F7207C9C91009BB554 /* README.md in Resources */,
 				EC42A4DD2068DCC500C52324 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -987,62 +785,44 @@
 			files = (
 				EC42A4D92068DC3A00C52324 /* AppDelegate.m in Sources */,
 				EC42A4C1206346A800C52324 /* FMTCodeInputTextField.m in Sources */,
-				ECDCE6F1207C9C91009BB554 /* UIView+JKR_Frame.m in Sources */,
-				ECDCE6F9207C9C91009BB554 /* NSString+URLComponents.m in Sources */,
-				ECDCE6FD207C9C91009BB554 /* UIViewController+JKRStatusBarStyle.m in Sources */,
 				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
-				ECDCE6F2207C9C91009BB554 /* UIView+JKRSnap.m in Sources */,
-				ECDCE6EF207C9C91009BB554 /* UIView+JKRTouch.m in Sources */,
-				ECDCE6EC207C9C91009BB554 /* UIImage+JKR_MessageImage.m in Sources */,
 				EC38CB08207379FE00C09DC7 /* Reachability.m in Sources */,
 				ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */,
-				ECDCE6F5207C9C91009BB554 /* NSObject+JKR_RunTime.m in Sources */,
 				ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */,
-				ECDCE6FE207C9C91009BB554 /* UINavigationController+JKRBackButton.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
-				ECDCE6F4207C9C91009BB554 /* NSObject+JKR_Observer.m in Sources */,
 				EC38CB02207250B200C09DC7 /* FMAlertViewController.m in Sources */,
 				ECDCE689207B9C8C009BB554 /* UIView+SDAutoLayout.m in Sources */,
 				EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */,
-				ECDCE6FB207C9C91009BB554 /* NSString+JKRSize.m in Sources */,
-				ECDCE6F8207C9C91009BB554 /* UINavigationBar+JKR_BackgroundColor.m in Sources */,
+				ECDCE71C207F3E81009BB554 /* HXTagsView.m in Sources */,
 				EC42A4D42064F13600C52324 /* UINavigationBar+BackgroundColor.m in Sources */,
+				ECDCE71B207F3E81009BB554 /* HXTagCollectionViewCell.m in Sources */,
 				ECDCE68C207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
-				ECDCE6EA207C9C91009BB554 /* UIImage+JKRRender.m in Sources */,
 				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
 				EC38CB0C2074745600C09DC7 /* FMSetMyInfoViewController.m in Sources */,
 				EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */,
 				EC42A4C92063EEED00C52324 /* FMTLoginViewController.m in Sources */,
 				EC38CAFA20722EDB00C09DC7 /* FMViewController.m in Sources */,
 				EC42A4DE2068DCC500C52324 /* main.m in Sources */,
-				ECDCE6FA207C9C91009BB554 /* NSString+JKRMD5.m in Sources */,
+				ECDCE71F207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m in Sources */,
 				EC38CB0520732C8A00C09DC7 /* FMDeviceInfo.m in Sources */,
 				ECDCE699207C858A009BB554 /* YYWeakProxy.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
 				EC42A4F5206900E600C52324 /* UITextField+Delete.m in Sources */,
 				EC42A4F22068F6A000C52324 /* FMTCodeInputTextFields.m in Sources */,
-				ECDCE6EB207C9C91009BB554 /* UIImage+JKRImage.m in Sources */,
-				ECDCE6EE207C9C91009BB554 /* UIColor+JKRColor.m in Sources */,
 				EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */,
 				EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */,
 				ECDCE69A207C858A009BB554 /* YYFPSLabel.m in Sources */,
-				ECDCE6ED207C9C91009BB554 /* UIView+JKR_HitTest.m in Sources */,
-				ECDCE6F3207C9C91009BB554 /* UIView+JKRViewController.m in Sources */,
 				EC42A4CC2063EF0700C52324 /* FMTRegistViewController.m in Sources */,
 				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
-				ECDCE701207C9C91009BB554 /* UIGestureRecognizer+JKRTouch.m in Sources */,
 				ECDCE70E207DF666009BB554 /* FMImageCollectionViewCell.m in Sources */,
-				ECDCE6F6207C9C91009BB554 /* UITextView+JKRPlaceHolder.m in Sources */,
+				ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */,
 				EC38CB102074A7E500C09DC7 /* LewPickerController.m in Sources */,
 				ECDCE686207B6ACE009BB554 /* PBaseTableViewCell.m in Sources */,
 				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
-				ECDCE6FF207C9C91009BB554 /* UINavigationController+JKRStatusBar.m in Sources */,
-				ECDCE70A207C9C91009BB554 /* NSDate+JKRDate.m in Sources */,
 				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
-				ECDCE6F0207C9C91009BB554 /* UIView+JKRTapGestureRecognizer.m in Sources */,
 				ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
@@ -1196,7 +976,7 @@
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.FireMarchTch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joe.FireMarchTch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1213,7 +993,7 @@
 				INFOPLIST_FILE = FireMarchTch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.FireMarchTch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joe.FireMarchTch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

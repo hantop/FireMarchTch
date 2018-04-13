@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Classes/RegLogin/FMTUpImageViewController.m"
-            timestampString = "545146517.6100529"
+            timestampString = "545296499.74248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "-getPas"
             landmarkType = "7">
          </BreakpointContent>

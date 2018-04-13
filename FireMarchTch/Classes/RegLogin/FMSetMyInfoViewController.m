@@ -9,6 +9,7 @@
 #import "FMSetMyInfoViewController.h"
 #import "LewPickerController.h"
 #import "FMTUpImageViewController.h"
+#import "HXTagsView.h"
 
 @interface FMSetMyInfoViewController ()
 <
@@ -27,6 +28,7 @@ UIPickerViewDelegate
 @property (assign, nonatomic) NSInteger currentSelectOld;
 @property (assign, nonatomic) NSInteger currentSelectBust;
 @property (weak, nonatomic) IBOutlet UILabel *bigTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
 @property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UIView *buttomView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *line1;
@@ -41,6 +43,9 @@ UIPickerViewDelegate
 
 - (IBAction)buttonAction:(id)sender;
 - (IBAction)nextStepAction:(id)sender;
+@property (weak, nonatomic) IBOutlet HXTagsView *tagsView;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
+- (IBAction)refreshAction:(id)sender;
 
 @end
 
@@ -56,18 +61,31 @@ UIPickerViewDelegate
 }
 
 - (void)initViewsAndDatas {
-    self.line1.constant = 0.5;
-    self.line2.constant = 0.5;
-    self.line3.constant = 0.5;
-    self.line4.constant = 0.5;
+    self.line1.constant = 0.3;
+    self.line2.constant = 0.3;
+    self.line3.constant = 0.3;
+    self.line4.constant = 0.3;
     
     self.bigTitleLabel.text = @"设置基本信息";
     self.bigTitleLabel.hidden = NO;
+    self.subTitleLabel.hidden = NO;
+    self.subTitleLabel.text = @"填写真实详细的信息有助于学生搜索你";
     
     self.heightArray = @[@"155-159cm",@"160-165cm",@"166-169cm",@"170-175cm",@"176-179cm",@"180+cm"];
     self.weightArray = @[@"40-45kg",@"46-49kg",@"50-55kg",@"56-59kg",@"60+kg"];
     self.bustArray = @[@"B", @"B+", @"C", @"C+", @"D", @"E", @"F",];
     self.oldArray = @[@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25",@"26",@"27",@"28",@"29",@"30",@"31",@"32",@"33",@"34",@"35",@"36",@"37",@"38",@"39"];
+    
+    
+    self.tagsView.isMultiSelect = YES;
+    self.tagsView.layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    self.tagsView.tags = @[@"知性",@"明媚",@"有为青年",@"颜值高",@"春天的一阵风",@"透心凉",@"服务好",@"倾国倾城",@"有缘再见"];
+    self.tagsView.completion = ^(NSArray *selectTags, NSInteger currentIndex) {
+        DLog(@"%@",selectTags);
+    };
+    
+    [self.refreshButton setImage:[IMAGENAMED(@"refresh") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [self.refreshButton setTintColor:FSYellow];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -230,4 +248,8 @@ UIPickerViewDelegate
     }];
 }
 
+- (IBAction)refreshAction:(id)sender {
+    self.tagsView.tags = @[@"理智",@"宽容",@"有担当",@"老司机开车",@"不系安全带",@"爽翻",@"皮肤光滑",@"小城故事",@"想你的365天"];
+    [self.tagsView reloadData];
+}
 @end

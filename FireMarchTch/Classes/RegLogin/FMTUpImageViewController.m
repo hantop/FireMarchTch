@@ -23,8 +23,9 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 @property (strong, nonatomic) __block NSMutableArray *photoVideoUrlArray;
 @property (strong, nonatomic)UICollectionView* myPicCollectionView;
 @property (nonatomic, strong) NSMutableArray<UIImage *> *lastSelectPhotos;
-@property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssets;
-@property (nonatomic, strong) NSArray *arrDataSources;
+@property (nonatomic, strong) NSMutableArray<UIImage *> *lastSelectVideos;
+@property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssetsP;
+@property (nonatomic, strong) NSMutableArray<PHAsset *> *lastSelectAssetsV;
 @property (nonatomic, assign) BOOL isOriginal;
 
 
@@ -37,6 +38,9 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 - (IBAction)nextStepAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *photoButton;
 @property (weak, nonatomic) IBOutlet UIButton *videoButton;
+@property (weak, nonatomic) IBOutlet UIView *buttomView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttomViewWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttomViewLeading;
 
 @end
 
@@ -48,6 +52,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     self.photoPicUrlArray = [NSMutableArray array];
     self.photoVideoUrlArray = [NSMutableArray array];
     self.fmImageType = FMImageTypePic;
+    self.buttomViewWidth.constant = PJ_SCREEN_WIDTH*0.5;
 
     [self photoAction:nil];
     [self.myPicCollectionView reloadData];
@@ -155,28 +160,28 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     switch (self.fmImageType) {
         case FMImageTypePic:
         {
+            ZLPhotoActionSheet *actionSheet = [self getPas];
+            [actionSheet.configuration setAllowSelectImage:YES];
+            [actionSheet.configuration setAllowSelectVideo:NO];
             if (indexPath.item == self.photoPicUrlArray.count) {
-                ZLPhotoActionSheet *actionSheet = [self getPas];
-                ZLPhotoConfiguration *config = actionSheet.configuration;
-                [config setAllowSelectImage:YES];
-                [config setAllowSelectVideo:NO];
                 [actionSheet showPhotoLibrary];
             }
             else {
-                //        [[self getPas] previewSelectedPhotos:self.lastSelectPhotos assets:self.lastSelectAssets index:indexPath.row isOriginal:self.isOriginal];
+                [actionSheet previewSelectedPhotos:self.lastSelectPhotos assets:self.lastSelectAssetsP index:indexPath.row isOriginal:self.isOriginal];
             }
         }
             break;
         case FMImageTypeVideo:
         {
+            ZLPhotoActionSheet *actionSheet = [self getPas];
+            [actionSheet.configuration setAllowSelectImage:NO];
+            [actionSheet.configuration setAllowSelectVideo:YES];
             if (indexPath.item == self.photoVideoUrlArray.count) {
-                ZLPhotoActionSheet *actionSheet = [self getPas];
-                [actionSheet.configuration setAllowSelectImage:NO];
-                [actionSheet.configuration setAllowSelectVideo:YES];
+
                 [actionSheet showPhotoLibrary];
             }
             else {
-                //        [[self getPas] previewSelectedPhotos:self.lastSelectPhotos assets:self.lastSelectAssets index:indexPath.row isOriginal:self.isOriginal];
+                [actionSheet previewSelectedPhotos:self.lastSelectPhotos assets:self.lastSelectAssetsV index:indexPath.row isOriginal:self.isOriginal];
             }
         }
             break;
@@ -188,6 +193,13 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 }
 
 - (IBAction)photoAction:(id)sender {
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.buttomViewLeading.constant = 0;
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+    }];
+    
     self.fmImageType = FMImageTypePic;
     [self.photoButton setTitleColor:FSBlackColor20 forState:UIControlStateNormal];
     [self.videoButton setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
@@ -196,6 +208,12 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 }
 
 - (IBAction)vedioAction:(id)sender {
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.buttomViewLeading.constant = PJ_SCREEN_WIDTH*0.5;
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+    }];
     self.fmImageType = FMImageTypeVideo;
     [self.photoButton setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
     [self.videoButton setTitleColor:FSBlackColor20 forState:UIControlStateNormal];
@@ -216,7 +234,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
         //设置照片最大预览数
         actionSheet.configuration.maxPreviewCount = 10;
         actionSheet.sender = self;
-        actionSheet.arrSelectedAssets = self.lastSelectAssets;
+        actionSheet.arrSelectedAssets = FMImageTypePic == self.fmImageType ? self.lastSelectAssetsP : self.lastSelectAssetsV;
         weakSelf(self);
         [actionSheet setSelectImageBlock:^(NSArray<UIImage *> * _Nullable images, NSArray<PHAsset *> * _Nonnull assets, BOOL isOriginal) {
             strongSelf(weakSelf);
@@ -226,18 +244,16 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                 {
                     strongSelf.photoPicUrlArray = images.mutableCopy;
                     strongSelf.isOriginal = isOriginal;
-                    strongSelf.lastSelectAssets = assets.mutableCopy;
+                    strongSelf.lastSelectAssetsP = assets.mutableCopy;
                     strongSelf.lastSelectPhotos = images.mutableCopy;
-                    strongSelf.arrDataSources = images.copy;
                 }
                     break;
                 case FMImageTypeVideo:
                 {
                     strongSelf.photoVideoUrlArray = images.mutableCopy;
                     strongSelf.isOriginal = isOriginal;
-                    strongSelf.lastSelectAssets = assets.mutableCopy;
-                    strongSelf.lastSelectPhotos = images.mutableCopy;
-                    strongSelf.arrDataSources = images.copy;
+                    strongSelf.lastSelectAssetsV = assets.mutableCopy;
+                    strongSelf.lastSelectVideos = images.mutableCopy;
                 }
                     break;
                     
@@ -248,29 +264,29 @@ typedef NS_ENUM(NSInteger, FMImageType) {
             
             [strongSelf.myPicCollectionView reloadData];
             
-            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[FMUtils getCurrentVC].view animated:YES];
-            hud.label.text = @"上传中...";
-            [[FMTBaseDataManager sharedFMTBaseDataManager] uploadImages:self.arrDataSources param:@{@"imageType" : @"1"} progress:nil success:^(id json) {
-                NSArray* tmpAry = json[@"data"];
-                for (NSDictionary* dictKey in tmpAry)
-                {
-                    switch (strongSelf.fmImageType) {
-                        case FMImageTypePic:
-                            [strongSelf.photoPicUrlArray addObject:dictKey[@"image_url"]];
-                            break;
-                        case FMImageTypeVideo:
-                            [strongSelf.photoVideoUrlArray addObject:dictKey[@"image_url"]];
-                            break;
-                            
-                        default:
-                            break;
-                    }
-                    
-                }
-                [strongSelf.myPicCollectionView reloadData];
-            } failure:^(id json){
-
-            }];
+//            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[FMUtils getCurrentVC].view animated:YES];
+//            hud.label.text = @"上传中...";
+//            [[FMTBaseDataManager sharedFMTBaseDataManager] uploadImages:FMImageTypePic == self.fmImageType ? self.pho : self.lastSelectAssetsV param:@{@"imageType" : @"1"} progress:nil success:^(id json) {
+//                NSArray* tmpAry = json[@"data"];
+//                for (NSDictionary* dictKey in tmpAry)
+//                {
+//                    switch (strongSelf.fmImageType) {
+//                        case FMImageTypePic:
+//                            [strongSelf.photoPicUrlArray addObject:dictKey[@"image_url"]];
+//                            break;
+//                        case FMImageTypeVideo:
+//                            [strongSelf.photoVideoUrlArray addObject:dictKey[@"image_url"]];
+//                            break;
+//
+//                        default:
+//                            break;
+//                    }
+//
+//                }
+//                [strongSelf.myPicCollectionView reloadData];
+//            } failure:^(id json){
+//
+//            }];
             
         }];
         

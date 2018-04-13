@@ -39,6 +39,9 @@
     [self.pwdTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     self.phoneNumTextField.delegate = self;
     self.pwdTextField.delegate = self;
+    
+    [self.logoImageView setImage:[IMAGENAMED(@"myCircle") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [self.logoImageView setTintColor:FSGrayColorA8];
 }
 
 - (void)didReceiveMemoryWarning {

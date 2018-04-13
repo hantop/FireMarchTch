@@ -153,6 +153,9 @@ singleton_implementation(FMTBaseDataManager)
             _fail(json);
         }
     };
+    FMProgressBlock progressBlock = ^ (NSProgress *progress) {
+        CGFloat stauts = 100.f * progress.completedUnitCount/progress.totalUnitCount;
+    };
     
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setValuesForKeysWithDictionary:_params];

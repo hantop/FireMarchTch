@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YYFPSLabel.h"
+extern CFAbsoluteTime StartTime;
 
 @interface AppDelegate ()
 
@@ -41,13 +42,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        iLog(@"Lauched in %f seconds.", (CFAbsoluteTimeGetCurrent() - StartTime));
+    });
+    
     //-------------------1.设置状态栏隐藏，因为有广告------------------
 //    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     [USER_DEFAULT setValue:@"1234" forKey:kFMTAccessCode];
     
     //------------------2.设置URL缓存机制----------------
-//    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
-//    [NSURLCache setSharedURLCache:URLCache];
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
     
     //--------------------4.初始化定位-------------------
     [[CCLocationManager shareLocation]getCity:^(NSString *addressString) {
