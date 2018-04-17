@@ -61,12 +61,12 @@ UIPickerViewDelegate
 }
 
 - (void)initViewsAndDatas {
-    self.line1.constant = 0.3;
-    self.line2.constant = 0.3;
-    self.line3.constant = 0.3;
-    self.line4.constant = 0.3;
+    self.line1.constant = 0.5;
+    self.line2.constant = 0.5;
+    self.line3.constant = 0.5;
+    self.line4.constant = 0.5;
     
-    self.bigTitleLabel.text = @"设置基本信息";
+    self.bigTitleLabel.text = @"①设置基本信息";
     self.bigTitleLabel.hidden = NO;
     self.subTitleLabel.hidden = NO;
     self.subTitleLabel.text = @"填写真实详细的信息有助于学生搜索你";
@@ -86,6 +86,13 @@ UIPickerViewDelegate
     
     [self.refreshButton setImage:[IMAGENAMED(@"refresh") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     [self.refreshButton setTintColor:FSYellow];
+
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(nextStepAction:)];
+    rightItem.width = 60.f;
+    [rightItem setTitleTextAttributes:@{NSFontAttributeName:BOLDSYSTEMFONT(16)} forState:UIControlStateNormal];
+    [rightItem setTintColor:FSYellow];
+    
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)didReceiveMemoryWarning {

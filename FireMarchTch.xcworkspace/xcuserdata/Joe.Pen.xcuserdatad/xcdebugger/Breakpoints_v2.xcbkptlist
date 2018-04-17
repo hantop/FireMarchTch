@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Classes/RegLogin/FMSetPWDViewController.m"
-            timestampString = "544873226.6450469"
+            timestampString = "545669047.804698"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-registAction:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Extentions/Coponents/LewPickerController.m"
-            timestampString = "544873226.6451091"
+            timestampString = "545651399.502987"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "226"
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Classes/RegLogin/FMTUpImageViewController.m"
-            timestampString = "545296499.74248"
+            timestampString = "545669047.804796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
             landmarkName = "-getPas"
             landmarkType = "7">
          </BreakpointContent>

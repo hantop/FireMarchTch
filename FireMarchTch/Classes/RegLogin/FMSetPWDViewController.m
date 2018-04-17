@@ -35,6 +35,7 @@
     self.firstPWDTextField.delegate = self;
     self.secondPWDTextField.delegate = self;
     [self updateRegistButton];
+    [self.registButton setTitle:FMTRegistTypeReset == self.registType ? @"重置密码" : @"注册" forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {

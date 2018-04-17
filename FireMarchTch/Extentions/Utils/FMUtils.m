@@ -350,8 +350,8 @@ void backLastView(id sender)
 //    [leftBtn setTitleEdgeInsets:UIEdgeInsetsMake(0,12,0,0)];
 //    [leftBtn setImageEdgeInsets:UIEdgeInsetsMake(0,-6,0,0)];
     [leftBtn addTarget:target action:popAction forControlEvents:UIControlEventTouchUpInside];
-    [leftBtn setTintColor: FSGrayColorB8];
-    [leftBtn setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
+    [leftBtn setTintColor: FSBlackColor33];
+    [leftBtn setTitleColor:FSBlackColor33 forState:UIControlStateNormal];
     
     //UIBarButtonItem
     UIBarButtonItem *leftItem =[[UIBarButtonItem alloc]initWithCustomView: leftBtn];

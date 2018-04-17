@@ -16,7 +16,7 @@
     if (self) {
         UIColor *normalColor = FSGrayColorA8;
         UIColor *normalBackgroundColor = [UIColor whiteColor];
-        UIColor *selectedBackgroundColor = [UIColor colorWithRed:255/255.0 green:235/255.0 blue:200/255.0 alpha:1.0];
+        UIColor *selectedBackgroundColor = [UIColor colorWithRed:255/255.0 green:215/255.0 blue:215/255.0 alpha:1.0];
         
         _borderWidth = 0.5f;
         _borderColor = normalColor;

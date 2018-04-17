@@ -11,11 +11,14 @@
 #import "FMSetPWDViewController.h"
 
 @interface FMTRegistViewController () <FMTCodeInputTextFieldsDelegate, UITextFieldDelegate>
-@property (strong, nonatomic) __block FMTCodeInputTextFields *textField;
 @property (strong, nonatomic) NSString *inviteCode;
+@property (assign, nonatomic) __block BOOL isOK;
+@property (strong, nonatomic) __block FMTCodeInputTextFields *textField;
+
 @property (weak, nonatomic) IBOutlet UIView *inputPhoneNumView;
 @property (weak, nonatomic) IBOutlet UIView *titleView;
-@property (assign, nonatomic) __block BOOL isOK;
+
+@property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 @property (weak, nonatomic) IBOutlet UILabel *getMsgCodeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mainTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subTitleLabel;
@@ -30,7 +33,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *getMsgCodeButton;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-@property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 
 - (IBAction)nextStepAction:(id)sender;
 - (IBAction)getMsgCodeAction:(id)sender;
@@ -47,7 +49,6 @@
 - (void)initViews {
     self.inputPhoneNumView.alpha = 0;
     self.inputPhoneNumView.hidden = YES;
-    self.inviteCode = @"djkief";
     self.lineOneHeight.constant = 0.3;
     self.lineTwoHeight.constant = 0.3;
     self.lineThrHeight.constant = 0.3;
@@ -59,19 +60,29 @@
     [self.msgCodeTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.qqTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     
-    FMTCodeInputTextFieldsConfig *config = [[FMTCodeInputTextFieldsConfig alloc]initWithCodeType:FMTCodeTypeLong];
-    config.keyboardType = UIKeyboardTypeEmailAddress;
-    config.textFieldSize = (iPhone5 || iPhone4) ? CGSizeMake(40, 50) : CGSizeMake(50, 50);
-    _textField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
-    [self.view addSubview:_textField];
-    [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.left.equalTo(self.view).with.offset(0);
-        make.top.equalTo(self.view).with.offset(180);
-        make.height.mas_equalTo(@(100));
-    }];
-    
-    self.mainTitleLabel.text = @"填写邀请码";
-    self.subTitleLabel.text = @"邀请码的获取方式来自好友的分享及加群获取";
+    switch (self.registType) {
+        case FMTRegistTypeRegist:
+        {
+            self.mainTitleLabel.text = @"填写邀请码";
+            self.subTitleLabel.text = @"邀请码的获取方式来自好友的分享及加群获取";
+            self.textField.hidden = NO;
+        }
+            break;
+        case FMTRegistTypeReset:
+        {
+            self.mainTitleLabel.text = @"验证手机";
+            self.subTitleLabel.text = @"输入手机号";
+            self.inputPhoneNumView.alpha = 1;
+            self.inputPhoneNumView.hidden = NO;
+            self.qqTextField.hidden = YES;
+            self.lineThrHeight.constant = 0;
+            [self updateNextStepButton:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -136,6 +147,11 @@
         self.msgCodeTextField.tag == textField.tag)
     {
         [self postCheckSMSCode];
+        if (FMTRegistTypeReset == self.registType){
+            [self.nextButton setBackgroundColor:FSYellow];
+            [self.nextButton setEnabled:YES];
+            return;
+        }
     }
     
     //手机号是否正确、验证码是否正确、QQ号是否正确 决定是否显示下一步按钮
@@ -143,7 +159,7 @@
         self.msgCodeTextField.text.length == 6 &&
         self.qqTextField.text.length > 5 &&
         [FMUtils isMobileNumber:self.phoneNumTextField.text]) {
-        [self.nextButton setBackgroundColor:FSYellowColor33];
+        [self.nextButton setBackgroundColor:FSYellow];
         [self.nextButton setEnabled:YES];
     }
     else
@@ -223,7 +239,7 @@
             [self.getMsgCodeButton setEnabled:NO];
             [self.getMsgCodeButton setHidden:YES];
             [self.getMsgCodeLabel setHidden:NO];
-            [self.msgCodeTextField becomeFirstResponder];
+//            [self.msgCodeTextField becomeFirstResponder];
             
             __block int timeout=9; //倒计时时间
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -273,10 +289,30 @@
 - (IBAction)nextStepAction:(id)sender {
     [self.view endEditing:YES];
     __weak typeof(self) weakSelf = self;
-    NSDictionary *params = @{@"qqNumber":self.qqTextField.text,@"mobile":self.phoneNumTextField.text};
-    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
-        [weakSelf performSegueWithIdentifier:@"segueToSetPwdVC" sender:weakSelf];
-    } url:kFMTAPICheckUserFirst];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    switch (self.registType) {
+        case FMTRegistTypeReset:
+        {
+            params = [@{@"mobile":self.phoneNumTextField.text} mutableCopy];
+            [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
+                [weakSelf performSegueWithIdentifier:@"segueToSetPwdVC" sender:weakSelf];
+            } url:kFMTAPICheckUserFirst];
+        }
+
+            break;
+        case FMTRegistTypeRegist:
+        {
+            params = [@{@"qqNumber":self.qqTextField.text,@"mobile":self.phoneNumTextField.text} mutableCopy];
+            [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
+                [weakSelf performSegueWithIdentifier:@"segueToSetPwdVC" sender:weakSelf];
+            } url:kFMTAPICheckUserFirst];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - Navigation
@@ -284,17 +320,43 @@
 {
     if ([segue.identifier isEqualToString:@"segueToSetPwdVC"])
     {
-        if (self.phoneNumTextField.text &&
-            self.qqTextField.text &&
-            self.inviteCode) {
+        if (FMTRegistTypeReset == self.registType &&
+            self.phoneNumTextField.text) {
+            NSDictionary *dict = @{@"mobile" : self.phoneNumTextField.text};
+            FMSetPWDViewController* setPwdVC = segue.destinationViewController;
+            setPwdVC.basicInfo = [dict mutableCopy];
+            setPwdVC.registType = self.registType;
+        }
+        else if (self.phoneNumTextField.text &&
+                   self.qqTextField.text &&
+                   self.inviteCode) {
             NSDictionary *dict = @{@"mobile" : self.phoneNumTextField.text,
                                    @"qqNumber" : self.qqTextField.text,
                                    @"inviteCode" : self.inviteCode
                                    };
             FMSetPWDViewController* setPwdVC = segue.destinationViewController;
             setPwdVC.basicInfo = [dict mutableCopy];
+            setPwdVC.registType = self.registType;
         }
     }
 }
 
+
+#pragma mark- 懒加载
+- (FMTCodeInputTextFields *)textField {
+    if (!_textField) {
+        FMTCodeInputTextFieldsConfig *config = [[FMTCodeInputTextFieldsConfig alloc]initWithCodeType:FMTCodeTypeLong];
+        config.tintColor = FSYellow;
+        config.keyboardType = UIKeyboardTypeEmailAddress;
+        config.textFieldSize = (iPhone5 || iPhone4) ? CGSizeMake(40, 50) : CGSizeMake(50, 50);
+        _textField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
+        [self.view addSubview:_textField];
+        [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.left.equalTo(self.view).with.offset(0);
+            make.top.equalTo(self.view).with.offset(180);
+            make.height.mas_equalTo(@(100));
+        }];
+    }
+    return _textField;
+}
 @end

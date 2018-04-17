@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FMTRegistViewController : FMViewController
-
+@property (assign, nonatomic) FMTRegistType registType;
 @end

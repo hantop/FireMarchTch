@@ -20,6 +20,7 @@
     if (self = [super init]) {
         self.codeType = type;
         self.keyboardType = _codeType == FMTCodeTypeShort ? UIKeyboardTypeNumberPad : UIKeyboardTypeDefault;
+        
         self.tintColor = [UIColor colorWithRed:250/255.0f green:100/255.0f blue:0/255.0f alpha:1];
         self.originBoderColor = [UIColor colorWithRed:216/255.0f green:216/255.0f blue:216/255.0f alpha: 1];
         self.textFieldSize = CGSizeMake(50, 50);
@@ -172,6 +173,7 @@
     UITextField *text = [[UITextField alloc]initWithFrame:CGRectMake(20, 20, 130, 30)];
     //边框样式一定要选None
     text.borderStyle = UITextBorderStyleNone;
+    text.secureTextEntry = FMTCodeTypeShort == _configuration.codeType;
     //
     text.tintColor = _configuration.tintColor;
     text.layer.borderColor = _configuration.tintColor.CGColor;

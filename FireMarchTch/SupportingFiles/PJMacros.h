@@ -151,12 +151,12 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define REDCOLOR   [UIColor redColor]
 #define GRAYCOLOR  [UIColor grayColor]
 #define LIGHTGRAYCOLOR [UIColor lightGrayColor]
-#define FSYellow UIColorFromHEX(0xF75411,1)
+#define FSYellow UIColorFromHEX(0xEB362E,1)
 #define FSBlue UIColorFromHEX(0x34A9E5,1)
 #define FSDisButtonBG UIColorFromHEX(0xBBBBBB,1)
 
 //本项目自定义颜色
-#define FSBlackColor20 RGB (32, 32, 32)
+//大黑体颜色
 #define FSBlackColor33 RGB (64, 64, 64)
 #define FSBlackColor66 RGB (102, 102, 102)
 #define FSGrayColor99 RGB (153, 153, 153)
@@ -167,7 +167,8 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define FSGrayColorD8 RGB (216, 216, 216)
 #define FSGrayColorE0 RGB (224, 224, 224)
 #define FSGrayColorE8 RGB (232, 232, 232)
-#define FSYellowColor33 RGB (250, 100, 0)
+//整体基色
+#define FSYellowColor33 RGB (235, 54, 46)
 
 
 //------------------------调试-------------------------

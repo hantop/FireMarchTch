@@ -56,6 +56,19 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 
     [self photoAction:nil];
     [self.myPicCollectionView reloadData];
+    
+    self.bigTitle.text = @"②影像资料上传";
+    self.bigTitle.hidden = NO;
+    self.littleTitle.hidden = NO;
+    self.littleTitle.text = @"照片视频让学生更直观的了解你";
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(nextStepAction:)];
+    rightItem.width = 60.f;
+    [rightItem setTitleTextAttributes:@{NSFontAttributeName:BOLDSYSTEMFONT(16)} forState:UIControlStateNormal];
+    [rightItem setTintColor:FSYellow];
+    
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -201,7 +214,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     }];
     
     self.fmImageType = FMImageTypePic;
-    [self.photoButton setTitleColor:FSBlackColor20 forState:UIControlStateNormal];
+    [self.photoButton setTitleColor:FSBlackColor33 forState:UIControlStateNormal];
     [self.videoButton setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
     [self.myPicCollectionView removeAllSubViews];
     [self.myPicCollectionView reloadData];
@@ -216,7 +229,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     }];
     self.fmImageType = FMImageTypeVideo;
     [self.photoButton setTitleColor:FSGrayColorB8 forState:UIControlStateNormal];
-    [self.videoButton setTitleColor:FSBlackColor20 forState:UIControlStateNormal];
+    [self.videoButton setTitleColor:FSBlackColor33 forState:UIControlStateNormal];
     [self.myPicCollectionView removeAllSubViews];
     [self.myPicCollectionView reloadData];
 }

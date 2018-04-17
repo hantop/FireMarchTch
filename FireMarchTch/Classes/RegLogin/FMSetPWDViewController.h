@@ -10,4 +10,5 @@
 
 @interface FMSetPWDViewController : FMViewController
 @property (strong, nonatomic) NSMutableDictionary *basicInfo;
+@property (assign, nonatomic) FMTRegistType registType;
 @end

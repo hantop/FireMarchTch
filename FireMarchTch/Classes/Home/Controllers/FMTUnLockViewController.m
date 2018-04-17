@@ -20,6 +20,7 @@
     [super viewDidLoad];
 
     FMTCodeInputTextFieldsConfig *config = [[FMTCodeInputTextFieldsConfig alloc] initWithCodeType:FMTCodeTypeShort];
+    config.tintColor = FSYellow;
     _textField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
     [self.view addSubview:_textField];
     [_textField mas_makeConstraints:^(MASConstraintMaker *make) {

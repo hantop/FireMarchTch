@@ -45,6 +45,13 @@ struct CZJMargin {
 };
 typedef struct CZJMargin CZJMargin;
 
+
+typedef NS_ENUM (NSInteger, FMTRegistType)
+{
+    FMTRegistTypeRegist = 0,
+    FMTRegistTypeReset
+};
+
 CG_INLINE CZJMargin CZJMarginMake(CGFloat horisideMargin, CGFloat vertiMiddleMargin)
 {
     CZJMargin margin;

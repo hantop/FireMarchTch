@@ -8,6 +8,7 @@
 
 #import "FMTLoginViewController.h"
 #import "FMSetMyInfoViewController.h"
+#import "FMTRegistViewController.h"
 
 @interface FMTLoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *topView;
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 
 - (IBAction)LoginAction:(id)sender;
+- (IBAction)forgetPWDAction:(id)sender;
 @end
 
 @implementation FMTLoginViewController
@@ -42,6 +44,8 @@
     
     [self.logoImageView setImage:[IMAGENAMED(@"myCircle") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [self.logoImageView setTintColor:FSGrayColorA8];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:FSBlackColor33,NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0f]}];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +95,12 @@
 //    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
 //
 //    } url:kFMTAPILogin];
+}
+
+- (IBAction)forgetPWDAction:(id)sender {
+    FMTRegistViewController *resetPWD = (FMTRegistViewController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"registSBID"];
+    resetPWD.registType = FMTRegistTypeReset;
+    [self.navigationController pushViewController:resetPWD animated:YES];
 }
 
 
