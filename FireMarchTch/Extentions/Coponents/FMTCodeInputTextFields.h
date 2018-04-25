@@ -14,6 +14,8 @@ typedef NS_ENUM (NSInteger, FMTCodeType)
     FMTCodeTypeLong
 };
 
+@class FMTCodeInputTextFields;
+
 @interface FMTCodeInputTextFieldsConfig : NSObject
 //
 @property (strong, nonatomic) UIColor * tintColor;
@@ -33,7 +35,7 @@ typedef NS_ENUM (NSInteger, FMTCodeType)
 
 
 @protocol FMTCodeInputTextFieldsDelegate <NSObject>
-- (void)codeInputTextFieldOverWithString:(NSString *)codeStr;
+- (void)codeInputTextFieldOverWithString:(NSString *)codeStr textFields:(FMTCodeInputTextFields *)textField;
 @end
 
 @interface FMTCodeInputTextFields : UIView
@@ -44,4 +46,5 @@ typedef NS_ENUM (NSInteger, FMTCodeType)
 - (instancetype)initWithConfiguration: (FMTCodeInputTextFieldsConfig *)configuration delegate: (id<FMTCodeInputTextFieldsDelegate>)delegate;
 
 - (void)resetCodeInputTextField;
+- (void)becomeFirstResponser;
 @end

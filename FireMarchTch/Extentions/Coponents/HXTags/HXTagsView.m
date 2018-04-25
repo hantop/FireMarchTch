@@ -12,7 +12,7 @@
 
 @interface HXTagsView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic,strong) NSMutableArray *selectedTags;
+
 @property (nonatomic,strong) UICollectionView *collectionView;
 
 @end
@@ -230,4 +230,8 @@ static NSString * const reuseIdentifier = @"HXTagCollectionViewCellId";
     return contentHeight;
 }
 
+- (void)setTouchEnableFalse
+{
+    self.collectionView.userInteractionEnabled = NO;
+}
 @end

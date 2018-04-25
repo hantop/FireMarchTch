@@ -76,10 +76,9 @@
         _lastTime = link.timestamp;
         return;
     }
-    
     _count++;
     NSTimeInterval delta = link.timestamp - _lastTime;
-    if (delta < 1) return;
+    if (delta < 0.7) return;
     _lastTime = link.timestamp;
     float fps = _count / delta;
     _count = 0;

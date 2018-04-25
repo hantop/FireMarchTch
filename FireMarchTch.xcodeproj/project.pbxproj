@@ -62,6 +62,21 @@
 		ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE716207F3E81009BB554 /* HXTagAttribute.m */; };
 		ECDCE71F207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE719207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m */; };
 		ECDCE721208593DF009BB554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE720208593DF009BB554 /* Assets.xcassets */; };
+		ECDCE72720871CA7009BB554 /* FMTRegTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE72620871CA7009BB554 /* FMTRegTopView.m */; };
+		ECE816682087559700A4D691 /* MMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE816662087559700A4D691 /* MMLabel.m */; };
+		ECF1919B2089E11F004A158E /* FMTCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF1919A2089E11F004A158E /* FMTCourseController.m */; };
+		ECF191A2208DAAC9004A158E /* FMTCourseSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191A0208DAAC9004A158E /* FMTCourseSetController.m */; };
+		ECF191A3208DAAC9004A158E /* FMTCourseSetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191A1208DAAC9004A158E /* FMTCourseSetController.xib */; };
+		ECF191A7208DB050004A158E /* FMTPrivacySetController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191A5208DB050004A158E /* FMTPrivacySetController.m */; };
+		ECF191A8208DB050004A158E /* FMTPrivacySetController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191A6208DB050004A158E /* FMTPrivacySetController.xib */; };
+		ECF191B1208F0C16004A158E /* FMTCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191B0208F0C16004A158E /* FMTCourseModel.m */; };
+		ECF191BA208F178F004A158E /* FMTCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191B8208F178F004A158E /* FMTCourseCell.m */; };
+		ECF191BB208F178F004A158E /* FMTCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191B9208F178F004A158E /* FMTCourseCell.xib */; };
+		ECF191C3208F2906004A158E /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191C2208F2906004A158E /* UIView+Shadow.m */; };
+		ECF191C720902321004A158E /* FMTCourseEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191C520902321004A158E /* FMTCourseEditView.m */; };
+		ECF191C820902321004A158E /* FMTCourseEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191C620902321004A158E /* FMTCourseEditView.xib */; };
+		ECF191CD20902AD0004A158E /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF191CA20902AD0004A158E /* dropdownMenu_cornerIcon.png */; };
+		ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191CB20902AD0004A158E /* LMJDropdownMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +183,31 @@
 		ECDCE718207F3E81009BB554 /* HXTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HXTagsView.h; sourceTree = "<group>"; };
 		ECDCE719207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HXTagCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		ECDCE720208593DF009BB554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECDCE72520871CA7009BB554 /* FMTRegTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTRegTopView.h; sourceTree = "<group>"; };
+		ECDCE72620871CA7009BB554 /* FMTRegTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTRegTopView.m; sourceTree = "<group>"; };
+		ECE816662087559700A4D691 /* MMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLabel.m; sourceTree = "<group>"; };
+		ECE816672087559700A4D691 /* MMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLabel.h; sourceTree = "<group>"; };
+		ECF191992089E11F004A158E /* FMTCourseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseController.h; sourceTree = "<group>"; };
+		ECF1919A2089E11F004A158E /* FMTCourseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCourseController.m; sourceTree = "<group>"; };
+		ECF1919F208DAAC9004A158E /* FMTCourseSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseSetController.h; sourceTree = "<group>"; };
+		ECF191A0208DAAC9004A158E /* FMTCourseSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCourseSetController.m; sourceTree = "<group>"; };
+		ECF191A1208DAAC9004A158E /* FMTCourseSetController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTCourseSetController.xib; sourceTree = "<group>"; };
+		ECF191A4208DB050004A158E /* FMTPrivacySetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTPrivacySetController.h; sourceTree = "<group>"; };
+		ECF191A5208DB050004A158E /* FMTPrivacySetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTPrivacySetController.m; sourceTree = "<group>"; };
+		ECF191A6208DB050004A158E /* FMTPrivacySetController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTPrivacySetController.xib; sourceTree = "<group>"; };
+		ECF191AF208F0C16004A158E /* FMTCourseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseModel.h; sourceTree = "<group>"; };
+		ECF191B0208F0C16004A158E /* FMTCourseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCourseModel.m; sourceTree = "<group>"; };
+		ECF191B7208F178F004A158E /* FMTCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseCell.h; sourceTree = "<group>"; };
+		ECF191B8208F178F004A158E /* FMTCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCourseCell.m; sourceTree = "<group>"; };
+		ECF191B9208F178F004A158E /* FMTCourseCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTCourseCell.xib; sourceTree = "<group>"; };
+		ECF191C1208F2906004A158E /* UIView+Shadow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Shadow.h"; sourceTree = "<group>"; };
+		ECF191C2208F2906004A158E /* UIView+Shadow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Shadow.m"; sourceTree = "<group>"; };
+		ECF191C420902321004A158E /* FMTCourseEditView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseEditView.h; sourceTree = "<group>"; };
+		ECF191C520902321004A158E /* FMTCourseEditView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTCourseEditView.m; sourceTree = "<group>"; };
+		ECF191C620902321004A158E /* FMTCourseEditView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTCourseEditView.xib; sourceTree = "<group>"; };
+		ECF191CA20902AD0004A158E /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
+		ECF191CB20902AD0004A158E /* LMJDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJDropdownMenu.m; sourceTree = "<group>"; };
+		ECF191CC20902AD0004A158E /* LMJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJDropdownMenu.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +242,11 @@
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				ECF191C920902AD0004A158E /* LMJDropdownMenu */,
+				ECDCE72520871CA7009BB554 /* FMTRegTopView.h */,
+				ECDCE72620871CA7009BB554 /* FMTRegTopView.m */,
+				ECE816672087559700A4D691 /* MMLabel.h */,
+				ECE816662087559700A4D691 /* MMLabel.m */,
 				ECDCE710207F3E81009BB554 /* HXTags */,
 				ECDCE698207C858A009BB554 /* YYFPSLabel.h */,
 				ECDCE696207C858A009BB554 /* YYFPSLabel.m */,
@@ -229,23 +274,9 @@
 		EC42A4C32063EEAA00C52324 /* RegLogin */ = {
 			isa = PBXGroup;
 			children = (
-				EC42A4CD2063EF2200C52324 /* FMTRegLoginHomeController.h */,
-				EC42A4CE2063EF2200C52324 /* FMTRegLoginHomeController.m */,
-				EC42A4C72063EEED00C52324 /* FMTLoginViewController.h */,
-				EC42A4C82063EEED00C52324 /* FMTLoginViewController.m */,
-				EC42A4CA2063EF0700C52324 /* FMTRegistViewController.h */,
-				EC42A4CB2063EF0700C52324 /* FMTRegistViewController.m */,
-				ECA70B86206A935B003E2F62 /* FMSetPWDViewController.h */,
-				ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */,
-				EC38CB092074745600C09DC7 /* FMSetMyInfoViewController.h */,
-				EC38CB0A2074745600C09DC7 /* FMSetMyInfoViewController.m */,
-				EC38CB0B2074745600C09DC7 /* FMSetMyInfoViewController.xib */,
-				ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */,
-				ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */,
-				ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */,
-				ECDCE70B207DF666009BB554 /* FMImageCollectionViewCell.h */,
-				ECDCE70C207DF666009BB554 /* FMImageCollectionViewCell.m */,
-				ECDCE70D207DF666009BB554 /* FMImageCollectionViewCell.xib */,
+				ECDCE72320871BFE009BB554 /* Controllers */,
+				ECDCE72420871C0B009BB554 /* Models */,
+				ECDCE72220871BF1009BB554 /* Views */,
 			);
 			path = RegLogin;
 			sourceTree = "<group>";
@@ -309,12 +340,14 @@
 		EC473CCB2056B9DB00CD9397 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EC42A4C32063EEAA00C52324 /* RegLogin */,
+				ECF191AB208F0A2D004A158E /* Config */,
+				ECF191982089E101004A158E /* Course */,
+				EC473CD82056B9DB00CD9397 /* Evaluate */,
 				EC473CCC2056B9DB00CD9397 /* Home */,
 				EC473CD02056B9DB00CD9397 /* MyInfos */,
-				EC473CD42056B9DB00CD9397 /* Square */,
-				EC473CD82056B9DB00CD9397 /* Evaluate */,
 				EC473CDC2056B9DB00CD9397 /* Orders */,
+				EC42A4C32063EEAA00C52324 /* RegLogin */,
+				EC473CD42056B9DB00CD9397 /* Square */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -583,6 +616,8 @@
 				EC473D18205BF6DB00CD9397 /* UIView+RGSize.m */,
 				ECDCE687207B9C8C009BB554 /* UIView+SDAutoLayout.h */,
 				ECDCE688207B9C8C009BB554 /* UIView+SDAutoLayout.m */,
+				ECF191C1208F2906004A158E /* UIView+Shadow.h */,
+				ECF191C2208F2906004A158E /* UIView+Shadow.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -600,6 +635,132 @@
 				ECDCE713207F3E81009BB554 /* HXTagsView.m */,
 			);
 			path = HXTags;
+			sourceTree = "<group>";
+		};
+		ECDCE72220871BF1009BB554 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECDCE72320871BFE009BB554 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC42A4CD2063EF2200C52324 /* FMTRegLoginHomeController.h */,
+				EC42A4CE2063EF2200C52324 /* FMTRegLoginHomeController.m */,
+				EC42A4C72063EEED00C52324 /* FMTLoginViewController.h */,
+				EC42A4C82063EEED00C52324 /* FMTLoginViewController.m */,
+				EC42A4CA2063EF0700C52324 /* FMTRegistViewController.h */,
+				EC42A4CB2063EF0700C52324 /* FMTRegistViewController.m */,
+				ECA70B86206A935B003E2F62 /* FMSetPWDViewController.h */,
+				ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ECDCE72420871C0B009BB554 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECF191982089E101004A158E /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				ECF1919C2089E123004A158E /* Controllers */,
+				ECF1919D2089E12D004A158E /* Models */,
+				ECF1919E2089E133004A158E /* Views */,
+			);
+			path = Course;
+			sourceTree = "<group>";
+		};
+		ECF1919C2089E123004A158E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ECF191992089E11F004A158E /* FMTCourseController.h */,
+				ECF1919A2089E11F004A158E /* FMTCourseController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ECF1919D2089E12D004A158E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECF1919E2089E133004A158E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECF191AB208F0A2D004A158E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				ECF191AC208F0A5F004A158E /* Controllers */,
+				ECF191AE208F0A6D004A158E /* Models */,
+				ECF191AD208F0A66004A158E /* Views */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		ECF191AC208F0A5F004A158E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC38CB092074745600C09DC7 /* FMSetMyInfoViewController.h */,
+				EC38CB0A2074745600C09DC7 /* FMSetMyInfoViewController.m */,
+				ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */,
+				ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */,
+				ECF1919F208DAAC9004A158E /* FMTCourseSetController.h */,
+				ECF191A0208DAAC9004A158E /* FMTCourseSetController.m */,
+				ECF191A4208DB050004A158E /* FMTPrivacySetController.h */,
+				ECF191A5208DB050004A158E /* FMTPrivacySetController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ECF191AD208F0A66004A158E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC38CB0B2074745600C09DC7 /* FMSetMyInfoViewController.xib */,
+				ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */,
+				ECF191A1208DAAC9004A158E /* FMTCourseSetController.xib */,
+				ECF191A6208DB050004A158E /* FMTPrivacySetController.xib */,
+				ECDCE70B207DF666009BB554 /* FMImageCollectionViewCell.h */,
+				ECDCE70C207DF666009BB554 /* FMImageCollectionViewCell.m */,
+				ECDCE70D207DF666009BB554 /* FMImageCollectionViewCell.xib */,
+				ECF191B7208F178F004A158E /* FMTCourseCell.h */,
+				ECF191B8208F178F004A158E /* FMTCourseCell.m */,
+				ECF191B9208F178F004A158E /* FMTCourseCell.xib */,
+				ECF191C420902321004A158E /* FMTCourseEditView.h */,
+				ECF191C520902321004A158E /* FMTCourseEditView.m */,
+				ECF191C620902321004A158E /* FMTCourseEditView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECF191AE208F0A6D004A158E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECF191AF208F0C16004A158E /* FMTCourseModel.h */,
+				ECF191B0208F0C16004A158E /* FMTCourseModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECF191C920902AD0004A158E /* LMJDropdownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				ECF191CA20902AD0004A158E /* dropdownMenu_cornerIcon.png */,
+				ECF191CB20902AD0004A158E /* LMJDropdownMenu.m */,
+				ECF191CC20902AD0004A158E /* LMJDropdownMenu.h */,
+			);
+			path = LMJDropdownMenu;
 			sourceTree = "<group>";
 		};
 		FB5A6B064CF7852341A3800A /* Pods */ = {
@@ -673,15 +834,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC38CB0D2074745600C09DC7 /* FMSetMyInfoViewController.xib in Resources */,
+				ECF191CD20902AD0004A158E /* dropdownMenu_cornerIcon.png in Resources */,
+				ECF191A8208DB050004A158E /* FMTPrivacySetController.xib in Resources */,
 				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
 				ECDCE721208593DF009BB554 /* Assets.xcassets in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
+				ECF191BB208F178F004A158E /* FMTCourseCell.xib in Resources */,
+				ECF191A3208DAAC9004A158E /* FMTCourseSetController.xib in Resources */,
 				EC38CAFF2072507900C09DC7 /* CZJAlertView.xib in Resources */,
 				ECDCE70F207DF666009BB554 /* FMImageCollectionViewCell.xib in Resources */,
 				ECDCE67B207B0D07009BB554 /* FMTUpImageViewController.xib in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
 				EC42A4DD2068DCC500C52324 /* Info.plist in Resources */,
+				ECF191C820902321004A158E /* FMTCourseEditView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,11 +871,11 @@
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-				"${PODS_ROOT}/KMCGeigerCounter/KMCGeigerCounter/KMCGeigerCounterTick.aiff",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoActionSheet.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowserCell.xib",
 				"${PODS_ROOT}/ZLPhotoBrowser/PhotoBrowser/resource/ZLPhotoBrowser.bundle",
+				"${PODS_ROOT}/ZWPullMenuView/ZWPullMenuView/ZWPullMenuCell.xib",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -723,11 +889,11 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/KMCGeigerCounterTick.aiff",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoActionSheet.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowserCell.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZLPhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZWPullMenuCell.nib",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -788,35 +954,45 @@
 				EC42A4D42064F13600C52324 /* UINavigationBar+BackgroundColor.m in Sources */,
 				ECDCE71B207F3E81009BB554 /* HXTagCollectionViewCell.m in Sources */,
 				ECDCE68C207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				ECF191B1208F0C16004A158E /* FMTCourseModel.m in Sources */,
 				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
 				EC38CB0C2074745600C09DC7 /* FMSetMyInfoViewController.m in Sources */,
 				EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */,
+				ECF1919B2089E11F004A158E /* FMTCourseController.m in Sources */,
 				EC42A4C92063EEED00C52324 /* FMTLoginViewController.m in Sources */,
 				EC38CAFA20722EDB00C09DC7 /* FMViewController.m in Sources */,
 				EC42A4DE2068DCC500C52324 /* main.m in Sources */,
 				ECDCE71F207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m in Sources */,
+				ECF191C3208F2906004A158E /* UIView+Shadow.m in Sources */,
 				EC38CB0520732C8A00C09DC7 /* FMDeviceInfo.m in Sources */,
 				ECDCE699207C858A009BB554 /* YYWeakProxy.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
+				ECE816682087559700A4D691 /* MMLabel.m in Sources */,
 				EC42A4F5206900E600C52324 /* UITextField+Delete.m in Sources */,
+				ECF191A2208DAAC9004A158E /* FMTCourseSetController.m in Sources */,
 				EC42A4F22068F6A000C52324 /* FMTCodeInputTextFields.m in Sources */,
 				EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */,
 				EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */,
 				ECDCE69A207C858A009BB554 /* YYFPSLabel.m in Sources */,
 				EC42A4CC2063EF0700C52324 /* FMTRegistViewController.m in Sources */,
+				ECF191C720902321004A158E /* FMTCourseEditView.m in Sources */,
+				ECF191BA208F178F004A158E /* FMTCourseCell.m in Sources */,
 				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
 				ECDCE70E207DF666009BB554 /* FMImageCollectionViewCell.m in Sources */,
 				ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */,
 				EC38CB102074A7E500C09DC7 /* LewPickerController.m in Sources */,
+				ECF191A7208DB050004A158E /* FMTPrivacySetController.m in Sources */,
 				ECDCE686207B6ACE009BB554 /* PBaseTableViewCell.m in Sources */,
 				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
+				ECDCE72720871CA7009BB554 /* FMTRegTopView.m in Sources */,
 				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
 				ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
 				ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */,
+				ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */,
 				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

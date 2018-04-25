@@ -13,6 +13,7 @@
 
 @interface HXTagsView : UIView
 
+@property (nonatomic,strong) NSMutableArray *selectedTags;
 @property (nonatomic,strong) NSArray *tags;//传入的标签数组 字符串数组
 @property (nonatomic,strong) HXTagCollectionViewFlowLayout *layout;//布局layout
 @property (nonatomic,strong) HXTagAttribute *tagAttribute;//按钮样式对象
@@ -33,5 +34,7 @@
  *  @param width        计算的最大范围
  */
 + (CGFloat)getHeightWithTags:(NSArray *)tags layout:(HXTagCollectionViewFlowLayout *)layout tagAttribute:(HXTagAttribute *)tagAttribute width:(CGFloat)width;
+
+- (void)setTouchEnableFalse;
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "FMImageUploadView.h"
-#import "VPImageCropperViewController.h"
 #import "FSDeletableImageView.h"
 #import "AppDelegate.h"
 #import <ZLPhotoModel.h>
@@ -17,8 +16,7 @@
 <
 UIActionSheetDelegate,
 UIImagePickerControllerDelegate,
-UINavigationControllerDelegate,
-VPImageCropperDelegate
+UINavigationControllerDelegate
 >
 @property (strong, nonatomic)  UIButton *picBtn;
 @property (nonatomic, strong) NSArray<ZLPhotoModel *> *lastSelectMoldels;

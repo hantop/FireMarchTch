@@ -6,6 +6,9 @@ target 'FireMarchTch' do
   # use_frameworks!
 
   # Pods for FireMarchTch
+  
+#扩展UIKit Foundation类的回调
+pod 'BlocksKit', '~> 2.2.5'
 #网络库
 pod 'AFNetworking', '~>3.1.0'
 #图片上传下载库
@@ -40,14 +43,14 @@ pod 'SVProgressHUD'
 pod 'JVFloatLabeledTextField'
 #实现左右滑动出现按钮
 pod 'SWTableViewCell', '~> 0.3.7'
+#文字高亮动画
+pod 'Shimmer', '~> 1.0.2'
 #可以替代UILabel
-pod 'TTTAttributedLabel'
+pod 'YYText', '~> 1.0.7'
 #通知角标
 pod 'HHBadgeHUD'
-#帧率显示
-pod 'KMCGeigerCounter', '~> 0.2.2'
 #获取相册
 pod 'ZLPhotoBrowser', '~> 2.6.4'
-#图片裁剪
-pod 'VPImageCropper', '~> 0.0.4'
+#下拉框
+pod 'ZWPullMenuView'
 end

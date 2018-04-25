@@ -37,7 +37,7 @@
 }
 
 #pragma mark- FMTCodeInputTextFieldDelegate
-- (void)codeInputTextFieldOverWithString:(NSString *)codeStr
+- (void)codeInputTextFieldOverWithString:(NSString *)codeStr textFields:(FMTCodeInputTextFields *)textField
 {
     DLog(@"codestr:%@",codeStr);
     NSString *accessCode = [USER_DEFAULT valueForKey:kFMTAccessCode];

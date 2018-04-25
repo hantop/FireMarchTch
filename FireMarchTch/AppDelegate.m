@@ -40,6 +40,34 @@ extern CFAbsoluteTime StartTime;
     [self.window addSubview:_notifyView];
 }
 
+- (void)initUserDefaultDatas
+{
+    [USER_DEFAULT setValue:@"" forKey:kUserDefaultTimeDay];
+    [USER_DEFAULT setValue:@"" forKey:kUserDefaultTimeMin];
+    [USER_DEFAULT setValue:@"" forKey:kUserDefaultRandomCode];
+    
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedCarModelType];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedCarModelID];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedBrandID];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPrice];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultEndPrice];
+//    [USER_DEFAULT setValue:@"false" forKey:kUSerDefaultStockFlag];
+//    [USER_DEFAULT setValue:@"false" forKey:kUSerDefaultPromotionFlag];
+//    [USER_DEFAULT setValue:@"false" forKey:kUSerDefaultRecommendFlag];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultServicePlace];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultDetailStoreItemPid];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultDetailItemCode];
+    [USER_DEFAULT setValue:@"" forKey:kFMTAccessCode];
+    
+//    [USER_DEFAULT setObject:@"" forKey:kUSerDefaultSexual];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageUrl];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageImagePath];
+//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageForm];
+//    [USER_DEFAULT setObject:@"0" forKey:kUserDefaultShoppingCartCount];
+//    [USER_DEFAULT setObject:@"0" forKey:kCZJDefaultCityID];
+//    [USER_DEFAULT setObject:@"" forKey:kCZJDefaultyCityName];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -48,7 +76,7 @@ extern CFAbsoluteTime StartTime;
     
     //-------------------1.设置状态栏隐藏，因为有广告------------------
 //    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
-    [USER_DEFAULT setValue:@"1234" forKey:kFMTAccessCode];
+//    [USER_DEFAULT setValue:@"1234" forKey:kFMTAccessCode];
     
     //------------------2.设置URL缓存机制----------------
     NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:40 * 1024 * 1024 diskCapacity:40 * 1024 * 1024 diskPath:nil];
@@ -64,6 +92,8 @@ extern CFAbsoluteTime StartTime;
     //-----------------6.设置主页并判断是否启动广告页面--------------
 #ifdef DEBUG//离线日志打印
     self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //--------------------9.开启帧数显示------------------
     YYFPSLabel *label = [[YYFPSLabel alloc] initWithSize:CGSizeMake(60, 20)];
     label.textColor = FSYellow;
     [self.window addSubview:label];
@@ -85,8 +115,6 @@ extern CFAbsoluteTime StartTime;
     //-------------------8.字典描述分类替换----------------
     [NSDictionary jr_swizzleMethod:@selector(description) withMethod:@selector(my_description) error:nil];
     
-    //--------------------9.开启帧数显示------------------
-//    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
     
     //-------------------12.接收远程通知本地显示---------------
     [self initNotifyView];

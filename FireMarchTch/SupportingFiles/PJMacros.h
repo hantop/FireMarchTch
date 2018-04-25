@@ -156,10 +156,10 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 #define FSDisButtonBG UIColorFromHEX(0xBBBBBB,1)
 
 //本项目自定义颜色
-//大黑体颜色
+//主标题黑色
 #define FSBlackColor33 RGB (64, 64, 64)
 #define FSBlackColor66 RGB (102, 102, 102)
-#define FSGrayColor99 RGB (153, 153, 153)
+//副标题灰色
 #define FSGrayColorA8 RGB (168, 168, 168)
 #define FSGrayColorB8 RGB (184, 184, 184)
 #define FSGrayColorC8 RGB (200, 200, 200)

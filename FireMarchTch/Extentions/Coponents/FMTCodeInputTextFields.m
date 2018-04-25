@@ -72,7 +72,11 @@
         [_fieldsAry addObject:textField];
         [_buttonAry addObject:button];
     }
+    [self becomeFirstResponser];
     
+}
+
+- (void)becomeFirstResponser{
     [_fieldsAry.firstObject becomeFirstResponder];
 }
 
@@ -151,8 +155,8 @@
         ((UITextField*)_fieldsAry[count]).layer.borderColor = _configuration.tintColor.CGColor;
     }
     
-    if (count == _fieldsAry.count && [self.delegate respondsToSelector:@selector(codeInputTextFieldOverWithString:)]) {
-        [self.delegate codeInputTextFieldOverWithString:[codeAry componentsJoinedByString:@""]];
+    if (count == _fieldsAry.count && [self.delegate respondsToSelector:@selector(codeInputTextFieldOverWithString:textFields:)]) {
+        [self.delegate codeInputTextFieldOverWithString:[codeAry componentsJoinedByString:@""] textFields:self];
     }
 }
 
