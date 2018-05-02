@@ -1,23 +1,21 @@
 //
-//  FMTCourseController.m
+//  FMTForumController.m
 //  FireMarchTch
 //
-//  Created by Joe.Pen on 2018/4/20.
+//  Created by Joe.Pen on 2018/4/26.
 //  Copyright © 2018 Joe.Pen. All rights reserved.
 //
 
-#import "FMTCourseController.h"
+#import "FMTForumController.h"
 
-@interface FMTCourseController ()
+@interface FMTForumController ()
 
 @end
 
-@implementation FMTCourseController
+@implementation FMTForumController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //导航栏设置为透明色
-    [self.navigationController.navigationBar lt_setBackgroundColor:RGBA(100, 100, 100, 0)];
     // Do any additional setup after loading the view.
 }
 

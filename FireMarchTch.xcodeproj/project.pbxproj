@@ -77,6 +77,20 @@
 		ECF191C820902321004A158E /* FMTCourseEditView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191C620902321004A158E /* FMTCourseEditView.xib */; };
 		ECF191CD20902AD0004A158E /* dropdownMenu_cornerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF191CA20902AD0004A158E /* dropdownMenu_cornerIcon.png */; };
 		ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191CB20902AD0004A158E /* LMJDropdownMenu.m */; };
+		ECF191D120917896004A158E /* FMBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191D020917896004A158E /* FMBaseTabBarController.m */; };
+		ECF191D42091A257004A158E /* FMTOrderManageController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191D32091A257004A158E /* FMTOrderManageController.m */; };
+		ECF191D72091A8BA004A158E /* FMTMyInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191D62091A8BA004A158E /* FMTMyInfoController.m */; };
+		ECF191DA2091A974004A158E /* FMTForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191D92091A974004A158E /* FMTForumController.m */; };
+		ECF191DD2091B1DD004A158E /* CZJPageControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191DB2091B1DD004A158E /* CZJPageControlView.m */; };
+		ECF191E120998FF3004A158E /* FMTMyInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191DF20998FF3004A158E /* FMTMyInfoCell.m */; };
+		ECF191E220998FF3004A158E /* FMTMyInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191E020998FF3004A158E /* FMTMyInfoCell.xib */; };
+		ECF191E62099900C004A158E /* FMTMyAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191E42099900C004A158E /* FMTMyAccountCell.m */; };
+		ECF191E72099900C004A158E /* FMTMyAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF191E52099900C004A158E /* FMTMyAccountCell.xib */; };
+		ECF191EA20999F5A004A158E /* FMTMyAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191E920999F5A004A158E /* FMTMyAccountController.m */; };
+		ECF191ED20999F7C004A158E /* FMTMyStuController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191EC20999F7C004A158E /* FMTMyStuController.m */; };
+		ECF191F020999FA7004A158E /* FMTMyAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191EF20999FA7004A158E /* FMTMyAlbumController.m */; };
+		ECF191F320999FBC004A158E /* FMTMySettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191F220999FBC004A158E /* FMTMySettingController.m */; };
+		ECF191F620999FDB004A158E /* FMTMyEvaluateController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191F520999FDB004A158E /* FMTMyEvaluateController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -208,6 +222,32 @@
 		ECF191CA20902AD0004A158E /* dropdownMenu_cornerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdownMenu_cornerIcon.png; sourceTree = "<group>"; };
 		ECF191CB20902AD0004A158E /* LMJDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJDropdownMenu.m; sourceTree = "<group>"; };
 		ECF191CC20902AD0004A158E /* LMJDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJDropdownMenu.h; sourceTree = "<group>"; };
+		ECF191CF20917896004A158E /* FMBaseTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseTabBarController.h; sourceTree = "<group>"; };
+		ECF191D020917896004A158E /* FMBaseTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseTabBarController.m; sourceTree = "<group>"; };
+		ECF191D22091A257004A158E /* FMTOrderManageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTOrderManageController.h; sourceTree = "<group>"; };
+		ECF191D32091A257004A158E /* FMTOrderManageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTOrderManageController.m; sourceTree = "<group>"; };
+		ECF191D52091A8BA004A158E /* FMTMyInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyInfoController.h; sourceTree = "<group>"; };
+		ECF191D62091A8BA004A158E /* FMTMyInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyInfoController.m; sourceTree = "<group>"; };
+		ECF191D82091A974004A158E /* FMTForumController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTForumController.h; sourceTree = "<group>"; };
+		ECF191D92091A974004A158E /* FMTForumController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTForumController.m; sourceTree = "<group>"; };
+		ECF191DB2091B1DD004A158E /* CZJPageControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZJPageControlView.m; sourceTree = "<group>"; };
+		ECF191DC2091B1DD004A158E /* CZJPageControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZJPageControlView.h; sourceTree = "<group>"; };
+		ECF191DE20998FF3004A158E /* FMTMyInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyInfoCell.h; sourceTree = "<group>"; };
+		ECF191DF20998FF3004A158E /* FMTMyInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyInfoCell.m; sourceTree = "<group>"; };
+		ECF191E020998FF3004A158E /* FMTMyInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTMyInfoCell.xib; sourceTree = "<group>"; };
+		ECF191E32099900C004A158E /* FMTMyAccountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyAccountCell.h; sourceTree = "<group>"; };
+		ECF191E42099900C004A158E /* FMTMyAccountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyAccountCell.m; sourceTree = "<group>"; };
+		ECF191E52099900C004A158E /* FMTMyAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTMyAccountCell.xib; sourceTree = "<group>"; };
+		ECF191E820999F5A004A158E /* FMTMyAccountController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyAccountController.h; sourceTree = "<group>"; };
+		ECF191E920999F5A004A158E /* FMTMyAccountController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyAccountController.m; sourceTree = "<group>"; };
+		ECF191EB20999F7C004A158E /* FMTMyStuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyStuController.h; sourceTree = "<group>"; };
+		ECF191EC20999F7C004A158E /* FMTMyStuController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyStuController.m; sourceTree = "<group>"; };
+		ECF191EE20999FA7004A158E /* FMTMyAlbumController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyAlbumController.h; sourceTree = "<group>"; };
+		ECF191EF20999FA7004A158E /* FMTMyAlbumController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyAlbumController.m; sourceTree = "<group>"; };
+		ECF191F120999FBC004A158E /* FMTMySettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMySettingController.h; sourceTree = "<group>"; };
+		ECF191F220999FBC004A158E /* FMTMySettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMySettingController.m; sourceTree = "<group>"; };
+		ECF191F420999FDB004A158E /* FMTMyEvaluateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTMyEvaluateController.h; sourceTree = "<group>"; };
+		ECF191F520999FDB004A158E /* FMTMyEvaluateController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTMyEvaluateController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +275,8 @@
 			children = (
 				EC38CAF820722EDB00C09DC7 /* FMViewController.h */,
 				EC38CAF920722EDB00C09DC7 /* FMViewController.m */,
+				ECF191CF20917896004A158E /* FMBaseTabBarController.h */,
+				ECF191D020917896004A158E /* FMBaseTabBarController.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -242,6 +284,8 @@
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				ECF191DC2091B1DD004A158E /* CZJPageControlView.h */,
+				ECF191DB2091B1DD004A158E /* CZJPageControlView.m */,
 				ECF191C920902AD0004A158E /* LMJDropdownMenu */,
 				ECDCE72520871CA7009BB554 /* FMTRegTopView.h */,
 				ECDCE72620871CA7009BB554 /* FMTRegTopView.m */,
@@ -407,6 +451,18 @@
 		EC473CD22056B9DB00CD9397 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECF191D52091A8BA004A158E /* FMTMyInfoController.h */,
+				ECF191D62091A8BA004A158E /* FMTMyInfoController.m */,
+				ECF191E820999F5A004A158E /* FMTMyAccountController.h */,
+				ECF191E920999F5A004A158E /* FMTMyAccountController.m */,
+				ECF191EB20999F7C004A158E /* FMTMyStuController.h */,
+				ECF191EC20999F7C004A158E /* FMTMyStuController.m */,
+				ECF191EE20999FA7004A158E /* FMTMyAlbumController.h */,
+				ECF191EF20999FA7004A158E /* FMTMyAlbumController.m */,
+				ECF191F120999FBC004A158E /* FMTMySettingController.h */,
+				ECF191F220999FBC004A158E /* FMTMySettingController.m */,
+				ECF191F420999FDB004A158E /* FMTMyEvaluateController.h */,
+				ECF191F520999FDB004A158E /* FMTMyEvaluateController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -414,6 +470,12 @@
 		EC473CD32056B9DB00CD9397 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ECF191DE20998FF3004A158E /* FMTMyInfoCell.h */,
+				ECF191DF20998FF3004A158E /* FMTMyInfoCell.m */,
+				ECF191E020998FF3004A158E /* FMTMyInfoCell.xib */,
+				ECF191E32099900C004A158E /* FMTMyAccountCell.h */,
+				ECF191E42099900C004A158E /* FMTMyAccountCell.m */,
+				ECF191E52099900C004A158E /* FMTMyAccountCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -438,6 +500,8 @@
 		EC473CD62056B9DB00CD9397 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECF191D82091A974004A158E /* FMTForumController.h */,
+				ECF191D92091A974004A158E /* FMTForumController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -500,6 +564,8 @@
 		EC473CDE2056B9DB00CD9397 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				ECF191D22091A257004A158E /* FMTOrderManageController.h */,
+				ECF191D32091A257004A158E /* FMTOrderManageController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -837,6 +903,7 @@
 				ECF191CD20902AD0004A158E /* dropdownMenu_cornerIcon.png in Resources */,
 				ECF191A8208DB050004A158E /* FMTPrivacySetController.xib in Resources */,
 				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
+				ECF191E72099900C004A158E /* FMTMyAccountCell.xib in Resources */,
 				ECDCE721208593DF009BB554 /* Assets.xcassets in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
@@ -844,6 +911,7 @@
 				ECF191A3208DAAC9004A158E /* FMTCourseSetController.xib in Resources */,
 				EC38CAFF2072507900C09DC7 /* CZJAlertView.xib in Resources */,
 				ECDCE70F207DF666009BB554 /* FMImageCollectionViewCell.xib in Resources */,
+				ECF191E220998FF3004A158E /* FMTMyInfoCell.xib in Resources */,
 				ECDCE67B207B0D07009BB554 /* FMTUpImageViewController.xib in Resources */,
 				EC473CF52056BDCB00CD9397 /* LaunchScreen.storyboard in Resources */,
 				EC42A4DD2068DCC500C52324 /* Info.plist in Resources */,
@@ -943,9 +1011,12 @@
 				EC42A4D92068DC3A00C52324 /* AppDelegate.m in Sources */,
 				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
+				ECF191DA2091A974004A158E /* FMTForumController.m in Sources */,
 				EC38CB08207379FE00C09DC7 /* Reachability.m in Sources */,
 				ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */,
 				ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */,
+				ECF191EA20999F5A004A158E /* FMTMyAccountController.m in Sources */,
+				ECF191E120998FF3004A158E /* FMTMyInfoCell.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
 				EC38CB02207250B200C09DC7 /* FMAlertViewController.m in Sources */,
 				ECDCE689207B9C8C009BB554 /* UIView+SDAutoLayout.m in Sources */,
@@ -955,6 +1026,7 @@
 				ECDCE71B207F3E81009BB554 /* HXTagCollectionViewCell.m in Sources */,
 				ECDCE68C207B9D0D009BB554 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				ECF191B1208F0C16004A158E /* FMTCourseModel.m in Sources */,
+				ECF191D120917896004A158E /* FMBaseTabBarController.m in Sources */,
 				EC42A4AF20614F4700C52324 /* FMTBaseDataManager.m in Sources */,
 				EC38CB0C2074745600C09DC7 /* FMSetMyInfoViewController.m in Sources */,
 				EC42A4CF2063EF2200C52324 /* FMTRegLoginHomeController.m in Sources */,
@@ -968,21 +1040,28 @@
 				ECDCE699207C858A009BB554 /* YYWeakProxy.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
 				ECE816682087559700A4D691 /* MMLabel.m in Sources */,
+				ECF191ED20999F7C004A158E /* FMTMyStuController.m in Sources */,
 				EC42A4F5206900E600C52324 /* UITextField+Delete.m in Sources */,
 				ECF191A2208DAAC9004A158E /* FMTCourseSetController.m in Sources */,
 				EC42A4F22068F6A000C52324 /* FMTCodeInputTextFields.m in Sources */,
+				ECF191F620999FDB004A158E /* FMTMyEvaluateController.m in Sources */,
 				EC473D21205BF6DB00CD9397 /* UIColor+WLZ_HexRGB.m in Sources */,
 				EC473D2F205FBFF300CD9397 /* WGS84TOGCJ02.m in Sources */,
 				ECDCE69A207C858A009BB554 /* YYFPSLabel.m in Sources */,
 				EC42A4CC2063EF0700C52324 /* FMTRegistViewController.m in Sources */,
+				ECF191F320999FBC004A158E /* FMTMySettingController.m in Sources */,
 				ECF191C720902321004A158E /* FMTCourseEditView.m in Sources */,
+				ECF191D42091A257004A158E /* FMTOrderManageController.m in Sources */,
 				ECF191BA208F178F004A158E /* FMTCourseCell.m in Sources */,
 				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
 				ECDCE70E207DF666009BB554 /* FMImageCollectionViewCell.m in Sources */,
+				ECF191D72091A8BA004A158E /* FMTMyInfoController.m in Sources */,
 				ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */,
+				ECF191E62099900C004A158E /* FMTMyAccountCell.m in Sources */,
 				EC38CB102074A7E500C09DC7 /* LewPickerController.m in Sources */,
+				ECF191F020999FA7004A158E /* FMTMyAlbumController.m in Sources */,
 				ECF191A7208DB050004A158E /* FMTPrivacySetController.m in Sources */,
 				ECDCE686207B6ACE009BB554 /* PBaseTableViewCell.m in Sources */,
 				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
@@ -992,6 +1071,7 @@
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
 				ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */,
+				ECF191DD2091B1DD004A158E /* CZJPageControlView.m in Sources */,
 				ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */,
 				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);

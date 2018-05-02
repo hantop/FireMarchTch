@@ -25,10 +25,15 @@ UIKIT_EXTERN NSString *const kFMTAPIUploadImage;
 
 
 
-#pragma mark-
-UIKIT_EXTERN NSString *const kFMTAccessToken;
-UIKIT_EXTERN NSString *const kFMTAccessCode;
+#pragma mark- UserDefault
+UIKIT_EXTERN NSString *const kUserDefaultAccessToken;
+UIKIT_EXTERN NSString *const kUserDefaultAccessCode;
+UIKIT_EXTERN NSString *const kUserDefaultIsLogin;
 
+
+#pragma mark- 通知类
+UIKIT_EXTERN NSString *const kFMNotifiLoginSuccess;
+UIKIT_EXTERN NSString *const kFMNotifiRefreshOrderlist;
 
 
 

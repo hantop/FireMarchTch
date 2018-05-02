@@ -7,7 +7,6 @@
 //
 
 #import "FMTRegLoginHomeController.h"
-#import "UIView+Shadow.h"
 
 @interface FMTRegLoginHomeController ()
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;

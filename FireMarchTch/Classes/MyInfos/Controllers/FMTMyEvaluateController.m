@@ -1,31 +1,22 @@
 //
-//  FMTCourseController.m
+//  FMTMyEvaluateController.m
 //  FireMarchTch
 //
-//  Created by Joe.Pen on 2018/4/20.
+//  Created by Joe.Pen on 2018/5/2.
 //  Copyright © 2018 Joe.Pen. All rights reserved.
 //
 
-#import "FMTCourseController.h"
+#import "FMTMyEvaluateController.h"
 
-@interface FMTCourseController ()
+@interface FMTMyEvaluateController ()
 
 @end
 
-@implementation FMTCourseController
+@implementation FMTMyEvaluateController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //导航栏设置为透明色
-    [self.navigationController.navigationBar lt_setBackgroundColor:RGBA(100, 100, 100, 0)];
     // Do any additional setup after loading the view.
-}
-
-- (void) viewDidAppear:(BOOL)animated
-{
-    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    NSArray *views = self.navigationController.viewControllers;
-    DLog(@"%@",views);
 }
 
 - (void)didReceiveMemoryWarning {

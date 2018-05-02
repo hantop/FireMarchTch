@@ -57,7 +57,7 @@ extern CFAbsoluteTime StartTime;
 //    [USER_DEFAULT setValue:@"" forKey:kUserDefaultServicePlace];
 //    [USER_DEFAULT setValue:@"" forKey:kUserDefaultDetailStoreItemPid];
 //    [USER_DEFAULT setValue:@"" forKey:kUserDefaultDetailItemCode];
-    [USER_DEFAULT setValue:@"" forKey:kFMTAccessCode];
+    [USER_DEFAULT setValue:@"" forKey:kUserDefaultAccessCode];
     
 //    [USER_DEFAULT setObject:@"" forKey:kUSerDefaultSexual];
 //    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageUrl];
@@ -105,8 +105,16 @@ extern CFAbsoluteTime StartTime;
 #else
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 #endif
+    
+    NSString *storyboardName = @"RegLogin";
+    NSString *vcName = @"LoginNavi";
+    [USER_DEFAULT setValue:@"0" forKey:kUserDefaultIsLogin];
+    if ([[USER_DEFAULT valueForKey:kUserDefaultIsLogin] isEqualToString:@"1"]) {
+        storyboardName = @"Main";
+        vcName = @"MainNavi";
+    }
 
-    UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginNavi"];
+    UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:storyboardName andVCName:vcName];
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
     
@@ -136,9 +144,12 @@ extern CFAbsoluteTime StartTime;
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    UIViewController* unloackView = [FMUtils getViewControllerFromStoryboard:@"Main" andVCName:@"unlockView"];
-    [self.window.rootViewController presentViewController:unloackView animated:YES
-                                               completion:nil];
+    if ([USER_DEFAULT valueForKey:kUserDefaultAccessCode]) {
+        UIViewController* unloackView = [FMUtils getViewControllerFromStoryboard:@"Main" andVCName:@"unlockView"];
+        [self.window.rootViewController presentViewController:unloackView animated:YES
+                                                   completion:nil];
+    }
+    
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
 

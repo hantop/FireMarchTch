@@ -24,9 +24,10 @@ NSString *const kFMTAPIUploadImage = @"";
 
 #pragma mark- 字符串定义
 //token key值定义
-NSString *const kFMTAccessToken = @"token";
+NSString *const kUserDefaultAccessToken = @"token";
 //
-NSString *const kFMTAccessCode = @"accessCode";
+NSString *const kUserDefaultAccessCode = @"accessCode";
+NSString *const kUserDefaultIsLogin = @"isLogin";
 //以天为间隔时间
 NSString *const kUserDefaultTimeDay = @"userdefaultTimeDay";
 //以分钟为间隔时间
@@ -34,3 +35,8 @@ NSString *const kUserDefaultTimeMin = @"userdefaultTimeMin";
 //定位间隔时间
 NSString *const kUserDefaultTimeMinLocation = @"userdefaultTimeMinLocation";
 NSString *const kUserDefaultRandomCode = @"userdefaultRandomCode";
+
+#pragma mark- 通知类定义
+//新消息通知
+NSString *const kFMNotifiLoginSuccess = @"loginSuccess";
+NSString *const kFMNotifiRefreshOrderlist = @"refreshOrderListNotify";
