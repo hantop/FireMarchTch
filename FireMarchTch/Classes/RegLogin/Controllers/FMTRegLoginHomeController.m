@@ -25,16 +25,12 @@
     //导航栏设置为透明色
     [self.navigationController.navigationBar lt_setBackgroundColor:RGBA(100, 100, 100, 0)];
     //登录、注册按钮设置
-    _loginButton.layer.cornerRadius = 25;
-    [_loginButton addShadowColor:FSYellow];
+    _loginButton.layer.cornerRadius = 5;
+    [_loginButton addShadowColor:FSYellow offset:CGSizeMake(0, 5) edge:UIEdgeInsetsMake(20, 10, 0, 10)];
     
-    
-    _registButton.layer.cornerRadius = 25;
+    _registButton.layer.cornerRadius = 5;
     _registButton.layer.borderWidth = 0.5;
     _registButton.layer.borderColor = FSYellow.CGColor;
-    
-//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-//    [UIApplication sharedApplication].statusBarHidden = YES;
 }
 
 - (void) viewDidAppear:(BOOL)animated

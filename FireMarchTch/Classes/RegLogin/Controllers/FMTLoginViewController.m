@@ -38,6 +38,11 @@
     self.lineTwoHeight.constant = 0.5;
     self.loginButton.layer.cornerRadius = 5;
     
+    self.phoneNumTextField.leftView = [[UIImageView alloc]initWithImage:IMAGENAMED(@"man")];
+    self.pwdTextField.leftView = [[UIImageView alloc]initWithImage:IMAGENAMED(@"lock2")];
+    self.phoneNumTextField.leftViewMode = UITextFieldViewModeAlways;
+    self.pwdTextField.leftViewMode = UITextFieldViewModeAlways;
+    
     [self.phoneNumTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pwdTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     self.phoneNumTextField.delegate = self;
@@ -94,19 +99,32 @@
 
 
 - (IBAction)LoginAction:(id)sender {
+    [self.view endEditing:YES];
+    //规则校验
+    if (![FMUtils isMobileNumber:_phoneNumTextField.text]) {
+        [FMUtils tipWithText:@"请输入正确的手机号" onView:self.view];
+        return;
+    }
+    if (_pwdTextField.text.length < 8 || _pwdTextField.text.length > 20) {
+        [FMUtils tipWithText:@"密码长度不对，不少于8位，不大于20位" onView:self.view];
+        return;
+    }
     
+    //数据采集
     NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
     DLog(@"%@",[deviceInfo description]);
+
     NSDictionary *params = @{@"username" : _phoneNumTextField.text,
                              @"password" : _pwdTextField.text,
-                             @"deviceid" : @""
+                             @"deviceid" : deviceInfo[@"uuid"]
                              };
-    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
-    [self.navigationController pushViewController:setVC animated:YES];
     
-//    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
-//
-//    } url:kFMTAPILogin];
+    //发送请求
+    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
+        [USER_DEFAULT setValue:json[@"token"] forKey:kUserDefaultAccessToken];
+//        FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+//        [self.navigationController pushViewController:setVC animated:YES];
+    } url:kFMTAPILogin];
 }
 
 - (IBAction)forgetPWDAction:(id)sender {
@@ -114,7 +132,4 @@
     resetPWD.registType = FMTRegistTypeReset;
     [self.navigationController pushViewController:resetPWD animated:YES];
 }
-
-
-
 @end

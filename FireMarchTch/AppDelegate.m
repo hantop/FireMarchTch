@@ -45,6 +45,7 @@ extern CFAbsoluteTime StartTime;
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultTimeDay];
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultTimeMin];
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultRandomCode];
+    [USER_DEFAULT setValue:@"" forKey:kUserDefaultInviteCodeCheck];
     
 //    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedCarModelType];
 //    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedCarModelID];

@@ -98,7 +98,7 @@ singleton_implementation(FMTBaseDataManager)
         if ([self showAlertView:json])
         {
             if (success)
-                success(json);
+                success(json[@"result"]);
         }
         else
         {

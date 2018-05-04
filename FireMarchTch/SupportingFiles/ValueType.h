@@ -24,11 +24,15 @@ UIKIT_EXTERN NSString *const kFMTAPIUploadImage;
 
 
 
-
 #pragma mark- UserDefault
 UIKIT_EXTERN NSString *const kUserDefaultAccessToken;
 UIKIT_EXTERN NSString *const kUserDefaultAccessCode;
 UIKIT_EXTERN NSString *const kUserDefaultIsLogin;
+UIKIT_EXTERN NSString *const kUserDefaultInviteCodeCheck;
+UIKIT_EXTERN NSString *const kUserDefaultTimeDay;
+UIKIT_EXTERN NSString *const kUserDefaultTimeMin;
+UIKIT_EXTERN NSString *const kUserDefaultTimeMinLocation;
+UIKIT_EXTERN NSString *const kUserDefaultRandomCode;
 
 
 #pragma mark- 通知类
@@ -36,11 +40,6 @@ UIKIT_EXTERN NSString *const kFMNotifiLoginSuccess;
 UIKIT_EXTERN NSString *const kFMNotifiRefreshOrderlist;
 
 
-
-UIKIT_EXTERN NSString *const kUserDefaultTimeDay;
-UIKIT_EXTERN NSString *const kUserDefaultTimeMin;
-UIKIT_EXTERN NSString *const kUserDefaultTimeMinLocation;
-UIKIT_EXTERN NSString *const kUserDefaultRandomCode;
 
 
 #pragma mark- 枚举数据声明

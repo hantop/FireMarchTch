@@ -35,6 +35,8 @@ NSString *const kUserDefaultTimeMin = @"userdefaultTimeMin";
 //定位间隔时间
 NSString *const kUserDefaultTimeMinLocation = @"userdefaultTimeMinLocation";
 NSString *const kUserDefaultRandomCode = @"userdefaultRandomCode";
+//邀请码是否验证过了
+NSString *const kUserDefaultInviteCodeCheck = @"invitecodeIsChecked";
 
 #pragma mark- 通知类定义
 //新消息通知

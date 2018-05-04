@@ -9,11 +9,12 @@
 #import "FMTRegistViewController.h"
 #import "FMTCodeInputTextFields.h"
 #import "FMSetPWDViewController.h"
+#import "FMTRegTopView.h"
 
 @interface FMTRegistViewController () <FMTCodeInputTextFieldsDelegate, UITextFieldDelegate>
 @property (strong, nonatomic) NSString *inviteCode;
 @property (assign, nonatomic) __block BOOL isOK;
-@property (strong, nonatomic) __block FMTCodeInputTextFields *textField;
+@property (strong, nonatomic) __block FMTCodeInputTextFields *codeTextField;
 
 @property (weak, nonatomic) IBOutlet UIView *inputPhoneNumView;
 @property (weak, nonatomic) IBOutlet UIView *titleView;
@@ -63,9 +64,14 @@
     switch (self.registType) {
         case FMTRegistTypeRegist:
         {
-            self.mainTitleLabel.text = @"填写邀请码";
-            self.subTitleLabel.text = @"邀请码的获取方式来自好友的分享及加群获取";
-            self.textField.hidden = NO;
+            if ([USER_DEFAULT valueForKey:kUserDefaultInviteCodeCheck]) {
+                [self showPhoneNumAndPWDView];
+                self.inviteCode = [USER_DEFAULT valueForKey:kUserDefaultInviteCodeCheck];
+            } else {
+                self.mainTitleLabel.text = @"填写邀请码";
+                self.subTitleLabel.text = @"邀请码的获取方式来自好友的分享及加群获取";
+                self.codeTextField.hidden = NO;
+            }
         }
             break;
         case FMTRegistTypeReset:
@@ -181,11 +187,12 @@
 - (void)postCheckInviteCodeWithCodeString:(NSString *)codeStr {
     __weak typeof(self) weakSelf = self;
     [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:@{@"inviteCode" : codeStr} success:^(id json) {
+        [USER_DEFAULT setValue:codeStr forKey:kUserDefaultInviteCodeCheck];
         weakSelf.inviteCode = codeStr;
         [weakSelf showPhoneNumAndPWDView];
     } fail:^(NSError *error) {
         DLog(@"%@",error);
-        [_textField resetCodeInputTextField];
+        [_codeTextField resetCodeInputTextField];
     } url:kFMTAPICheckInviteCode];
 }
 
@@ -197,15 +204,15 @@
     self.mainTitleLabel.text = @"填写手机号码和QQ号";
     self.subTitleLabel.text = @"手机号获取短信验证码，QQ号用作辅助审核";
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         self.inputPhoneNumView.alpha = 1;
-        _textField.alpha = 0;
+        _codeTextField.alpha = 0;
         //必须调用此方法，才能出动画效果
-        [_textField.superview layoutIfNeeded];
+        [_codeTextField.superview layoutIfNeeded];
     } completion:^(BOOL finished) {
         if (finished) {
-            [_textField removeFromSuperview];
-            [self.phoneNumTextField becomeFirstResponder];
+            [_codeTextField removeFromSuperview];
+//            [self.phoneNumTextField becomeFirstResponder];
         }
     }];
 }
@@ -296,7 +303,7 @@
             params = [@{@"mobile":self.phoneNumTextField.text} mutableCopy];
             [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
                 [weakSelf performSegueWithIdentifier:@"segueToSetPwdVC" sender:weakSelf];
-            } url:kFMTAPICheckUserFirst];
+            } url:kFMTAPIForgotPWD];
         }
 
             break;
@@ -342,20 +349,20 @@
 
 
 #pragma mark- 懒加载
-- (FMTCodeInputTextFields *)textField {
-    if (!_textField) {
+- (FMTCodeInputTextFields *)codeTextField {
+    if (!_codeTextField) {
         FMTCodeInputTextFieldsConfig *config = [[FMTCodeInputTextFieldsConfig alloc]initWithCodeType:FMTCodeTypeLong];
         config.tintColor = FSYellow;
         config.keyboardType = UIKeyboardTypeEmailAddress;
         config.textFieldSize = (iPhone5 || iPhone4) ? CGSizeMake(40, 50) : CGSizeMake(50, 50);
-        _textField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
-        [self.view addSubview:_textField];
-        [_textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        _codeTextField = [[FMTCodeInputTextFields alloc] initWithConfiguration:config delegate:self];
+        [self.view addSubview:_codeTextField];
+        [_codeTextField mas_makeConstraints:^(MASConstraintMaker *make) {
             make.right.left.equalTo(self.view).with.offset(0);
             make.top.equalTo(self.view).with.offset(180);
             make.height.mas_equalTo(@(100));
         }];
     }
-    return _textField;
+    return _codeTextField;
 }
 @end

@@ -70,20 +70,37 @@
 }
 
 - (IBAction)registAction:(id)sender {
-    if (![self.firstPWDTextField.text isEqualToString:self.secondPWDTextField.text]) {
+    if (![self.firstPWDTextField.text isEqualToString:self.secondPWDTextField.text] ) {
         [FMUtils tipWithText:@"俩次密码输入不一致" onView:self.view withCompeletHandler:^{
             self.secondPWDTextField.text = @"";
             self.firstPWDTextField.text = @"";
             [self.firstPWDTextField becomeFirstResponder];
+            [self updateRegistButton];
         }];
         return;
     }
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:self.basicInfo];
     [params setValuesForKeysWithDictionary:@{@"password" : self.firstPWDTextField.text}];
-    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
-        
-    } fail:^(NSError *error) {
-        
-    } url:kFMTAPIRegister];
+    
+    if (self.registType == FMTRegistTypeRegist) {
+        [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
+            [FMUtils tipWithText:@"恭喜注册成功,请登录" onView:self.view withCompeletHandler:^{
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }];
+            
+        } fail:^(NSError *error) {
+            
+        } url:kFMTAPIRegister];
+    } else {
+        [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
+            [FMUtils tipWithText:@"重置密码成功，请登录" onView:self.view withCompeletHandler:^{
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }];
+            
+        } fail:^(NSError *error) {
+            
+        } url:kFMTAPIForgotPWD];
+    }
+    
 }
 @end
