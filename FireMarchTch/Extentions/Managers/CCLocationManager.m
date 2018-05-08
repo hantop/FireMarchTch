@@ -7,7 +7,7 @@
 //
 
 #import "CCLocationManager.h"
-#import "WGS84TOGCJ02.h"
+#import "FMWGS84TOGCJ02.h"
 
 @interface CCLocationManager (){
     CLLocationManager *_manager;

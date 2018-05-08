@@ -11,7 +11,7 @@
 #import <CoreTelephony/CTCarrier.h>
 #import <CoreLocation/CoreLocation.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
-#import "Reachability.h"
+#import "FMReachability.h"
 
 #include <dlfcn.h>
 #include <mach/mach.h>
@@ -334,7 +334,7 @@
     return deviceString;
 }
 
-const char* jailbreak_tool_pathes[] = {
+const char* FMjailbreak_tool_pathes[] = {
     "/Applications/Cydia.app",
     "/Library/MobileSubstrate/MobileSubstrate.dylib",
     "/bin/bash",
@@ -344,9 +344,9 @@ const char* jailbreak_tool_pathes[] = {
 
 + (BOOL)isJailBreak
 {
-    for (int i=0; i<ARRAY_SIZE(jailbreak_tool_pathes); i++)
+    for (int i=0; i<ARRAY_SIZE(FMjailbreak_tool_pathes); i++)
     {
-        if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithUTF8String:jailbreak_tool_pathes[i]]]) {
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithUTF8String:FMjailbreak_tool_pathes[i]]]) {
             return YES;
         }
     }
@@ -358,7 +358,7 @@ const char* jailbreak_tool_pathes[] = {
 {
     NSString *netconnType = @"";
     
-    Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
+    FMReachability *reach = [FMReachability reachabilityWithHostName:@"www.apple.com"];
     switch ([reach currentReachabilityStatus]) {
         case NotReachable:// 没有网络
         {

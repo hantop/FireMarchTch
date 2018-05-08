@@ -1,0 +1,6 @@
+framework module XWAFSDK {
+  umbrella header "XWAFSDK.h"
+
+  export *
+  module * { export * }
+}

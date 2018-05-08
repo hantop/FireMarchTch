@@ -300,10 +300,12 @@
     switch (self.registType) {
         case FMTRegistTypeReset:
         {
-            params = [@{@"mobile":self.phoneNumTextField.text} mutableCopy];
+            params = [@{@"mobile":self.phoneNumTextField.text,
+                        @"smsCode" : self.msgCodeTextField.text
+                        } mutableCopy];
             [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
                 [weakSelf performSegueWithIdentifier:@"segueToSetPwdVC" sender:weakSelf];
-            } url:kFMTAPIForgotPWD];
+            } url:kFMTAPICheckSMSCode];
         }
 
             break;
@@ -328,7 +330,9 @@
     {
         if (FMTRegistTypeReset == self.registType &&
             self.phoneNumTextField.text) {
-            NSDictionary *dict = @{@"mobile" : self.phoneNumTextField.text};
+            NSDictionary *dict = @{@"mobile" : self.phoneNumTextField.text,
+                                   @"smscode" : self.msgCodeTextField.text
+                                   };
             FMSetPWDViewController* setPwdVC = segue.destinationViewController;
             setPwdVC.basicInfo = [dict mutableCopy];
             setPwdVC.registType = self.registType;

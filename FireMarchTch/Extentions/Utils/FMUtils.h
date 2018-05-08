@@ -55,6 +55,7 @@
 
 
 #pragma mark- 字符串处理
++ (NSString *)getRandomStringWithNum:(NSInteger)num;
 + (BOOL)isBlankString:(NSString *)string;
 + (NSString *)resetString:(NSString *)str;
 + (NSString *)cutString:(NSString *)str Prefix:(NSString *)pre;

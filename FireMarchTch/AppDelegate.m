@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YYFPSLabel.h"
+#import <XWAFSDK/XWAFSDK.h>
 extern CFAbsoluteTime StartTime;
 
 @interface AppDelegate ()
@@ -40,36 +41,21 @@ extern CFAbsoluteTime StartTime;
     [self.window addSubview:_notifyView];
 }
 
+
 - (void)initUserDefaultDatas
 {
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultTimeDay];
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultTimeMin];
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultRandomCode];
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultInviteCodeCheck];
-    
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedCarModelType];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedCarModelID];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultChoosedBrandID];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPrice];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultEndPrice];
-//    [USER_DEFAULT setValue:@"false" forKey:kUSerDefaultStockFlag];
-//    [USER_DEFAULT setValue:@"false" forKey:kUSerDefaultPromotionFlag];
-//    [USER_DEFAULT setValue:@"false" forKey:kUSerDefaultRecommendFlag];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultServicePlace];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultDetailStoreItemPid];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultDetailItemCode];
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultAccessCode];
-    
-//    [USER_DEFAULT setObject:@"" forKey:kUSerDefaultSexual];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageUrl];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageImagePath];
-//    [USER_DEFAULT setValue:@"" forKey:kUserDefaultStartPageForm];
-//    [USER_DEFAULT setObject:@"0" forKey:kUserDefaultShoppingCartCount];
-//    [USER_DEFAULT setObject:@"0" forKey:kCZJDefaultCityID];
-//    [USER_DEFAULT setObject:@"" forKey:kCZJDefaultyCityName];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSString *rand = [XWAFSDK initWithAppID:@"12334324"];
+    [XWAFSDK postDeviceInfo];
+
     
     dispatch_async(dispatch_get_main_queue(), ^{
         iLog(@"Lauched in %f seconds.", (CFAbsoluteTimeGetCurrent() - StartTime));
