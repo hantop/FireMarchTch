@@ -18,6 +18,7 @@ LewPickerControllerDelegate,
 UIPickerViewDataSource,
 UIPickerViewDelegate
 >
+@property (strong, nonatomic) __block NSArray<NSString *> *titleArray;
 @property (strong, nonatomic) NSArray<NSString *> *heightArray;
 @property (strong, nonatomic) NSArray<NSString *> *oldArray;
 @property (strong, nonatomic) NSArray<NSString *> *weightArray;
@@ -28,6 +29,7 @@ UIPickerViewDelegate
 @property (assign, nonatomic) NSInteger currentSelectWeight;
 @property (assign, nonatomic) NSInteger currentSelectOld;
 @property (assign, nonatomic) NSInteger currentSelectBust;
+@property (strong, nonatomic) LewPickerController *pickerController;
 
 @property (weak, nonatomic) IBOutlet UIView *startView;
 @property (weak, nonatomic) IBOutlet UIImageView *startImageView;
@@ -78,6 +80,7 @@ UIPickerViewDelegate
     [self.refreshButton setImage:[IMAGENAMED(@"refresh") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     [self.refreshButton setTintColor:FSYellow];
     
+    self.titleArray = [NSArray array];
     self.heightArray = @[@"155-159cm",@"160-165cm",@"166-169cm",@"170-175cm",@"176-179cm",@"180+cm"];
     self.weightArray = @[@"40-45kg",@"46-49kg",@"50-55kg",@"56-59kg",@"60+kg"];
     self.bustArray = @[@"B", @"B+", @"C", @"C+", @"D", @"E", @"F",];
@@ -89,6 +92,7 @@ UIPickerViewDelegate
     self.tagsView.tags = @[@"知性",@"明媚",@"有为青年",@"颜值高",@"春天的一阵风",@"透心凉",@"服务好",@"倾国倾城",@"有缘再见"];
     self.tagsView.completion = ^(NSArray *selectTags, NSInteger currentIndex) {
         DLog(@"%@",selectTags);
+        self.titleArray = [selectTags copy];
     };
 }
 
@@ -114,21 +118,26 @@ UIPickerViewDelegate
 
 - (IBAction)buttonAction:(id)sender {
     [self.view endEditing:YES];
-    _pickerView = [[UIPickerView alloc]init];
-    _pickerView.delegate = self;
-    _pickerView.dataSource = self;
-    _pickerView.tag = ((UIButton*)sender).tag;
-    LewPickerController *pickerController = [[LewPickerController alloc]initWithDelegate:self];
-    pickerController.pickerView = _pickerView;
+    if (!_pickerView) {
+        _pickerView = [[UIPickerView alloc]init];
+        _pickerView.delegate = self;
+        _pickerView.dataSource = self;
+    }
+    
+    if (!self.pickerController) {
+        self.pickerController = [[LewPickerController alloc]initWithDelegate:self];
+        self.pickerController.pickerView = _pickerView;
+    }
+    self.pickerController.pickerView.tag = ((UIButton*)sender).tag;
     
     [self.view addSubview:_backgroundView];
     [UIView animateWithDuration:0.35 animations:^{
-        _backgroundView.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
+        _backgroundView.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.1];
     }];
     
-    [pickerController showInView:self.view];
+    [self.pickerController showInView:self.view];
     
-    
+    [self.pickerController.pickerView reloadAllComponents];
     NSString *title = @"";
     switch (_pickerView.tag) {
         case 1:
@@ -152,12 +161,48 @@ UIPickerViewDelegate
         default:
             break;
     }
-    pickerController.titleLabel.text = title;
+    self.pickerController.titleLabel.text = title;
 }
 
 - (void)nextStepAction:(id)sender {
+//    if ([FMUtils isBlankString: self.heightLabel.text]) {
+//        [FMUtils tipWithText:@"请填写身高" onView:self.view];
+//        return;
+//    }
+//    if ([FMUtils isBlankString: self.weightLabel.text]) {
+//        [FMUtils tipWithText:@"请填写体重" onView:self.view];
+//        return;
+//    }
+//    if ([FMUtils isBlankString: self.oldLabel.text]) {
+//        [FMUtils tipWithText:@"请填写年龄" onView:self.view];
+//        return;
+//    }
+//    if ([FMUtils isBlankString: self.bustLabel.text]) {
+//        [FMUtils tipWithText:@"请填写胸围" onView:self.view];
+//        return;
+//    }
+//    if (_titleArray.count == 0) {
+//        [FMUtils tipWithText:@"请选择我的标签" onView:self.view];
+//        return;
+//    }
+    
     FMTUpImageViewController *imageUpVC = [[FMTUpImageViewController alloc] init];
     [self.navigationController pushViewController:imageUpVC animated:YES];
+    return;
+    
+    NSDictionary *params = @{@"height" : self.heightLabel.text,
+                             @"weight" : self.weightLabel.text,
+                             @"old" : self.oldLabel.text,
+                             @"bust" : self.bustLabel.text,
+                             @"titles" : self.titleArray
+                             };
+    [[FMTBaseDataManager sharedFMTBaseDataManager]generalPost:params success:^(id json) {
+        [FMUtils tipWithText:@"基本信息设置成功，下一步上传影像资料" onView:self.view withCompeletHandler:^{
+            FMTUpImageViewController *imageUpVC = [[FMTUpImageViewController alloc] init];
+            [self.navigationController pushViewController:imageUpVC animated:YES];
+        }];
+    } url:kFMTAPISetBasicInfo];
+    
 }
 
 #pragma mark - UIPickerViewDelegate,UIPickerViewDataSource

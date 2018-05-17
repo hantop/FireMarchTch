@@ -157,6 +157,8 @@ CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].si
 
 //本项目自定义颜色
 //主标题黑色
+#define FSBlackColor00 RGB (0, 0, 0)
+#define FSBlackColor22 RGB (32, 32, 32)
 #define FSBlackColor33 RGB (64, 64, 64)
 #define FSBlackColor66 RGB (102, 102, 102)
 //副标题灰色

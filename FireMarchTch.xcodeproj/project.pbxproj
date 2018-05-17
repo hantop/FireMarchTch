@@ -63,6 +63,12 @@
 		ECDCE71F207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE719207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m */; };
 		ECDCE721208593DF009BB554 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE720208593DF009BB554 /* Assets.xcassets */; };
 		ECDCE72720871CA7009BB554 /* FMTRegTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE72620871CA7009BB554 /* FMTRegTopView.m */; };
+		ECDD6BA220A541990026AC4E /* HWWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6B9A20A541990026AC4E /* HWWaveView.m */; };
+		ECDD6BA320A541990026AC4E /* HWCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6B9D20A541990026AC4E /* HWCircleView.m */; };
+		ECDD6BA420A541990026AC4E /* HWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6B9F20A541990026AC4E /* HWProgressView.m */; };
+		ECDD6BA520A541990026AC4E /* HWInstallView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6BA120A541990026AC4E /* HWInstallView.m */; };
+		ECDD6BA820A574B90026AC4E /* FMTImageUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6BA720A574B90026AC4E /* FMTImageUploadModel.m */; };
+		ECDD6BAB20A96F040026AC4E /* FMUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6BAA20A96F040026AC4E /* FMUploadManager.m */; };
 		ECE816682087559700A4D691 /* MMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE816662087559700A4D691 /* MMLabel.m */; };
 		ECF1919B2089E11F004A158E /* FMTCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF1919A2089E11F004A158E /* FMTCourseController.m */; };
 		ECF191A2208DAAC9004A158E /* FMTCourseSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191A0208DAAC9004A158E /* FMTCourseSetController.m */; };
@@ -198,6 +204,18 @@
 		ECDCE720208593DF009BB554 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECDCE72520871CA7009BB554 /* FMTRegTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTRegTopView.h; sourceTree = "<group>"; };
 		ECDCE72620871CA7009BB554 /* FMTRegTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTRegTopView.m; sourceTree = "<group>"; };
+		ECDD6B9A20A541990026AC4E /* HWWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWaveView.m; sourceTree = "<group>"; };
+		ECDD6B9B20A541990026AC4E /* HWInstallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWInstallView.h; sourceTree = "<group>"; };
+		ECDD6B9C20A541990026AC4E /* HWProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWProgressView.h; sourceTree = "<group>"; };
+		ECDD6B9D20A541990026AC4E /* HWCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWCircleView.m; sourceTree = "<group>"; };
+		ECDD6B9E20A541990026AC4E /* HWWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWaveView.h; sourceTree = "<group>"; };
+		ECDD6B9F20A541990026AC4E /* HWProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWProgressView.m; sourceTree = "<group>"; };
+		ECDD6BA020A541990026AC4E /* HWCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWCircleView.h; sourceTree = "<group>"; };
+		ECDD6BA120A541990026AC4E /* HWInstallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWInstallView.m; sourceTree = "<group>"; };
+		ECDD6BA620A574B90026AC4E /* FMTImageUploadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTImageUploadModel.h; sourceTree = "<group>"; };
+		ECDD6BA720A574B90026AC4E /* FMTImageUploadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTImageUploadModel.m; sourceTree = "<group>"; };
+		ECDD6BA920A96F040026AC4E /* FMUploadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUploadManager.h; sourceTree = "<group>"; };
+		ECDD6BAA20A96F040026AC4E /* FMUploadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUploadManager.m; sourceTree = "<group>"; };
 		ECE816662087559700A4D691 /* MMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLabel.m; sourceTree = "<group>"; };
 		ECE816672087559700A4D691 /* MMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLabel.h; sourceTree = "<group>"; };
 		ECF191992089E11F004A158E /* FMTCourseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseController.h; sourceTree = "<group>"; };
@@ -285,6 +303,7 @@
 		EC42A4B02061EFB500C52324 /* Coponents */ = {
 			isa = PBXGroup;
 			children = (
+				ECDD6B9920A541990026AC4E /* ProgressView */,
 				ECF191DC2091B1DD004A158E /* CZJPageControlView.h */,
 				ECF191DB2091B1DD004A158E /* CZJPageControlView.m */,
 				ECF191C920902AD0004A158E /* LMJDropdownMenu */,
@@ -654,6 +673,8 @@
 				EC473D312060DB9500CD9397 /* FMNetworkMananger.m */,
 				EC42A4AD20614F4700C52324 /* FMTBaseDataManager.h */,
 				EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */,
+				ECDD6BA920A96F040026AC4E /* FMUploadManager.h */,
+				ECDD6BAA20A96F040026AC4E /* FMUploadManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -729,6 +750,21 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ECDD6B9920A541990026AC4E /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD6B9A20A541990026AC4E /* HWWaveView.m */,
+				ECDD6B9B20A541990026AC4E /* HWInstallView.h */,
+				ECDD6B9C20A541990026AC4E /* HWProgressView.h */,
+				ECDD6B9D20A541990026AC4E /* HWCircleView.m */,
+				ECDD6B9E20A541990026AC4E /* HWWaveView.h */,
+				ECDD6B9F20A541990026AC4E /* HWProgressView.m */,
+				ECDD6BA020A541990026AC4E /* HWCircleView.h */,
+				ECDD6BA120A541990026AC4E /* HWInstallView.m */,
+			);
+			path = ProgressView;
 			sourceTree = "<group>";
 		};
 		ECF191982089E101004A158E /* Course */ = {
@@ -814,6 +850,8 @@
 			children = (
 				ECF191AF208F0C16004A158E /* FMTCourseModel.h */,
 				ECF191B0208F0C16004A158E /* FMTCourseModel.m */,
+				ECDD6BA620A574B90026AC4E /* FMTImageUploadModel.h */,
+				ECDD6BA720A574B90026AC4E /* FMTImageUploadModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1013,6 +1051,7 @@
 				ECF191DA2091A974004A158E /* FMTForumController.m in Sources */,
 				ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */,
 				ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */,
+				ECDD6BA220A541990026AC4E /* HWWaveView.m in Sources */,
 				ECF191EA20999F5A004A158E /* FMTMyAccountController.m in Sources */,
 				ECF191E120998FF3004A158E /* FMTMyInfoCell.m in Sources */,
 				EC473D22205BF6DB00CD9397 /* UIView+Frame.m in Sources */,
@@ -1036,6 +1075,7 @@
 				ECDCE71F207F3E81009BB554 /* HXTagCollectionViewFlowLayout.m in Sources */,
 				ECF191C3208F2906004A158E /* UIView+Shadow.m in Sources */,
 				EC38CB0520732C8A00C09DC7 /* FMDeviceInfo.m in Sources */,
+				ECDD6BA420A541990026AC4E /* HWProgressView.m in Sources */,
 				ECDCE699207C858A009BB554 /* YYWeakProxy.m in Sources */,
 				EC473C962056556200CD9397 /* ViewController.m in Sources */,
 				ECE816682087559700A4D691 /* MMLabel.m in Sources */,
@@ -1049,12 +1089,14 @@
 				EC42A4CC2063EF0700C52324 /* FMTRegistViewController.m in Sources */,
 				ECF191F320999FBC004A158E /* FMTMySettingController.m in Sources */,
 				ECF191C720902321004A158E /* FMTCourseEditView.m in Sources */,
+				ECDD6BA520A541990026AC4E /* HWInstallView.m in Sources */,
 				ECF191D42091A257004A158E /* FMTOrderManageController.m in Sources */,
 				ECF191BA208F178F004A158E /* FMTCourseCell.m in Sources */,
 				EC473D25205BF6DB00CD9397 /* NSDictionary+NSDictonay_Unicode.m in Sources */,
 				EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */,
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
 				ECDCE70E207DF666009BB554 /* FMImageCollectionViewCell.m in Sources */,
+				ECDD6BA320A541990026AC4E /* HWCircleView.m in Sources */,
 				ECF191D72091A8BA004A158E /* FMTMyInfoController.m in Sources */,
 				ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */,
 				ECF191E62099900C004A158E /* FMTMyAccountCell.m in Sources */,
@@ -1063,11 +1105,13 @@
 				ECF191A7208DB050004A158E /* FMTPrivacySetController.m in Sources */,
 				ECDCE686207B6ACE009BB554 /* PBaseTableViewCell.m in Sources */,
 				EC42A4E62068DCCD00C52324 /* FMModel.m in Sources */,
+				ECDD6BA820A574B90026AC4E /* FMTImageUploadModel.m in Sources */,
 				ECDCE72720871CA7009BB554 /* FMTRegTopView.m in Sources */,
 				EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */,
 				ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
+				ECDD6BAB20A96F040026AC4E /* FMUploadManager.m in Sources */,
 				ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */,
 				ECF191DD2091B1DD004A158E /* CZJPageControlView.m in Sources */,
 				ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */,

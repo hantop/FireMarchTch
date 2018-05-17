@@ -295,11 +295,12 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s93-aI-Cme">
-                                        <rect key="frame" x="265" y="55" width="90" height="45"/>
+                                        <rect key="frame" x="255" y="65" width="100" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="sb4-F9-4Lk"/>
+                                            <constraint firstAttribute="height" constant="30" id="iW5-6w-UN4"/>
+                                            <constraint firstAttribute="width" constant="100" id="sb4-F9-4Lk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="获取验证码">
                                             <color key="titleColor" red="0.92156862745098034" green="0.21176470588235294" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -307,18 +308,18 @@
                                             <action selector="getMsgCodeAction:" destination="YUe-O1-hSe" eventType="touchUpInside" id="bUn-1C-OyX"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi8-Rg-geb">
-                                        <rect key="frame" x="280" y="67.5" width="60" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi8-Rg-geb">
+                                        <rect key="frame" x="275" y="70.5" width="60" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="RUM-tx-Chp"/>
-                                            <constraint firstAttribute="height" constant="21" id="rkb-4h-DKH"/>
+                                            <constraint firstAttribute="height" constant="20" id="rkb-4h-DKH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机验证码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pPK-Fr-8hl" userLabel="codeText">
-                                        <rect key="frame" x="20" y="65" width="235" height="35"/>
+                                        <rect key="frame" x="20" y="65" width="225" height="35"/>
                                         <color key="tintColor" red="0.92156862745098034" green="0.21176470588235294" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="JtZ-U1-t23"/>
@@ -381,13 +382,12 @@
                                     <constraint firstItem="iKG-pH-b23" firstAttribute="leading" secondItem="Xun-Lu-j7a" secondAttribute="leading" constant="20" id="3NL-PT-0Ly"/>
                                     <constraint firstItem="VPi-cm-SDJ" firstAttribute="leading" secondItem="Xun-Lu-j7a" secondAttribute="leading" constant="20" id="4ef-Ja-hUY"/>
                                     <constraint firstItem="7Xu-pB-SB0" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" id="590-0g-liL"/>
-                                    <constraint firstItem="s93-aI-Cme" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" constant="15" id="A4a-vu-HGT"/>
                                     <constraint firstItem="pPK-Fr-8hl" firstAttribute="top" secondItem="iKG-pH-b23" secondAttribute="bottom" constant="25" id="Anr-kX-co8"/>
                                     <constraint firstItem="bi8-Rg-geb" firstAttribute="centerY" secondItem="s93-aI-Cme" secondAttribute="centerY" id="BKy-bn-Snh"/>
                                     <constraint firstItem="pPK-Fr-8hl" firstAttribute="trailing" secondItem="s93-aI-Cme" secondAttribute="leading" constant="-10" id="C6X-0n-OAK"/>
                                     <constraint firstItem="OtE-EO-1Sp" firstAttribute="top" secondItem="T0F-IW-Wnw" secondAttribute="bottom" id="DqO-Iw-ydZ"/>
                                     <constraint firstItem="VPi-cm-SDJ" firstAttribute="top" secondItem="pPK-Fr-8hl" secondAttribute="bottom" id="FPx-7j-DPo"/>
-                                    <constraint firstItem="VPi-cm-SDJ" firstAttribute="top" secondItem="s93-aI-Cme" secondAttribute="bottom" id="GR5-DT-x5L"/>
+                                    <constraint firstItem="VPi-cm-SDJ" firstAttribute="top" secondItem="s93-aI-Cme" secondAttribute="bottom" constant="5" id="GR5-DT-x5L"/>
                                     <constraint firstItem="BpX-i7-j7o" firstAttribute="leading" secondItem="Xun-Lu-j7a" secondAttribute="leading" constant="20" id="IWQ-pR-MQz"/>
                                     <constraint firstItem="7Xu-pB-SB0" firstAttribute="trailing" secondItem="iKG-pH-b23" secondAttribute="trailing" id="K3I-YX-6cg"/>
                                     <constraint firstItem="bi8-Rg-geb" firstAttribute="centerX" secondItem="s93-aI-Cme" secondAttribute="centerX" id="QVh-i6-ypL"/>

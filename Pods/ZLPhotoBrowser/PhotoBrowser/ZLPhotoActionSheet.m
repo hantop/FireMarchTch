@@ -189,10 +189,10 @@ double const ScalePhotoWidth = 1000;
 {
     NSAssert(self.sender != nil, @"sender 对象不能为空");
     
-    if (!self.configuration.allowSelectImage && self.arrSelectedModels.count) {
-        [self.arrSelectedAssets removeAllObjects];
-        [self.arrSelectedModels removeAllObjects];
-    }
+//    if (!self.configuration.allowSelectImage && self.arrSelectedModels.count) {
+//        [self.arrSelectedAssets removeAllObjects];
+//        [self.arrSelectedModels removeAllObjects];
+//    }
     
     self.animate = animate;
     self.preview = preview;

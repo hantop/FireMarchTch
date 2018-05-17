@@ -23,6 +23,7 @@
 + (BOOL)saveStringDataToDocumentDirectory:(NSString *)str withPlistName:(NSString *)plistName;
 + (BOOL)saveArrayToDocumentsDirectory:(NSMutableArray *)array withPlistName:(NSString *)plistName;
 + (BOOL)saveDictionaryToDocumentsDirectory:(NSMutableDictionary *)dict withPlistName:(NSString *)plistName;
++ (NSString *)writeToCacheVideo:(NSData *)data appendNameString:(NSString *)name;
 
 
 #pragma mark- 从本地读取数据

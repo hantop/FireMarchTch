@@ -36,6 +36,9 @@ PODS:
   - CocoaLumberjack/Extensions (3.4.1):
     - CocoaLumberjack/Default
   - FlatUIKit (1.6.2)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
   - GPUImage (0.1.7)
   - HHBadgeHUD (0.0.5)
   - iConsole (1.5.3)
@@ -66,6 +69,7 @@ DEPENDENCIES:
   - BlocksKit (~> 2.2.5)
   - CocoaLumberjack (~> 3.4.1)
   - FlatUIKit
+  - FMDB (~> 2.7.2)
   - GPUImage (~> 0.1.7)
   - HHBadgeHUD
   - iConsole (~> 1.5.3)
@@ -90,6 +94,7 @@ SPEC CHECKSUMS:
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CocoaLumberjack: 2e258a064cacc8eb9a2aca318e24d02a0a7fd56d
   FlatUIKit: 1b41f0d4952ce8d970d8479ce79df54a960242c4
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   HHBadgeHUD: 186f1c13c8db8d2291720b7bd96d47b0c103a79c
   iConsole: 823d9b14ac90f0a2a4fc9bf6a973a03ba9c4c7eb
@@ -110,6 +115,6 @@ SPEC CHECKSUMS:
   ZLPhotoBrowser: 2125e7b7ea328c959a5ead1204c83b3bb0f0bf5a
   ZWPullMenuView: ff9565af18d4d88d8b4173c9bd82fb570c405000
 
-PODFILE CHECKSUM: 69bfcccb2420455a43eef7d63c72a8fd9d89c40a
+PODFILE CHECKSUM: 3b11dad07b956a6c02e5da18f2f24079586c06dd
 
 COCOAPODS: 1.4.0

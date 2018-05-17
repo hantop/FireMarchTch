@@ -7,6 +7,8 @@ target 'FireMarchTch' do
 
   # Pods for FireMarchTch
   
+#数据库SQLite封装框架
+pod 'FMDB', '~> 2.7.2'
 #扩展UIKit Foundation类的回调
 pod 'BlocksKit', '~> 2.2.5'
 #网络库

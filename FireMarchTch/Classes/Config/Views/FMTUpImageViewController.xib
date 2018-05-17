@@ -17,7 +17,8 @@
                 <outlet property="buttomViewWidth" destination="YcB-7k-0qd" id="H0T-77-VOf"/>
                 <outlet property="imageView" destination="n0G-2L-9CU" id="RbJ-yi-sHd"/>
                 <outlet property="photoButton" destination="vEy-f4-DZ9" id="SjS-GA-oXn"/>
-                <outlet property="videoButton" destination="wX4-cw-A5A" id="pRf-Mm-dYU"/>
+                <outlet property="uploadButton" destination="oyc-y6-1G6" id="Gok-FD-oQf"/>
+                <outlet property="videoButton" destination="wX4-cw-A5A" id="yXI-6N-2nm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,9 +42,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="2i6-cv-irY"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                             <state key="normal" title="相册">
-                                <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="photoAction:" destination="-1" eventType="touchUpInside" id="9oT-iq-k3h"/>
@@ -54,9 +55,9 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="nGF-bB-5KH"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="black" pointSize="16"/>
                             <state key="normal" title="视频">
-                                <color key="titleColor" red="0.12549019607843137" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>
                                 <action selector="vedioAction:" destination="-1" eventType="touchUpInside" id="OSy-AX-dCq"/>
@@ -88,19 +89,36 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0G-2L-9CU" userLabel="imageView">
-                    <rect key="frame" x="0.0" y="221" width="375" height="446"/>
+                    <rect key="frame" x="0.0" y="221" width="375" height="396"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyc-y6-1G6">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.21176470589999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UQt-4v-Mm6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                    <state key="normal" title="开始上传">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="uploadAction:" destination="-1" eventType="touchUpInside" id="oFD-Hy-Dkv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Ofi-At-fXB" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="150" id="1jh-Re-bni"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Ofi-At-fXB" secondAttribute="trailing" id="1uW-0b-ury"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="oyc-y6-1G6" secondAttribute="trailing" id="4gW-46-aI9"/>
+                <constraint firstItem="oyc-y6-1G6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="6O3-Xk-bIX"/>
+                <constraint firstItem="oyc-y6-1G6" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="7oP-Qz-ZKL"/>
                 <constraint firstItem="Ofi-At-fXB" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ZF0-ai-w5P"/>
                 <constraint firstItem="n0G-2L-9CU" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gfe-gr-oiA"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="n0G-2L-9CU" secondAttribute="trailing" id="tfX-uz-l29"/>
                 <constraint firstItem="n0G-2L-9CU" firstAttribute="top" secondItem="Ofi-At-fXB" secondAttribute="bottom" constant="1" id="vMg-UU-s8c"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="n0G-2L-9CU" secondAttribute="bottom" id="znn-dI-c7C"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="n0G-2L-9CU" secondAttribute="bottom" constant="50" id="znn-dI-c7C"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="65.5" y="53.5"/>

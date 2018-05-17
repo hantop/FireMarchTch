@@ -131,6 +131,18 @@
     return NO;
 }
 
++ (NSString *)writeToCacheVideo:(NSData *)data appendNameString:(NSString *)name {
+    
+    NSString *cachesDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *createPath =  [cachesDirectory stringByAppendingPathComponent:@"video"];
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    [fileManager createDirectoryAtPath:createPath withIntermediateDirectories:YES attributes:nil error:nil];
+    NSString *path = [cachesDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"/video/%.0f%@",[NSDate date].timeIntervalSince1970,name]];
+    [data writeToFile:path atomically:NO];
+    
+    return path;
+}
+
 
 #pragma mark- 从本地读取数据
 + (NSData *)readDataFromDocumentDirectoryWithName:(NSString *)plistName{

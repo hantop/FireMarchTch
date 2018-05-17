@@ -61,6 +61,10 @@
     [self.msgCodeTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.qqTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     
+    self.getMsgCodeButton.backgroundColor = RGB(255, 215, 215);
+    self.getMsgCodeButton.layer.cornerRadius = 15;
+    self.getMsgCodeButton.clipsToBounds = YES;
+    
     switch (self.registType) {
         case FMTRegistTypeRegist:
         {

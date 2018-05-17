@@ -21,7 +21,8 @@ UIKIT_EXTERN NSString *const kFMTAPIForgotPWD;
 UIKIT_EXTERN NSString *const kFMTAPISendSMSCode;
 UIKIT_EXTERN NSString *const kFMTAPICheckSMSCode;
 UIKIT_EXTERN NSString *const kFMTAPIUploadImage;
-
+UIKIT_EXTERN NSString *const kFMTAPISetBasicInfo;
+UIKIT_EXTERN NSString *const kFMTAPIFileAuth;
 
 
 #pragma mark- UserDefault

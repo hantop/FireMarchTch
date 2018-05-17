@@ -38,10 +38,10 @@
     self.lineTwoHeight.constant = 0.5;
     self.loginButton.layer.cornerRadius = 5;
     
-    self.phoneNumTextField.leftView = [[UIImageView alloc]initWithImage:IMAGENAMED(@"man")];
-    self.pwdTextField.leftView = [[UIImageView alloc]initWithImage:IMAGENAMED(@"lock2")];
-    self.phoneNumTextField.leftViewMode = UITextFieldViewModeAlways;
-    self.pwdTextField.leftViewMode = UITextFieldViewModeAlways;
+//    self.phoneNumTextField.leftView = [[UIImageView alloc]initWithImage:IMAGENAMED(@"man")];
+//    self.pwdTextField.leftView = [[UIImageView alloc]initWithImage:IMAGENAMED(@"lock2")];
+//    self.phoneNumTextField.leftViewMode = UITextFieldViewModeAlways;
+//    self.pwdTextField.leftViewMode = UITextFieldViewModeAlways;
     
     [self.phoneNumTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
     [self.pwdTextField addTarget:self action:@selector(textFieldChanged:) forControlEvents:UIControlEventEditingChanged];
@@ -100,6 +100,12 @@
 
 - (IBAction)LoginAction:(id)sender {
     [self.view endEditing:YES];
+    
+    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+    [self.navigationController pushViewController:setVC animated:YES];
+    
+    return;
+    
     //规则校验
     if (![FMUtils isMobileNumber:_phoneNumTextField.text]) {
         [FMUtils tipWithText:@"请输入正确的手机号" onView:self.view];
@@ -119,11 +125,27 @@
                              @"deviceid" : deviceInfo[@"uuid"]
                              };
     
+    
     //发送请求
     [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
         [USER_DEFAULT setValue:json[@"token"] forKey:kUserDefaultAccessToken];
-//        FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
-//        [self.navigationController pushViewController:setVC animated:YES];
+        if ([json[@"completed"] isEqualToString:@""]) {
+            //首次登录，跳转资料完善界面
+//            FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+//            [self.navigationController pushViewController:setVC animated:YES];
+        }
+        else {
+            //非首次登录则检查是否审核完成
+            if ([json[@"approved"] isEqualToString:@""]) {
+                //审核未完成跳转审核中页面
+                
+            }
+            else {
+                //审核完成，进入主页
+                
+            }
+        }
+        
     } url:kFMTAPILogin];
 }
 

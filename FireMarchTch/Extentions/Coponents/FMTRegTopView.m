@@ -53,7 +53,7 @@
         _bigTitleLabel = [MMLabel new];
         _bigTitleLabel.font = SYSTEMFONT(24);
         _bigTitleLabel.keyWordFont = SYSTEMFONT(18);
-        _bigTitleLabel.textColor = FSBlackColor33;
+        _bigTitleLabel.textColor = FSBlackColor00;
         _bigTitleLabel.textAlignment = NSTextAlignmentCenter;
         _bigTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         _bigTitleLabel.numberOfLines = 1;
