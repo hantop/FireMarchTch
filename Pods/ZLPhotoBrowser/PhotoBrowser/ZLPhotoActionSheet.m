@@ -182,13 +182,14 @@ double const ScalePhotoWidth = 1000;
 
 - (void)showPhotoLibrary
 {
+    /* 展不展示缩略图 Joe.Pen 备注  */
     [self showPreview:NO animate:NO];
 }
 
 - (void)showPreview:(BOOL)preview animate:(BOOL)animate
 {
     NSAssert(self.sender != nil, @"sender 对象不能为空");
-    
+    /* Joe.Pen Modify */
 //    if (!self.configuration.allowSelectImage && self.arrSelectedModels.count) {
 //        [self.arrSelectedAssets removeAllObjects];
 //        [self.arrSelectedModels removeAllObjects];

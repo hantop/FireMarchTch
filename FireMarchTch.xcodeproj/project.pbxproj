@@ -43,6 +43,10 @@
 		EC473D26205BF6DB00CD9397 /* CALayer+UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D1E205BF6DB00CD9397 /* CALayer+UIColor.m */; };
 		EC473D2C205FBF5200CD9397 /* CCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D2B205FBF5200CD9397 /* CCLocationManager.m */; };
 		EC473D322060DB9500CD9397 /* FMNetworkMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = EC473D312060DB9500CD9397 /* FMNetworkMananger.m */; };
+		EC78EF6A20D249BC00F199DC /* CWUploadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EC78EF6220D249BC00F199DC /* CWUploadTask.m */; };
+		EC78EF6B20D249BC00F199DC /* CWFileStreamSeparation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC78EF6420D249BC00F199DC /* CWFileStreamSeparation.m */; };
+		EC78EF6C20D249BC00F199DC /* CWFileUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC78EF6720D249BC00F199DC /* CWFileUploadManager.m */; };
+		EC78EF7020D28F3700F199DC /* CWFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC78EF6F20D28F3600F199DC /* CWFileManager.m */; };
 		EC9FEC6E20A0589A00DBF465 /* XWAFSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9FEC6D20A0589A00DBF465 /* XWAFSDK.framework */; };
 		EC9FEC7720A05DAA00DBF465 /* FMReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9FEC7620A05DAA00DBF465 /* FMReachability.m */; };
 		ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */; };
@@ -68,7 +72,6 @@
 		ECDD6BA420A541990026AC4E /* HWProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6B9F20A541990026AC4E /* HWProgressView.m */; };
 		ECDD6BA520A541990026AC4E /* HWInstallView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6BA120A541990026AC4E /* HWInstallView.m */; };
 		ECDD6BA820A574B90026AC4E /* FMTImageUploadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6BA720A574B90026AC4E /* FMTImageUploadModel.m */; };
-		ECDD6BAB20A96F040026AC4E /* FMUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDD6BAA20A96F040026AC4E /* FMUploadManager.m */; };
 		ECE816682087559700A4D691 /* MMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE816662087559700A4D691 /* MMLabel.m */; };
 		ECF1919B2089E11F004A158E /* FMTCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF1919A2089E11F004A158E /* FMTCourseController.m */; };
 		ECF191A2208DAAC9004A158E /* FMTCourseSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF191A0208DAAC9004A158E /* FMTCourseSetController.m */; };
@@ -168,6 +171,14 @@
 		EC473D2B205FBF5200CD9397 /* CCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationManager.m; sourceTree = "<group>"; };
 		EC473D302060DB9500CD9397 /* FMNetworkMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMNetworkMananger.h; sourceTree = "<group>"; };
 		EC473D312060DB9500CD9397 /* FMNetworkMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNetworkMananger.m; sourceTree = "<group>"; };
+		EC78EF6220D249BC00F199DC /* CWUploadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUploadTask.m; sourceTree = "<group>"; };
+		EC78EF6320D249BC00F199DC /* CWFileUploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFileUploadManager.h; sourceTree = "<group>"; };
+		EC78EF6420D249BC00F199DC /* CWFileStreamSeparation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFileStreamSeparation.m; sourceTree = "<group>"; };
+		EC78EF6620D249BC00F199DC /* CWUploadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUploadTask.h; sourceTree = "<group>"; };
+		EC78EF6720D249BC00F199DC /* CWFileUploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFileUploadManager.m; sourceTree = "<group>"; };
+		EC78EF6920D249BC00F199DC /* CWFileStreamSeparation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFileStreamSeparation.h; sourceTree = "<group>"; };
+		EC78EF6E20D28F3600F199DC /* CWFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFileManager.h; sourceTree = "<group>"; };
+		EC78EF6F20D28F3600F199DC /* CWFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFileManager.m; sourceTree = "<group>"; };
 		EC9FEC6D20A0589A00DBF465 /* XWAFSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XWAFSDK.framework; sourceTree = "<group>"; };
 		EC9FEC7520A05DAA00DBF465 /* FMReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMReachability.h; sourceTree = "<group>"; };
 		EC9FEC7620A05DAA00DBF465 /* FMReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMReachability.m; sourceTree = "<group>"; };
@@ -214,8 +225,6 @@
 		ECDD6BA120A541990026AC4E /* HWInstallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWInstallView.m; sourceTree = "<group>"; };
 		ECDD6BA620A574B90026AC4E /* FMTImageUploadModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTImageUploadModel.h; sourceTree = "<group>"; };
 		ECDD6BA720A574B90026AC4E /* FMTImageUploadModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTImageUploadModel.m; sourceTree = "<group>"; };
-		ECDD6BA920A96F040026AC4E /* FMUploadManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUploadManager.h; sourceTree = "<group>"; };
-		ECDD6BAA20A96F040026AC4E /* FMUploadManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUploadManager.m; sourceTree = "<group>"; };
 		ECE816662087559700A4D691 /* MMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLabel.m; sourceTree = "<group>"; };
 		ECE816672087559700A4D691 /* MMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLabel.h; sourceTree = "<group>"; };
 		ECF191992089E11F004A158E /* FMTCourseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTCourseController.h; sourceTree = "<group>"; };
@@ -667,14 +676,13 @@
 		EC473D0720576F1D00CD9397 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EC78EF6120D249BC00F199DC /* CWUploadFile */,
 				EC473D2A205FBF5200CD9397 /* CCLocationManager.h */,
 				EC473D2B205FBF5200CD9397 /* CCLocationManager.m */,
 				EC473D302060DB9500CD9397 /* FMNetworkMananger.h */,
 				EC473D312060DB9500CD9397 /* FMNetworkMananger.m */,
 				EC42A4AD20614F4700C52324 /* FMTBaseDataManager.h */,
 				EC42A4AE20614F4700C52324 /* FMTBaseDataManager.m */,
-				ECDD6BA920A96F040026AC4E /* FMUploadManager.h */,
-				ECDD6BAA20A96F040026AC4E /* FMUploadManager.m */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -706,6 +714,21 @@
 				ECF191C2208F2906004A158E /* UIView+Shadow.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		EC78EF6120D249BC00F199DC /* CWUploadFile */ = {
+			isa = PBXGroup;
+			children = (
+				EC78EF6E20D28F3600F199DC /* CWFileManager.h */,
+				EC78EF6F20D28F3600F199DC /* CWFileManager.m */,
+				EC78EF6920D249BC00F199DC /* CWFileStreamSeparation.h */,
+				EC78EF6420D249BC00F199DC /* CWFileStreamSeparation.m */,
+				EC78EF6320D249BC00F199DC /* CWFileUploadManager.h */,
+				EC78EF6720D249BC00F199DC /* CWFileUploadManager.m */,
+				EC78EF6620D249BC00F199DC /* CWUploadTask.h */,
+				EC78EF6220D249BC00F199DC /* CWUploadTask.m */,
+			);
+			path = CWUploadFile;
 			sourceTree = "<group>";
 		};
 		ECDCE710207F3E81009BB554 /* HXTags */ = {
@@ -1048,6 +1071,7 @@
 				EC42A4D92068DC3A00C52324 /* AppDelegate.m in Sources */,
 				EC473D0A205BD9BF00CD9397 /* FMUtils.m in Sources */,
 				EC473D23205BF6DB00CD9397 /* UIView+RGSize.m in Sources */,
+				EC78EF6A20D249BC00F199DC /* CWUploadTask.m in Sources */,
 				ECF191DA2091A974004A158E /* FMTForumController.m in Sources */,
 				ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */,
 				ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */,
@@ -1097,7 +1121,9 @@
 				EC473D24205BF6DB00CD9397 /* UIScrollView+Touch.m in Sources */,
 				ECDCE70E207DF666009BB554 /* FMImageCollectionViewCell.m in Sources */,
 				ECDD6BA320A541990026AC4E /* HWCircleView.m in Sources */,
+				EC78EF7020D28F3700F199DC /* CWFileManager.m in Sources */,
 				ECF191D72091A8BA004A158E /* FMTMyInfoController.m in Sources */,
+				EC78EF6B20D249BC00F199DC /* CWFileStreamSeparation.m in Sources */,
 				ECDCE71E207F3E81009BB554 /* HXTagAttribute.m in Sources */,
 				ECF191E62099900C004A158E /* FMTMyAccountCell.m in Sources */,
 				EC38CB102074A7E500C09DC7 /* LewPickerController.m in Sources */,
@@ -1111,10 +1137,10 @@
 				ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */,
 				EC42A4B82062131500C52324 /* FMTUnLockViewController.m in Sources */,
 				EC38CAFE2072507900C09DC7 /* CZJAlertView.m in Sources */,
-				ECDD6BAB20A96F040026AC4E /* FMUploadManager.m in Sources */,
 				ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */,
 				ECF191DD2091B1DD004A158E /* CZJPageControlView.m in Sources */,
 				ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */,
+				EC78EF6C20D249BC00F199DC /* CWFileUploadManager.m in Sources */,
 				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

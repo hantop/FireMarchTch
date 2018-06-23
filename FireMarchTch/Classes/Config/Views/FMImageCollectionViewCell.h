@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CWUploadTask.h"
 
 @interface FMImageCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIImageView *addImageView;
 @property (weak, nonatomic) IBOutlet UIView *maskView;
 @property (weak, nonatomic) IBOutlet UIImageView *videoImage;
+@property (nonatomic, strong)CWUploadTask *uploadTask;
 
-- (void) startSpin;
-- (void) stopSpin;
 
 @end

@@ -452,7 +452,7 @@ static BOOL _sortAscending;
 
 + (void)requestVideoForAsset:(PHAsset *)asset completion:(void (^)(AVPlayerItem *item, NSDictionary *info))completion
 {
-    [[PHCachingImageManager defaultManager] requestPlayerItemForVideo:asset options:nil resultHandler:^(AVPlayerItem * _Nullable playerItem, NSDictionary * _Nullable info) {
+    [[PHImageManager defaultManager] requestPlayerItemForVideo:asset options:nil resultHandler:^(AVPlayerItem * _Nullable playerItem, NSDictionary * _Nullable info) {
         if (completion) completion(playerItem, info);
     }];
 }
@@ -579,23 +579,30 @@ static BOOL _sortAscending;
 
 + (void)getPhotosBytesWithArray:(NSArray<ZLPhotoModel *> *)photos completion:(void (^)(NSString *photosBytes))completion
 {
-    __block NSInteger dataLength = 0;
+
     __block NSInteger count = photos.count;
-    
-    __weak typeof(self) weakSelf = self;
     for (int i = 0; i < photos.count; i++) {
         ZLPhotoModel *model = photos[i];
-        [[PHCachingImageManager defaultManager] requestImageDataForAsset:model.asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            dataLength += imageData.length;
-            count--;
-            if (count <= 0) {
-                if (completion) {
-                    completion([strongSelf transformDataLength:dataLength]);
-                }
+        count--;
+        if (count <= 0) {
+            if (completion) {
+                [self getPhotoBytesWithAsset:model.asset completion:completion];
             }
-        }];
+        }
+        
     }
+}
+
++ (void)getPhotoBytesWithAsset:(PHAsset *)asset completion:(void (^)(NSString *photosBytes))completion {
+    __weak typeof(self) weakSelf = self;
+    __block NSInteger dataLength = 0;
+    [[PHCachingImageManager defaultManager] requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        dataLength += imageData.length;
+        if (completion) {
+            completion([strongSelf transformDataLength:dataLength]);
+        }
+    }];
 }
 
 + (NSString *)transformDataLength:(NSInteger)dataLength {
@@ -1192,6 +1199,17 @@ static BOOL _sortAscending;
         return NO;
     }
     return YES;
+}
+
++ (NSDictionary *)getVideoInfoWithSourcePath:(NSString *)path{
+    AVURLAsset * asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:path]];
+    CMTime   time = [asset duration];
+    int seconds = ceil(time.value/time.timescale);
+    
+    NSInteger   fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
+    
+    return @{@"size" : @(fileSize),
+             @"duration" : @(seconds)};
 }
 
 @end

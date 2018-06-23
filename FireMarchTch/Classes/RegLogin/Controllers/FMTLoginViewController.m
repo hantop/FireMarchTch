@@ -104,6 +104,10 @@
     FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
     [self.navigationController pushViewController:setVC animated:YES];
     
+    //数据采集
+    NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
+    DLog(@"%@",[deviceInfo description]);
+    
     return;
     
     //规则校验
@@ -117,8 +121,8 @@
     }
     
     //数据采集
-    NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
-    DLog(@"%@",[deviceInfo description]);
+//    NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
+//    DLog(@"%@",[deviceInfo description]);
 
     NSDictionary *params = @{@"username" : _phoneNumTextField.text,
                              @"password" : _pwdTextField.text,
@@ -131,8 +135,8 @@
         [USER_DEFAULT setValue:json[@"token"] forKey:kUserDefaultAccessToken];
         if ([json[@"completed"] isEqualToString:@""]) {
             //首次登录，跳转资料完善界面
-//            FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
-//            [self.navigationController pushViewController:setVC animated:YES];
+            FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+            [self.navigationController pushViewController:setVC animated:YES];
         }
         else {
             //非首次登录则检查是否审核完成

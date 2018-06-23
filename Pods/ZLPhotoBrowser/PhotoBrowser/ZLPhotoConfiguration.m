@@ -51,10 +51,10 @@
     configuration.showCaptureImageOnTakePhotoBtn = YES;
     configuration.sortAscending = YES;
     configuration.showSelectBtn = NO;
-    configuration.navBarColor = kRGB(19, 153, 231);
+    configuration.navBarColor = kRGB(235, 54, 46);
     configuration.navTitleColor = [UIColor whiteColor];
     configuration.bottomViewBgColor = [UIColor whiteColor];
-    configuration.bottomBtnsNormalTitleColor = kRGB(80, 180, 234);
+    configuration.bottomBtnsNormalTitleColor = kRGB(235, 54, 46);
     configuration.bottomBtnsDisableBgColor = kRGB(200, 200, 200);
     configuration.showSelectedMask = NO;
     configuration.selectedMaskColor = [UIColor blackColor];

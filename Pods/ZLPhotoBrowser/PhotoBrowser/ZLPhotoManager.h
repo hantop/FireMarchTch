@@ -127,6 +127,11 @@
 + (void)getPhotosBytesWithArray:(NSArray<ZLPhotoModel *> *)photos completion:(void (^)(NSString *photosBytes))completion;
 
 /**
+ * @brief 获取图片字节大小
+ */
++ (void)getPhotoBytesWithAsset:(PHAsset *)asset completion:(void (^)(NSString *photosBytes))completion;
+
+/**
  * @brief 标记源数组中已被选择的model
  */
 + (void)markSelectModelInArr:(NSArray<ZLPhotoModel *> *)dataArr selArr:(NSArray<ZLPhotoModel *> *)selArr;
@@ -249,5 +254,7 @@
  是否有麦克风访问权限
  */
 + (BOOL)haveMicrophoneAuthority;
+
++ (NSDictionary *)getVideoInfoWithSourcePath:(NSString *)path;
 
 @end

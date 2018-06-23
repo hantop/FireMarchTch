@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,6 +48,14 @@
                             <constraint firstAttribute="height" constant="48" id="bdX-fk-3bf"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jeu-zd-T3I" customClass="HWCircleView">
+                        <rect key="frame" x="10" y="20" width="60" height="60"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="8dd-bD-w1C"/>
+                            <constraint firstAttribute="height" constant="60" id="mcI-B5-iLE"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,10 +63,12 @@
                 <constraint firstAttribute="trailing" secondItem="xr1-lE-yDL" secondAttribute="trailing" id="2sV-WU-iCD"/>
                 <constraint firstAttribute="bottom" secondItem="O9n-ov-iVp" secondAttribute="bottom" constant="-5" id="3jP-pd-LlI"/>
                 <constraint firstItem="xr1-lE-yDL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gu3-FN-ql8"/>
+                <constraint firstItem="jeu-zd-T3I" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="Hrm-Wc-TTY"/>
                 <constraint firstAttribute="trailing" secondItem="hxw-f1-661" secondAttribute="trailing" id="KtU-1N-4Z3"/>
                 <constraint firstItem="JAf-4a-6l3" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="Wtw-Fh-5jf"/>
                 <constraint firstItem="xr1-lE-yDL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YdS-DO-X5Q"/>
                 <constraint firstItem="hxw-f1-661" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cyh-qs-HIO"/>
+                <constraint firstItem="jeu-zd-T3I" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="dPw-7u-9mu"/>
                 <constraint firstItem="RXZ-5L-pXF" firstAttribute="centerY" secondItem="SEy-5g-ep8" secondAttribute="centerY" id="im8-xi-us7"/>
                 <constraint firstItem="RXZ-5L-pXF" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="kN7-jw-htk"/>
                 <constraint firstAttribute="bottom" secondItem="xr1-lE-yDL" secondAttribute="bottom" id="lsy-8L-3BT"/>
@@ -73,6 +83,7 @@
                 <outlet property="animationImage" destination="JAf-4a-6l3" id="Rhd-MC-uDz"/>
                 <outlet property="imageView" destination="xr1-lE-yDL" id="NHr-2x-WH2"/>
                 <outlet property="maskView" destination="hxw-f1-661" id="q7c-jA-VjG"/>
+                <outlet property="processView" destination="jeu-zd-T3I" id="Go1-iX-8ej"/>
                 <outlet property="videoImage" destination="O9n-ov-iVp" id="S8H-iI-V5Y"/>
             </connections>
             <point key="canvasLocation" x="-25" y="2"/>

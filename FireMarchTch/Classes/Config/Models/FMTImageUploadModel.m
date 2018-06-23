@@ -9,5 +9,13 @@
 #import "FMTImageUploadModel.h"
 
 @implementation FMTImageUploadModel
-
++ (instancetype)modelWithAsset:(PHAsset *)asset
+{
+    FMTImageUploadModel *model = [[FMTImageUploadModel alloc] init];
+//    model.asset = asset;
+//    model.type = type;
+//    model.duration = duration;
+//    model.selected = NO;
+    return model;
+}
 @end

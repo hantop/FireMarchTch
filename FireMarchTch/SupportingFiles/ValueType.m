@@ -11,7 +11,7 @@
 
 #pragma mark- 接口请求地址
 NSString *const kFMTAPIHttpScheme = @"https";
-NSString *const kFMTAPIHost = @"https://dev.cucole.cc/";
+NSString *const kFMTAPIHost = @"http://118.126.113.252/";
 NSString *const kFMTAPILogin = @"auth/login";
 NSString *const kFMTAPIRegister = @"auth/register";
 NSString *const kFMTAPICheckInviteCode = @"auth/inviteCode";

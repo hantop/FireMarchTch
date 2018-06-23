@@ -95,7 +95,9 @@ singleton_implementation(FMNetworkMananger)
     self.requestSerializer.timeoutInterval = 10.f;
     
     // 设置请求Header token值
+    NSLog(@"token:%@", [USER_DEFAULT valueForKey:kUserDefaultAccessToken]);
     [self.requestSerializer setValue:[USER_DEFAULT valueForKey:kUserDefaultAccessToken] forHTTPHeaderField:kUserDefaultAccessToken];
+    
     
     // 设置返回类型
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];

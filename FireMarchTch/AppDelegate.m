@@ -53,10 +53,6 @@ extern CFAbsoluteTime StartTime;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    NSString *rand = [XWAFSDK initWithAppID:@"12334324"];
-    [XWAFSDK postDeviceInfo];
-
-    
     dispatch_async(dispatch_get_main_queue(), ^{
         iLog(@"Lauched in %f seconds.", (CFAbsoluteTimeGetCurrent() - StartTime));
     });

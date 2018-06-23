@@ -33,4 +33,5 @@
 @property (nonatomic, copy) NSString *title;
 // 上传百分比
 @property (nonatomic, assign) CGFloat uploadPercent;
++ (instancetype)modelWithAsset:(PHAsset *)asset;
 @end
