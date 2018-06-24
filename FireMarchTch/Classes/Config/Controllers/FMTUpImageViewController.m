@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
         make.height.mas_equalTo(150);
     }];
     tipView.bigTitleLabel.text = @"②影像资料上传";
-    tipView.subTitleLabel.text = @"照片至少9张，视频1个。照片禁止上传菜单，上传菜单审核不通过";
+    tipView.subTitleLabel.text = @"照片";
     [tipView updateHeight];
 }
 
@@ -379,12 +379,42 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                     strongSelf.photoPicUrlArray = images.mutableCopy;
                     strongSelf.isOriginal = isOriginal;
                     strongSelf.lastSelectAssetsP = assets.mutableCopy;
+                    [images enumerateObjectsUsingBlock:^(UIImage * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        NSData *data = UIImageJPEGRepresentation((UIImage *)obj, 1);
+                        NSInteger size =  data.length;
+                        
+                        NSString *createPath =  [CachesDirectory stringByAppendingPathComponent:@"photo"];
+                        NSFileManager *fileManager = [[NSFileManager alloc] init];
+                        [fileManager createDirectoryAtPath:createPath withIntermediateDirectories:YES attributes:nil error:nil];
+                        BOOL photo = [[NSFileManager defaultManager] fileExistsAtPath:createPath];
+                        NSString *path = [CachesDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"/photo/%.0f%@",[NSDate date].timeIntervalSince1970,@"test"]];
+                        [fileManager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+                        NSError *error;
+                        BOOL test = [[NSFileManager defaultManager] fileExistsAtPath:path];
+                        [CWFileManager writeFileAtPath:createPath content:obj error:&error];
+                        NSLog(@"%@",error);
+                        BOOL isexist = [CWFileManager isFileAtPath:path error:&error];
+                        NSLog(@"%@",error);
+                        NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:path];
+                        CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:path];
+                    }];
                     [assets enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                         [ZLPhotoManager requestAssetFileUrl:obj complete:^(NSString *filePath) {
+                            NSString *newpath1 = [filePath stringByReplacingOccurrencesOfString:@"file://" withString:@"/private"];
+                            
+                            NSError *error;
+                            BOOL test = [[NSFileManager defaultManager] fileExistsAtPath:newpath1];
+                            BOOL test1 = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
+                            [[NSFileManager defaultManager] attributesOfItemAtPath:newpath1 error:&error];
+//                            BOOL isexist = [CWFileManager isFileAtPath:newpath1 error:&error];
+                            NSLog(@"%@",error);
+                            
+                            NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:newpath1];
+
                             [ZLPhotoManager getPhotoBytesWithAsset:obj completion:^(NSString *photosBytes) {
                                 NSLog(@"%@", photosBytes);
                                 NSString *fileName = [filePath lastPathComponent];
-                                
+
                                 NSString *newpath = [filePath stringByReplacingOccurrencesOfString:@"file://" withString:@""];
                                 NSDictionary *argdict = @{@"fileName" : fileName,
                                                           @"fileSize" : photosBytes
@@ -392,7 +422,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                                 [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:argdict success:^(id json) {
                                     NSLog(@"%@",json);
                                 } url:kFMTAPIFileAuth];
-                                
+
                                 CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:newpath];
                             }];
                         }];

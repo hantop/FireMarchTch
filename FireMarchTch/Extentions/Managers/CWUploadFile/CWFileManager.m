@@ -468,7 +468,9 @@
         }else if ([content isKindOfClass:[NSString class]]) {
             [[((NSString *)content) dataUsingEncoding:NSUTF8StringEncoding] writeToFile:path atomically:YES];
         }else if ([content isKindOfClass:[UIImage class]]) {
-            [UIImagePNGRepresentation((UIImage *)content) writeToFile:path atomically:YES];
+            NSData *data = UIImageJPEGRepresentation((UIImage *)content, 1);
+            NSInteger size =  data.length;
+            [UIImageJPEGRepresentation((UIImage *)content, 1) writeToFile:path atomically:YES];
         }else if ([content conformsToProtocol:@protocol(NSCoding)]) {
             [NSKeyedArchiver archiveRootObject:content toFile:path];
         }else {

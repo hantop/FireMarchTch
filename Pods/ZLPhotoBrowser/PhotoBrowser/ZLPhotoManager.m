@@ -725,6 +725,7 @@ static BOOL _sortAscending;
         [self requestOriginalImageDataForAsset:asset completion:^(NSData *data, NSDictionary *info) {
             if ([[info objectForKey:PHImageResultIsDegradedKey] boolValue]) return;
             if (complete) {
+                NSInteger size = data.length;
                 NSURL *url = info[@"PHImageFileURLKey"];
                 complete(url.absoluteString);
             }
@@ -1205,8 +1206,10 @@ static BOOL _sortAscending;
     AVURLAsset * asset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:path]];
     CMTime   time = [asset duration];
     int seconds = ceil(time.value/time.timescale);
-    
-    NSInteger   fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil].fileSize;
+    NSError *error;
+    BOOL isExist = [[NSFileManager defaultManager] fileExistsAtPath:path];
+    NSInteger   fileSize = [[NSFileManager defaultManager] attributesOfItemAtPath:path error:&error].fileSize;
+    NSLog(@"%@",error);
     
     return @{@"size" : @(fileSize),
              @"duration" : @(seconds)};
