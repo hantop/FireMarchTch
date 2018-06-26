@@ -173,7 +173,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
             }
             else {
                 cell.videoImage.hidden = NO;
-//                cell.maskView.hidden = NO;
                 [cell.addImageView setImage:[IMAGENAMED(@"arrowTop") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
                 [cell.addImageView setTintColor: WHITECOLOR];
                 [cell.videoImage setImage:[IMAGENAMED(@"video") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
@@ -181,9 +180,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                 NSArray* taskAry = [CWFileUploadManager shardUploadManager].allTasks.allValues;
                 NSInteger item = indexPath.item;
                 cell.uploadTask = taskAry[item];
-                
-                //        NSString *urlStr = self.photoPicUrlArray[indexPath.item];
-                //        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:DefaultPlaceHolderSquare];
+
                 [cell.imageView setImage:self.photoVideoUrlArray[indexPath.item]];
             }
         }
@@ -215,22 +212,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     switch (self.fmImageType) {
         case FMImageTypePic:
         {
-            /*
-            UIImagePickerController *picker=[[UIImagePickerController alloc] init];
-            picker.delegate=self;
-            picker.allowsEditing=NO;
-            picker.videoMaximumDuration = 1.0;//视频最长长度
-            picker.videoQuality = UIImagePickerControllerQualityTypeHigh;//视频质量
-            //媒体类型：@"public.movie" 为视频  @"public.image" 为图片
-            //这里只选择展示视频
-            picker.mediaTypes = [NSArray arrayWithObjects:@"public.image", nil];
-            picker.sourceType= UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-            [self presentViewController:picker animated:YES completion:^{
-                
-            }];
-            */
-            
-            
             ZLPhotoActionSheet *actionSheet = [self getPas];
             [actionSheet.configuration setAllowSelectImage:YES];
             [actionSheet.configuration setAllowSelectVideo:NO];
@@ -245,21 +226,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
             break;
         case FMImageTypeVideo:
         {
-            /*
-            UIImagePickerController *picker=[[UIImagePickerController alloc] init];
-            picker.delegate=self;
-            picker.allowsEditing=NO;
-            picker.videoMaximumDuration = 1.0;//视频最长长度
-            picker.videoQuality = UIImagePickerControllerQualityTypeHigh;//视频质量
-            //媒体类型：@"public.movie" 为视频  @"public.image" 为图片
-            //这里只选择展示视频
-            picker.mediaTypes = [NSArray arrayWithObjects:@"public.movie", nil];
-            picker.sourceType= UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-            [self presentViewController:picker animated:YES completion:^{
-                
-            }];
-            */
-            
             ZLPhotoActionSheet *actionSheet = [self getPas];
             [actionSheet.configuration setAllowSelectImage:NO];
             [actionSheet.configuration setAllowSelectVideo:YES];
@@ -278,7 +244,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     }
     
 }
-
 
 
 
@@ -323,42 +288,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 }
 
 
-/*
-#pragma mark UIImagePickerControllerDelegate
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    
-    NSLog(@"%@",info);
-    NSString *mediaType=[info objectForKey:UIImagePickerControllerMediaType];
-    
-    if ([mediaType isEqualToString:@"public.movie"]){
-        //如果是视频
-        NSURL *url = info[UIImagePickerControllerMediaURL];//获得视频的URL
-        //保存至沙盒路径
-        NSString *fileFolder = [[CWFileManager cachesDir] stringByAppendingString:@"/video"];
-        if (![CWFileManager isExistsAtPath:fileFolder]) {
-            [CWFileManager createDirectoryAtPath:fileFolder];
-        }
-        NSString *originalPath = [url.absoluteString stringByReplacingOccurrencesOfString:@"file://" withString:@""];
-        NSString *videoName = [NSString stringWithFormat:@"%@.mp4", [CWFileStreamSeparation fileKeyMD5WithPath:originalPath]];
-        NSString *sandboxPath = [fileFolder stringByAppendingPathComponent:videoName];
-        NSError* theError;
-        [CWFileManager moveItemAtPath:originalPath toPath:sandboxPath overwrite:YES error:&theError];
-        NSLog(@"原地址：%@, 名称：%@, url %@",originalPath, videoName, url);
-        
-    }
-    if ([mediaType isEqualToString:@"public.image"]) {
-        //如果是视频
-        NSURL *url = info[UIImagePickerControllerReferenceURL];//获得视频的URL
-        UIImage *portraitImg = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
-        NSData *imageData = UIImageJPEGRepresentation(portraitImg,1);
-        NSLog(@"大小：%ld",imageData.length);
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-*/
-
-
 - (ZLPhotoActionSheet *)getPas
 {
     if ([FMUtils isPhotoLibraryAvailable]) {
@@ -370,6 +299,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
         actionSheet.sender = self;
         actionSheet.arrSelectedAssets = FMImageTypePic == self.fmImageType ? self.lastSelectAssetsP : self.lastSelectAssetsV;
         weakSelf(self);
+        __block NSString *filePathOriginal;
         [actionSheet setSelectImageBlock:^(NSArray<UIImage *> * _Nullable images, NSArray<PHAsset *> * _Nonnull assets, BOOL isOriginal) {
             strongSelf(weakSelf);
 
@@ -396,10 +326,11 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                         BOOL isexist = [CWFileManager isFileAtPath:path error:&error];
                         NSLog(@"%@",error);
                         NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:path];
-                        CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:path];
+//                        CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:path];
                     }];
                     [assets enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                         [ZLPhotoManager requestAssetFileUrl:obj complete:^(NSString *filePath) {
+                            filePathOriginal = filePath;
                             NSString *newpath1 = [filePath stringByReplacingOccurrencesOfString:@"file://" withString:@"/private"];
                             
                             NSError *error;
@@ -423,7 +354,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                                     NSLog(@"%@",json);
                                 } url:kFMTAPIFileAuth];
 
-                                CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:newpath];
+//                                CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:filePathOriginal];
                             }];
                         }];
                     }];
@@ -438,29 +369,28 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                     [assets enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                         [ZLPhotoManager requestAssetFileUrl:obj complete:^(NSString *filePath) {
                             
+//                            filePathOriginal = filePath;
+//                            NSError *error;
+//                            NSURL *url = [NSURL fileURLWithPath:filePath];
+//                            NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingMappedIfSafe error:&error];
+//                            NSLog(@"error:%@ size:%ld", error,data.length);
+//
                             NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:filePath];
                             NSString *fileName = [filePath lastPathComponent];
                             NSDictionary *argdict = @{@"fileName" : fileName,
                                                       @"fileSize" : dict[@"size"]
                                                       };
+
                             [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:argdict success:^(id json) {
                                 NSLog(@"%@",json);
+                                [[CWFileUploadManager shardUploadManager] removeAllUploadTask];
+                                CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:filePath withFileid:json[@"fileId"]];
+                                [task taskResume];
                             } url:kFMTAPIFileAuth];
+                            
 
-                            CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:filePath];
-//                            //保存至沙盒路径
-//                            NSString *fileFolder = [[CWFileManager cachesDir] stringByAppendingString:@"/video"];
-//                            if (![CWFileManager isExistsAtPath:fileFolder]) {
-//                                [CWFileManager createDirectoryAtPath:fileFolder];
-//                            }
-//                            NSString *originalPath = [filePath stringByReplacingOccurrencesOfString:@"file://" withString:@""];
-//                            NSString *videoName = [NSString stringWithFormat:@"%@.mp4", [CWFileStreamSeparation fileKeyMD5WithPath:originalPath]];
-//                            NSString *sandboxPath = [fileFolder stringByAppendingPathComponent:videoName];
-//                            NSError *theError;
-//                            [CWFileManager moveItemAtPath:originalPath toPath:sandboxPath overwrite:YES error:&theError];
-//                            NSLog(@"原地址：%@, \n现地址：%@, error:%@",originalPath, sandboxPath,theError);
                         }];
-                        [self.myPicCollectionView reloadData];
+//                        [self.myPicCollectionView reloadData];
                     }];
             
                     

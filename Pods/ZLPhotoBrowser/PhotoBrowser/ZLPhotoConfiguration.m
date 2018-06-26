@@ -35,7 +35,7 @@
     configuration.allowTakePhotoInLibrary = YES;
     configuration.allowForceTouch = YES;
     configuration.allowEditImage = YES;
-    configuration.allowEditVideo = NO;
+    configuration.allowEditVideo = YES;
     configuration.allowSelectOriginal = YES;
     configuration.maxEditVideoTime = 10;
     configuration.maxVideoDuration = 120;
@@ -65,7 +65,7 @@
     configuration.allowRecordVideo = YES;
     configuration.maxRecordDuration = 10;
     configuration.sessionPreset = ZLCaptureSessionPreset1280x720;
-    configuration.exportVideoType = ZLExportVideoTypeMov;
+    configuration.exportVideoType = ZLExportVideoTypeMp4;
     
     return configuration;
 }

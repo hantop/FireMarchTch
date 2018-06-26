@@ -20,13 +20,13 @@ NSString *const kFMTAPIForgotPWD = @"auth/forgetPassword";
 NSString *const kFMTAPISendSMSCode = @"auth/sendSmsCode";
 NSString *const kFMTAPICheckSMSCode = @"auth/smsCodeValid";
 NSString *const kFMTAPIFileAuth = @"fileserv/auth";
-NSString *const kFMTAPIUploadImage = @"file/{fileId}";
+NSString *const kFMTAPIUploadFile = @"http://118.126.113.252/file/";
 NSString *const kFMTAPISetBasicInfo = @"";
 
 
 #pragma mark- 字符串定义
 //token key值定义
-NSString *const kUserDefaultAccessToken = @"token";
+NSString *const kUserDefaultAccessToken = @"AUTHORIZATION";
 //
 NSString *const kUserDefaultAccessCode = @"accessCode";
 NSString *const kUserDefaultIsLogin = @"isLogin";

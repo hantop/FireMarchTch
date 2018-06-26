@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-            timestampString = "551330155.959823"
+            timestampString = "551706874.42453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "929"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-            timestampString = "551330155.960429"
+            timestampString = "551706874.4246351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-            timestampString = "551330155.960655"
+            timestampString = "551706874.424716"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "777"
@@ -201,24 +201,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
-            timestampString = "551505230.951334"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-createUploadTask:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileManager.m"
-            timestampString = "551505815.970823"
+            timestampString = "551639307.76738"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "371"
@@ -233,29 +217,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551505815.970898"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.5419019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351"
-            landmarkName = "FMTUpImageViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551505815.971404"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
-            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "-startExe"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -265,13 +233,347 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLPhotoManager.m"
-            timestampString = "551505815.971709"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+            timestampString = "551706874.4253401"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "719"
-            endingLineNumber = "719"
-            landmarkName = "+requestAssetFileUrl:complete:"
+            startingLineNumber = "883"
+            endingLineNumber = "883"
+            landmarkName = "-saveImage:videoUrl:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+            timestampString = "551706874.425385"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "900"
+            endingLineNumber = "900"
+            landmarkName = "-saveImage:videoUrl:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ZLThumbnailViewController saveImage:videoUrl:]"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+                  timestampString = "551710718.653648"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "900"
+                  endingLineNumber = "900"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[ZLThumbnailViewController saveImage:videoUrl:]_block_invoke.569"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+                  timestampString = "551710718.655458"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "900"
+                  endingLineNumber = "900"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.581"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+                  timestampString = "551710718.657192"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "900"
+                  endingLineNumber = "900"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLCustomCamera.m"
+            timestampString = "551710718.542053"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "836"
+            endingLineNumber = "836"
+            landmarkName = "-playVideo"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLCustomCamera.m"
+            timestampString = "551710718.542115"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "861"
+            endingLineNumber = "861"
+            landmarkName = "-captureOutput:didFinishRecordingToOutputFileAtURL:fromConnections:error:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLCustomCamera.m"
+            timestampString = "551710718.542168"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "794"
+            endingLineNumber = "794"
+            landmarkName = "-onStartRecord"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+            timestampString = "551706874.425621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "865"
+            endingLineNumber = "865"
+            landmarkName = "-takePhoto"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+            timestampString = "551706874.425676"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "887"
+            endingLineNumber = "887"
+            landmarkName = "-saveImage:videoUrl:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ZLThumbnailViewController saveImage:videoUrl:]"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+                  timestampString = "551710718.676941"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "887"
+                  endingLineNumber = "887"
+                  offsetFromSymbolStart = "192">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__48-[ZLThumbnailViewController saveImage:videoUrl:]_block_invoke"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+                  timestampString = "551710718.679013"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "887"
+                  endingLineNumber = "887"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.564"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+                  timestampString = "551710718.680694"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "887"
+                  endingLineNumber = "887"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
+            timestampString = "551706874.425739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "903"
+            endingLineNumber = "903"
+            landmarkName = "-saveImage:videoUrl:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.542327"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "-uploadTaskWithUrl:param:uploadData:completionHandler:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.5423909"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "-startExe"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.542452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "-startExe"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.5425071"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "-taskResume"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+            timestampString = "551710718.54256"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "-createUploadTask:withFileid:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.542623"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "-postFileInfo"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+            timestampString = "551710718.542673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-config:maxTask:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.54273"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "+initWithStreamModel:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -282,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551505815.9717669"
+            timestampString = "551710718.542783"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441"
+            startingLineNumber = "385"
+            endingLineNumber = "385"
             landmarkName = "-getPas"
             landmarkType = "7">
          </BreakpointContent>
@@ -297,13 +599,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileStreamSeparation.m"
-            timestampString = "551505815.97206"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+            timestampString = "551710718.542832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "-getFileInfoAtPath:"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "-removeAllUploadTask"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CWFileUploadManager removeAllUploadTask]"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+                  timestampString = "551710718.7213449"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CWFileUploadManager removeAllUploadTask]"
+                  moduleName = "FireMarchTch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+                  timestampString = "551710718.723175"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+            timestampString = "551710718.542881"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-allTasks"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -313,13 +663,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLPhotoManager.m"
-            timestampString = "551505815.97211"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
+            timestampString = "551710718.54293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1206"
-            endingLineNumber = "1206"
-            landmarkName = "+getVideoInfoWithSourcePath:"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "-allUploadTasks"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -329,77 +679,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileStreamSeparation.m"
-            timestampString = "551505815.9721611"
+            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWUploadTask.m"
+            timestampString = "551710718.54298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "-cutFileForFragments"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileManager.m"
-            timestampString = "551505815.972208"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472"
-            landmarkName = "+writeFileAtPath:content:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551505815.972255"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "406"
-            endingLineNumber = "406"
-            landmarkName = "-getPas"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/ZLPhotoBrowser/PhotoBrowser/ZLPhotoManager.m"
-            timestampString = "551505815.972507"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "727"
-            endingLineNumber = "727"
-            landmarkName = "+requestAssetFileUrl:complete:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551505815.9725519"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "383"
-            endingLineNumber = "383"
-            landmarkName = "-getPas"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "+uploadTasksWithDict:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

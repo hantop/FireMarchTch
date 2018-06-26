@@ -10,6 +10,7 @@
 #import "CWFileUploadManager.h"
 #import "CWFileStreamSeparation.h"
 #import "CWFileManager.h"
+#import "FMTBaseDataManager.h"
 
 //分隔符
 #define Boundary @"1a2b3c"
@@ -92,6 +93,9 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
     task.fileStream = fileStream;
     task.isSuspendedState = NO;
     task.url = [CWFileUploadManager shardUploadManager].url;
+    task.param = [@{@"fileId" : fileStream.fileId,
+                   @"allBlobNum" : @(fileStream.streamFragments.count)
+                   } mutableCopy];
     return task;
 }
 
@@ -117,32 +121,6 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
 - (void)checkParamFromServer:(CWFileStreamSeparation *_Nonnull)fileStream
                paramCallback:(void(^ _Nullable)(NSString *_Nonnull chunkNumName,NSDictionary *_Nullable param))paramBlock
 {
-    //    NSString *uploadFileInfoUrl=[NSString stringWithFormat:@"%@/upload/checkFileChunk",CURRENT_API];
-    //    NSURL *url = [NSURL URLWithString:uploadFileInfoUrl];
-    //
-    //    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    //    NSString *args = [NSString stringWithFormat:@"bizId=%@&fileName=%@&saveName=%@&chunks=%@",fileStream.bizId,fileStream.fileName,fileStream.md5String,[NSString stringWithFormat:@"%zd",fileStream.streamFragments.count]];
-    //    NSLog(@"%@",args);
-    //    request.HTTPMethod = @"POST";//设置请求类型
-    //    [request setValue:@"v1" forHTTPHeaderField:@"api_version"];
-    //    request.HTTPBody = [args dataUsingEncoding:NSUTF8StringEncoding];//设置参数
-    //    NSURLSession *session = [NSURLSession sharedSession];
-    //    //发送请求
-    //    NSURLSessionDataTask *postTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-    //        if (error == nil) {
-    //            //解析得到的数据
-    //            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    //            if ([dict[@"code"] isEqualToString:@"500"]) {
-    //                NSLog(@"%@",dict[@"desc"]);
-    //                return;
-    //            }
-    //            NSMutableDictionary *tmpParam = [NSMutableDictionary dictionary];
-    //            [tmpParam setDictionary:dict[@"data"]];
-    //            NSLog(@"%@",tmpParam);
-    //            paramBlock(@"chunk",tmpParam);
-    //        }
-    //    }];
-    //    [postTask resume];
 }
 
 -(NSMutableURLRequest*)uploadRequest
@@ -228,10 +206,12 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
         dispatch_group_async(group, queue, ^{
             @autoreleasepool {
                 NSData *data = [_fileStream readDateOfFragment:fragment];
+                
                 __weak typeof(self) weekSelf = self;
-                [_param setObject:[NSString stringWithFormat:@"%ld",(i+1)] forKey:_chunkNumName];
+                [_param setObject:[NSString stringWithFormat:@"%ld",(i+1)] forKey:@"blobNum"];
+                [_param setObject:[data base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0] forKey:@"fileData"];
                 self.lastParam = _param;
-//                NSLog(@"*******参数*******\n%@",_param);
+                NSLog(@"*******参数*******\n%@",_param);
                 [self uploadTaskWithUrl:_url param:_param uploadData:data completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
                     if (!error && httpResponse.statusCode==200) {

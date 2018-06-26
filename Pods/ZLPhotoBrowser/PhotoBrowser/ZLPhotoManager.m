@@ -717,9 +717,15 @@ static BOOL _sortAscending;
         [self requestVideoForAsset:asset completion:^(AVPlayerItem *item, NSDictionary *info) {
             if ([[info objectForKey:PHImageResultIsDegradedKey] boolValue]) return;
             NSArray *arr = [info[@"PHImageFileSandboxExtensionTokenKey"] componentsSeparatedByString:@";"];
-            if (complete) {
-                complete(arr.lastObject);
-            }
+//            if (complete) {
+//                complete(arr.lastObject);
+//            }
+            NSDictionary* dict = [self getVideoInfoWithSourcePath:arr.lastObject];
+            [self movFileTransformToMP4WithSourceUrl:[NSURL fileURLWithPath:arr.lastObject] completion:^(NSString *Mp4FilePath) {
+                if (complete) {
+                    complete(Mp4FilePath);
+                }
+            }];
         }];
     } else {
         [self requestOriginalImageDataForAsset:asset completion:^(NSData *data, NSDictionary *info) {
@@ -1214,6 +1220,76 @@ static BOOL _sortAscending;
     return @{@"size" : @(fileSize),
              @"duration" : @(seconds)};
 }
+
++ (void)movFileTransformToMP4WithSourceUrl:(NSURL *)sourceUrl completion:(void(^)(NSString *Mp4FilePath))comepleteBlock
+{
+    /**
+     *  mov格式转mp4格式
+     */
+    AVURLAsset *avAsset = [AVURLAsset URLAssetWithURL:sourceUrl options:nil];
+    NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:avAsset];
+    NSLog(@"%@",compatiblePresets);
+    
+    if ([compatiblePresets containsObject:AVAssetExportPresetHighestQuality]) {
+        AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPresetMediumQuality];
+        
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyyMMddHHmmss"];
+        NSString *uniqueName = [NSString stringWithFormat:@"%@.mp4",[formatter stringFromDate:date]];
+        NSString * resultPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:uniqueName];
+        NSLog(@"output File Path : %@",[NSURL fileURLWithPath:resultPath]);
+
+        exportSession.outputURL = [NSURL fileURLWithPath:resultPath];
+        exportSession.outputFileType = AVFileTypeMPEG4;//可以配置多种输出文件格式
+        exportSession.shouldOptimizeForNetworkUse = YES;
+        [exportSession exportAsynchronouslyWithCompletionHandler:^(void) {
+             dispatch_async(dispatch_get_main_queue(), ^{
+//                 [hud hideAnimated:YES];
+             });
+             
+             switch (exportSession.status) {
+                     
+                 case AVAssetExportSessionStatusUnknown:
+                     NSLog(@"AVAssetExportSessionStatusUnknown");
+                     break;
+                     
+                 case AVAssetExportSessionStatusWaiting:
+                     NSLog(@"AVAssetExportSessionStatusWaiting");
+                     break;
+                     
+                 case AVAssetExportSessionStatusExporting:
+                     NSLog(@"AVAssetExportSessionStatusExporting");
+                     break;
+                     
+                 case AVAssetExportSessionStatusCompleted:
+                 {
+                     NSLog(@"AVAssetExportSessionStatusCompleted");
+                     comepleteBlock(resultPath);
+                     NSLog(@"mp4 file size:%lf MB",[NSData dataWithContentsOfURL:exportSession.outputURL].length/1024.f/1024.f);
+                     
+//                     [self saveVideoToAblum:exportSession.outputURL completion:^(BOOL suc, PHAsset *asset) {
+//                         if (suc)
+//                             NSLog(@"成功");
+//                     }];
+                 }
+                     break;
+                     
+                 case AVAssetExportSessionStatusFailed:
+                     NSLog(@"AVAssetExportSessionStatusFailed");
+                     break;
+                     
+                 case AVAssetExportSessionStatusCancelled:
+                     NSLog(@"AVAssetExportSessionStatusCancelled");
+                     break;
+                     
+             }
+             
+         }];
+        
+    }
+}
+
 
 @end
 

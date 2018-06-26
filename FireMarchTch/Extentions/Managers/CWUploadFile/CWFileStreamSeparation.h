@@ -33,6 +33,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, strong) NSArray<CWStreamFragment*> *streamFragments;//文件分片数组
 @property (nonatomic, copy) NSString *bizId;
 //图片
+@property (nonatomic, strong) NSString *fileId;
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic,readonly,assign)double progressRate;//上传进度
 @property (nonatomic,readonly,assign)NSInteger uploadDateSize;//已上传文件大小

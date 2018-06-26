@@ -255,6 +255,14 @@
  */
 + (BOOL)haveMicrophoneAuthority;
 
+/**
+ 获取文件名称和大小
+ */
 + (NSDictionary *)getVideoInfoWithSourcePath:(NSString *)path;
+
+/**
+ 导出视频为mp4格式
+ */
++ (void)movFileTransformToMP4WithSourceUrl:(NSURL *)sourceUrl completion:(void(^)(NSString *Mp4FilePath))comepleteBlock;
 
 @end

@@ -182,7 +182,7 @@ singleton_implementation(FMTBaseDataManager)
                      progress:_progress
                       success:_success
                       failure:_fail
-                       andUrl:kFMTAPIUploadImage];
+                       andUrl:kFMTAPIUploadFile];
 }
 
 - (void)cancelAllRequest {

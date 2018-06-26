@@ -101,14 +101,11 @@
 - (IBAction)LoginAction:(id)sender {
     [self.view endEditing:YES];
     
-    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
-    [self.navigationController pushViewController:setVC animated:YES];
-    
-    //数据采集
-    NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
-    DLog(@"%@",[deviceInfo description]);
-    
-    return;
+//    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+//    [self.navigationController pushViewController:setVC animated:YES];
+//
+//
+//    return;
     
     //规则校验
     if (![FMUtils isMobileNumber:_phoneNumTextField.text]) {
@@ -121,8 +118,8 @@
     }
     
     //数据采集
-//    NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
-//    DLog(@"%@",[deviceInfo description]);
+    NSDictionary *deviceInfo = [FMDeviceInfo XWGetDeviceInfo];
+    DLog(@"%@",[deviceInfo description]);
 
     NSDictionary *params = @{@"username" : _phoneNumTextField.text,
                              @"password" : _pwdTextField.text,

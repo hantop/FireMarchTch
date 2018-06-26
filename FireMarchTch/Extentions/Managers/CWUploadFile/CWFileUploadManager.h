@@ -47,7 +47,7 @@
 - (void)config:(NSMutableURLRequest * _Nonnull)request maxTask:(NSInteger)num;
 
 //根据文件路径创建上传任务
-- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath;
+- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath withFileid:(NSString *)fileId;
 
 
 /**

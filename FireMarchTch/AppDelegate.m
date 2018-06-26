@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YYFPSLabel.h"
+#import "CWFileUploadManager.h"
 #import <XWAFSDK/XWAFSDK.h>
 extern CFAbsoluteTime StartTime;
 

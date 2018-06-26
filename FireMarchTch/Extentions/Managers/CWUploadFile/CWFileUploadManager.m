@@ -81,22 +81,15 @@ static CWFileUploadManager * _instance;
     return _instance;
 }
 
-+ (CWUploadTask *)startUploadWithPath:(NSString *)path
-{
-    //是否是在册任务
-    if (![CWFileUploadManager isUploadTask:path]) {
-        [_instance taskRecord:path];
-        
-    }
-    return [_instance continuePerformTaskWithFilePath:path];
-}
 
-- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath
+- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath withFileid:(NSString *)fileId
 {
     //是否是在册任务
     if (![CWFileUploadManager isUploadTask:filePath]) {
-        if (![_instance taskRecord:filePath])
+        CWFileStreamSeparation *fileStream = [_instance taskRecord:filePath andFileId:fileId];
+        if (!fileStream) {
             return nil;
+        }
         
     }
     return [self continuePerformTaskWithFilePath:filePath];
@@ -127,6 +120,7 @@ static CWFileUploadManager * _instance;
 }
 
 - (void)defaultsTask{
+    self.url = [NSURL URLWithString:kFMTAPIUploadFile];
     NSInteger tmpMax = [[NSUserDefaults standardUserDefaults] integerForKey:default_max];
     self.uploadMaxNum = tmpMax?tmpMax:5;
 }
@@ -261,6 +255,7 @@ static CWFileUploadManager * _instance;
     if (![CWFileManager isFileAtPath:plistPath]) {
         [CWFileManager createFileAtPath:plistPath overwrite:NO];
     }
+    /* Joe.Pen 更改读取断点续传数据 */
     _instance.fileStreamDict = [_instance unArcherThePlist:plistPath];
     NSLog(@"%@", _instance.fileStreamDict);
     if (_instance.fileStreamDict[path.lastPathComponent] == nil) {
@@ -271,10 +266,10 @@ static CWFileUploadManager * _instance;
 }
 
 //新建任务分片模型并存入plist文件
-- (CWFileStreamSeparation * _Nullable)taskRecord:(NSString *)path{
-    
-    CWFileStreamSeparation *file = [[CWFileStreamSeparation alloc]initFileOperationAtPath:path forReadOperation:YES];
+- (CWFileStreamSeparation * _Nullable)taskRecord:(NSString *)path andFileId:(NSString *)fileId{
+    __block CWFileStreamSeparation *file = [[CWFileStreamSeparation alloc]initFileOperationAtPath:path forReadOperation:YES];
     if (file) {
+        file.fileId = fileId;
         [self.fileStreamDict setObject:file forKey:path.lastPathComponent];
         [self archerTheDictionary:_fileStreamDict file:plistPath];
     }

@@ -527,6 +527,8 @@
     [self.toggleCameraBtn addTarget:self action:@selector(btnToggleCameraAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.toggleCameraBtn];
     
+    [self btnToggleCameraAction];
+    
     if (self.allowRecordVideo) {
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(adjustCameraFocus:)];
         [self.view addGestureRecognizer:pan];
