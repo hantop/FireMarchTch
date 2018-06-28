@@ -39,6 +39,7 @@
 @implementation CWFileUploadManager
 
 static CWFileUploadManager * _instance;
+//singleton_implementation(CWFileUploadManager)
 
 -(NSMutableDictionary *)fileStreamDict{
     if (!_fileStreamDict) {
@@ -82,16 +83,16 @@ static CWFileUploadManager * _instance;
 }
 
 
-- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath withFileid:(NSString *)fileId
+- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath withFileid:(NSString *)fileId andImage:(UIImage *)image
 {
     //是否是在册任务
     if (![CWFileUploadManager isUploadTask:filePath]) {
-        CWFileStreamSeparation *fileStream = [_instance taskRecord:filePath andFileId:fileId];
+        CWFileStreamSeparation *fileStream = [_instance taskRecord:filePath andFileId:fileId andImage:image];
         if (!fileStream) {
             return nil;
         }
-        
     }
+    
     return [self continuePerformTaskWithFilePath:filePath];
 }
 
@@ -104,7 +105,6 @@ static CWFileUploadManager * _instance;
     [[NSUserDefaults standardUserDefaults] setInteger:num forKey:default_max];
     self.uploadMaxNum = num;
     self.url = request.URL;
-    self.request = request;
 }
 
 //设置最大任务数
@@ -121,8 +121,20 @@ static CWFileUploadManager * _instance;
 
 - (void)defaultsTask{
     self.url = [NSURL URLWithString:kFMTAPIUploadFile];
+    self.request = [self setUpRequest];
     NSInteger tmpMax = [[NSUserDefaults standardUserDefaults] integerForKey:default_max];
     self.uploadMaxNum = tmpMax?tmpMax:5;
+}
+
+- (NSMutableURLRequest *)setUpRequest
+{
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:kFMTAPIUploadFile]];
+    request.HTTPMethod=@"POST";
+    [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@",@"1a2b3c"] forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"v1" forHTTPHeaderField:@"api_version"];
+    [request setValue:[USER_DEFAULT valueForKey:kUserDefaultAccessToken] forHTTPHeaderField:kUserDefaultAccessToken];
+
+    return request;
 }
 
 /**
@@ -246,6 +258,7 @@ static CWFileUploadManager * _instance;
         uploadTask = [CWUploadTask initWithStreamModel:fstream];
         [self.allTasks setObject:uploadTask forKey:path.lastPathComponent];
     }
+    NSLog(@"当前任务：%@",self.allTasks);
     [uploadTask taskResume];
     return uploadTask;
 }
@@ -266,12 +279,13 @@ static CWFileUploadManager * _instance;
 }
 
 //新建任务分片模型并存入plist文件
-- (CWFileStreamSeparation * _Nullable)taskRecord:(NSString *)path andFileId:(NSString *)fileId{
+- (CWFileStreamSeparation * _Nullable)taskRecord:(NSString *)path andFileId:(NSString *)fileId andImage:(UIImage *)image{
     __block CWFileStreamSeparation *file = [[CWFileStreamSeparation alloc]initFileOperationAtPath:path forReadOperation:YES];
     if (file) {
         file.fileId = fileId;
+        file.image = image;
         [self.fileStreamDict setObject:file forKey:path.lastPathComponent];
-        [self archerTheDictionary:_fileStreamDict file:plistPath];
+//        [self archerTheDictionary:_fileStreamDict file:plistPath];
     }
     
     return file;

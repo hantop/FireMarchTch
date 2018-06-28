@@ -12,6 +12,7 @@
 
 
 @interface CWFileUploadManager : NSObject
+//singleton_interface(CWFileUploadManager)
 //总的文件分片模型数
 @property (nonatomic,readonly)NSMutableDictionary *fileStreamDict;
 
@@ -47,7 +48,7 @@
 - (void)config:(NSMutableURLRequest * _Nonnull)request maxTask:(NSInteger)num;
 
 //根据文件路径创建上传任务
-- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath withFileid:(NSString *)fileId;
+- (CWUploadTask *_Nullable)createUploadTask:(NSString *_Nonnull)filePath withFileid:(NSString *)fileId andImage:(UIImage *)image;
 
 
 /**

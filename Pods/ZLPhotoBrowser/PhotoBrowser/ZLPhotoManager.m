@@ -731,7 +731,6 @@ static BOOL _sortAscending;
         [self requestOriginalImageDataForAsset:asset completion:^(NSData *data, NSDictionary *info) {
             if ([[info objectForKey:PHImageResultIsDegradedKey] boolValue]) return;
             if (complete) {
-                NSInteger size = data.length;
                 NSURL *url = info[@"PHImageFileURLKey"];
                 complete(url.absoluteString);
             }
@@ -1231,7 +1230,7 @@ static BOOL _sortAscending;
     NSLog(@"%@",compatiblePresets);
     
     if ([compatiblePresets containsObject:AVAssetExportPresetHighestQuality]) {
-        AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPresetMediumQuality];
+        AVAssetExportSession *exportSession = [[AVAssetExportSession alloc] initWithAsset:avAsset presetName:AVAssetExportPreset960x540];
         
         NSDate *date = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];

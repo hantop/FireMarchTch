@@ -69,6 +69,7 @@
         case CWUploadStatusFinished:
             _statusText = @"完成";
             _maskView.hidden = YES;
+            _processView.hidden = YES;
             break;
         case CWUploadStatusFailed:
             _statusText = @"失败";

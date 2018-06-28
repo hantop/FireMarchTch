@@ -181,7 +181,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                 NSInteger item = indexPath.item;
                 cell.uploadTask = taskAry[item];
 
-                [cell.imageView setImage:self.photoVideoUrlArray[indexPath.item]];
+//                [cell.imageView setImage:self.photoVideoUrlArray[indexPath.item]];
             }
         }
             break;
@@ -368,13 +368,13 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                     strongSelf.lastSelectAssetsV = assets.mutableCopy;
                     [assets enumerateObjectsUsingBlock:^(PHAsset * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                         [ZLPhotoManager requestAssetFileUrl:obj complete:^(NSString *filePath) {
-                            
-//                            filePathOriginal = filePath;
-//                            NSError *error;
-//                            NSURL *url = [NSURL fileURLWithPath:filePath];
-//                            NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingMappedIfSafe error:&error];
-//                            NSLog(@"error:%@ size:%ld", error,data.length);
-//
+                            __block UIImage *image;
+                            [ZLPhotoManager requestOriginalImageDataForAsset:obj completion:^(NSData *data, NSDictionary *info) {
+                                if (![[info objectForKey:PHImageResultIsDegradedKey] boolValue]) {
+                                     image = [ZLPhotoManager transformToGifImageWithData:data];
+                                    
+                                }
+                            }];
                             NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:filePath];
                             NSString *fileName = [filePath lastPathComponent];
                             NSDictionary *argdict = @{@"fileName" : fileName,
@@ -383,14 +383,12 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 
                             [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:argdict success:^(id json) {
                                 NSLog(@"%@",json);
-                                [[CWFileUploadManager shardUploadManager] removeAllUploadTask];
-                                CWUploadTask *task = [[CWFileUploadManager shardUploadManager] createUploadTask:filePath withFileid:json[@"fileId"]];
-                                [task taskResume];
+                                [[CWFileUploadManager shardUploadManager] createUploadTask:filePath withFileid:json[@"fileId"] andImage:image];
+                                [self.myPicCollectionView reloadData];
                             } url:kFMTAPIFileAuth];
                             
-
                         }];
-//                        [self.myPicCollectionView reloadData];
+                        
                     }];
             
                     
@@ -400,7 +398,7 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                 default:
                     break;
             }
-  
+   
             
 //            [self.myPicCollectionView reloadData];
 //            self.fmImageType == FMImageTypePic ? [self photoAction:nil] : [self vedioAction:nil];

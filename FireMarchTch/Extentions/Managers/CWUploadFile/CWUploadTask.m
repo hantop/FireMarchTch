@@ -176,21 +176,9 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
     [_uploadTask resume];
 }
 
-//上传文件相关信息，返回文件上传相关参数
-- (void)postFileInfo
-{
-    __weak typeof(self) weekSelf = self;
-    [self checkParamFromServer:_fileStream paramCallback:^(NSString * _Nonnull chunkNumName, NSDictionary * _Nullable param) {
-        weekSelf.chunkNumName = chunkNumName;
-        weekSelf.param = [NSMutableDictionary dictionaryWithDictionary:param];
-        [weekSelf startExe];
-    }];
-}
-
 //上传文件的核心方法
 - (void)startExe{
-    //判断无参数的情况下先将文件信息上传并获得参数
-    if (!_param) [self postFileInfo];
+
     dispatch_group_t group = dispatch_group_create();
     dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
     dispatch_queue_t queue = dispatch_queue_create(NULL, DISPATCH_QUEUE_SERIAL);
@@ -201,6 +189,7 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
         return;
     };
     for (NSInteger i=0; i<_fileStream.streamFragments.count; i++) {
+//    for (NSInteger i=0; i<1; i++) {
         CWStreamFragment *fragment = _fileStream.streamFragments[i];
         if (fragment.fragmentStatus) continue;
         dispatch_group_async(group, queue, ^{
@@ -266,7 +255,7 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
         });
         return;
     }
-    _uploadTask == nil?[self postFileInfo]:[self startExe];
+    _uploadTask == nil?[self startExe]:[self startExe];
 }
 
 - (void)taskCancel{
