@@ -34,7 +34,7 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
 
 @interface CWUploadTask ()
 
-@property (nonatomic,strong)NSURLSessionUploadTask *uploadTask;
+@property (nonatomic,strong)NSURLSessionDataTask *uploadTask;
 @property (nonatomic,strong)NSMutableURLRequest *request;
 @property (nonatomic,readwrite)NSURL * url;
 @property (nonatomic,readwrite)NSString *ID;
@@ -96,6 +96,7 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
     task.param = [@{@"fileId" : fileStream.fileId,
                    @"allBlobNum" : @(fileStream.streamFragments.count)
                    } mutableCopy];
+    NSLog(@"任务参数： %@",task.param);
     return task;
 }
 
@@ -123,13 +124,25 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
 {
 }
 
--(NSMutableURLRequest*)uploadRequest
+-(NSMutableURLRequest*)request
 {
-    if ([CWFileUploadManager shardUploadManager].request) {
-        _request = [CWFileUploadManager shardUploadManager].request;
-    }else{
-        NSLog(@"请配置上传任务的request");
+//    if ([CWFileUploadManager shardUploadManager].request) {
+//        _request = [CWFileUploadManager shardUploadManager].request;
+//    }else{
+//        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url];
+//        request.HTTPMethod = @"POST";//设置请求类型
+//        [request setValue:[USER_DEFAULT valueForKey:kUserDefaultAccessToken] forHTTPHeaderField:kUserDefaultAccessToken];
+//        _request = request;
+//        NSLog(@"请配置上传任务的request");
+//    }
+    
+    if (!_request) {
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:_url];
+        request.HTTPMethod = @"POST";//设置请求类型
+        [request setValue:[USER_DEFAULT valueForKey:kUserDefaultAccessToken] forHTTPHeaderField:kUserDefaultAccessToken];
+        _request = request;
     }
+    
     return _request;
     
 }
@@ -169,9 +182,16 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
         [self taskCancel];
         return;
     }
-    _param = [NSMutableDictionary dictionaryWithDictionary:param];;
+    _param = [NSMutableDictionary dictionaryWithDictionary:param];
+    NSString *args = [FMUtils jsonStringFromData:param];
+    self.request.HTTPBody = nil;
+    self.request.HTTPBody = [args dataUsingEncoding:NSUTF8StringEncoding];
+    
     NSURLSession *session = [NSURLSession sharedSession];
-    self.uploadTask = [session uploadTaskWithRequest:[self uploadRequest] fromData:[self taskRequestBodyWithParam:param uploadData:data] completionHandler:completionHandler];
+    // 由于要先对request先行处理,我们通过request初始化task
+    self.uploadTask = [session dataTaskWithRequest:_request
+                                        completionHandler:completionHandler];
+    
     self.taskState = _uploadTask.state;
     [_uploadTask resume];
 }
@@ -189,7 +209,6 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
         return;
     };
     for (NSInteger i=0; i<_fileStream.streamFragments.count; i++) {
-//    for (NSInteger i=0; i<1; i++) {
         CWStreamFragment *fragment = _fileStream.streamFragments[i];
         if (fragment.fragmentStatus) continue;
         dispatch_group_async(group, queue, ^{
@@ -200,9 +219,11 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
                 [_param setObject:[NSString stringWithFormat:@"%ld",(i+1)] forKey:@"blobNum"];
                 [_param setObject:[data base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0] forKey:@"fileData"];
                 self.lastParam = _param;
-                NSLog(@"*******参数*******\n%@",_param);
+                
                 [self uploadTaskWithUrl:_url param:_param uploadData:data completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse*)response;
+                    NSString *dataString = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+                    NSLog(@"分片上送返回: %@",dataString);
                     if (!error && httpResponse.statusCode==200) {
                         weekSelf.taskRepeatNum = 0;
                         fragment.fragmentStatus = YES;
@@ -215,6 +236,7 @@ NSString *const CWUploadTaskExeSuspend = @"TaskExeSuspend";
                         });
                         dispatch_semaphore_signal(semaphore);
                     }else{
+                        NSLog(@"分片上送失败:%@",[error.userInfo description]);
                         if (weekSelf.taskRepeatNum<REPEAT_MAX) {
                             weekSelf.taskRepeatNum++;
                             [weekSelf startExe];

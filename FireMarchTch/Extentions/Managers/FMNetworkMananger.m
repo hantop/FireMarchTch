@@ -73,6 +73,45 @@ singleton_implementation(FMNetworkMananger)
     return [NSString stringWithFormat:@"%@%@",kFMTAPIHost,cmd];
 }
 
+- (NSURLSessionDataTask*)postJSONWithURL:(NSString *)urlStr
+                                parameters:(id)parameters
+                                   success:(void (^)(id responseObject))success
+                                      fail:(void (^)(id error))fail
+{
+    DLog(@"\nServerAPI:%@, \nParameter:%@",urlStr,[parameters description]);
+    // 设置请求格式
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    [self.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    [self.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    self.requestSerializer.timeoutInterval = 10.f;
+    
+    // 设置请求Header token值
+    NSLog(@"token:%@", [USER_DEFAULT valueForKey:kUserDefaultAccessToken]);
+    [self.requestSerializer setValue:[USER_DEFAULT valueForKey:kUserDefaultAccessToken] forHTTPHeaderField:kUserDefaultAccessToken];
+    
+    
+    // 设置返回类型
+    self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    
+    // 调用AF发起请求
+    NSURLSessionDataTask *task = [self POST:urlStr
+                                 parameters:parameters
+                                   progress:nil
+                                    success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                        if (success)
+                                            success(responseObject);
+//                                        
+//                                        //回到主线程
+//                                        dispatch_async(dispatch_get_main_queue(), ^(){
+//                                        });
+                                    }
+                                    failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+                                        if (fail)
+                                            fail(error.userInfo);
+                                    }];
+    return task;
+}
+
 - (void)postJSONWithUrl:(NSString *)urlStr
              parameters:(id)parameters
                 success:(void (^)(id responseObject))success

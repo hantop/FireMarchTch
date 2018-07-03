@@ -250,7 +250,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "551894696.281553"
+                  timestampString = "552299246.159095"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "900"
@@ -265,7 +265,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "551894696.283234"
+                  timestampString = "552299246.160731"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "900"
@@ -280,7 +280,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "551894696.2849669"
+                  timestampString = "552299246.162781"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "900"
@@ -377,7 +377,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "551894696.304721"
+                  timestampString = "552299246.181879"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "887"
@@ -392,7 +392,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "551894696.3064229"
+                  timestampString = "552299246.183646"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "887"
@@ -407,7 +407,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "551894696.308374"
+                  timestampString = "552299246.185326"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "887"
@@ -440,27 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
-            timestampString = "551894695.9743299"
+            timestampString = "552299245.862838"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
-            landmarkName = "-taskRecord:andFileId:andImage:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
-            timestampString = "551894695.974393"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "355"
-            endingLineNumber = "355"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
             landmarkName = "-archerTheDictionary:file:"
             landmarkType = "7">
          </BreakpointContent>
@@ -472,7 +456,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
-            timestampString = "551894695.974463"
+            timestampString = "552299245.862909"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -487,13 +471,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551894695.974512"
+            filePath = "FireMarchTch/Extentions/Managers/FMTBaseDataManager.m"
+            timestampString = "552231731.90266"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
-            landmarkName = "-getPas"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "-generalPost:success:fail:url:withTips:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -503,93 +487,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551894695.974562"
+            filePath = "FireMarchTch/Extentions/Managers/FMNetworkMananger.m"
+            timestampString = "552299245.862982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "386"
-            endingLineNumber = "386"
-            landmarkName = "-getPas"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-postJSONWithURL:parameters:success:fail:"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551894695.974609"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
-            landmarkName = "-getPas"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-            timestampString = "551894695.974655"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "384"
-            endingLineNumber = "384"
-            landmarkName = "-getPas"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[FMTUpImageViewController getPas]_block_invoke_2.340"
-                  moduleName = "FireMarchTch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-                  timestampString = "551894696.334362"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "384"
-                  endingLineNumber = "384"
-                  offsetFromSymbolStart = "512">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__34-[FMTUpImageViewController getPas]_block_invoke.358"
-                  moduleName = "FireMarchTch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-                  timestampString = "551894696.335983"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "384"
-                  endingLineNumber = "384"
-                  offsetFromSymbolStart = "24">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.364"
-                  moduleName = "FireMarchTch"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/FireMarchTch/Classes/Config/Controllers/FMTUpImageViewController.m"
-                  timestampString = "551894696.3377171"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "384"
-                  endingLineNumber = "384"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -90,7 +90,12 @@ static CWFileUploadManager * _instance;
         CWFileStreamSeparation *fileStream = [_instance taskRecord:filePath andFileId:fileId andImage:image];
         if (!fileStream) {
             return nil;
+        } else {
+            CWUploadTask *uploadTask = [CWUploadTask initWithStreamModel:fileStream];
+            [self.allTasks setObject:uploadTask forKey:filePath.lastPathComponent];
+            return uploadTask;
         }
+        
     }
     
     return [self continuePerformTaskWithFilePath:filePath];
@@ -201,7 +206,7 @@ static CWFileUploadManager * _instance;
 - (NSMutableDictionary<NSString*,CWUploadTask*>*_Nullable)allUploadTasks
 {
     if (self.fileStreamDict.count == 0) {
-        self.fileStreamDict = [self unArcherThePlist:plistPath];
+//        self.fileStreamDict = [self unArcherThePlist:plistPath];
     }
     NSDictionary *tmpDict = _allTasks?_allTasks:@{};
     NSMutableDictionary *fileWithTasks = [CWUploadTask uploadTasksWithDict:_instance.fileStreamDict];
@@ -265,11 +270,11 @@ static CWFileUploadManager * _instance;
 
 + (BOOL)isUploadTask:(NSString *)path{
     _instance = [CWFileUploadManager shardUploadManager];
-    if (![CWFileManager isFileAtPath:plistPath]) {
-        [CWFileManager createFileAtPath:plistPath overwrite:NO];
-    }
+//    if (![CWFileManager isFileAtPath:plistPath]) {
+//        [CWFileManager createFileAtPath:plistPath overwrite:NO];
+//    }
     /* Joe.Pen 更改读取断点续传数据 */
-    _instance.fileStreamDict = [_instance unArcherThePlist:plistPath];
+//    _instance.fileStreamDict = [_instance unArcherThePlist:plistPath];
     NSLog(@"%@", _instance.fileStreamDict);
     if (_instance.fileStreamDict[path.lastPathComponent] == nil) {
         return NO;

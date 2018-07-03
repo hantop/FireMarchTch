@@ -87,6 +87,8 @@ typedef NS_ENUM(NSInteger, FMImageType) {
     [self photoAction:nil];
     [self.myPicCollectionView reloadData];
     
+    [[CWFileUploadManager shardUploadManager] removeAllUploadTask];
+    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(nextStepAction:)];
     rightItem.width = 60.f;
     [rightItem setTitleTextAttributes:@{NSFontAttributeName:BOLDSYSTEMFONT(16)} forState:UIControlStateNormal];
@@ -180,8 +182,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                 NSArray* taskAry = [CWFileUploadManager shardUploadManager].allTasks.allValues;
                 NSInteger item = indexPath.item;
                 cell.uploadTask = taskAry[item];
-
-//                [cell.imageView setImage:self.photoVideoUrlArray[indexPath.item]];
             }
         }
             break;
@@ -371,26 +371,23 @@ typedef NS_ENUM(NSInteger, FMImageType) {
                             __block UIImage *image;
                             [ZLPhotoManager requestOriginalImageDataForAsset:obj completion:^(NSData *data, NSDictionary *info) {
                                 if (![[info objectForKey:PHImageResultIsDegradedKey] boolValue]) {
-                                     image = [ZLPhotoManager transformToGifImageWithData:data];
+                                    image = [ZLPhotoManager transformToGifImageWithData:data];
+                                    NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:filePath];
+                                    NSString *fileName = [filePath lastPathComponent];
+                                    NSDictionary *argdict = @{@"fileName" : fileName,
+                                                              @"fileSize" : dict[@"size"]
+                                                              };
                                     
+                                    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:argdict success:^(id json) {
+                                        NSLog(@"%@",json);
+                                        CWUploadTask *uploadTask = [[CWFileUploadManager shardUploadManager] createUploadTask:filePath withFileid:json[@"fileId"] andImage:image];
+                                        [uploadTask taskResume];
+                                        [self.myPicCollectionView reloadData];
+                                    } url:kFMTAPIFileAuth];
                                 }
                             }];
-                            NSDictionary* dict = [ZLPhotoManager getVideoInfoWithSourcePath:filePath];
-                            NSString *fileName = [filePath lastPathComponent];
-                            NSDictionary *argdict = @{@"fileName" : fileName,
-                                                      @"fileSize" : dict[@"size"]
-                                                      };
-
-                            [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:argdict success:^(id json) {
-                                NSLog(@"%@",json);
-                                [[CWFileUploadManager shardUploadManager] createUploadTask:filePath withFileid:json[@"fileId"] andImage:image];
-                                [self.myPicCollectionView reloadData];
-                            } url:kFMTAPIFileAuth];
-                            
                         }];
-                        
                     }];
-            
                     
                 }
                     break;

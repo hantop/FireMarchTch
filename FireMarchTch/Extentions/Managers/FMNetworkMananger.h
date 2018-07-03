@@ -18,6 +18,11 @@ singleton_interface(FMNetworkMananger)
  */
 - (void)checkNetWorkStatus;
 
+- (NSURLSessionDataTask*)postJSONWithURL:(NSString *)urlStr
+                                parameters:(id)parameters
+                                   success:(void (^)(id responseObject))success
+                                      fail:(void (^)(id error))fail;
+
 - (void)postJSONWithUrl:(NSString *)urlStr
              parameters:(id)parameters
                 success:(void (^)(id responseObject))success
