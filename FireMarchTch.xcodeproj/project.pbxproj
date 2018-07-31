@@ -50,6 +50,8 @@
 		EC9FEC6E20A0589A00DBF465 /* XWAFSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9FEC6D20A0589A00DBF465 /* XWAFSDK.framework */; };
 		EC9FEC7720A05DAA00DBF465 /* FMReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9FEC7620A05DAA00DBF465 /* FMReachability.m */; };
 		ECA70B88206A935B003E2F62 /* FMSetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */; };
+		ECD6640120F4DF6F00D7FAF0 /* FMTUpVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD663FF20F4DF6F00D7FAF0 /* FMTUpVideoViewController.m */; };
+		ECD6640220F4DF6F00D7FAF0 /* FMTUpVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECD6640020F4DF6F00D7FAF0 /* FMTUpVideoViewController.xib */; };
 		ECDCE67A207B0D07009BB554 /* FMTUpImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */; };
 		ECDCE67B207B0D07009BB554 /* FMTUpImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */; };
 		ECDCE67E207B5DF0009BB554 /* FSDeletableImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECDCE67C207B5DEF009BB554 /* FSDeletableImageView.m */; };
@@ -184,6 +186,9 @@
 		EC9FEC7620A05DAA00DBF465 /* FMReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMReachability.m; sourceTree = "<group>"; };
 		ECA70B86206A935B003E2F62 /* FMSetPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMSetPWDViewController.h; sourceTree = "<group>"; };
 		ECA70B87206A935B003E2F62 /* FMSetPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMSetPWDViewController.m; sourceTree = "<group>"; };
+		ECD663FE20F4DF6F00D7FAF0 /* FMTUpVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTUpVideoViewController.h; sourceTree = "<group>"; };
+		ECD663FF20F4DF6F00D7FAF0 /* FMTUpVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTUpVideoViewController.m; sourceTree = "<group>"; };
+		ECD6640020F4DF6F00D7FAF0 /* FMTUpVideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTUpVideoViewController.xib; sourceTree = "<group>"; };
 		ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTUpImageViewController.h; sourceTree = "<group>"; };
 		ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTUpImageViewController.m; sourceTree = "<group>"; };
 		ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMTUpImageViewController.xib; sourceTree = "<group>"; };
@@ -778,14 +783,14 @@
 		ECDD6B9920A541990026AC4E /* ProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				ECDD6B9A20A541990026AC4E /* HWWaveView.m */,
-				ECDD6B9B20A541990026AC4E /* HWInstallView.h */,
-				ECDD6B9C20A541990026AC4E /* HWProgressView.h */,
-				ECDD6B9D20A541990026AC4E /* HWCircleView.m */,
-				ECDD6B9E20A541990026AC4E /* HWWaveView.h */,
-				ECDD6B9F20A541990026AC4E /* HWProgressView.m */,
 				ECDD6BA020A541990026AC4E /* HWCircleView.h */,
+				ECDD6B9D20A541990026AC4E /* HWCircleView.m */,
+				ECDD6B9B20A541990026AC4E /* HWInstallView.h */,
 				ECDD6BA120A541990026AC4E /* HWInstallView.m */,
+				ECDD6B9C20A541990026AC4E /* HWProgressView.h */,
+				ECDD6B9F20A541990026AC4E /* HWProgressView.m */,
+				ECDD6B9E20A541990026AC4E /* HWWaveView.h */,
+				ECDD6B9A20A541990026AC4E /* HWWaveView.m */,
 			);
 			path = ProgressView;
 			sourceTree = "<group>";
@@ -838,12 +843,14 @@
 			children = (
 				EC38CB092074745600C09DC7 /* FMSetMyInfoViewController.h */,
 				EC38CB0A2074745600C09DC7 /* FMSetMyInfoViewController.m */,
-				ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */,
-				ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */,
 				ECF1919F208DAAC9004A158E /* FMTCourseSetController.h */,
 				ECF191A0208DAAC9004A158E /* FMTCourseSetController.m */,
 				ECF191A4208DB050004A158E /* FMTPrivacySetController.h */,
 				ECF191A5208DB050004A158E /* FMTPrivacySetController.m */,
+				ECDCE677207B0D07009BB554 /* FMTUpImageViewController.h */,
+				ECDCE678207B0D07009BB554 /* FMTUpImageViewController.m */,
+				ECD663FE20F4DF6F00D7FAF0 /* FMTUpVideoViewController.h */,
+				ECD663FF20F4DF6F00D7FAF0 /* FMTUpVideoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -851,19 +858,20 @@
 		ECF191AD208F0A66004A158E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EC38CB0B2074745600C09DC7 /* FMSetMyInfoViewController.xib */,
-				ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */,
-				ECF191A1208DAAC9004A158E /* FMTCourseSetController.xib */,
-				ECF191A6208DB050004A158E /* FMTPrivacySetController.xib */,
 				ECDCE70B207DF666009BB554 /* FMImageCollectionViewCell.h */,
 				ECDCE70C207DF666009BB554 /* FMImageCollectionViewCell.m */,
 				ECDCE70D207DF666009BB554 /* FMImageCollectionViewCell.xib */,
+				EC38CB0B2074745600C09DC7 /* FMSetMyInfoViewController.xib */,
 				ECF191B7208F178F004A158E /* FMTCourseCell.h */,
 				ECF191B8208F178F004A158E /* FMTCourseCell.m */,
 				ECF191B9208F178F004A158E /* FMTCourseCell.xib */,
 				ECF191C420902321004A158E /* FMTCourseEditView.h */,
 				ECF191C520902321004A158E /* FMTCourseEditView.m */,
 				ECF191C620902321004A158E /* FMTCourseEditView.xib */,
+				ECF191A1208DAAC9004A158E /* FMTCourseSetController.xib */,
+				ECF191A6208DB050004A158E /* FMTPrivacySetController.xib */,
+				ECDCE679207B0D07009BB554 /* FMTUpImageViewController.xib */,
+				ECD6640020F4DF6F00D7FAF0 /* FMTUpVideoViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -964,6 +972,7 @@
 				ECF191A8208DB050004A158E /* FMTPrivacySetController.xib in Resources */,
 				EC473D0620576BD000CD9397 /* 方正兰亭细黑_GBK.TTF in Resources */,
 				ECF191E72099900C004A158E /* FMTMyAccountCell.xib in Resources */,
+				ECD6640220F4DF6F00D7FAF0 /* FMTUpVideoViewController.xib in Resources */,
 				ECDCE721208593DF009BB554 /* Assets.xcassets in Resources */,
 				EC473CF62056BDCB00CD9397 /* Main.storyboard in Resources */,
 				EC473CF92056BE0B00CD9397 /* RegLogin.storyboard in Resources */,
@@ -1140,6 +1149,7 @@
 				ECDCE694207BABD7009BB554 /* FMImageUploadView.m in Sources */,
 				ECF191DD2091B1DD004A158E /* CZJPageControlView.m in Sources */,
 				ECF191CE20902AD0004A158E /* LMJDropdownMenu.m in Sources */,
+				ECD6640120F4DF6F00D7FAF0 /* FMTUpVideoViewController.m in Sources */,
 				EC78EF6C20D249BC00F199DC /* CWFileUploadManager.m in Sources */,
 				EC42A4E52068DCCD00C52324 /* ValueType.m in Sources */,
 			);
@@ -1285,7 +1295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NB59393AH;
+				DEVELOPMENT_TEAM = TL4R9BXB5H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1306,7 +1316,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NB59393AH;
+				DEVELOPMENT_TEAM = TL4R9BXB5H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

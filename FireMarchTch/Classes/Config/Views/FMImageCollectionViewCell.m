@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *animationImage;
 @property (assign, nonatomic) BOOL isAnimate;
 @property (nonatomic, copy) NSString *statusText;
-@property (weak, nonatomic) IBOutlet HWCircleView *processView;
+@property (strong, nonatomic) HWCircleView *processView;
 
 @end
 
@@ -26,7 +26,15 @@
     
     self.isAnimate = NO;
     self.addImageView.hidden = YES;
-    self.processView.hidden = YES;
+    _processView  = [HWCircleView new];
+    [self addSubview:_processView];
+    [_processView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(self.center).offset(0);
+        make.size.mas_equalTo(CGSizeMake(60, 60));
+    }];
+//    _processView.progress = 0.5;
+    
+//    _processView.hidden = YES;
     
     [self registeNotification];
     // Initialization code

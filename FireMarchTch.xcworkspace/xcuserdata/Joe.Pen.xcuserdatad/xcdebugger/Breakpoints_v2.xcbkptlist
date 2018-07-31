@@ -250,7 +250,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "552299246.159095"
+                  timestampString = "554732252.59061"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "900"
@@ -265,7 +265,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "552299246.160731"
+                  timestampString = "554732252.592286"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "900"
@@ -280,7 +280,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "552299246.162781"
+                  timestampString = "554732252.593958"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "900"
@@ -377,7 +377,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "552299246.181879"
+                  timestampString = "554732252.614222"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "887"
@@ -392,7 +392,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "552299246.183646"
+                  timestampString = "554732252.61587"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "887"
@@ -407,7 +407,7 @@
                   moduleName = "FireMarchTch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Joe.Pen/Documents/GitHub/FireMarchTch/Pods/ZLPhotoBrowser/PhotoBrowser/ZLThumbnailViewController.m"
-                  timestampString = "552299246.185326"
+                  timestampString = "554732252.617568"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "887"
@@ -436,22 +436,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/CWUploadFile/CWFileUploadManager.m"
-            timestampString = "552299245.862838"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "360"
-            endingLineNumber = "360"
-            landmarkName = "-archerTheDictionary:file:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -471,24 +455,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FireMarchTch/Extentions/Managers/FMTBaseDataManager.m"
-            timestampString = "552231731.90266"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "-generalPost:success:fail:url:withTips:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FireMarchTch/Extentions/Managers/FMNetworkMananger.m"
-            timestampString = "552299245.862982"
+            timestampString = "554728180.490428"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"

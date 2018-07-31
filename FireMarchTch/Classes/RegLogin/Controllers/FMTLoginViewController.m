@@ -101,11 +101,11 @@
 - (IBAction)LoginAction:(id)sender {
     [self.view endEditing:YES];
     
-    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
-    [self.navigationController pushViewController:setVC animated:YES];
-
-
-    return;
+//    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+//    [self.navigationController pushViewController:setVC animated:YES];
+//
+//
+//    return;
     
     //规则校验
     if (![FMUtils isMobileNumber:_phoneNumTextField.text]) {

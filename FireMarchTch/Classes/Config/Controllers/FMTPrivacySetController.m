@@ -9,6 +9,7 @@
 #import "FMTPrivacySetController.h"
 #import "FMTRegTopView.h"
 #import "FMTCodeInputTextFields.h"
+#import "FMTOrderManageController.h"
 
 @interface FMTPrivacySetController () <FMTCodeInputTextFieldsDelegate>
 
@@ -85,6 +86,10 @@
     if ([_secCode isEqualToString:_firstCode])
     {
         [self.view endEditing:YES];
+        NSString *storyboardName = @"Main";
+        NSString *vcName = @"MainNavi";
+        UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:storyboardName andVCName:vcName];
+        [UIApplication sharedApplication].delegate.window.rootViewController = rootViewController;
     }
     else
     {

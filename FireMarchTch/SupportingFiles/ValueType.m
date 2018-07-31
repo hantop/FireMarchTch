@@ -11,6 +11,7 @@
 
 #pragma mark- 接口请求地址
 NSString *const kFMTAPIHttpScheme = @"https";
+NSString *const kFMTAPICheckToken = @"auth/verify";
 NSString *const kFMTAPIHost = @"http://118.126.113.252/";
 NSString *const kFMTAPILogin = @"auth/login";
 NSString *const kFMTAPIRegister = @"auth/register";

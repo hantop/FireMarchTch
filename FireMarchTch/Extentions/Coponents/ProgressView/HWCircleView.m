@@ -10,7 +10,7 @@
 
 #define KHWCircleLineWidth 5.0f
 #define KHWCircleFont [UIFont boldSystemFontOfSize:16.0f]
-#define KHWCircleColor [UIColor colorWithRed:0/255.0 green:191/255.0 blue:255/255.0 alpha:1]
+#define KHWCircleColor [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1]
 
 @interface HWCircleView ()
 
@@ -53,7 +53,7 @@
     //线宽
     path.lineWidth = KHWCircleLineWidth;
     //颜色
-    [WHITECOLOR set];
+    [KHWCircleColor set];
     //拐角
     path.lineCapStyle = kCGLineCapRound;
     path.lineJoinStyle = kCGLineJoinRound;

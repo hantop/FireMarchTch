@@ -12,6 +12,7 @@
 
 #pragma mark- 接口名称静态变量申明
 UIKIT_EXTERN NSString *const kFMTAPIHttpScheme;
+UIKIT_EXTERN NSString *const kFMTAPICheckToken;
 UIKIT_EXTERN NSString *const kFMTAPIHost;
 UIKIT_EXTERN NSString *const kFMTAPILogin;
 UIKIT_EXTERN NSString *const kFMTAPIRegister;
@@ -71,7 +72,7 @@ typedef void (^FMBasicBlock)(void);
 typedef void (^FMButtonBlock)(UIButton* button);
 typedef void (^FMProgressBlock)(NSProgress* progress);
 typedef void (^FMSuccessBlock)(id json);
-typedef void (^FMFailureBlock)(NSError *error);
+typedef void (^FMFailureBlock)(id error);
 typedef void (^FMGeneralBlock)(void);
 
 

@@ -20,7 +20,7 @@
     if (self = [super init]) {
         self.codeType = type;
         self.keyboardType = _codeType == FMTCodeTypeShort ? UIKeyboardTypeNumberPad : UIKeyboardTypeDefault;
-        
+        self.bgColor = [UIColor clearColor];
         self.tintColor = [UIColor colorWithRed:250/255.0f green:100/255.0f blue:0/255.0f alpha:1];
         self.originBoderColor = [UIColor colorWithRed:216/255.0f green:216/255.0f blue:216/255.0f alpha: 1];
         self.textFieldSize = CGSizeMake(50, 50);

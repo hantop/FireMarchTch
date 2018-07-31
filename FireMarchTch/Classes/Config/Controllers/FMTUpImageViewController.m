@@ -246,7 +246,6 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 }
 
 
-
 #pragma mark- Action
 - (IBAction)photoAction:(id)sender {
     [self.view layoutIfNeeded];
@@ -284,7 +283,22 @@ typedef NS_ENUM(NSInteger, FMImageType) {
 }
 
 - (IBAction)uploadAction:(id)sender {
-    
+    switch (self.fmImageType) {
+        case FMImageTypePic:
+        {
+            
+        }
+            break;
+            
+        case FMImageTypeVideo:
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 

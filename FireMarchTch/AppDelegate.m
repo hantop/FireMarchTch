@@ -58,6 +58,10 @@ extern CFAbsoluteTime StartTime;
         iLog(@"Lauched in %f seconds.", (CFAbsoluteTimeGetCurrent() - StartTime));
     });
     
+//    NSString *token = [XWAFSDK initWithAppID:@"f4043b4f-e517-4ab1-9686-7fa6bac7104e"
+//                                      andURL:XWAF_UAT_B];
+//    [XWAFSDK postDeviceInfo];
+    
     //-------------------1.设置状态栏隐藏，因为有广告------------------
 //    [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 //    [USER_DEFAULT setValue:@"1234" forKey:kFMTAccessCode];
@@ -78,10 +82,10 @@ extern CFAbsoluteTime StartTime;
     self.window = [[iConsoleWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     //--------------------9.开启帧数显示------------------
-    YYFPSLabel *label = [[YYFPSLabel alloc] initWithSize:CGSizeMake(60, 20)];
-    label.textColor = FSYellow;
-    [self.window addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+    YYFPSLabel *FPSlabel = [[YYFPSLabel alloc] initWithSize:CGSizeMake(60, 20)];
+    FPSlabel.textColor = FSYellow;
+    [self.window addSubview:FPSlabel];
+    [FPSlabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.window).offset(-50);
         make.top.mas_equalTo(self.window).offset(3);
     }];
@@ -90,10 +94,19 @@ extern CFAbsoluteTime StartTime;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 #endif
     
+    [USER_DEFAULT setValue:@"" forKey:kUserDefaultAccessToken];
+    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:nil success:^(id json) {
+        //token未过期，直接进入app。
+        NSLog(@"%@",json);
+    } fail:^(id error) {
+        //token过期，需重新登录
+        NSLog(@"%@",error);
+    } url:kFMTAPIFileAuth];
     NSString *storyboardName = @"RegLogin";
     NSString *vcName = @"LoginNavi";
     [USER_DEFAULT setValue:@"0" forKey:kUserDefaultIsLogin];
     if ([[USER_DEFAULT valueForKey:kUserDefaultIsLogin] isEqualToString:@"1"]) {
+        //登录成功
         storyboardName = @"Main";
         vcName = @"MainNavi";
     }
@@ -102,7 +115,7 @@ extern CFAbsoluteTime StartTime;
     self.window.rootViewController = rootViewController;
     [self.window makeKeyAndVisible];
     
-    [self.window bringSubviewToFront:label];
+//    [self.window bringSubviewToFront:FPSlabel];
     
     //-------------------8.字典描述分类替换----------------
     [NSDictionary jr_swizzleMethod:@selector(description) withMethod:@selector(my_description) error:nil];

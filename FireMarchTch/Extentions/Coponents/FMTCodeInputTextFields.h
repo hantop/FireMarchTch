@@ -17,6 +17,7 @@ typedef NS_ENUM (NSInteger, FMTCodeType)
 @class FMTCodeInputTextFields;
 
 @interface FMTCodeInputTextFieldsConfig : NSObject
+@property (strong, nonatomic) UIColor * bgColor;
 //
 @property (strong, nonatomic) UIColor * tintColor;
 //
