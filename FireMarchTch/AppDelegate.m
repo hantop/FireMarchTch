@@ -95,20 +95,18 @@ extern CFAbsoluteTime StartTime;
 #endif
     
     [USER_DEFAULT setValue:@"" forKey:kUserDefaultAccessToken];
-    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:nil success:^(id json) {
-        //token未过期，直接进入app。
-        NSLog(@"%@",json);
-    } fail:^(id error) {
-        //token过期，需重新登录
-        NSLog(@"%@",error);
-    } url:kFMTAPIFileAuth];
-    NSString *storyboardName = @"RegLogin";
-    NSString *vcName = @"LoginNavi";
+
+    __block NSString *storyboardName = @"RegLogin";
+    __block NSString *vcName = @"LoginNavi";
     [USER_DEFAULT setValue:@"0" forKey:kUserDefaultIsLogin];
     if ([[USER_DEFAULT valueForKey:kUserDefaultIsLogin] isEqualToString:@"1"]) {
         //登录成功
         storyboardName = @"Main";
         vcName = @"MainNavi";
+    } else {
+        //未登陆过，进入登陆注册页面
+        storyboardName = @"RegLogin";
+        vcName = @"LoginNavi";
     }
 
     UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:storyboardName andVCName:vcName];

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initPageBarView];
-    
+    [self checkToken];
     // Do any additional setup after loading the view.
 }
 
@@ -60,5 +60,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)checkToken {
+    //检查token过期否
+    [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:nil success:^(id json) {
+        //token未过期，直接进入app。
+        
+        NSLog(@"%@",json);
+    } fail:^(id error) {
+        //token过期，需重新登录，进入den
+        UIViewController *loginViewController = (UIViewController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginScene"];
+        [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
+        NSLog(@"%@",error);
+    } url:kFMTAPIFileAuth];
+}
+
 
 @end
