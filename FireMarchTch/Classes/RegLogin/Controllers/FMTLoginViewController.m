@@ -49,7 +49,7 @@
     self.pwdTextField.delegate = self;
     
     //设置导航栏标题字体颜色大小
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:FSBlackColor33,NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0f]}];
+//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:FSBlackColor33,NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0f]}];
 }
 
 - (void)initTopView {
@@ -101,12 +101,6 @@
 - (IBAction)LoginAction:(id)sender {
     [self.view endEditing:YES];
     
-//    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
-//    [self.navigationController pushViewController:setVC animated:YES];
-//
-//
-//    return;
-    
     //规则校验
     if (![FMUtils isMobileNumber:_phoneNumTextField.text]) {
         [FMUtils tipWithText:@"请输入正确的手机号" onView:self.view];
@@ -130,6 +124,7 @@
     //发送请求
     [[FMTBaseDataManager sharedFMTBaseDataManager] generalPost:params success:^(id json) {
         [USER_DEFAULT setValue:json[@"token"] forKey:kUserDefaultAccessToken];
+        [USER_DEFAULT setValue:@"1" forKey:kUserDefaultIsLogin];
         if ([json[@"completed"] isEqualToString:@""]) {
             //首次登录，跳转资料完善界面
             FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];

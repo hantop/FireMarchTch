@@ -72,7 +72,7 @@
         UIViewController *loginViewController = (UIViewController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginScene"];
         [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
         NSLog(@"%@",error);
-    } url:kFMTAPIFileAuth];
+    } url:kFMTAPICheckToken];
 }
 
 
