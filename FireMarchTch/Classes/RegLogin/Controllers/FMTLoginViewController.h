@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface FMTLoginViewController : FMViewController
-
+@property (assign, nonatomic) BOOL isPopView;
 @end

@@ -22,6 +22,7 @@
 
 - (IBAction)LoginAction:(id)sender;
 - (IBAction)forgetPWDAction:(id)sender;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *phoneNumTop;
 @end
 
 @implementation FMTLoginViewController
@@ -63,6 +64,14 @@
     }];
     [tipView.topLogoImageView setImage:[IMAGENAMED(@"myCircle") imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [tipView.topLogoImageView setTintColor:FSBlackColor33];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    //如果界面是弹框出来
+    if (self.isPopView) {
+        self.phoneNumTop.constant = 200;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

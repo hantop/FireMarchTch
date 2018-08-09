@@ -8,6 +8,7 @@
 
 #import "FMTOrderManageController.h"
 #import "CZJPageControlView.h"
+#import "FMTLoginViewController.h"
 
 @interface FMTOrderManageController ()
 @property (assign, nonatomic)NSInteger orderListTypeIndex;
@@ -62,14 +63,14 @@
 */
 
 - (void)checkToken {
-    //检查token过期否
     [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:nil success:^(id json) {
         //token未过期，直接进入app。
         
         NSLog(@"%@",json);
     } fail:^(id error) {
         //token过期，需重新登录，进入den
-        UIViewController *loginViewController = (UIViewController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginScene"];
+        FMTLoginViewController *loginViewController = (FMTLoginViewController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginScene"];
+        loginViewController.isPopView = YES;
         [self.navigationController presentViewController:loginViewController animated:YES completion:nil];
         NSLog(@"%@",error);
     } url:kFMTAPICheckToken];
