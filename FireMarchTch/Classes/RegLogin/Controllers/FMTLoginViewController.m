@@ -110,6 +110,10 @@
 - (IBAction)LoginAction:(id)sender {
     [self.view endEditing:YES];
     
+    FMSetMyInfoViewController *setVC = [[FMSetMyInfoViewController alloc] init];
+    [self.navigationController pushViewController:setVC animated:YES];
+    return;
+    
     //规则校验
     if (![FMUtils isMobileNumber:_phoneNumTextField.text]) {
         [FMUtils tipWithText:@"请输入正确的手机号" onView:self.view];
