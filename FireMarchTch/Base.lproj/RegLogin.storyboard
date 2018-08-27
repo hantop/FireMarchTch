@@ -228,6 +228,7 @@
                         <outlet property="lineTwoHeight" destination="8vQ-SG-Y4L" id="FgH-T7-00i"/>
                         <outlet property="loginButton" destination="ZH3-Fu-Tef" id="6gC-uM-8j8"/>
                         <outlet property="phoneNumTextField" destination="qgp-rc-hc6" id="xth-vV-946"/>
+                        <outlet property="phoneNumTop" destination="7Ci-K5-VBA" id="tM0-wI-mYE"/>
                         <outlet property="pwdTextField" destination="4YE-HI-Wpx" id="i26-eE-Bmf"/>
                     </connections>
                 </viewController>

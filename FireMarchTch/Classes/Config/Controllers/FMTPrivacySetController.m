@@ -90,6 +90,7 @@
         NSString *vcName = @"MainNavi";
         UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:storyboardName andVCName:vcName];
         [UIApplication sharedApplication].delegate.window.rootViewController = rootViewController;
+        [USER_DEFAULT setValue:_firstCode forKey:kUserDefaultAccessCode];
     }
     else
     {
