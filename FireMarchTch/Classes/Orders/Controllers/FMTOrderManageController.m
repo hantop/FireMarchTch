@@ -64,10 +64,11 @@
 
 - (void)checkToken {
     [[FMTBaseDataManager sharedFMTBaseDataManager] generalPostNoTips:nil success:^(id json) {
-        //token未过期，直接进入app。
-        
+        //token未过期，直接进入app。从后台返回需要显示隐私码
+        [USER_DEFAULT setValue:@"1" forKey:kUserDefaultAccessCodeShow];
         NSLog(@"%@",json);
     } fail:^(id error) {
+        [USER_DEFAULT setValue:@"0" forKey:kUserDefaultAccessCodeShow];
         //token过期，需重新登录，进入den
         FMTLoginViewController *loginViewController = (FMTLoginViewController *)[FMUtils getViewControllerFromStoryboard:@"RegLogin" andVCName:@"LoginScene"];
         loginViewController.isPopView = YES;

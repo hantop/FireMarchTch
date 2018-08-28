@@ -101,7 +101,7 @@ extern CFAbsoluteTime StartTime;
         //登录成功
         storyboardName = @"Main";
         vcName = @"MainNavi";
-    } 
+    }
 
     UINavigationController *rootViewController = (UINavigationController *)[FMUtils getViewControllerFromStoryboard:storyboardName andVCName:vcName];
     self.window.rootViewController = rootViewController;
@@ -133,7 +133,8 @@ extern CFAbsoluteTime StartTime;
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    if ([USER_DEFAULT valueForKey:kUserDefaultAccessCode]) {
+    if ([USER_DEFAULT valueForKey:kUserDefaultAccessCode] &&
+        [[USER_DEFAULT valueForKey:kUserDefaultAccessCodeShow] isEqualToString:@"1"]) {
         UIViewController* unloackView = [FMUtils getViewControllerFromStoryboard:@"Main" andVCName:@"unlockView"];
         [self.window.rootViewController presentViewController:unloackView animated:YES
                                                    completion:nil];

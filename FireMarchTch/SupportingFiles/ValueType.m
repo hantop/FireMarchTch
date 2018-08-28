@@ -30,6 +30,7 @@ NSString *const kFMTAPISetBasicInfo = @"";
 NSString *const kUserDefaultAccessToken = @"AUTHORIZATION";
 //
 NSString *const kUserDefaultAccessCode = @"accessCode";
+NSString *const kUserDefaultAccessCodeShow = @"accessCodeShow";
 NSString *const kUserDefaultIsLogin = @"isLogin";
 //以天为间隔时间
 NSString *const kUserDefaultTimeDay = @"userdefaultTimeDay";

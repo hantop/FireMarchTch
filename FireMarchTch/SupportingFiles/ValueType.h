@@ -29,6 +29,7 @@ UIKIT_EXTERN NSString *const kFMTAPIFileAuth;
 #pragma mark- UserDefault
 UIKIT_EXTERN NSString *const kUserDefaultAccessToken;
 UIKIT_EXTERN NSString *const kUserDefaultAccessCode;
+UIKIT_EXTERN NSString *const kUserDefaultAccessCodeShow;
 UIKIT_EXTERN NSString *const kUserDefaultIsLogin;
 UIKIT_EXTERN NSString *const kUserDefaultInviteCodeCheck;
 UIKIT_EXTERN NSString *const kUserDefaultTimeDay;
