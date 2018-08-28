@@ -8,5 +8,12 @@
 
 #import "FMViewController.h"
 
+typedef NS_ENUM (NSInteger, FMSetMyInfoType)
+{
+    FMSetMyInfoTypeRegist = 0,
+    FMSetMyInfoTypeUpdate
+};
+
 @interface FMSetMyInfoViewController : FMViewController
+@property(assign) FMSetMyInfoType setMyInfoType;
 @end

@@ -46,6 +46,7 @@ UIPickerViewDelegate
 @property (weak, nonatomic) IBOutlet UITextField *oldLabel;
 @property (weak, nonatomic) IBOutlet HXTagsView *tagsView;
 @property (weak, nonatomic) IBOutlet UIButton *refreshButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttomViewTopCons;
 
 - (IBAction)startAction:(id)sender;
 - (IBAction)buttonAction:(id)sender;
@@ -59,9 +60,31 @@ UIPickerViewDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     [FMUtils customizeNavigationBarForTarget:self];
-    [self initStartView];
+    
+    switch (self.setMyInfoType) {
+        case FMSetMyInfoTypeRegist:
+            //注册
+        {
+            [self initStartView];
+            [self initTopView];
+            self.buttomViewTopCons.constant = 160;
+        }
+            break;
+            
+        case FMSetMyInfoTypeUpdate:
+            //更新
+        {
+            self.buttomViewTopCons.constant = 20;
+            [self initUpdateNextButton];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
     [self initViewsAndDatas];
-    [self initTopView];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -322,13 +345,30 @@ UIPickerViewDelegate
         
     } completion:^(BOOL finished) {
         if (finished) {
-            UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"下一步" style:UIBarButtonItemStylePlain target:self action:@selector(nextStepAction:)];
-            rightItem.width = 60.f;
-            [rightItem setTitleTextAttributes:@{NSFontAttributeName:BOLDSYSTEMFONT(16)} forState:UIControlStateNormal];
-            [rightItem setTintColor:FSYellow];
-            
-            self.navigationItem.rightBarButtonItem = rightItem;
+            [self initUpdateNextButton];
         }
     }];
+}
+
+- (void)initUpdateNextButton {
+    NSString *buttontitle = @"";
+    switch (self.setMyInfoType) {
+        case FMSetMyInfoTypeUpdate:
+            buttontitle = @"完成";
+            break;
+            
+        case FMSetMyInfoTypeRegist:
+            buttontitle = @"下一步";
+            break;
+            
+        default:
+            break;
+    }
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:buttontitle style:UIBarButtonItemStylePlain target:self action:@selector(nextStepAction:)];
+    rightItem.width = 60.f;
+    [rightItem setTitleTextAttributes:@{NSFontAttributeName:BOLDSYSTEMFONT(16)} forState:UIControlStateNormal];
+    [rightItem setTintColor:FSYellow];
+    
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 @end

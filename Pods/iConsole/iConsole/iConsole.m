@@ -165,7 +165,7 @@ static void exceptionHandler(NSException *exception)
                                                        delegate:self
                                               cancelButtonTitle:@"Cancel"
                                          destructiveButtonTitle:@"Clear Log"
-                                              otherButtonTitles:@"Send by Email", @"Close Console", nil];
+                                              otherButtonTitles:@"Send by Email", @"Debug View",@"Close Console", nil];
 
     sheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
     [sheet showInView:self.view];
@@ -262,6 +262,11 @@ static void exceptionHandler(NSException *exception)
 		[iConsole sharedConsole].view.frame = [self offscreenFrame];
 		[UIView commitAnimations];
 	}
+}
+
+- (void)showDebugView
+{
+    NSLog(@"show debug view");
 }
 
 - (void)consoleHidden
@@ -426,6 +431,10 @@ static void exceptionHandler(NSException *exception)
                                           _logSubmissionEmail ?: @"", URLSafeName, URLSafeLog];
 
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:URLString]];
+        }
+        else if (buttonIndex == 2)
+        {
+            [self showDebugView];
         }
         else
         {
